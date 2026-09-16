@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789128918206,
+      "tag": "0000_little_rocket_racer",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1789128918207,
+      "tag": "0001_unaccent",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1789128918208,
+      "tag": "0002_ingredients_normalises",
+      "breakpoints": true
+    }
+  ]
+}

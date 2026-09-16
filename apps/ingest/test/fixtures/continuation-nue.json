@@ -1,0 +1,174 @@
+{
+  "book": 2,
+  "page": 218,
+  "items": [
+    {
+      "str": "Préparer une plaque de cuisson recouverte papier sulfurisé.",
+      "x": 107.77,
+      "y": 710.74,
+      "width": 291.51,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 399.27,
+      "y": 710.74,
+      "width": 3.11,
+      "size": 12
+    },
+    {
+      "str": "Préchauffer le four à",
+      "x": 401.61,
+      "y": 710.74,
+      "width": 103.74,
+      "size": 12
+    },
+    {
+      "str": "180°C.",
+      "x": 107.77,
+      "y": 694.23,
+      "width": 30.76,
+      "size": 12
+    },
+    {
+      "str": "Tremper chaque morceau de chou-fleur dans le mélange eau farine pour bien",
+      "x": 107.77,
+      "y": 661.22,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "les napper, puis les passer dans le bol de chapelure pour entièrement les",
+      "x": 107.77,
+      "y": 644.71,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "recouvrir. Déposer les morceaux sur la plaque de cuisson. Enfournez pour 20",
+      "x": 107.77,
+      "y": 628.21,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "minutes.",
+      "x": 107.77,
+      "y": 611.7,
+      "width": 43.02,
+      "size": 12
+    },
+    {
+      "str": "Sortir les choux-fleur panés du four et attendre quelques minutes qu'ils",
+      "x": 107.77,
+      "y": 578.69,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "refroidissent.",
+      "x": 107.77,
+      "y": 562.18,
+      "width": 67.62,
+      "size": 12
+    },
+    {
+      "str": "Tremper chaque Wings dans la sauce BBQ pour bien les recouvrir et les reposer",
+      "x": 107.77,
+      "y": 529.17,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "sur la plaque de cuisson. Attention à ne pas saturer les wings de sauce BBQ",
+      "x": 107.77,
+      "y": 512.66,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "sinon ils resteront mous après cuisson et il n'y aura pas assez de sauce (ça sent",
+      "x": 107.77,
+      "y": 496.16,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "le vécu). Enfourner à nouveau, mais à 160°C, pendant 20-25 minutes, pour",
+      "x": 107.77,
+      "y": 479.65,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "\"sécher\" les wings.",
+      "x": 107.77,
+      "y": 463.14,
+      "width": 90.28,
+      "size": 12
+    },
+    {
+      "str": "Sortir du four et laisser reposer 5 minutes à l'air libre pour terminer le",
+      "x": 107.77,
+      "y": 430.13,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "\"séchage\".",
+      "x": 107.77,
+      "y": 413.62,
+      "width": 49.16,
+      "size": 12
+    },
+    {
+      "str": "Pendant ce temps, préparer la sauce ranch : mixer le tofu soyeux, la levure de",
+      "x": 107.77,
+      "y": 380.61,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "bière,",
+      "x": 107.77,
+      "y": 364.11,
+      "width": 28.23,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 135.99,
+      "y": 364.11,
+      "width": 7.16,
+      "size": 12
+    },
+    {
+      "str": "la ciboulette, le jus de citron, l'ail et la moutarde jusqu'à obtention d'une",
+      "x": 141.36,
+      "y": 364.11,
+      "width": 363.99,
+      "size": 12
+    },
+    {
+      "str": "texture bien lisse.",
+      "x": 107.77,
+      "y": 347.6,
+      "width": 88.19,
+      "size": 12
+    },
+    {
+      "str": "Transvaser dans un petit ramequin et tremper les wings de chou-fleur pour la",
+      "x": 107.77,
+      "y": 314.59,
+      "width": 397.58,
+      "size": 12
+    },
+    {
+      "str": "dégustation.",
+      "x": 107.77,
+      "y": 298.08,
+      "width": 62.3,
+      "size": 12
+    }
+  ]
+}

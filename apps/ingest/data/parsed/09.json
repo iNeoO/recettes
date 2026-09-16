@@ -1,0 +1,2574 @@
+{
+  "300g de pavés de saumon": [
+    {
+      "name": "saumon",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pavés ou filets de saumon": [
+    {
+      "name": "saumon",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de petits pois frais": [
+    {
+      "name": "petit pois",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pleurotes frais": [
+    {
+      "name": "pleurote",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pois chiches en conserve": [
+    {
+      "name": "pois chiche",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de poivrons jaunes surgelés": [
+    {
+      "name": "poivron jaune",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pomme de terre": [
+    {
+      "name": "pomme de terre",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pommes de terre": [
+    {
+      "name": "pomme de terre",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pommes de terre grelots": [
+    {
+      "name": "pomme de terre grelot",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de pousses d'épinard": [
+    {
+      "name": "pousse d'épinard",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de riz à sushi": [
+    {
+      "name": "riz à sushi",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de saumon": [
+    {
+      "name": "saumon",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de saumon fumé": [
+    {
+      "name": "saumon fumé",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tempeh": [
+    {
+      "name": "tempeh",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de thon au naturel": [
+    {
+      "name": "thon au naturel",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu": [
+    {
+      "name": "tofu",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu aromatisé au choix": [
+    {
+      "name": "tofu aromatisé",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu ferme": [
+    {
+      "name": "tofu ferme",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu ferme nature": [
+    {
+      "name": "tofu ferme nature",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu nature": [
+    {
+      "name": "tofu nature",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu nature ferme": [
+    {
+      "name": "tofu ferme nature",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu Rosso": [
+    {
+      "name": "tofu rosso",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu Rosso Taifun": [
+    {
+      "name": "tofu rosso taifun",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu rosso Taifun (magasins bio)": [
+    {
+      "name": "tofu rosso taifun",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de tofu soyeux": [
+    {
+      "name": "tofu soyeux",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de yaourt grec": [
+    {
+      "name": "yaourt grec",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300g de yaourt végétal": [
+    {
+      "name": "yaourt végétal",
+      "amount": 300,
+      "unit": "g"
+    }
+  ],
+  "300ml d’eau tiède": [
+    {
+      "name": "eau",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de bouillon de légumes": [
+    {
+      "name": "bouillon de légumes",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de bouillon ou d'eau": [
+    {
+      "name": "bouillon",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de crème de soja": [
+    {
+      "name": "crème de soja",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de cube de bouillon de légumes": [
+    {
+      "name": "cube de bouillon de légumes",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de jus de raisins": [
+    {
+      "name": "jus de raisin",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de lait": [
+    {
+      "name": "lait",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de lait d'avoine": [
+    {
+      "name": "lait d'avoine",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de lait de coco": [
+    {
+      "name": "lait de coco",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "300ml de lait végétal": [
+    {
+      "name": "lait végétal",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "30cl d’eau": [
+    {
+      "name": "eau",
+      "amount": 30,
+      "unit": "cl"
+    }
+  ],
+  "30cl de lait d'amande, noisette, ou classique": [
+    {
+      "name": "lait d'amande",
+      "amount": 30,
+      "unit": "cl"
+    }
+  ],
+  "30g + 1 pincée de mascobado": [
+    {
+      "name": "mascobado",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g cacahuètes": [
+    {
+      "name": "cacahuète",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d’amande en poudre": [
+    {
+      "name": "poudre d'amande",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'amandes": [
+    {
+      "name": "amande",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'amandes effilées": [
+    {
+      "name": "amande",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d’amandes entières grillées non salées": [
+    {
+      "name": "amande",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d’anchois à l’huile (en bocal)": [
+    {
+      "name": "anchois à l'huile",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'emmental râpé": [
+    {
+      "name": "emmental",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d’épinards frais": [
+    {
+      "name": "épinard",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'huile de coco": [
+    {
+      "name": "huile de coco",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'huile neutre": [
+    {
+      "name": "huile neutre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d’oignon nouveau": [
+    {
+      "name": "oignon nouveau",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d'olives": [
+    {
+      "name": "olive",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g d’olives Kalamata": [
+    {
+      "name": "olive kalamata",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de beurre": [
+    {
+      "name": "beurre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de beurre demi-sel": [
+    {
+      "name": "beurre demi-sel",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de beurre fondu ou margarine": [
+    {
+      "name": "beurre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de bûche de chèvre": [
+    {
+      "name": "bûche de chèvre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de cacahuètes": [
+    {
+      "name": "cacahuète",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de cacahuètes non salées": [
+    {
+      "name": "cacahuète",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de cacahuètes salées": [
+    {
+      "name": "cacahuète",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de cacao en poudre": [
+    {
+      "name": "cacao en poudre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de céréales de flocons de maïs de type": [
+    {
+      "name": "céréale de flocon de maïs",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de cerneaux de noix": [
+    {
+      "name": "cerneau de noix",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de chapelure fine ou une farine de maïs, pois chiche etc": [
+    {
+      "name": "chapelure",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de chapelure panko": [
+    {
+      "name": "chapelure panko",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de chèvre frais": [
+    {
+      "name": "chèvre frais",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de chocolat noir": [
+    {
+      "name": "chocolat noir",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de concentré de tomates": [
+    {
+      "name": "concentré de tomate",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de cranberries séchées": [
+    {
+      "name": "cranberry séché",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de crème fraîche": [
+    {
+      "name": "crème fraîche",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de farine au choix": [
+    {
+      "name": "farine",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de farine de coco": [
+    {
+      "name": "farine de coco",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de farine de pois chiches": [
+    {
+      "name": "farine de pois chiche",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de farine de pois chiches ou autre": [
+    {
+      "name": "farine de pois chiche",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de fécule": [
+    {
+      "name": "fécule",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de feta": [
+    {
+      "name": "feta",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de flocons d'avoine": [
+    {
+      "name": "flocon d'avoine",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de flocons d’avoine fins": [
+    {
+      "name": "flocon d'avoine",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de fromage râpé": [
+    {
+      "name": "fromage",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de graines de chanvre": [
+    {
+      "name": "graine de chanvre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de graines de chia": [
+    {
+      "name": "graine de chia",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de graines de courge": [
+    {
+      "name": "graine de courge",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de graines de tournesol": [
+    {
+      "name": "graine de tournesol",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de grenade": [
+    {
+      "name": "grenade",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de lentilles vertes sèches (crues)": [
+    {
+      "name": "lentille verte sèche",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de levure maltée": [
+    {
+      "name": "levure maltée",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de maizena": [
+    {
+      "name": "maïzena",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de mélange de graines de tournesol et de courge": [
+    {
+      "name": "mélange de graines de tournesol et de courge",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de myrtilles séchées": [
+    {
+      "name": "myrtille séchée",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noisettes": [
+    {
+      "name": "noisette",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noisettes grillées": [
+    {
+      "name": "noisette",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noisettes toastées": [
+    {
+      "name": "noisette",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noix": [
+    {
+      "name": "noix",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noix concassées": [
+    {
+      "name": "noix",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noix de cajou concassées": [
+    {
+      "name": "noix de cajou",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noix de cajou grillées entières": [
+    {
+      "name": "noix de cajou",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noix de cajou grillées et non salées": [
+    {
+      "name": "noix de cajou",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de noix de coco râpée": [
+    {
+      "name": "noix de coco",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de papaye": [
+    {
+      "name": "papaye",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de parmesan": [
+    {
+      "name": "parmesan",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de parmesan animal ou végétal (Nurishh)": [
+    {
+      "name": "parmesan",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de parmesan rapé": [
+    {
+      "name": "parmesan",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pecorino râpé": [
+    {
+      "name": "pecorino",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pesto": [
+    {
+      "name": "pesto",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pignons de pin": [
+    {
+      "name": "pignon de pin",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pistaches": [
+    {
+      "name": "pistache",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pistaches décortiquées": [
+    {
+      "name": "pistache",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pois cassés secs (crus)": [
+    {
+      "name": "pois cassé",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de pois chiches cuits et égouttés": [
+    {
+      "name": "pois chiche",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de poudre d’amandes": [
+    {
+      "name": "poudre d'amande",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de poudre de protéine": [
+    {
+      "name": "poudre de protéine",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de protéines en poudre": [
+    {
+      "name": "poudre de protéine",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de raisins secs": [
+    {
+      "name": "raisin sec",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de raisins secs Sultanines": [
+    {
+      "name": "raisin sec sultanine",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de râpé végétal": [
+    {
+      "name": "râpé végétal",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de riz soufflé": [
+    {
+      "name": "riz soufflé",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de sirop d'érable": [
+    {
+      "name": "sirop d'érable",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de sucre": [
+    {
+      "name": "sucre",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de sucre de coco": [
+    {
+      "name": "sucre de coco",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30g de sucre glace": [
+    {
+      "name": "sucre glace",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "30ml d’huile neutre": [
+    {
+      "name": "huile neutre",
+      "amount": 30,
+      "unit": "ml"
+    }
+  ],
+  "30ml de lait végétal": [
+    {
+      "name": "lait végétal",
+      "amount": 30,
+      "unit": "ml"
+    }
+  ],
+  "30ml de sauce soja": [
+    {
+      "name": "sauce soja",
+      "amount": 30,
+      "unit": "ml"
+    }
+  ],
+  "30ml de sauce soja30ml de sirop d'érable": [
+    {
+      "name": "sauce soja",
+      "amount": 30,
+      "unit": "ml"
+    },
+    {
+      "name": "sirop d'érable",
+      "amount": 30,
+      "unit": "ml"
+    }
+  ],
+  "30ml de vinaigre de cidre": [
+    {
+      "name": "vinaigre de cidre",
+      "amount": 30,
+      "unit": "ml"
+    }
+  ],
+  "3½ cuillères à soupe de yaourt végétal": [
+    {
+      "name": "yaourt végétal",
+      "amount": 3.5,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "310ml d'eau froide": [
+    {
+      "name": "eau",
+      "amount": 310,
+      "unit": "ml"
+    }
+  ],
+  "310ml d’eau tiède": [
+    {
+      "name": "eau",
+      "amount": 310,
+      "unit": "ml"
+    }
+  ],
+  "320g de skyr": [
+    {
+      "name": "skyr",
+      "amount": 320,
+      "unit": "g"
+    }
+  ],
+  "330g de haricots noirs cuits": [
+    {
+      "name": "haricot noir",
+      "amount": 330,
+      "unit": "g"
+    }
+  ],
+  "330ml de bouillon de légumes": [
+    {
+      "name": "bouillon de légumes",
+      "amount": 330,
+      "unit": "ml"
+    }
+  ],
+  "330ml de vin rouge": [
+    {
+      "name": "vin rouge",
+      "amount": 330,
+      "unit": "ml"
+    }
+  ],
+  "35 grammes de pignons de pin": [
+    {
+      "name": "pignon de pin",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "350-400g de pommes de terre": [
+    {
+      "name": "pomme de terre",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de carotte": [
+    {
+      "name": "carotte",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de champignons": [
+    {
+      "name": "champignon",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de courgette gousse d'ail": [
+    {
+      "name": "courgette",
+      "amount": 350,
+      "unit": "g"
+    },
+    {
+      "name": "ail",
+      "amount": 1,
+      "unit": "gousse"
+    }
+  ],
+  "350g de farine": [
+    {
+      "name": "farine",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de farine d'épeauter complète": [
+    {
+      "name": "farine d'épeautre complète",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de farine de sarrasin": [
+    {
+      "name": "farine de sarrasin",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de noix de pécan": [
+    {
+      "name": "noix de pécan",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de patate douce": [
+    {
+      "name": "patate douce",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350g de tomates cerises rouges": [
+    {
+      "name": "tomate cerise rouge",
+      "amount": 350,
+      "unit": "g"
+    }
+  ],
+  "350ml d’eau": [
+    {
+      "name": "eau",
+      "amount": 350,
+      "unit": "ml"
+    }
+  ],
+  "350ml de bouillon de légumes": [
+    {
+      "name": "bouillon de légumes",
+      "amount": 350,
+      "unit": "ml"
+    }
+  ],
+  "350ml de lait de soja": [
+    {
+      "name": "lait de soja",
+      "amount": 350,
+      "unit": "ml"
+    }
+  ],
+  "35cl d'eau": [
+    {
+      "name": "eau",
+      "amount": 35,
+      "unit": "cl"
+    }
+  ],
+  "35g de beurre demi-sel": [
+    {
+      "name": "beurre demi-sel",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de beurre demi-sel froid": [
+    {
+      "name": "beurre demi-sel",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de cacao en poudre": [
+    {
+      "name": "cacao en poudre",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de céleri-branche": [
+    {
+      "name": "céleri-branche",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de comté": [
+    {
+      "name": "comté",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de concentré de tomates": [
+    {
+      "name": "concentré de tomate",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de concombre": [
+    {
+      "name": "concombre",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de fécule (maïs ou pomme de terre)": [
+    {
+      "name": "fécule de maïs",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de graines de courge": [
+    {
+      "name": "graine de courge",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de graines de tournesol": [
+    {
+      "name": "graine de tournesol",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35g de gruyère rapé": [
+    {
+      "name": "gruyère",
+      "amount": 35,
+      "unit": "g"
+    }
+  ],
+  "35ml d'eau froide": [
+    {
+      "name": "eau",
+      "amount": 35,
+      "unit": "ml"
+    }
+  ],
+  "35ml d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 35,
+      "unit": "ml"
+    }
+  ],
+  "360g de yaourt végétal": [
+    {
+      "name": "yaourt végétal",
+      "amount": 360,
+      "unit": "g"
+    }
+  ],
+  "360ml d'eau tiède": [
+    {
+      "name": "eau",
+      "amount": 360,
+      "unit": "ml"
+    }
+  ],
+  "360ml de bouillon de légumes": [
+    {
+      "name": "bouillon de légumes",
+      "amount": 360,
+      "unit": "ml"
+    }
+  ],
+  "370 g chou-fleur surgelé ou frais": [
+    {
+      "name": "chou-fleur",
+      "amount": 370,
+      "unit": "g"
+    }
+  ],
+  "375ml d’eau": [
+    {
+      "name": "eau",
+      "amount": 375,
+      "unit": "ml"
+    }
+  ],
+  "380g de farine de blé de t45": [
+    {
+      "name": "farine de blé t45",
+      "amount": 380,
+      "unit": "g"
+    }
+  ],
+  "3cl d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 3,
+      "unit": "cl"
+    }
+  ],
+  "3g de levure fraîche de boulangerie ou 1/2 cuillère à café de levure sèche": [
+    {
+      "name": "levure fraîche de boulangerie",
+      "amount": 3,
+      "unit": "g"
+    }
+  ],
+  "3g de Maïzena": [
+    {
+      "name": "maïzena",
+      "amount": 3,
+      "unit": "g"
+    }
+  ],
+  "3g de sel": [
+    {
+      "name": "sel",
+      "amount": 3,
+      "unit": "g"
+    }
+  ],
+  "4 à 5 belles tomates à l'ancienne": [
+    {
+      "name": "tomate à l'ancienne",
+      "amount": 4
+    }
+  ],
+  "4 bananes + 1 banane pour la déco": [
+    {
+      "name": "banane",
+      "amount": 4
+    }
+  ],
+  "4 blancs de poireaux": [
+    {
+      "name": "blanc de poireau",
+      "amount": 4
+    }
+  ],
+  "4 branches de kale": [
+    {
+      "name": "kale",
+      "amount": 4,
+      "unit": "branche"
+    }
+  ],
+  "4 carottes": [
+    {
+      "name": "carotte",
+      "amount": 4
+    }
+  ],
+  "4 carrés de chocolat noir": [
+    {
+      "name": "chocolat noir",
+      "amount": 4
+    }
+  ],
+  "4 champignons": [
+    {
+      "name": "champignon",
+      "amount": 4
+    }
+  ],
+  "4 champignons de Paris frais": [
+    {
+      "name": "champignon de paris",
+      "amount": 4
+    }
+  ],
+  "4 citrons": [
+    {
+      "name": "citron",
+      "amount": 4
+    }
+  ],
+  "4 clous de girofle": [
+    {
+      "name": "clou de girofle",
+      "amount": 4
+    }
+  ],
+  "4 courgettes de taille moyenne avec les fleurs": [
+    {
+      "name": "courgette",
+      "amount": 4
+    }
+  ],
+  "4 courgettes rondes": [
+    {
+      "name": "courgette ronde",
+      "amount": 4
+    }
+  ],
+  "4 cuillère à soupe de café refroidi": [
+    {
+      "name": "café",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à à soupe + 2 cuillères à café d’huile d’olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à café d’épices indiennes (curcuma, curry, gingembre…)": [
+    {
+      "name": "épice indienne",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café d'épices mexicaines": [
+    {
+      "name": "épice mexicaine",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de beurre ou margarine": [
+    {
+      "name": "beurre",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de concentré de tomates": [
+    {
+      "name": "concentré de tomate",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de crème fraîche épaisse": [
+    {
+      "name": "crème fraîche épaisse",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de cumin": [
+    {
+      "name": "cumin",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de de purée de cacahuète": [
+    {
+      "name": "purée de cacahuète",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de jus de citron": [
+    {
+      "name": "jus de citron",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de moutarde": [
+    {
+      "name": "moutarde",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de sauce soja": [
+    {
+      "name": "sauce soja",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de vinaigre de cidre": [
+    {
+      "name": "vinaigre de cidre",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à café de vinaigre de riz": [
+    {
+      "name": "vinaigre de riz",
+      "amount": 4,
+      "unit": "cuillère à café"
+    }
+  ],
+  "4 cuillères à soupe d’eau tiède": [
+    {
+      "name": "eau",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe d’huile": [
+    {
+      "name": "huile",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe d’huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe d'huile de coco": [
+    {
+      "name": "huile de coco",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe d'huile de coco fondue": [
+    {
+      "name": "huile de coco",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe d'huile de tournesol": [
+    {
+      "name": "huile de tournesol",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe d’huile neutre": [
+    {
+      "name": "huile neutre",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de beurre de cacahuète": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de concentré de tomates": [
+    {
+      "name": "concentré de tomate",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de coulis de caramel": [
+    {
+      "name": "coulis de caramel",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de crème de coco": [
+    {
+      "name": "crème de coco",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de crème de soja": [
+    {
+      "name": "crème de soja",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de crème végétale ou animale": [
+    {
+      "name": "crème végétale",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de farine": [
+    {
+      "name": "farine",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de fécule de maïs": [
+    {
+      "name": "fécule de maïs",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de flocons de riz": [
+    {
+      "name": "flocon de riz",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de graines de chia": [
+    {
+      "name": "graine de chia",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de graines de sésame": [
+    {
+      "name": "graine de sésame",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de jus de citron": [
+    {
+      "name": "jus de citron",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de lait de coco": [
+    {
+      "name": "lait de coco",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de levure maltée": [
+    {
+      "name": "levure maltée",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de mayonnaise (végane ou non)": [
+    {
+      "name": "mayonnaise",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de mayonnaise végane": [
+    {
+      "name": "mayonnaise végane",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de sauce barbecue": [
+    {
+      "name": "sauce barbecue",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de sauce buffalo": [
+    {
+      "name": "sauce buffalo",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de sauce soja": [
+    {
+      "name": "sauce soja",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de sauce soja sucrée": [
+    {
+      "name": "sauce soja sucrée",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de sauce tamari": [
+    {
+      "name": "sauce tamari",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de sucre glace": [
+    {
+      "name": "sucre glace",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de tapenade sans anchois": [
+    {
+      "name": "tapenade sans anchois",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de vin blanc sec": [
+    {
+      "name": "vin blanc sec",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de vinaigre de cidre": [
+    {
+      "name": "vinaigre de cidre",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de vinaigre de riz": [
+    {
+      "name": "vinaigre de riz",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 cuillères à soupe de vinaigre de vin rouge ou de cidre": [
+    {
+      "name": "vinaigre de vin rouge",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4 échalotes": [
+    {
+      "name": "échalote",
+      "amount": 4
+    }
+  ],
+  "4 escalopes de poulet": [
+    {
+      "name": "escalope de poulet",
+      "amount": 4
+    }
+  ],
+  "4 feuilles de brick": [
+    {
+      "name": "feuille de brick",
+      "amount": 4
+    }
+  ],
+  "4 feuilles de laitue romaine": [
+    {
+      "name": "feuille de laitue romaine",
+      "amount": 4
+    }
+  ],
+  "4 feuilles de menthe": [
+    {
+      "name": "feuille de menthe",
+      "amount": 4
+    }
+  ],
+  "4 figues": [
+    {
+      "name": "figue",
+      "amount": 4
+    }
+  ],
+  "4 fraises": [
+    {
+      "name": "fraise",
+      "amount": 4
+    }
+  ],
+  "4 gousses d’ail": [
+    {
+      "name": "ail",
+      "amount": 4,
+      "unit": "gousse"
+    }
+  ],
+  "4 grosses tomates": [
+    {
+      "name": "tomate",
+      "amount": 4
+    }
+  ],
+  "4 kiwis": [
+    {
+      "name": "kiwi",
+      "amount": 4
+    }
+  ],
+  "4 merguez végétales (en magasin bio)": [
+    {
+      "name": "merguez végétale",
+      "amount": 4
+    }
+  ],
+  "4 mini poivrons ou 2 grands": [
+    {
+      "name": "poivron",
+      "amount": 4
+    }
+  ],
+  "4 oeufs": [
+    {
+      "name": "oeuf",
+      "amount": 4
+    }
+  ],
+  "4 œufs": [
+    {
+      "name": "oeuf",
+      "amount": 4
+    }
+  ],
+  "4 oeufs frais": [
+    {
+      "name": "oeuf",
+      "amount": 4
+    }
+  ],
+  "4 oignon jaune": [
+    {
+      "name": "oignon jaune",
+      "amount": 4
+    }
+  ],
+  "4 oignons cébettes": [
+    {
+      "name": "oignon cébette",
+      "amount": 4
+    }
+  ],
+  "4 oignons verts": [
+    {
+      "name": "oignon vert",
+      "amount": 4
+    }
+  ],
+  "4 pains pita": [
+    {
+      "name": "pain pita",
+      "amount": 4
+    }
+  ],
+  "4 palets de chèvre": [
+    {
+      "name": "palet de chèvre",
+      "amount": 4
+    }
+  ],
+  "4 petites endives": [
+    {
+      "name": "endive",
+      "amount": 4
+    }
+  ],
+  "4 pincées de noix de muscade": [
+    {
+      "name": "noix de muscade",
+      "amount": 4,
+      "unit": "pincée"
+    }
+  ],
+  "4 pincées de sel": [
+    {
+      "name": "sel",
+      "amount": 4,
+      "unit": "pincée"
+    }
+  ],
+  "4 poignées de kale": [
+    {
+      "name": "kale",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poignées de mesclun ou salade au choix": [
+    {
+      "name": "mesclun",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poignées de pousses d'épinard": [
+    {
+      "name": "pousse d'épinard",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poignées de roquette": [
+    {
+      "name": "roquette",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poignées de roquette (ou mesclun)": [
+    {
+      "name": "roquette",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poignées de roquette (ou pousses d'épinard)": [
+    {
+      "name": "roquette",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poignées de roquette ou mesclun": [
+    {
+      "name": "roquette",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "4 poireaux": [
+    {
+      "name": "poireau",
+      "amount": 4
+    }
+  ],
+  "4 poivrons marinés": [
+    {
+      "name": "poivron mariné",
+      "amount": 4
+    }
+  ],
+  "4 pommes": [
+    {
+      "name": "pomme",
+      "amount": 4
+    }
+  ],
+  "4 pommes de terre": [
+    {
+      "name": "pomme de terre",
+      "amount": 4
+    }
+  ],
+  "4 pommes de terre moyennes": [
+    {
+      "name": "pomme de terre",
+      "amount": 4
+    }
+  ],
+  "4 tartines de pain": [
+    {
+      "name": "tartine de pain",
+      "amount": 4
+    }
+  ],
+  "4 tomates": [
+    {
+      "name": "tomate",
+      "amount": 4
+    }
+  ],
+  "4 tomates (Type grappe)": [
+    {
+      "name": "tomate grappe",
+      "amount": 4
+    }
+  ],
+  "4 tomates anciennes": [
+    {
+      "name": "tomate ancienne",
+      "amount": 4
+    }
+  ],
+  "4 tomates grappe": [
+    {
+      "name": "tomate grappe",
+      "amount": 4
+    }
+  ],
+  "4 tomates moyennes": [
+    {
+      "name": "tomate",
+      "amount": 4
+    }
+  ],
+  "4 tomates séchées ou 4 peperoni cruschi (poivron frit et séché)": [
+    {
+      "name": "tomate séchée",
+      "amount": 4
+    }
+  ],
+  "4 tortillas": [
+    {
+      "name": "tortilla",
+      "amount": 4
+    }
+  ],
+  "4 tortillas complètes": [
+    {
+      "name": "tortilla complète",
+      "amount": 4
+    }
+  ],
+  "4 tortillas de maïs": [
+    {
+      "name": "tortilla de maïs",
+      "amount": 4
+    }
+  ],
+  "4 tortillas sans gluten": [
+    {
+      "name": "tortilla sans gluten",
+      "amount": 4
+    }
+  ],
+  "4 tranches de cheddar vegan": [
+    {
+      "name": "cheddar vegan",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de cheddar végétal": [
+    {
+      "name": "cheddar végétal",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de fromage végétal au choix": [
+    {
+      "name": "fromage végétal",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de jambon blanc ou végétal La Vie": [
+    {
+      "name": "jambon blanc",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de jambon cru": [
+    {
+      "name": "jambon cru",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain": [
+    {
+      "name": "pain",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain (4x40g)": [
+    {
+      "name": "pain",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain (complet, de campagne, au levain, etc.)": [
+    {
+      "name": "pain",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain au choix": [
+    {
+      "name": "pain",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain de campagne": [
+    {
+      "name": "pain de campagne",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain de mie complet": [
+    {
+      "name": "pain de mie complet",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de pain sans gluten": [
+    {
+      "name": "pain sans gluten",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4 tranches de saumon ou truite fumé(e)": [
+    {
+      "name": "saumon fumé",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "4-5 cuillères à soupe d’eau": [
+    {
+      "name": "eau",
+      "amount": 4,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "4-5 feuilles de menthe fraîche": [
+    {
+      "name": "feuille de menthe",
+      "amount": 4
+    }
+  ],
+  "4-5 feuilles de persil plat": [
+    {
+      "name": "feuille de persil plat",
+      "amount": 4
+    }
+  ],
+  "4-6 grosses poignées de kale cru": [
+    {
+      "name": "kale",
+      "amount": 4,
+      "unit": "poignée"
+    }
+  ],
+  "40 g de parmesan râpé": [
+    {
+      "name": "parmesan",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "400g d'épinards": [
+    {
+      "name": "épinard",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g d’épinards frais": [
+    {
+      "name": "épinard",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g d’huile de coco désodorisée": [
+    {
+      "name": "huile de coco désodorisée",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g d’oignons nouveaux une grosse botte": [
+    {
+      "name": "oignon nouveau",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de brocoli": [
+    {
+      "name": "brocoli",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de brocolis ou Broccolini": [
+    {
+      "name": "brocoli",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de chair de butternut": [
+    {
+      "name": "chair de butternut",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de champignons. ici mélange de champignons bruns et pleurotes": [
+    {
+      "name": "champignon",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de châtaignes cuites": [
+    {
+      "name": "châtaigne",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de courge butternut": [
+    {
+      "name": "courge butternut",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de farine": [
+    {
+      "name": "farine",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de farine au choix": [
+    {
+      "name": "farine",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de haricots verts": [
+    {
+      "name": "haricot vert",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de lait végétal": [
+    {
+      "name": "lait végétal",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de légumes au choix (carotte, poireaux, choux...)": [
+    {
+      "name": "légume",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de légumes râpés au choix : carottes, chou rouge, courgette, radis, chou blanc, betterave...": [
+    {
+      "name": "légume",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de mangue congelée": [
+    {
+      "name": "mangue",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de mélange de carotte, chou rouge et blanc": [
+    {
+      "name": "mélange de carotte, chou rouge et blanc",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de nouilles ramen": [
+    {
+      "name": "nouille ramen",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de nouilles udon": [
+    {
+      "name": "nouille udon",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de nouilles udon fraîches": [
+    {
+      "name": "nouille udon",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de patate douce": [
+    {
+      "name": "patate douce",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de patate douce épluchée et coupée en cubes": [
+    {
+      "name": "patate douce",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de pois chiche cuits": [
+    {
+      "name": "pois chiche",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de pois chiches cuits": [
+    {
+      "name": "pois chiche",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de poivron jaune surgelé": [
+    {
+      "name": "poivron jaune",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de pomme de terre": [
+    {
+      "name": "pomme de terre",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de pommes de terre": [
+    {
+      "name": "pomme de terre",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de pommes de terre à chair ferme": [
+    {
+      "name": "pomme de terre à chair ferme",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de potimarron": [
+    {
+      "name": "potimarron",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de potiron": [
+    {
+      "name": "potiron",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de tofu": [
+    {
+      "name": "tofu",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de tofu soyeux": [
+    {
+      "name": "tofu soyeux",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de tomates": [
+    {
+      "name": "tomate",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de tomates pelées": [
+    {
+      "name": "tomate pelée",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g de tomates pelées San Marzano": [
+    {
+      "name": "tomate pelée san marzano",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400g/500g de tomate pelée": [
+    {
+      "name": "tomate pelée",
+      "amount": 400,
+      "unit": "g"
+    }
+  ],
+  "400ml d’eau": [
+    {
+      "name": "eau",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml d’eau chaude": [
+    {
+      "name": "eau",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de bouillon de légumes": [
+    {
+      "name": "bouillon de légumes",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de coeurs de palmier en conserve": [
+    {
+      "name": "coeur de palmier",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de lait de coco": [
+    {
+      "name": "lait de coco",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de lait de soja": [
+    {
+      "name": "lait de soja",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de lait végétal": [
+    {
+      "name": "lait végétal",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de tomates cerises en conserve": [
+    {
+      "name": "tomate cerise",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de tomates cerises en conserve ou tomates pelées": [
+    {
+      "name": "tomate cerise",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de tomates concassées": [
+    {
+      "name": "tomate concassée",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml de tomates pelées en conserve": [
+    {
+      "name": "tomate pelée",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "400ml lait de coco": [
+    {
+      "name": "lait de coco",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "40cl de crème de coco": [
+    {
+      "name": "crème de coco",
+      "amount": 40,
+      "unit": "cl"
+    }
+  ],
+  "40cl de lait": [
+    {
+      "name": "lait",
+      "amount": 40,
+      "unit": "cl"
+    }
+  ],
+  "40g d'amandes": [
+    {
+      "name": "amande",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g d'amandes effilées": [
+    {
+      "name": "amande",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g d’huile de coco": [
+    {
+      "name": "huile de coco",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g d'huile végétale": [
+    {
+      "name": "huile végétale",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de bananes séchées": [
+    {
+      "name": "banane séchée",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de beaufort ou comté": [
+    {
+      "name": "beaufort",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de betterave": [
+    {
+      "name": "betterave",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de beurre": [
+    {
+      "name": "beurre",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de beurre de cacahuète": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de beurre de cacahuètes": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de cacahuètes non salées": [
+    {
+      "name": "cacahuète",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de cacahuètes salées": [
+    {
+      "name": "cacahuète",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de cerneaux de noix": [
+    {
+      "name": "cerneau de noix",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de chèvre frais": [
+    {
+      "name": "chèvre frais",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de chèvre frais ou brocciu": [
+    {
+      "name": "chèvre frais",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de chocolat noir": [
+    {
+      "name": "chocolat noir",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de chutney de mangue": [
+    {
+      "name": "chutney de mangue",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de comté râpé": [
+    {
+      "name": "comté",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de cranberries séchées": [
+    {
+      "name": "cranberry séché",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de crème épaisse": [
+    {
+      "name": "crème épaisse",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de crème fraîche": [
+    {
+      "name": "crème fraîche",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de crème fraîche (ou crème de coco)": [
+    {
+      "name": "crème fraîche",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de crème fraîche épaisse": [
+    {
+      "name": "crème fraîche épaisse",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de farine": [
+    {
+      "name": "farine",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de farine d'avoine": [
+    {
+      "name": "farine d'avoine",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "40g de farine de maïs": [
+    {
+      "name": "farine de maïs",
+      "amount": 40,
+      "unit": "g"
+    }
+  ]
+}

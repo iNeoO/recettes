@@ -1,0 +1,433 @@
+{
+  "book": 1,
+  "page": 3,
+  "items": [
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "100g de quinoa",
+      "x": 29.55,
+      "y": 600.69,
+      "width": 54.65,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 588.88,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 588.88,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "mangue",
+      "x": 34.86,
+      "y": 588.88,
+      "width": 29.22,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 577.07,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 577.07,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "avocat",
+      "x": 34.86,
+      "y": 577.07,
+      "width": 23.37,
+      "size": 8.86
+    },
+    {
+      "str": "P",
+      "x": 29.55,
+      "y": 565.26,
+      "width": 4.86,
+      "size": 8.86
+    },
+    {
+      "str": "ousses d’épinards",
+      "x": 34.42,
+      "y": 565.26,
+      "width": 63.8,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 553.45,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 553.45,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "poivron",
+      "x": 34.86,
+      "y": 553.45,
+      "width": 28.47,
+      "size": 8.86
+    },
+    {
+      "str": "50g de",
+      "x": 29.55,
+      "y": 541.63,
+      "width": 23.25,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 52.8,
+      "y": 541.63,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "tomates séchées",
+      "x": 54.49,
+      "y": 541.63,
+      "width": 58.12,
+      "size": 8.86
+    },
+    {
+      "str": "10",
+      "x": 29.55,
+      "y": 529.82,
+      "width": 8.14,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 37.69,
+      "y": 529.82,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "radis",
+      "x": 39.38,
+      "y": 529.82,
+      "width": 18.28,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 29.55,
+      "y": 518.01,
+      "width": 4.05,
+      "size": 8.86
+    },
+    {
+      "str": "00g de tofu Taifun Curry-Mango (magasin",
+      "x": 33.6,
+      "y": 518.01,
+      "width": 154.43,
+      "size": 8.86
+    },
+    {
+      "str": "bio) OU 2 oeufs durs",
+      "x": 29.55,
+      "y": 506.2,
+      "width": 74.63,
+      "size": 8.86
+    },
+    {
+      "str": "Optionnel :",
+      "x": 29.55,
+      "y": 494.39,
+      "width": 40.44,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 70,
+      "y": 494.39,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "pousses de pois",
+      "x": 71.69,
+      "y": 494.39,
+      "width": 55.79,
+      "size": 8.86
+    },
+    {
+      "str": "Pour l",
+      "x": 14.5,
+      "y": 482.57,
+      "width": 21.79,
+      "size": 8.86
+    },
+    {
+      "str": "a vinaigrette",
+      "x": 36.3,
+      "y": 482.57,
+      "width": 45.19,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 470.76,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 470.76,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "orange",
+      "x": 34.86,
+      "y": 470.76,
+      "width": 25.1,
+      "size": 8.86
+    },
+    {
+      "str": "1/2",
+      "x": 29.55,
+      "y": 458.95,
+      "width": 11.22,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 40.77,
+      "y": 458.95,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "citron",
+      "x": 42.46,
+      "y": 458.95,
+      "width": 21.84,
+      "size": 8.86
+    },
+    {
+      "str": "3 cuillères à soupe d’",
+      "x": 29.55,
+      "y": 447.14,
+      "width": 74.28,
+      "size": 8.86
+    },
+    {
+      "str": "huile d'olive",
+      "x": 103.84,
+      "y": 447.14,
+      "width": 44.41,
+      "size": 8.86
+    },
+    {
+      "str": "B",
+      "x": 29.55,
+      "y": 435.33,
+      "width": 5.1,
+      "size": 8.86
+    },
+    {
+      "str": "asilic",
+      "x": 34.65,
+      "y": 435.33,
+      "width": 18.91,
+      "size": 8.86
+    },
+    {
+      "str": "S",
+      "x": 29.55,
+      "y": 423.51,
+      "width": 4.64,
+      "size": 8.86
+    },
+    {
+      "str": "el, poivre",
+      "x": 34.19,
+      "y": 423.51,
+      "width": 33,
+      "size": 8.86
+    },
+    {
+      "str": "S a l a d e",
+      "x": 140.17,
+      "y": 730.66,
+      "width": 96.76,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 236.92,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "à",
+      "x": 263.45,
+      "y": 730.66,
+      "width": 10.1,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 273.56,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "l a",
+      "x": 300.09,
+      "y": 730.66,
+      "width": 23.53,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 323.62,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "m a n g u e",
+      "x": 350.15,
+      "y": 730.66,
+      "width": 105.18,
+      "size": 39.01
+    },
+    {
+      "str": "e t",
+      "x": 199.87,
+      "y": 699.9,
+      "width": 22.59,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 222.46,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "a u",
+      "x": 248.99,
+      "y": 699.9,
+      "width": 28.79,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 277.79,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "q u i n o a",
+      "x": 304.32,
+      "y": 699.9,
+      "width": 91.29,
+      "size": 39.01
+    },
+    {
+      "str": "2 portions",
+      "x": 505.61,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "Cuire le quinoa selon les instructions d’emballage. Egoutter et réserver.",
+      "x": 100.23,
+      "y": 379.74,
+      "width": 346.85,
+      "size": 12
+    },
+    {
+      "str": "Eplucher la mangue et l'avocat. Les couper en cubes. Laver le poivron et le couper",
+      "x": 100.23,
+      "y": 346.73,
+      "width": 415.42,
+      "size": 12
+    },
+    {
+      "str": "aussi en cubes",
+      "x": 100.23,
+      "y": 330.23,
+      "width": 70.07,
+      "size": 12
+    },
+    {
+      "str": ".",
+      "x": 79.84,
+      "y": 313.72,
+      "width": 2.37,
+      "size": 12
+    },
+    {
+      "str": "Faire des rondelles de radis et émincer les tomates séchées.",
+      "x": 100.23,
+      "y": 297.21,
+      "width": 286.77,
+      "size": 12
+    },
+    {
+      "str": "Dans un saladier, rassembler le quinoa et toute la garniture et éventuellement les",
+      "x": 100.23,
+      "y": 264.2,
+      "width": 415.42,
+      "size": 12
+    },
+    {
+      "str": "pousses de pois pour décorer.",
+      "x": 100.23,
+      "y": 247.69,
+      "width": 143.89,
+      "size": 12
+    },
+    {
+      "str": "Préparer la vinaigrette : Presser l'orange et le citron puis mélanger avec l'huile et une",
+      "x": 100.23,
+      "y": 214.68,
+      "width": 415.42,
+      "size": 12
+    },
+    {
+      "str": "pincée de sel. Emincer le basilic et l’ajouter à la préparation.",
+      "x": 100.23,
+      "y": 198.18,
+      "width": 291.26,
+      "size": 12
+    }
+  ]
+}

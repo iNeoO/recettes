@@ -1,0 +1,9 @@
+packages:
+  - packages/*
+  - apps/*
+
+catalog:
+  effect: ^3.22.2
+  typescript: ^5.9.3
+  vitest: ^3.2.4
+  "@effect/vitest": ^0.30.0

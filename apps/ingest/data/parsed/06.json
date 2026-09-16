@@ -1,0 +1,2569 @@
+{
+ "15g de noix de cajou": [
+  {
+   "name": "noix de cajou",
+   "amount": 15,
+   "unit": "g"
+  }
+ ],
+ "15g de parmesan": [
+  {
+   "name": "parmesan",
+   "amount": 15,
+   "unit": "g"
+  }
+ ],
+ "15g de pignonsde pin": [
+  {
+   "name": "pignon de pin",
+   "amount": 15,
+   "unit": "g"
+  }
+ ],
+ "15g de purée d'amande": [
+  {
+   "name": "purée d'amande",
+   "amount": 15,
+   "unit": "g"
+  }
+ ],
+ "15ml d’huile d'olive saveur truffe": [
+  {
+   "name": "huile d'olive saveur truffe",
+   "amount": 15,
+   "unit": "ml"
+  }
+ ],
+ "15ml d’huile de sésame grillé": [
+  {
+   "name": "huile de sésame grillée",
+   "amount": 15,
+   "unit": "ml"
+  }
+ ],
+ "15ml de sirop d'érable": [
+  {
+   "name": "sirop d'érable",
+   "amount": 15,
+   "unit": "ml"
+  }
+ ],
+ "15ml de vinaigre": [
+  {
+   "name": "vinaigre",
+   "amount": 15,
+   "unit": "ml"
+  }
+ ],
+ "16 billes de mozzarella": [
+  {
+   "name": "bille de mozzarella",
+   "amount": 16
+  }
+ ],
+ "16 tomates cerises": [
+  {
+   "name": "tomate cerise",
+   "amount": 16
+  }
+ ],
+ "16-20 tomates cerises": [
+  {
+   "name": "tomate cerise",
+   "amount": 16
+  }
+ ],
+ "160g d'eau": [
+  {
+   "name": "eau",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de beurre à température ambiante ou margarine": [
+  {
+   "name": "beurre",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de farine au choix": [
+  {
+   "name": "farine",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de fregola": [
+  {
+   "name": "fregola",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de girolles": [
+  {
+   "name": "girolle",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de haricots rouges cuits": [
+  {
+   "name": "haricot rouge",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de pain": [
+  {
+   "name": "pain",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de pâtes longues type spaghetti, linguine, etc.": [
+  {
+   "name": "pâtes longues",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de pois chiches cuits (en boîte ou bocal, égouttés et rincés)": [
+  {
+   "name": "pois chiche",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de pois chiches cuits (en boîte)": [
+  {
+   "name": "pois chiche",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de semoule": [
+  {
+   "name": "semoule",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de sucre somplet": [
+  {
+   "name": "sucre complet",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160g de tofu fumé": [
+  {
+   "name": "tofu fumé",
+   "amount": 160,
+   "unit": "g"
+  }
+ ],
+ "160ml d’eau": [
+  {
+   "name": "eau",
+   "amount": 160,
+   "unit": "ml"
+  }
+ ],
+ "160ml de bouillon de légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 160,
+   "unit": "ml"
+  }
+ ],
+ "160ml de crème de soja": [
+  {
+   "name": "crème de soja",
+   "amount": 160,
+   "unit": "ml"
+  }
+ ],
+ "160ml de lait végétal ou animal": [
+  {
+   "name": "lait végétal",
+   "amount": 160,
+   "unit": "ml"
+  }
+ ],
+ "165g de farine au choix": [
+  {
+   "name": "farine",
+   "amount": 165,
+   "unit": "g"
+  }
+ ],
+ "170g de mascobado": [
+  {
+   "name": "mascobado",
+   "amount": 170,
+   "unit": "g"
+  }
+ ],
+ "170g de pépites de chocolat + 40g pour le dessus": [
+  {
+   "name": "pépite de chocolat",
+   "amount": 170,
+   "unit": "g"
+  }
+ ],
+ "170g de tomates cerises": [
+  {
+   "name": "tomate cerise",
+   "amount": 170,
+   "unit": "g"
+  }
+ ],
+ "170ml d’eau": [
+  {
+   "name": "eau",
+   "amount": 170,
+   "unit": "ml"
+  }
+ ],
+ "175g de beurre demi-sel ou beurre doux + 1 pincée de sel": [
+  {
+   "name": "beurre demi-sel",
+   "amount": 175,
+   "unit": "g"
+  },
+  {
+   "name": "sel",
+   "amount": 1,
+   "unit": "pincée"
+  }
+ ],
+ "175g de brocolis": [
+  {
+   "name": "brocoli",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de farine au choix": [
+  {
+   "name": "farine",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de farine de blé T65": [
+  {
+   "name": "farine de blé t65",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de farine de blé T80": [
+  {
+   "name": "farine de blé t80",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de lardons végétaux La Vie": [
+  {
+   "name": "lardon végétal la vie",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de légumineuses (50%) et céréales complètes (50%) mélangées (orge, épeautre, lentilles brunes, haricots coco)": [
+  {
+   "name": "mélange de légumineuses et céréales complètes",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de lentilles corail": [
+  {
+   "name": "lentille corail",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de mascobado": [
+  {
+   "name": "mascobado",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de yaourt nature": [
+  {
+   "name": "yaourt nature",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "175g de yaourt végétal au choix": [
+  {
+   "name": "yaourt végétal",
+   "amount": 175,
+   "unit": "g"
+  }
+ ],
+ "18-20 tomates cerises": [
+  {
+   "name": "tomate cerise",
+   "amount": 18
+  }
+ ],
+ "180g d’huile de coco désodorisée": [
+  {
+   "name": "huile de coco désodorisée",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de beurre ou margarine": [
+  {
+   "name": "beurre",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de champignons de Paris": [
+  {
+   "name": "champignon de paris",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de conchiglie": [
+  {
+   "name": "conchiglie",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de farine": [
+  {
+   "name": "farine",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de farine d'amande": [
+  {
+   "name": "farine d'amande",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de feta": [
+  {
+   "name": "feta",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de feta émietté": [
+  {
+   "name": "feta",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de flocons d’avoine": [
+  {
+   "name": "flocon d'avoine",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de pâtes coquilles géantes": [
+  {
+   "name": "pâtes coquilles géantes",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180g de pois chiches cuits": [
+  {
+   "name": "pois chiche",
+   "amount": 180,
+   "unit": "g"
+  }
+ ],
+ "180ml d’eau (ajuster si besoin)": [
+  {
+   "name": "eau",
+   "amount": 180,
+   "unit": "ml"
+  }
+ ],
+ "180ml de lait d’amande tiède": [
+  {
+   "name": "lait d'amande",
+   "amount": 180,
+   "unit": "ml"
+  }
+ ],
+ "180ml de lait de coco": [
+  {
+   "name": "lait de coco",
+   "amount": 180,
+   "unit": "ml"
+  }
+ ],
+ "180ml de lait végétal": [
+  {
+   "name": "lait végétal",
+   "amount": 180,
+   "unit": "ml"
+  }
+ ],
+ "180ml de lait végétal neutre": [
+  {
+   "name": "lait végétal neutre",
+   "amount": 180,
+   "unit": "ml"
+  }
+ ],
+ "180ml de yaourt nature": [
+  {
+   "name": "yaourt nature",
+   "amount": 180,
+   "unit": "ml"
+  }
+ ],
+ "185g de beurre de cacahuète": [
+  {
+   "name": "beurre de cacahuète",
+   "amount": 185,
+   "unit": "g"
+  }
+ ],
+ "18g de levure fraîche ou 7g de levure sèche": [
+  {
+   "name": "levure fraîche",
+   "amount": 18,
+   "unit": "g"
+  }
+ ],
+ "190g de farine de blé": [
+  {
+   "name": "farine de blé",
+   "amount": 190,
+   "unit": "g"
+  }
+ ],
+ "190ml de crème de coco": [
+  {
+   "name": "crème de coco",
+   "amount": 190,
+   "unit": "ml"
+  }
+ ],
+ "190ml de crème de soja": [
+  {
+   "name": "crème de soja",
+   "amount": 190,
+   "unit": "ml"
+  }
+ ],
+ "1cuillère à café de curcuma en poudre": [
+  {
+   "name": "curcuma",
+   "amount": 1,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1g de sel": [
+  {
+   "name": "sel",
+   "amount": 1,
+   "unit": "g"
+  }
+ ],
+ "1kg d'aubergines": [
+  {
+   "name": "aubergine",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1kg d’épinards surgelés": [
+  {
+   "name": "épinard surgelé",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1kg d'oignons jaunes": [
+  {
+   "name": "oignon jaune",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1kg de brocoli rave (cime di rape)": [
+  {
+   "name": "brocoli rave",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1kg de fèves fraîches": [
+  {
+   "name": "fève",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1kg de poivrons rouge sans la peau": [
+  {
+   "name": "poivron rouge",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1kg de pommes de terre": [
+  {
+   "name": "pomme de terre",
+   "amount": 1,
+   "unit": "kg"
+  }
+ ],
+ "1L d’eau": [
+  {
+   "name": "eau",
+   "amount": 1,
+   "unit": "l"
+  }
+ ],
+ "1L d’huile pour friture": [
+  {
+   "name": "huile de friture",
+   "amount": 1,
+   "unit": "l"
+  }
+ ],
+ "1L de bouillon de légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 1,
+   "unit": "l"
+  }
+ ],
+ "1L de lait de soja": [
+  {
+   "name": "lait de soja",
+   "amount": 1,
+   "unit": "l"
+  }
+ ],
+ "1l. de lait végétal neutre": [
+  {
+   "name": "lait végétal neutre",
+   "amount": 1,
+   "unit": "l"
+  }
+ ],
+ "2 + 2 oeufs": [
+  {
+   "name": "oeuf",
+   "amount": 4
+  }
+ ],
+ "2 à 4 figues (selon la taille)": [
+  {
+   "name": "figue",
+   "amount": 2
+  }
+ ],
+ "2 aubergines": [
+  {
+   "name": "aubergine",
+   "amount": 2
+  }
+ ],
+ "2 aubergines moyenne": [
+  {
+   "name": "aubergine",
+   "amount": 2
+  }
+ ],
+ "2 bagel": [
+  {
+   "name": "bagel",
+   "amount": 2
+  }
+ ],
+ "2 bagels": [
+  {
+   "name": "bagel",
+   "amount": 2
+  }
+ ],
+ "2 bagels au sésame": [
+  {
+   "name": "bagel au sésame",
+   "amount": 2
+  }
+ ],
+ "2 bananes": [
+  {
+   "name": "banane",
+   "amount": 2
+  }
+ ],
+ "2 bananes pas trop mûres": [
+  {
+   "name": "banane",
+   "amount": 2
+  }
+ ],
+ "2 bâtons de citronnelle": [
+  {
+   "name": "bâton de citronnelle",
+   "amount": 2
+  }
+ ],
+ "2 belles courgettes": [
+  {
+   "name": "courgette",
+   "amount": 2
+  }
+ ],
+ "2 belles cuillères à soupe de sauce soja": [
+  {
+   "name": "sauce soja",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 belles patates douces": [
+  {
+   "name": "patate douce",
+   "amount": 2
+  }
+ ],
+ "2 belles poignées d’épinards frais": [
+  {
+   "name": "épinard",
+   "amount": 2,
+   "unit": "poignée"
+  }
+ ],
+ "2 belles poignées de mâche": [
+  {
+   "name": "mâche",
+   "amount": 2,
+   "unit": "poignée"
+  }
+ ],
+ "2 belles tomates, coupées en tranches": [
+  {
+   "name": "tomate",
+   "amount": 2
+  }
+ ],
+ "2 betteraves crues": [
+  {
+   "name": "betterave",
+   "amount": 2
+  }
+ ],
+ "2 betteraves jaunes crues": [
+  {
+   "name": "betterave jaune",
+   "amount": 2
+  }
+ ],
+ "2 betteraves jaunes crues (de la taille d'une mandarine environ)": [
+  {
+   "name": "betterave jaune",
+   "amount": 2
+  }
+ ],
+ "2 betteraves rouges crues": [
+  {
+   "name": "betterave rouge",
+   "amount": 2
+  }
+ ],
+ "2 blancs de poireaux": [
+  {
+   "name": "blanc de poireau",
+   "amount": 2
+  }
+ ],
+ "2 blancs de poireaux peu épais": [
+  {
+   "name": "blanc de poireau",
+   "amount": 2
+  }
+ ],
+ "2 boites de pois chiches soit 480g de pois chiches cuits rincés et égouttés": [
+  {
+   "name": "pois chiche",
+   "amount": 2,
+   "unit": "boite"
+  }
+ ],
+ "2 bok choy": [
+  {
+   "name": "bok choy",
+   "amount": 2
+  }
+ ],
+ "2 bokchoy": [
+  {
+   "name": "bok choy",
+   "amount": 2
+  }
+ ],
+ "2 branches d’origan": [
+  {
+   "name": "origan",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de céleri": [
+  {
+   "name": "céleri",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de coriandre": [
+  {
+   "name": "coriandre",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de kale ou pousses d’épinard": [
+  {
+   "name": "kale",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de menthe": [
+  {
+   "name": "menthe",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de menthe fraîche": [
+  {
+   "name": "menthe",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de persil ciselé": [
+  {
+   "name": "persil",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de persil frais": [
+  {
+   "name": "persil",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de persil plat": [
+  {
+   "name": "persil plat",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de thym frais": [
+  {
+   "name": "thym",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 branches de tomates cerises (6-8 tomates par branche)": [
+  {
+   "name": "tomate cerise",
+   "amount": 2,
+   "unit": "branche"
+  }
+ ],
+ "2 buns à burger": [
+  {
+   "name": "bun à burger",
+   "amount": 2
+  }
+ ],
+ "2 buns à la patate douce": [
+  {
+   "name": "bun à la patate douce",
+   "amount": 2
+  }
+ ],
+ "2 carottes": [
+  {
+   "name": "carotte",
+   "amount": 2
+  }
+ ],
+ "2 cébettes": [
+  {
+   "name": "cébette",
+   "amount": 2
+  }
+ ],
+ "2 cébettes en julienne": [
+  {
+   "name": "cébette",
+   "amount": 2
+  }
+ ],
+ "2 chili broyé": [
+  {
+   "name": "chili",
+   "amount": 2
+  }
+ ],
+ "2 choux pak choï": [
+  {
+   "name": "chou pak choy",
+   "amount": 2
+  }
+ ],
+ "2 choux pak choy": [
+  {
+   "name": "chou pak choy",
+   "amount": 2
+  }
+ ],
+ "2 ciboules": [
+  {
+   "name": "ciboule",
+   "amount": 2
+  }
+ ],
+ "2 clémentines": [
+  {
+   "name": "clémentine",
+   "amount": 2
+  }
+ ],
+ "2 clous de girofle": [
+  {
+   "name": "clou de girofle",
+   "amount": 2
+  }
+ ],
+ "2 courgette": [
+  {
+   "name": "courgette",
+   "amount": 2
+  }
+ ],
+ "2 courgettes": [
+  {
+   "name": "courgette",
+   "amount": 2
+  }
+ ],
+ "2 courgettes de taille moyenne": [
+  {
+   "name": "courgette",
+   "amount": 2
+  }
+ ],
+ "2 courgettes de taille moyenne avec leur fleur": [
+  {
+   "name": "courgette avec fleur",
+   "amount": 2
+  }
+ ],
+ "2 cubes de bouillon de légumes": [
+  {
+   "name": "cube de bouillon de légumes",
+   "amount": 2
+  }
+ ],
+ "2 cuillère à café d’extrait de vanille": [
+  {
+   "name": "extrait de vanille",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à café d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à café de graines de sésame": [
+  {
+   "name": "graine de sésame",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à café de miel": [
+  {
+   "name": "miel",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à café de moutarde": [
+  {
+   "name": "moutarde",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à café de sucre (10g)": [
+  {
+   "name": "sucre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à café de vinaigre de vin blanc": [
+  {
+   "name": "vinaigre de vin blanc",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillère à soupe d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillère à soupe de crème d’artichaut": [
+  {
+   "name": "crème d'artichaut",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillère à soupe de pesto": [
+  {
+   "name": "pesto",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillère à soupe de vin blanc": [
+  {
+   "name": "vin blanc",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillère à soupe de vinaigre balsamique": [
+  {
+   "name": "vinaigre balsamique",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillère s à soupe de jus de citron": [
+  {
+   "name": "jus de citron",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à café d’ail en poudre": [
+  {
+   "name": "ail en poudre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d’extrait de vanille": [
+  {
+   "name": "extrait de vanille",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d’huile de coco": [
+  {
+   "name": "huile de coco",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d’huile de sésame": [
+  {
+   "name": "huile de sésame",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d’huile de tournesol": [
+  {
+   "name": "huile de tournesol",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d'huile neutre": [
+  {
+   "name": "huile neutre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d'huile pimentée (à adapter selon votre goût et tolérance)": [
+  {
+   "name": "huile pimentée",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d'origan": [
+  {
+   "name": "origan",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café d'origan séché": [
+  {
+   "name": "origan séché",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de beurre": [
+  {
+   "name": "beurre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de beurre ou margarine": [
+  {
+   "name": "beurre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de beurre2 buns ou petits pains": [
+  {
+   "name": "beurre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  },
+  {
+   "name": "bun",
+   "amount": 2
+  }
+ ],
+ "2 cuillères à café de cassonade": [
+  {
+   "name": "cassonade",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de concentré de tomate": [
+  {
+   "name": "concentré de tomate",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de concentré de tomates": [
+  {
+   "name": "concentré de tomate",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de coriandre moulue": [
+  {
+   "name": "coriandre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de crème fraiche": [
+  {
+   "name": "crème fraîche",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de cumin": [
+  {
+   "name": "cumin",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de curcuma": [
+  {
+   "name": "curcuma",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de curry": [
+  {
+   "name": "curry",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de curry vert": [
+  {
+   "name": "curry vert",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de farine": [
+  {
+   "name": "farine",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de garam masala": [
+  {
+   "name": "garam masala",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de gingembre": [
+  {
+   "name": "gingembre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de gingembre frais": [
+  {
+   "name": "gingembre frais",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de gomasio": [
+  {
+   "name": "gomasio",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de graines de chanvre": [
+  {
+   "name": "graine de chanvre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de jus de citron": [
+  {
+   "name": "jus de citron",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de levure sans gluten": [
+  {
+   "name": "levure sans gluten",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de margarine": [
+  {
+   "name": "margarine",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de mascobado": [
+  {
+   "name": "mascobado",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de mélange à la thaïlandaise Picard (ou mélange d’herbe asiatiques)": [
+  {
+   "name": "mélange à la thaïlandaise picard",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de miel": [
+  {
+   "name": "miel",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de miel ou de sirop d’agave": [
+  {
+   "name": "miel",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de miel ou sirop d’érable": [
+  {
+   "name": "miel",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de moutarde": [
+  {
+   "name": "moutarde",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de paprika": [
+  {
+   "name": "paprika",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de paprika fumé": [
+  {
+   "name": "paprika fumé",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de pâte de curry rouge": [
+  {
+   "name": "pâte de curry rouge",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de pesto": [
+  {
+   "name": "pesto",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de piment en flocons": [
+  {
+   "name": "piment en flocons",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de poudre de matcha": [
+  {
+   "name": "poudre de matcha",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de purée de sésame": [
+  {
+   "name": "purée de sésame",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de romarin": [
+  {
+   "name": "romarin",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sauce": [
+  {
+   "name": "sauce",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sauce soja": [
+  {
+   "name": "sauce soja",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sauce soja salée": [
+  {
+   "name": "sauce soja salée",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sauce sriracha": [
+  {
+   "name": "sauce sriracha",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sel": [
+  {
+   "name": "sel",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sésame": [
+  {
+   "name": "sésame",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sirop d’agave": [
+  {
+   "name": "sirop d'agave",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sirop d'agave ou sucre": [
+  {
+   "name": "sirop d'agave",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sirop d'érable": [
+  {
+   "name": "sirop d'érable",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sirop d'érable (ou miel)": [
+  {
+   "name": "sirop d'érable",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sucre": [
+  {
+   "name": "sucre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sucre complet": [
+  {
+   "name": "sucre complet",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de sucre roux": [
+  {
+   "name": "sucre roux",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de thym": [
+  {
+   "name": "thym",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de thym sec": [
+  {
+   "name": "thym séché",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de thym séché": [
+  {
+   "name": "thym séché",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de thym séché (ou origan)": [
+  {
+   "name": "thym séché",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de velours (ou vinaigre) balsamique": [
+  {
+   "name": "vinaigre balsamique",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre": [
+  {
+   "name": "vinaigre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre balsamique": [
+  {
+   "name": "vinaigre balsamique",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre de cidre": [
+  {
+   "name": "vinaigre de cidre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre de cidre ou de vin rouge": [
+  {
+   "name": "vinaigre de cidre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre de riz": [
+  {
+   "name": "vinaigre de riz",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre de riz ou de cidre": [
+  {
+   "name": "vinaigre de riz",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de vinaigre de vin rouge ou de cidre": [
+  {
+   "name": "vinaigre de vin rouge",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de zaatar": [
+  {
+   "name": "zaatar",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de zaatar (ou mélange d'épices de votre choix)": [
+  {
+   "name": "zaatar",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café de zeste d’orange": [
+  {
+   "name": "zeste d'orange",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café rase de levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café rase de maïzena": [
+  {
+   "name": "maïzena",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café rase de miel": [
+  {
+   "name": "miel",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à café rase de sucre": [
+  {
+   "name": "sucre",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 cuillères à soupe + 1 cuillère à café d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe à soupe de pistaches hachées": [
+  {
+   "name": "pistache",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’amandes entières": [
+  {
+   "name": "amande entière",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’amaretto": [
+  {
+   "name": "amaretto",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'arachides toastées": [
+  {
+   "name": "arachide toastée",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'eau": [
+  {
+   "name": "eau",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’eau chaude": [
+  {
+   "name": "eau",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'éclats de pistaches": [
+  {
+   "name": "éclat de pistache",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’épices cajun": [
+  {
+   "name": "épices cajun",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'épices pour pizza": [
+  {
+   "name": "épices pour pizza",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'herbes fraîches ou séchées comme ciboulette et/ou persil": [
+  {
+   "name": "herbes fraîches",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile": [
+  {
+   "name": "huile",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile d’amande": [
+  {
+   "name": "huile d'amande",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile d'olive -": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'huile d'olive1 gousse d'ail": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  },
+  {
+   "name": "ail",
+   "amount": 1,
+   "unit": "gousse"
+  }
+ ],
+ "2 cuillères à soupe d'huile de colza": [
+  {
+   "name": "huile de colza",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile de sésame": [
+  {
+   "name": "huile de sésame",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile de sésame grillé": [
+  {
+   "name": "huile de sésame grillée",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile de tournesol": [
+  {
+   "name": "huile de tournesol",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d'huile de votre choix": [
+  {
+   "name": "huile",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile neutre": [
+  {
+   "name": "huile neutre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile végétale": [
+  {
+   "name": "huile végétale",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe d’huile végétale neutre": [
+  {
+   "name": "huile végétale neutre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de baies de gojii": [
+  {
+   "name": "baie de goji",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de beurre": [
+  {
+   "name": "beurre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de beurre de cacahuète": [
+  {
+   "name": "beurre de cacahuète",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de beurre de cacahuètes": [
+  {
+   "name": "beurre de cacahuète",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de beurre ou margarine": [
+  {
+   "name": "beurre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de beurre, fondu": [
+  {
+   "name": "beurre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de cacao maigre": [
+  {
+   "name": "cacao maigre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de cacao maigre en poudre": [
+  {
+   "name": "cacao maigre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de cannelle": [
+  {
+   "name": "cannelle",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de câpres": [
+  {
+   "name": "câpre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de chapelure": [
+  {
+   "name": "chapelure",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de chermoula (si vous n’en avez pas, pas de panique, remplacez par ⅓ de paprika, ⅓ de cumin en poudre et ⅓ de coriandre en poudre)": [
+  {
+   "name": "chermoula",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de cognac": [
+  {
+   "name": "cognac",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de concentré de tomate": [
+  {
+   "name": "concentré de tomate",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de concentré de tomates": [
+  {
+   "name": "concentré de tomate",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de crème d'avoine": [
+  {
+   "name": "crème d'avoine",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de crème végétale": [
+  {
+   "name": "crème végétale",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de curry": [
+  {
+   "name": "curry",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de de yaourt végétal neutre": [
+  {
+   "name": "yaourt végétal neutre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de farine": [
+  {
+   "name": "farine",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de farine de blé": [
+  {
+   "name": "farine de blé",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de farine sans gluten": [
+  {
+   "name": "farine sans gluten",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de fécule": [
+  {
+   "name": "fécule",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de fécule de maïs": [
+  {
+   "name": "fécule de maïs",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de fécule de pomme de terre": [
+  {
+   "name": "fécule de pomme de terre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de flocons d'avoine": [
+  {
+   "name": "flocon d'avoine",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de fromage au choix": [
+  {
+   "name": "fromage",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de fromage frais": [
+  {
+   "name": "fromage frais",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de gomasio": [
+  {
+   "name": "gomasio",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de graines de chia": [
+  {
+   "name": "graine de chia",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de graines de lin": [
+  {
+   "name": "graine de lin",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de graines de sésame": [
+  {
+   "name": "graine de sésame",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de graines de tournesol": [
+  {
+   "name": "graine de tournesol",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de houmous": [
+  {
+   "name": "houmous",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de jus de citron": [
+  {
+   "name": "jus de citron",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de jus de citron vert": [
+  {
+   "name": "jus de citron vert",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de ketchup": [
+  {
+   "name": "ketchup",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de lait de soja": [
+  {
+   "name": "lait de soja",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de lait demi-écrémé": [
+  {
+   "name": "lait demi-écrémé",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de lait végétal": [
+  {
+   "name": "lait végétal",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de levure maltée": [
+  {
+   "name": "levure maltée",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de maïs en boîte": [
+  {
+   "name": "maïs",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de margarine": [
+  {
+   "name": "margarine",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de mascobado": [
+  {
+   "name": "mascobado",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de mayonnaise": [
+  {
+   "name": "mayonnaise",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de miel": [
+  {
+   "name": "miel",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de moutarde": [
+  {
+   "name": "moutarde",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de moutarde forte": [
+  {
+   "name": "moutarde forte",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de mulberries (en magasin bio)": [
+  {
+   "name": "mulberries",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de parmesan": [
+  {
+   "name": "parmesan",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de parmesan râpé": [
+  {
+   "name": "parmesan",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de pâte à tartiner": [
+  {
+   "name": "pâte à tartiner",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de pepperoncini": [
+  {
+   "name": "pepperoncini",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de persil haché": [
+  {
+   "name": "persil",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de pesto": [
+  {
+   "name": "pesto",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de pesto de basilic": [
+  {
+   "name": "pesto de basilic",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de pignons de pin": [
+  {
+   "name": "pignon de pin",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de pistaches concassées": [
+  {
+   "name": "pistache",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de poudre d’amandes": [
+  {
+   "name": "poudre d'amande",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de poudre de baobab": [
+  {
+   "name": "poudre de baobab",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de psyllium": [
+  {
+   "name": "psyllium",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de ricotta": [
+  {
+   "name": "ricotta",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de salicornes": [
+  {
+   "name": "salicorne",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce barbecue": [
+  {
+   "name": "sauce barbecue",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce buffalo": [
+  {
+   "name": "sauce buffalo",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce burger": [
+  {
+   "name": "sauce burger",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce hoisin": [
+  {
+   "name": "sauce hoisin",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce soja": [
+  {
+   "name": "sauce soja",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce soja salée": [
+  {
+   "name": "sauce soja salée",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce soja sucrée": [
+  {
+   "name": "sauce soja sucrée",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce sriracha": [
+  {
+   "name": "sauce sriracha",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce tamari": [
+  {
+   "name": "sauce tamari",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sauce Teriyaki": [
+  {
+   "name": "sauce teriyaki",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de semoule": [
+  {
+   "name": "semoule",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sésame noir": [
+  {
+   "name": "sésame noir",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sirop d’agave": [
+  {
+   "name": "sirop d'agave",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sirop d'érable": [
+  {
+   "name": "sirop d'érable",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de skyr": [
+  {
+   "name": "skyr",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de soja": [
+  {
+   "name": "soja",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de Sriracha": [
+  {
+   "name": "sriracha",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sucre": [
+  {
+   "name": "sucre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sucre brun": [
+  {
+   "name": "sucre brun",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de sucre glace": [
+  {
+   "name": "sucre glace",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de tahini": [
+  {
+   "name": "tahini",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de tamari": [
+  {
+   "name": "tamari",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de thym séché": [
+  {
+   "name": "thym séché",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de véganaise": [
+  {
+   "name": "véganaise",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre": [
+  {
+   "name": "vinaigre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre balsamique": [
+  {
+   "name": "vinaigre balsamique",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre de cidre": [
+  {
+   "name": "vinaigre de cidre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre de riz": [
+  {
+   "name": "vinaigre de riz",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre de vin": [
+  {
+   "name": "vinaigre de vin",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre de vin blanc": [
+  {
+   "name": "vinaigre de vin blanc",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de vinaigre de vin blanc ou cidre": [
+  {
+   "name": "vinaigre de vin blanc",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de yaourt de chèvre": [
+  {
+   "name": "yaourt de chèvre",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de yaourt grec": [
+  {
+   "name": "yaourt grec",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe de yaourt végétal": [
+  {
+   "name": "yaourt végétal",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe rase ciboulette ciselée": [
+  {
+   "name": "ciboulette",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe rase de noix de coco râpée": [
+  {
+   "name": "noix de coco râpée",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe rase de pâte de curry rouge thaï": [
+  {
+   "name": "pâte de curry rouge thaï",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe rase de pistaches concassées": [
+  {
+   "name": "pistache",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe rases de mélasse noire": [
+  {
+   "name": "mélasse noire",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à soupe sirop d'érable": [
+  {
+   "name": "sirop d'érable",
+   "amount": 2,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "2 cuillères à thé de graines de lin": [
+  {
+   "name": "graine de lin",
+   "amount": 2,
+   "unit": "cuillère à café"
+  }
+ ],
+ "2 dattes dénoyautées": [
+  {
+   "name": "datte",
+   "amount": 2
+  }
+ ],
+ "2 demi-baguettes": [
+  {
+   "name": "demi-baguette",
+   "amount": 2
+  }
+ ],
+ "2 dos de cabillaud.": [
+  {
+   "name": "dos de cabillaud",
+   "amount": 2
+  }
+ ],
+ "2 échalotes": [
+  {
+   "name": "échalote",
+   "amount": 2
+  }
+ ],
+ "2 espresso allongés": [
+  {
+   "name": "espresso allongé",
+   "amount": 2
+  }
+ ],
+ "2 feuille de brick": [
+  {
+   "name": "feuille de brick",
+   "amount": 2
+  }
+ ],
+ "2 feuilles d'algue nori": [
+  {
+   "name": "feuille d'algue nori",
+   "amount": 2
+  }
+ ],
+ "2 feuilles de basilic frais": [
+  {
+   "name": "feuille de basilic",
+   "amount": 2
+  }
+ ],
+ "2 feuilles de laurier": [
+  {
+   "name": "feuille de laurier",
+   "amount": 2
+  }
+ ],
+ "2 figues": [
+  {
+   "name": "figue",
+   "amount": 2
+  }
+ ],
+ "2 filets d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 2,
+   "unit": "filet"
+  }
+ ],
+ "2 filets de cabillaud": [
+  {
+   "name": "filet de cabillaud",
+   "amount": 2
+  }
+ ],
+ "2 filets de lieu noir": [
+  {
+   "name": "filet de lieu noir",
+   "amount": 2
+  }
+ ],
+ "2 filets de saumon": [
+  {
+   "name": "filet de saumon",
+   "amount": 2
+  }
+ ],
+ "2 filets de saumon avec peau": [
+  {
+   "name": "filet de saumon",
+   "amount": 2
+  }
+ ],
+ "2 filets ou pavés de saumon (ou truite)": [
+  {
+   "name": "filet de saumon",
+   "amount": 2
+  }
+ ],
+ "2 fleurets de brocolis": [
+  {
+   "name": "fleuret de brocoli",
+   "amount": 2
+  }
+ ],
+ "2 fruits de la passion": [
+  {
+   "name": "fruit de la passion",
+   "amount": 2
+  }
+ ]
+}

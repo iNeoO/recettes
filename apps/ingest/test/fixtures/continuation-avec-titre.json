@@ -1,0 +1,167 @@
+{
+  "book": 1,
+  "page": 450,
+  "items": [
+    {
+      "str": "C o u s c o u s",
+      "x": 133.57,
+      "y": 730.46,
+      "width": 130.4,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 263.97,
+      "y": 730.46,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "d e",
+      "x": 291.18,
+      "y": 730.46,
+      "width": 26.53,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 317.71,
+      "y": 730.46,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "l é g u m e s",
+      "x": 344.92,
+      "y": 730.46,
+      "width": 117,
+      "size": 40.01
+    },
+    {
+      "str": "e t",
+      "x": 122.45,
+      "y": 698.95,
+      "width": 23.17,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 145.61,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "s a u c i s s e s",
+      "x": 172.82,
+      "y": 698.95,
+      "width": 134.84,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 307.67,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "d e",
+      "x": 334.87,
+      "y": 698.95,
+      "width": 26.53,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 361.4,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "s e i t a n",
+      "x": 388.61,
+      "y": 698.95,
+      "width": 85.83,
+      "size": 40.01
+    },
+    {
+      "str": "2 portions",
+      "x": 506.66,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "Mélanger avec le concentré de tomate, le paprika et les graines de cumin.",
+      "x": 92.98,
+      "y": 595.55,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "Incorporer tous les légumes et mélanger avec les épices. . Verser les tomates avec",
+      "x": 92.98,
+      "y": 581.3,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "leur jus et les écraser à la fourchette. Verser l’eau et saler. Porter à ébullition, puis",
+      "x": 92.98,
+      "y": 567.04,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "baisser le feu et faire mijoter pendant 20 minutes sous couvercle. Incorporer les",
+      "x": 92.98,
+      "y": 552.79,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "pois chiches et prolonger la cuisson 10 minutes, sans couvercle.",
+      "x": 92.98,
+      "y": 538.53,
+      "width": 314.74,
+      "size": 12
+    },
+    {
+      "str": "Pendant ce temps, préparer la semoule. Couvrir la semoule de son poids en eau",
+      "x": 92.98,
+      "y": 510.02,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "chaude salée. Couvrir et laisser reposer une dizaine de minutes.",
+      "x": 92.98,
+      "y": 495.77,
+      "width": 315.56,
+      "size": 12
+    },
+    {
+      "str": "Égrainer la semoule à la fourchette avant de servir.",
+      "x": 92.98,
+      "y": 467.26,
+      "width": 253.76,
+      "size": 12
+    },
+    {
+      "str": "Servir les légumes sur la semoule et accompagner de saucisses. Saupoudrer les",
+      "x": 92.98,
+      "y": 438.75,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "assiettes de persil frais et d’amandes effilées grillées.",
+      "x": 92.98,
+      "y": 424.49,
+      "width": 264.86,
+      "size": 12
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "book": 1,
+  "page": 388,
+  "items": [
+    {
+      "str": "D h a l",
+      "x": 160.86,
+      "y": 730.46,
+      "width": 66.94,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 227.8,
+      "y": 730.46,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "d e",
+      "x": 255.01,
+      "y": 730.46,
+      "width": 26.53,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 281.54,
+      "y": 730.46,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "l e n t i l l e s",
+      "x": 308.74,
+      "y": 730.46,
+      "width": 125.88,
+      "size": 40.01
+    },
+    {
+      "str": "c o r a i l",
+      "x": 114.35,
+      "y": 698.95,
+      "width": 85.03,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 199.38,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "&",
+      "x": 226.59,
+      "y": 698.95,
+      "width": 12.36,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 238.95,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "p a t a t e",
+      "x": 266.16,
+      "y": 698.95,
+      "width": 90.67,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 356.83,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "d o u c e",
+      "x": 384.04,
+      "y": 698.95,
+      "width": 77.38,
+      "size": 40.01
+    },
+    {
+      "str": "2 portions",
+      "x": 506.66,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "80g de lentilles corail",
+      "x": 31.6,
+      "y": 600.99,
+      "width": 80.15,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 31.6,
+      "y": 588.81,
+      "width": 4.27,
+      "size": 8.86
+    },
+    {
+      "str": "00g de patate douce",
+      "x": 35.86,
+      "y": 588.81,
+      "width": 74.42,
+      "size": 8.86
+    },
+    {
+      "str": "250",
+      "x": 31.6,
+      "y": 576.63,
+      "width": 13.7,
+      "size": 8.86
+    },
+    {
+      "str": "ml d'eau",
+      "x": 45.3,
+      "y": 576.63,
+      "width": 31.01,
+      "size": 8.86
+    },
+    {
+      "str": "7",
+      "x": 31.6,
+      "y": 564.45,
+      "width": 4.2,
+      "size": 8.86
+    },
+    {
+      "str": "0g de lait de coco",
+      "x": 35.79,
+      "y": 564.45,
+      "width": 63.63,
+      "size": 8.86
+    },
+    {
+      "str": "5",
+      "x": 31.6,
+      "y": 552.27,
+      "width": 4.52,
+      "size": 8.86
+    },
+    {
+      "str": "0g de tomates pelées",
+      "x": 36.12,
+      "y": 552.27,
+      "width": 76.69,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 31.6,
+      "y": 540.09,
+      "width": 3.82,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 35.42,
+      "y": 540.09,
+      "width": 3.05,
+      "size": 8.86
+    },
+    {
+      "str": "cuillère à café de curry doux",
+      "x": 37.11,
+      "y": 540.09,
+      "width": 104.46,
+      "size": 8.86
+    },
+    {
+      "str": "Peler et couper en dès la patate douce",
+      "x": 313.92,
+      "y": 636.8,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "et",
+      "x": 313.92,
+      "y": 620.3,
+      "width": 9.81,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 323.73,
+      "y": 620.3,
+      "width": 15.83,
+      "size": 12
+    },
+    {
+      "str": "les",
+      "x": 335.61,
+      "y": 620.3,
+      "width": 14.15,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 349.76,
+      "y": 620.3,
+      "width": 15.83,
+      "size": 12
+    },
+    {
+      "str": "mettre",
+      "x": 361.64,
+      "y": 620.3,
+      "width": 34.04,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 395.69,
+      "y": 620.3,
+      "width": 15.83,
+      "size": 12
+    },
+    {
+      "str": "dans",
+      "x": 407.57,
+      "y": 620.3,
+      "width": 23.97,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 431.54,
+      "y": 620.3,
+      "width": 15.83,
+      "size": 12
+    },
+    {
+      "str": "une",
+      "x": 443.42,
+      "y": 620.3,
+      "width": 18.76,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 462.18,
+      "y": 620.3,
+      "width": 15.83,
+      "size": 12
+    },
+    {
+      "str": "grande",
+      "x": 474.06,
+      "y": 620.3,
+      "width": 35.52,
+      "size": 12
+    },
+    {
+      "str": "casserole d'eau. Ajouter les lentilles.",
+      "x": 313.92,
+      "y": 603.79,
+      "width": 180.87,
+      "size": 12
+    },
+    {
+      "str": "Baisser le feu dès lors que le dhal",
+      "x": 313.92,
+      "y": 570.78,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "commence à frémir et ajouter : le curry,",
+      "x": 313.92,
+      "y": 554.27,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "les tomates, le lait de coco et le tofu",
+      "x": 313.92,
+      "y": 537.76,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "émietté. Couvrir et laisser mijoter à feu",
+      "x": 313.92,
+      "y": 521.26,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "moyen pendant environ 30min. Vous",
+      "x": 313.92,
+      "y": 504.75,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "devez remuer régulièrement et ajouter",
+      "x": 313.92,
+      "y": 488.25,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "un peu d’eau si nécessaire.",
+      "x": 313.92,
+      "y": 471.74,
+      "width": 131.66,
+      "size": 12
+    },
+    {
+      "str": "Le dhal est cuit quand vous obtenez",
+      "x": 313.92,
+      "y": 438.73,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "une texture crémeuse.",
+      "x": 313.92,
+      "y": 422.22,
+      "width": 110.36,
+      "size": 12
+    },
+    {
+      "str": "Servir avec le riz, un peu de coriandre",
+      "x": 313.92,
+      "y": 389.21,
+      "width": 195.66,
+      "size": 12
+    },
+    {
+      "str": "fraîche et un filet de jus de citron vert.",
+      "x": 313.92,
+      "y": 372.7,
+      "width": 190.4,
+      "size": 12
+    },
+    {
+      "str": "2 cuillères à soupe d’huile",
+      "x": 170.49,
+      "y": 600.56,
+      "width": 98.74,
+      "size": 9.42
+    },
+    {
+      "str": "d’olive",
+      "x": 170.49,
+      "y": 587.61,
+      "width": 25.39,
+      "size": 9.42
+    },
+    {
+      "str": "140",
+      "x": 170.49,
+      "y": 574.66,
+      "width": 14.18,
+      "size": 9.42
+    },
+    {
+      "str": "g de riz semi-complet",
+      "x": 184.67,
+      "y": 574.66,
+      "width": 83.26,
+      "size": 9.42
+    },
+    {
+      "str": "1",
+      "x": 170.49,
+      "y": 561.71,
+      "width": 4.06,
+      "size": 9.42
+    },
+    {
+      "str": " ",
+      "x": 174.56,
+      "y": 561.71,
+      "width": 3.05,
+      "size": 9.42
+    },
+    {
+      "str": "citron vert",
+      "x": 176.35,
+      "y": 561.71,
+      "width": 41.75,
+      "size": 9.42
+    },
+    {
+      "str": "300g de tofu rosso Taifun",
+      "x": 170.49,
+      "y": 548.76,
+      "width": 100.33,
+      "size": 9.42
+    },
+    {
+      "str": "(magasins bio)",
+      "x": 170.49,
+      "y": 535.82,
+      "width": 57.26,
+      "size": 9.42
+    }
+  ]
+}

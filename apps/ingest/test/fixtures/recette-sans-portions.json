@@ -1,0 +1,356 @@
+{
+  "book": 1,
+  "page": 187,
+  "items": [
+    {
+      "str": "Préchauffer le four à 185°C.",
+      "x": 101.12,
+      "y": 428.14,
+      "width": 132.32,
+      "size": 12
+    },
+    {
+      "str": "Dans un saladier, mélanger la farine, la levure alimentaire, le sel, la levure",
+      "x": 101.12,
+      "y": 395.13,
+      "width": 405.53,
+      "size": 12
+    },
+    {
+      "str": "chimique et le bicarbonate. Faire un puits au centre et verser le lait végétal, l’huile",
+      "x": 101.12,
+      "y": 378.62,
+      "width": 405.53,
+      "size": 12
+    },
+    {
+      "str": "et le jus de citron. Mélanger au fouet pour obtenir la pâte à cake.",
+      "x": 101.12,
+      "y": 362.12,
+      "width": 310.72,
+      "size": 12
+    },
+    {
+      "str": "Éplucher et émincer l’échalote. Ajouter toutes les garnitures dans la pâte (en garder",
+      "x": 101.12,
+      "y": 329.11,
+      "width": 405.53,
+      "size": 12
+    },
+    {
+      "str": "un peu en topping).",
+      "x": 101.12,
+      "y": 312.6,
+      "width": 95.54,
+      "size": 12
+    },
+    {
+      "str": "Déposer la pate dans des moules huilés. Décorer avec le reste de garniture.",
+      "x": 101.12,
+      "y": 279.59,
+      "width": 405.53,
+      "size": 12
+    },
+    {
+      "str": "Enfourner pour 35 minutes !",
+      "x": 101.12,
+      "y": 263.08,
+      "width": 138.47,
+      "size": 12
+    },
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "M i n i",
+      "x": 210.68,
+      "y": 730.66,
+      "width": 72.41,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 283.09,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "c a k e s",
+      "x": 309.62,
+      "y": 730.66,
+      "width": 75.18,
+      "size": 39.01
+    },
+    {
+      "str": "s a l é s",
+      "x": 131.76,
+      "y": 699.9,
+      "width": 66.99,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 198.75,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "a u x",
+      "x": 225.28,
+      "y": 699.9,
+      "width": 46.12,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 271.39,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "p e t i t s",
+      "x": 297.92,
+      "y": 699.9,
+      "width": 83.96,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 381.88,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "p o i s",
+      "x": 408.41,
+      "y": 699.9,
+      "width": 55.32,
+      "size": 39.01
+    },
+    {
+      "str": "150g de farine",
+      "x": 29.55,
+      "y": 600.69,
+      "width": 50.19,
+      "size": 8.86
+    },
+    {
+      "str": "20g de",
+      "x": 29.55,
+      "y": 588.88,
+      "width": 23.18,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 52.73,
+      "y": 588.88,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "levure maltée",
+      "x": 54.42,
+      "y": 588.88,
+      "width": 49.1,
+      "size": 8.86
+    },
+    {
+      "str": "1 cuillère à café de",
+      "x": 29.55,
+      "y": 577.07,
+      "width": 65.47,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 95.02,
+      "y": 577.07,
+      "width": 2.3,
+      "size": 8.86
+    },
+    {
+      "str": "levure chimique",
+      "x": 96.72,
+      "y": 577.07,
+      "width": 58.99,
+      "size": 8.86
+    },
+    {
+      "str": "1 cuillère à café de",
+      "x": 29.55,
+      "y": 565.26,
+      "width": 65.47,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 95.02,
+      "y": 565.26,
+      "width": 2.3,
+      "size": 8.86
+    },
+    {
+      "str": "bicarbonate de soude",
+      "x": 96.72,
+      "y": 565.26,
+      "width": 77.39,
+      "size": 8.86
+    },
+    {
+      "str": "Sel, poivre",
+      "x": 29.55,
+      "y": 553.45,
+      "width": 37.64,
+      "size": 8.86
+    },
+    {
+      "str": "150ml de",
+      "x": 29.55,
+      "y": 541.63,
+      "width": 32.26,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 61.81,
+      "y": 541.63,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "lait végétal",
+      "x": 63.5,
+      "y": 541.63,
+      "width": 39.36,
+      "size": 8.86
+    },
+    {
+      "str": "40ml d’",
+      "x": 29.55,
+      "y": 529.82,
+      "width": 26.47,
+      "size": 8.86
+    },
+    {
+      "str": "huile neutre",
+      "x": 56.02,
+      "y": 529.82,
+      "width": 44.61,
+      "size": 8.86
+    },
+    {
+      "str": "1/2",
+      "x": 29.55,
+      "y": 518.01,
+      "width": 11.22,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 40.77,
+      "y": 518.01,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "citron",
+      "x": 42.46,
+      "y": 518.01,
+      "width": 21.84,
+      "size": 8.86
+    },
+    {
+      "str": "100g de",
+      "x": 29.55,
+      "y": 506.2,
+      "width": 27.27,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 56.82,
+      "y": 506.2,
+      "width": 2.3,
+      "size": 8.86
+    },
+    {
+      "str": "petits pois blanchis ou surgelés",
+      "x": 58.52,
+      "y": 506.2,
+      "width": 112.55,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 494.39,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 494.39,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "échalote",
+      "x": 34.86,
+      "y": 494.39,
+      "width": 30.65,
+      "size": 8.86
+    },
+    {
+      "str": "Optionnel :",
+      "x": 29.55,
+      "y": 482.57,
+      "width": 40.44,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 70,
+      "y": 482.57,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "fromage râpé",
+      "x": 71.69,
+      "y": 482.57,
+      "width": 47.9,
+      "size": 8.86
+    },
+    {
+      "str": "Optionnel :",
+      "x": 29.55,
+      "y": 470.76,
+      "width": 40.44,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 70,
+      "y": 470.76,
+      "width": 2.29,
+      "size": 8.86
+    },
+    {
+      "str": "épices",
+      "x": 71.69,
+      "y": 470.76,
+      "width": 22.52,
+      "size": 8.86
+    }
+  ]
+}

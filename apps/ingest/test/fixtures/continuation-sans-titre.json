@@ -1,0 +1,48 @@
+{
+  "book": 2,
+  "page": 87,
+  "items": [
+    {
+      "str": "2 portions",
+      "x": 506.66,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "Laver et essorer la salade. Laver et couper les tomates en tranches. Ajouter selon",
+      "x": 101.11,
+      "y": 699.5,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "les goûts des crudités comme des carottes râpées ou de l’oignon rouge émincé.",
+      "x": 101.11,
+      "y": 682.99,
+      "width": 389.35,
+      "size": 12
+    },
+    {
+      "str": "Réchauffer les pains pita dans le four chaud pendant 1 minute.",
+      "x": 101.11,
+      "y": 649.98,
+      "width": 311.16,
+      "size": 12
+    },
+    {
+      "str": "Garnir chaque pita de feuilles de salade et de tomates. Couvrir de jackfruit et de",
+      "x": 101.11,
+      "y": 616.97,
+      "width": 413.68,
+      "size": 12
+    },
+    {
+      "str": "champignons, répartir les frites et arroser de sauce à l’ail.",
+      "x": 101.11,
+      "y": 600.46,
+      "width": 286.54,
+      "size": 12
+    }
+  ]
+}

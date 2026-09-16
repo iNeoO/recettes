@@ -1,0 +1,580 @@
+{
+  "book": 1,
+  "page": 114,
+  "items": [
+    {
+      "str": "P o k e b o w l",
+      "x": 167.51,
+      "y": 730.46,
+      "width": 136.12,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 303.63,
+      "y": 730.46,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "v e g g i e",
+      "x": 330.84,
+      "y": 730.46,
+      "width": 98.23,
+      "size": 40.01
+    },
+    {
+      "str": "s a u c e",
+      "x": 180.78,
+      "y": 698.95,
+      "width": 77.22,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 258.01,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "c r é m e u s e",
+      "x": 285.21,
+      "y": 698.95,
+      "width": 129.48,
+      "size": 40.01
+    },
+    {
+      "str": "2 portions",
+      "x": 506.66,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "140g de riz à sushi",
+      "x": 29.55,
+      "y": 600.32,
+      "width": 67.07,
+      "size": 8.86
+    },
+    {
+      "str": "10",
+      "x": 29.55,
+      "y": 588.14,
+      "width": 8.74,
+      "size": 8.86
+    },
+    {
+      "str": "cl de vinaigre de riz",
+      "x": 38.29,
+      "y": 588.14,
+      "width": 71.7,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 29.55,
+      "y": 575.96,
+      "width": 4.27,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.82,
+      "y": 575.96,
+      "width": 3.05,
+      "size": 8.86
+    },
+    {
+      "str": "cuillères à café rase",
+      "x": 35.5,
+      "y": 575.96,
+      "width": 72.51,
+      "size": 8.86
+    },
+    {
+      "str": "de sucre",
+      "x": 29.55,
+      "y": 563.78,
+      "width": 30.93,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 29.55,
+      "y": 551.6,
+      "width": 4.27,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.82,
+      "y": 551.6,
+      "width": 3.05,
+      "size": 8.86
+    },
+    {
+      "str": "cuillères à café de",
+      "x": 35.5,
+      "y": 551.6,
+      "width": 65.91,
+      "size": 8.86
+    },
+    {
+      "str": "purée de sésame",
+      "x": 29.55,
+      "y": 539.42,
+      "width": 60.77,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 29.55,
+      "y": 527.24,
+      "width": 4.27,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.82,
+      "y": 527.24,
+      "width": 3.05,
+      "size": 8.86
+    },
+    {
+      "str": "cuillères à café",
+      "x": 35.5,
+      "y": 527.24,
+      "width": 55.16,
+      "size": 8.86
+    },
+    {
+      "str": "d'huile de sésame",
+      "x": 29.55,
+      "y": 515.06,
+      "width": 64.63,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 29.55,
+      "y": 502.88,
+      "width": 4.27,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.82,
+      "y": 502.88,
+      "width": 3.05,
+      "size": 8.86
+    },
+    {
+      "str": "cuillères à café de",
+      "x": 35.5,
+      "y": 502.88,
+      "width": 65.91,
+      "size": 8.86
+    },
+    {
+      "str": "vinaigre de riz",
+      "x": 29.55,
+      "y": 490.69,
+      "width": 52.64,
+      "size": 8.86
+    },
+    {
+      "str": "2",
+      "x": 29.55,
+      "y": 478.51,
+      "width": 4.27,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.82,
+      "y": 478.51,
+      "width": 3.05,
+      "size": 8.86
+    },
+    {
+      "str": "cuillères à soupe de",
+      "x": 35.5,
+      "y": 478.51,
+      "width": 72.56,
+      "size": 8.86
+    },
+    {
+      "str": "sauce soja sucrée",
+      "x": 29.55,
+      "y": 466.33,
+      "width": 63.35,
+      "size": 8.86
+    },
+    {
+      "str": "Le jus d'un citron vert",
+      "x": 131.48,
+      "y": 600.46,
+      "width": 79.99,
+      "size": 8.86
+    },
+    {
+      "str": "Gingembre",
+      "x": 131.48,
+      "y": 588.27,
+      "width": 41.46,
+      "size": 8.86
+    },
+    {
+      "str": "Topping",
+      "x": 131.48,
+      "y": 576.09,
+      "width": 30.76,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 162.25,
+      "y": 576.09,
+      "width": 6.09,
+      "size": 8.86
+    },
+    {
+      "str": ": 1/2 avocat,",
+      "x": 165.62,
+      "y": 576.09,
+      "width": 42.79,
+      "size": 8.86
+    },
+    {
+      "str": "tomates cerises, mangue,",
+      "x": 131.48,
+      "y": 563.91,
+      "width": 91.42,
+      "size": 8.86
+    },
+    {
+      "str": "edamame, tofu mange",
+      "x": 131.48,
+      "y": 551.73,
+      "width": 80.78,
+      "size": 8.86
+    },
+    {
+      "str": "curry, oeuf mollet, chou",
+      "x": 131.48,
+      "y": 539.55,
+      "width": 87.4,
+      "size": 8.86
+    },
+    {
+      "str": "rouge, pousses de soja...",
+      "x": 131.48,
+      "y": 527.37,
+      "width": 86.3,
+      "size": 8.86
+    },
+    {
+      "str": "Pour la base de riz vinaigré : Laver le",
+      "x": 266.05,
+      "y": 636.8,
+      "width": 181.43,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 447.48,
+      "y": 636.8,
+      "width": 3.12,
+      "size": 12
+    },
+    {
+      "str": "riz jusqu’à ce",
+      "x": 449.83,
+      "y": 636.8,
+      "width": 65.53,
+      "size": 12
+    },
+    {
+      "str": "que l’eau soit claire.",
+      "x": 266.05,
+      "y": 620.3,
+      "width": 100.4,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 366.46,
+      "y": 620.3,
+      "width": 3.37,
+      "size": 12
+    },
+    {
+      "str": "Le mettre à cuire à couvert et",
+      "x": 368.98,
+      "y": 620.3,
+      "width": 146.38,
+      "size": 12
+    },
+    {
+      "str": "à",
+      "x": 266.05,
+      "y": 603.79,
+      "width": 5.78,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 271.83,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "feu",
+      "x": 280.21,
+      "y": 603.79,
+      "width": 16.22,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 296.43,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "vif",
+      "x": 304.81,
+      "y": 603.79,
+      "width": 13.04,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 317.85,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "avec",
+      "x": 326.22,
+      "y": 603.79,
+      "width": 22.25,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 348.47,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "200ml",
+      "x": 356.85,
+      "y": 603.79,
+      "width": 32.23,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 389.08,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "d’eau.",
+      "x": 397.45,
+      "y": 603.79,
+      "width": 29.67,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 427.12,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "A",
+      "x": 435.5,
+      "y": 603.79,
+      "width": 7.58,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 443.08,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "la",
+      "x": 451.46,
+      "y": 603.79,
+      "width": 9.44,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 460.9,
+      "y": 603.79,
+      "width": 11.16,
+      "size": 12
+    },
+    {
+      "str": "première",
+      "x": 469.27,
+      "y": 603.79,
+      "width": 46.08,
+      "size": 12
+    },
+    {
+      "str": "ébullition, baisser le feu sans ouvrir le couvercle.",
+      "x": 266.05,
+      "y": 587.28,
+      "width": 247.02,
+      "size": 12
+    },
+    {
+      "str": "Laisser cuire 10min.",
+      "x": 266.05,
+      "y": 570.78,
+      "width": 108.98,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 375.03,
+      "y": 570.78,
+      "width": 9.34,
+      "size": 12
+    },
+    {
+      "str": "Couper le feu et laisser",
+      "x": 382.04,
+      "y": 570.78,
+      "width": 133.32,
+      "size": 12
+    },
+    {
+      "str": "reposer à nouveau 10min, toujours sans ouvrir le",
+      "x": 266.05,
+      "y": 554.27,
+      "width": 249.3,
+      "size": 12
+    },
+    {
+      "str": "couvercle.",
+      "x": 266.05,
+      "y": 537.76,
+      "width": 50.91,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 316.97,
+      "y": 537.76,
+      "width": 3.05,
+      "size": 12
+    },
+    {
+      "str": "Faire refroidir.",
+      "x": 319.25,
+      "y": 537.76,
+      "width": 74.55,
+      "size": 12
+    },
+    {
+      "str": "Dans une casserole, faire chauffer les 10cl",
+      "x": 266.05,
+      "y": 504.75,
+      "width": 226.41,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 492.46,
+      "y": 504.75,
+      "width": 14.16,
+      "size": 12
+    },
+    {
+      "str": "de",
+      "x": 503.08,
+      "y": 504.75,
+      "width": 12.27,
+      "size": 12
+    },
+    {
+      "str": "vinaigre de riz avec le sucre et une pincée de sel.",
+      "x": 266.05,
+      "y": 488.25,
+      "width": 249.3,
+      "size": 12
+    },
+    {
+      "str": "Faire refroidir et ajouter au riz.",
+      "x": 266.05,
+      "y": 471.74,
+      "width": 155.74,
+      "size": 12
+    },
+    {
+      "str": "Pour la sauce : Mélanger la purée de sésame,",
+      "x": 266.05,
+      "y": 438.73,
+      "width": 249.3,
+      "size": 12
+    },
+    {
+      "str": "l'huile de sésame, le reste de vinaigre de riz, la",
+      "x": 266.05,
+      "y": 422.22,
+      "width": 249.3,
+      "size": 12
+    },
+    {
+      "str": "sauce soja sucrée, le jus de citron vert et le",
+      "x": 266.05,
+      "y": 405.71,
+      "width": 249.3,
+      "size": 12
+    },
+    {
+      "str": "gingembre.",
+      "x": 266.05,
+      "y": 389.21,
+      "width": 56.2,
+      "size": 12
+    },
+    {
+      "str": "Présentation : Placer le riz au fond d'un bol,",
+      "x": 266.05,
+      "y": 356.2,
+      "width": 249.3,
+      "size": 12
+    },
+    {
+      "str": "recouvrir du topping et verser la sauce dessus.",
+      "x": 266.05,
+      "y": 339.69,
+      "width": 230.91,
+      "size": 12
+    }
+  ]
+}

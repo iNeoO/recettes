@@ -1,0 +1,293 @@
+{
+  "book": 1,
+  "page": 54,
+  "items": [
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "B o w l",
+      "x": 238.56,
+      "y": 730.66,
+      "width": 65.97,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 304.53,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "d e",
+      "x": 331.06,
+      "y": 730.66,
+      "width": 25.87,
+      "size": 39.01
+    },
+    {
+      "str": "l é g u m e s",
+      "x": 195.36,
+      "y": 699.9,
+      "width": 114.08,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 309.43,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "r ô t i s",
+      "x": 335.96,
+      "y": 699.9,
+      "width": 64.18,
+      "size": 39.01
+    },
+    {
+      "str": "2 portions",
+      "x": 505.61,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "500g de carottes violettes, à",
+      "x": 29.55,
+      "y": 600.69,
+      "width": 104.32,
+      "size": 8.86
+    },
+    {
+      "str": "défaut des carottes",
+      "x": 29.55,
+      "y": 588.88,
+      "width": 71.72,
+      "size": 8.86
+    },
+    {
+      "str": "traditionnelles",
+      "x": 29.55,
+      "y": 577.07,
+      "width": 56.81,
+      "size": 8.86
+    },
+    {
+      "str": "1 fenouil",
+      "x": 29.55,
+      "y": 565.26,
+      "width": 32.99,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 553.45,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 553.45,
+      "width": 2.89,
+      "size": 8.86
+    },
+    {
+      "str": "oignons rouge",
+      "x": 35.3,
+      "y": 553.45,
+      "width": 54.1,
+      "size": 8.86
+    },
+    {
+      "str": "1 boite de pois chiches cuits",
+      "x": 29.55,
+      "y": 541.63,
+      "width": 105.54,
+      "size": 8.86
+    },
+    {
+      "str": "(220g environ)",
+      "x": 29.55,
+      "y": 529.82,
+      "width": 55.38,
+      "size": 8.86
+    },
+    {
+      "str": "1 cuillère à café rase de paprika",
+      "x": 29.55,
+      "y": 518.01,
+      "width": 119.07,
+      "size": 8.86
+    },
+    {
+      "str": "fumé",
+      "x": 29.55,
+      "y": 506.2,
+      "width": 19.27,
+      "size": 8.86
+    },
+    {
+      "str": "1 cuillère à café de romarin",
+      "x": 29.55,
+      "y": 494.39,
+      "width": 103.03,
+      "size": 8.86
+    },
+    {
+      "str": "Huile d'olive",
+      "x": 29.55,
+      "y": 482.57,
+      "width": 48.34,
+      "size": 8.86
+    },
+    {
+      "str": "Sel, poivre",
+      "x": 29.55,
+      "y": 470.76,
+      "width": 39.86,
+      "size": 8.86
+    },
+    {
+      "str": "Peler les carottes.",
+      "x": 187.23,
+      "y": 636.8,
+      "width": 90.44,
+      "size": 12
+    },
+    {
+      "str": "Couper les tiges des fenouils. Les garder pour une autre recette,",
+      "x": 187.23,
+      "y": 603.79,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "parfumer une soupe ou un bouillon par exemple. Couper la base",
+      "x": 187.23,
+      "y": 587.28,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "des bulbes et ôter la première épaisseur épaisse et coriace.",
+      "x": 187.23,
+      "y": 570.78,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "Laver soigneusement",
+      "x": 187.23,
+      "y": 554.27,
+      "width": 112.58,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 299.81,
+      "y": 554.27,
+      "width": 17.66,
+      "size": 12
+    },
+    {
+      "str": "les bulbes. Les couper en deux pour",
+      "x": 313.05,
+      "y": 554.27,
+      "width": 205.74,
+      "size": 12
+    },
+    {
+      "str": "retirer le coeur qui est fibreux et amer (la partie blanche au",
+      "x": 187.23,
+      "y": 537.76,
+      "width": 331.56,
+      "size": 12
+    },
+    {
+      "str": "centre du légume), puis couper en quartiers. Réserver les fanes",
+      "x": 187.23,
+      "y": 521.26,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "pour décorer le plat.",
+      "x": 187.23,
+      "y": 504.75,
+      "width": 104.7,
+      "size": 12
+    },
+    {
+      "str": "Peler les oignons et couper en quartiers.",
+      "x": 187.23,
+      "y": 471.74,
+      "width": 207.04,
+      "size": 12
+    },
+    {
+      "str": "Rincer et égoutter les pois chiches.",
+      "x": 187.23,
+      "y": 438.73,
+      "width": 178.52,
+      "size": 12
+    },
+    {
+      "str": "Disposer tous les légumes sur une plaque de four.",
+      "x": 187.23,
+      "y": 405.71,
+      "width": 255.2,
+      "size": 12
+    },
+    {
+      "str": "Mélanger 2 cuillères à soupe d'huile d'olive avec le paprika.",
+      "x": 187.23,
+      "y": 372.7,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "Arroser les légumes. Saupoudrer de romarin. Saler et poivrer au",
+      "x": 187.23,
+      "y": 356.2,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "moulin.",
+      "x": 187.23,
+      "y": 339.69,
+      "width": 39.84,
+      "size": 12
+    },
+    {
+      "str": "Enfourner 40min à 210°C en mélangeant à mi cuisson.",
+      "x": 187.23,
+      "y": 306.68,
+      "width": 276.74,
+      "size": 12
+    },
+    {
+      "str": "Garnir les légumes quelques fanes du fenouil coupés finement.",
+      "x": 187.23,
+      "y": 273.66,
+      "width": 331.57,
+      "size": 12
+    },
+    {
+      "str": "Servir avec une céréale comme du riz.",
+      "x": 187.23,
+      "y": 257.16,
+      "width": 193.81,
+      "size": 12
+    }
+  ]
+}

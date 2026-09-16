@@ -1,0 +1,2584 @@
+{
+  "-250ml de lait de coco": [
+    {
+      "name": "lait de coco",
+      "amount": 250,
+      "unit": "ml"
+    }
+  ],
+  "+ levure)": [
+    {
+      "name": "levure"
+    }
+  ],
+  "+/- 300 ml de bouillon": [
+    {
+      "name": "bouillon",
+      "amount": 300,
+      "unit": "ml"
+    }
+  ],
+  "+/- 400ml d'eau": [
+    {
+      "name": "eau",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "+/- 50 ml d'eau": [
+    {
+      "name": "eau",
+      "amount": 50,
+      "unit": "ml"
+    }
+  ],
+  "+/-100g de chapelure Panko": [
+    {
+      "name": "chapelure panko",
+      "amount": 100,
+      "unit": "g"
+    }
+  ],
+  "+/-100ml eau": [
+    {
+      "name": "eau",
+      "amount": 100,
+      "unit": "ml"
+    }
+  ],
+  "+/-80ml de lait végétal": [
+    {
+      "name": "lait végétal",
+      "amount": 80,
+      "unit": "ml"
+    }
+  ],
+  "+/-80ml de lait végétal (délicieux avec coco)": [
+    {
+      "name": "lait végétal",
+      "amount": 80,
+      "unit": "ml"
+    }
+  ],
+  "~110ml d’eau": [
+    {
+      "name": "eau",
+      "amount": 110,
+      "unit": "ml"
+    }
+  ],
+  "~12 cuillères à soupe de purée de tomates": [
+    {
+      "name": "purée de tomates",
+      "amount": 12,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "~200g polenta (1 volume)": [
+    {
+      "name": "polenta",
+      "amount": 200,
+      "unit": "g"
+    }
+  ],
+  "~3 cuillères à soupe de crème végétale (soja, coco, amande…)": [
+    {
+      "name": "crème végétale",
+      "amount": 3,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "~300ml d’eau + 1 bouillon cube aux légumes": [
+    {
+      "name": "eau",
+      "amount": 300,
+      "unit": "ml"
+    },
+    {
+      "name": "bouillon cube légumes",
+      "amount": 1
+    }
+  ],
+  "~350ml d’eau": [
+    {
+      "name": "eau",
+      "amount": 350,
+      "unit": "ml"
+    }
+  ],
+  "~800ml d'eau (3.5 volumes)": [
+    {
+      "name": "eau",
+      "amount": 800,
+      "unit": "ml"
+    }
+  ],
+  "1 + 1/2 cuillère à café de levure": [
+    {
+      "name": "levure",
+      "amount": 1.5,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 + 3 oeufs": [
+    {
+      "name": "oeuf",
+      "amount": 4
+    }
+  ],
+  "1 1/2 cuillère à soupe d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 1.5,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 1/2 litres d'eau": [
+    {
+      "name": "eau",
+      "amount": 1.5,
+      "unit": "litre"
+    }
+  ],
+  "1 à 2 cuillères à soupe de pâte miso": [
+    {
+      "name": "pâte miso",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 anis étoilé": [
+    {
+      "name": "anis étoilé",
+      "amount": 1
+    }
+  ],
+  "1 artichaut italien": [
+    {
+      "name": "artichaut italien",
+      "amount": 1
+    }
+  ],
+  "1 aubergine": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 aubergine (2 si elles sont petites)": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 aubergine (de taille moyenne)": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 aubergine (petite)": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 aubergine longue (325g de chair d'aubergine rôtie)": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 aubergine moyenne": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 avocat": [
+    {
+      "name": "avocat",
+      "amount": 1
+    }
+  ],
+  "1 avocat tranché": [
+    {
+      "name": "avocat",
+      "amount": 1
+    }
+  ],
+  "1 baguette": [
+    {
+      "name": "baguette",
+      "amount": 1
+    }
+  ],
+  "1 baguette de pain": [
+    {
+      "name": "baguette",
+      "amount": 1
+    }
+  ],
+  "1 banane": [
+    {
+      "name": "banane",
+      "amount": 1
+    }
+  ],
+  "1 banane (écrasée)": [
+    {
+      "name": "banane",
+      "amount": 1
+    }
+  ],
+  "1 banane congelée": [
+    {
+      "name": "banane",
+      "amount": 1
+    }
+  ],
+  "1 banane plantain bien mûre": [
+    {
+      "name": "banane plantain",
+      "amount": 1
+    }
+  ],
+  "1 barquette de falafels": [
+    {
+      "name": "falafel",
+      "amount": 1,
+      "unit": "barquette"
+    }
+  ],
+  "1 beau morceau de gingembre frais": [
+    {
+      "name": "gingembre frais",
+      "amount": 1
+    }
+  ],
+  "1 belle aubergine": [
+    {
+      "name": "aubergine",
+      "amount": 1
+    }
+  ],
+  "1 belle cuillère à café de miel de pommes (ou sirop d'érable ou d'agave)": [
+    {
+      "name": "miel de pommes",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 belle cuillère à café de pesto": [
+    {
+      "name": "pesto",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 belle cuillère à soupe de beurre de cacahuète": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 belle cuillère à soupe de beurre de cacahuète sans sucre ajouté": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 belle patate douce": [
+    {
+      "name": "patate douce",
+      "amount": 1
+    }
+  ],
+  "1 belle pincée de sel": [
+    {
+      "name": "sel",
+      "amount": 1,
+      "unit": "pincée"
+    }
+  ],
+  "1 belle poignée d’abricots secs": [
+    {
+      "name": "abricot sec",
+      "amount": 1,
+      "unit": "poignée"
+    }
+  ],
+  "1 belle poignée de raisins secs": [
+    {
+      "name": "raisin sec",
+      "amount": 1,
+      "unit": "poignée"
+    }
+  ],
+  "1 belle tranche de brie": [
+    {
+      "name": "brie",
+      "amount": 1,
+      "unit": "tranche"
+    }
+  ],
+  "1 belle tranches de pain": [
+    {
+      "name": "pain",
+      "amount": 1,
+      "unit": "tranche"
+    }
+  ],
+  "1 betterave crue râpée": [
+    {
+      "name": "betterave crue",
+      "amount": 1
+    }
+  ],
+  "1 betterave jaune": [
+    {
+      "name": "betterave jaune",
+      "amount": 1
+    }
+  ],
+  "1 blanc d’oeuf": [
+    {
+      "name": "blanc d'oeuf",
+      "amount": 1
+    }
+  ],
+  "1 bloc de halloumi (250g)": [
+    {
+      "name": "halloumi",
+      "amount": 1,
+      "unit": "bloc"
+    }
+  ],
+  "1 bloc de tofu ferme": [
+    {
+      "name": "tofu ferme",
+      "amount": 1,
+      "unit": "bloc"
+    }
+  ],
+  "1 bocal de chair de tomates (400g)": [
+    {
+      "name": "chair de tomates",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 bocal de chair de tomates soit 400g": [
+    {
+      "name": "chair de tomates",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 bocal de pois chiches (240g égouttés)": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 bocal de pois chiches (ou conserve) environ": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 bocal de poivrons rouges grillés en saumure (environ 300g égoutté)": [
+    {
+      "name": "poivron rouge en saumure",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 bocal de tomates séchées": [
+    {
+      "name": "tomate séchée",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 bocal ou conserve de pois chiches soit 240g (égouttés)": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "bocal"
+    }
+  ],
+  "1 boîte (400g) de haricots blancs": [
+    {
+      "name": "haricot blanc",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boite de conserve de pois chiches (265g égouttées)": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boite de haricots rouges": [
+    {
+      "name": "haricot rouge",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de haricots rouges": [
+    {
+      "name": "haricot rouge",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boite de jack fruit en saumure": [
+    {
+      "name": "jackfruit en saumure",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de maïs": [
+    {
+      "name": "maïs",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boite de pois chiches cuits (220g environ)": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de pois chiches de 530 ml": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de thon": [
+    {
+      "name": "thon",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de thon à l'huile d'olive": [
+    {
+      "name": "thon à l'huile d'olive",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de thon au naturel": [
+    {
+      "name": "thon au naturel",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de tomates concassée": [
+    {
+      "name": "tomate concassée",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 boîte de tomates concassées": [
+    {
+      "name": "tomate concassée",
+      "amount": 1,
+      "unit": "boite"
+    }
+  ],
+  "1 bokchoy": [
+    {
+      "name": "bok choy",
+      "amount": 1
+    }
+  ],
+  "1 botte d'asperges blanches": [
+    {
+      "name": "asperge blanche",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 botte d'asperges vertes": [
+    {
+      "name": "asperge verte",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 botte d’asperges vertes de 500 g": [
+    {
+      "name": "asperge verte",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 botte d’oignons verts": [
+    {
+      "name": "oignon vert",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 botte de carottes fanes": [
+    {
+      "name": "carotte fane",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 botte de ciboulette": [
+    {
+      "name": "ciboulette",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 botte de fanes de radis (90 g)": [
+    {
+      "name": "fanes de radis",
+      "amount": 1,
+      "unit": "botte"
+    }
+  ],
+  "1 bouillon cube de légumes": [
+    {
+      "name": "bouillon cube légumes",
+      "amount": 1
+    }
+  ],
+  "1 boule (125g) de Mozzarella di Bufala": [
+    {
+      "name": "mozzarella di bufala",
+      "amount": 1,
+      "unit": "boule"
+    }
+  ],
+  "1 boule de burrata": [
+    {
+      "name": "burrata",
+      "amount": 1,
+      "unit": "boule"
+    }
+  ],
+  "1 boule de mozzarella": [
+    {
+      "name": "mozzarella",
+      "amount": 1,
+      "unit": "boule"
+    }
+  ],
+  "1 boule de mozzarella fior di latte": [
+    {
+      "name": "mozzarella fior di latte",
+      "amount": 1,
+      "unit": "boule"
+    }
+  ],
+  "1 bouquet d’herbes fraîches ciselées (estragon, thym, coriandre, basilic...)": [
+    {
+      "name": "herbes fraîches",
+      "amount": 1,
+      "unit": "bouquet"
+    }
+  ],
+  "1 bouquet de basilic": [
+    {
+      "name": "basilic",
+      "amount": 1,
+      "unit": "bouquet"
+    }
+  ],
+  "1 bouquet de chou Cima ou de chou kale (ou 150g de pousses d'épinards)": [
+    {
+      "name": "chou cima",
+      "amount": 1,
+      "unit": "bouquet"
+    }
+  ],
+  "1 bouquet de persil plat": [
+    {
+      "name": "persil plat",
+      "amount": 1,
+      "unit": "bouquet"
+    }
+  ],
+  "1 branche de basilic": [
+    {
+      "name": "basilic",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de céleri": [
+    {
+      "name": "céleri",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de céleri branche": [
+    {
+      "name": "céleri branche",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de céléri branche": [
+    {
+      "name": "céleri branche",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de persil frais": [
+    {
+      "name": "persil frais",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de romarin": [
+    {
+      "name": "romarin",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de romarin frais": [
+    {
+      "name": "romarin",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de thym": [
+    {
+      "name": "thym",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branche de thym frais": [
+    {
+      "name": "thym",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branches de coriandre": [
+    {
+      "name": "coriandre",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 branches de menthe fraîche": [
+    {
+      "name": "menthe",
+      "amount": 1,
+      "unit": "branche"
+    }
+  ],
+  "1 brin de romarin": [
+    {
+      "name": "romarin",
+      "amount": 1,
+      "unit": "brin"
+    }
+  ],
+  "1 brin persil plat": [
+    {
+      "name": "persil plat",
+      "amount": 1,
+      "unit": "brin"
+    }
+  ],
+  "1 brique de crème de coco": [
+    {
+      "name": "crème de coco",
+      "amount": 1,
+      "unit": "brique"
+    }
+  ],
+  "1 brique de crème liquide": [
+    {
+      "name": "crème liquide",
+      "amount": 1,
+      "unit": "brique"
+    }
+  ],
+  "1 brique de crème liquide (20cl)": [
+    {
+      "name": "crème liquide",
+      "amount": 1,
+      "unit": "brique"
+    }
+  ],
+  "1 brique de crème liquide végétale neutre": [
+    {
+      "name": "crème liquide végétale",
+      "amount": 1,
+      "unit": "brique"
+    }
+  ],
+  "1 brique de lait de coco": [
+    {
+      "name": "lait de coco",
+      "amount": 1,
+      "unit": "brique"
+    }
+  ],
+  "1 briquette de crème liquide (ou crème de coco)": [
+    {
+      "name": "crème liquide",
+      "amount": 1,
+      "unit": "brique"
+    }
+  ],
+  "1 brocoli": [
+    {
+      "name": "brocoli",
+      "amount": 1
+    }
+  ],
+  "1 brocolis": [
+    {
+      "name": "brocoli",
+      "amount": 1
+    }
+  ],
+  "1 bulbe de fenouil assez gros, environ 400g": [
+    {
+      "name": "fenouil",
+      "amount": 1,
+      "unit": "bulbe"
+    }
+  ],
+  "1 burrata": [
+    {
+      "name": "burrata",
+      "amount": 1
+    }
+  ],
+  "1 burrata fumée": [
+    {
+      "name": "burrata fumée",
+      "amount": 1
+    }
+  ],
+  "1 c à c de poudre à lever": [
+    {
+      "name": "levure chimique",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 c. à soupe de jus de citron": [
+    {
+      "name": "jus de citron",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 carotte": [
+    {
+      "name": "carotte",
+      "amount": 1
+    }
+  ],
+  "1 carotte en julienne": [
+    {
+      "name": "carotte",
+      "amount": 1
+    }
+  ],
+  "1 carottes": [
+    {
+      "name": "carotte",
+      "amount": 1
+    }
+  ],
+  "1 champignon portobello": [
+    {
+      "name": "champignon portobello",
+      "amount": 1
+    }
+  ],
+  "1 chou-fleur": [
+    {
+      "name": "chou-fleur",
+      "amount": 1
+    }
+  ],
+  "1 citron": [
+    {
+      "name": "citron",
+      "amount": 1
+    }
+  ],
+  "1 citron (jus)": [
+    {
+      "name": "citron",
+      "amount": 1
+    }
+  ],
+  "1 citron bio : récupérer 1 cuillère à soupe de jus et les zestes": [
+    {
+      "name": "citron",
+      "amount": 1
+    }
+  ],
+  "1 citron jaune": [
+    {
+      "name": "citron jaune",
+      "amount": 1
+    }
+  ],
+  "1 citron jaune non traité ou bio": [
+    {
+      "name": "citron jaune",
+      "amount": 1
+    }
+  ],
+  "1 citron pressé": [
+    {
+      "name": "citron",
+      "amount": 1
+    }
+  ],
+  "1 citron vert": [
+    {
+      "name": "citron vert",
+      "amount": 1
+    }
+  ],
+  "1 citron1 cuillère à soupe d’huile de sésame": [
+    {
+      "name": "citron",
+      "amount": 1
+    },
+    {
+      "name": "huile de sésame",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 citrouille ou 400 g de purée de citrouille en conserve": [
+    {
+      "name": "citrouille",
+      "amount": 1
+    }
+  ],
+  "1 concombre": [
+    {
+      "name": "concombre",
+      "amount": 1
+    }
+  ],
+  "1 concombres": [
+    {
+      "name": "concombre",
+      "amount": 1
+    }
+  ],
+  "1 conserve de chair de tomates": [
+    {
+      "name": "chair de tomates",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de haricots": [
+    {
+      "name": "haricot",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de lentilles": [
+    {
+      "name": "lentille",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de pois chiches": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de pois chiches cuits": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de purée de tomate": [
+    {
+      "name": "purée de tomate",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de tomates (400g)": [
+    {
+      "name": "tomate",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de tomates concassées": [
+    {
+      "name": "tomate concassée",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve de tomates pelées": [
+    {
+      "name": "tomate pelée",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 conserve/bocal de pois chiches cuits (265g net égoutté)": [
+    {
+      "name": "pois chiches",
+      "amount": 1,
+      "unit": "conserve"
+    }
+  ],
+  "1 courge butternut": [
+    {
+      "name": "courge butternut",
+      "amount": 1
+    }
+  ],
+  "1 courge spaghetti": [
+    {
+      "name": "courge spaghetti",
+      "amount": 1
+    }
+  ],
+  "1 courgette": [
+    {
+      "name": "courgette",
+      "amount": 1
+    }
+  ],
+  "1 courgette (env 250g)": [
+    {
+      "name": "courgette",
+      "amount": 1
+    }
+  ],
+  "1 courgette (jaune ici)": [
+    {
+      "name": "courgette jaune",
+      "amount": 1
+    }
+  ],
+  "1 courgette (petite, environ 15-20 cm)": [
+    {
+      "name": "courgette",
+      "amount": 1
+    }
+  ],
+  "1 courgette blanche": [
+    {
+      "name": "courgette blanche",
+      "amount": 1
+    }
+  ],
+  "1 courgette de taille moyenne": [
+    {
+      "name": "courgette",
+      "amount": 1
+    }
+  ],
+  "1 courgette jaune": [
+    {
+      "name": "courgette jaune",
+      "amount": 1
+    }
+  ],
+  "1 courgette moyenne": [
+    {
+      "name": "courgette",
+      "amount": 1
+    }
+  ],
+  "1 crottin de Chavignol": [
+    {
+      "name": "crottin de chavignol",
+      "amount": 1
+    }
+  ],
+  "1 crottin de chèvre": [
+    {
+      "name": "crottin de chèvre",
+      "amount": 1
+    }
+  ],
+  "1 cube de bouillon aux légumes": [
+    {
+      "name": "bouillon cube légumes",
+      "amount": 1
+    }
+  ],
+  "1 cube de bouillon de légumes": [
+    {
+      "name": "bouillon cube légumes",
+      "amount": 1
+    }
+  ],
+  "1 cube de bouillon de légumes bio": [
+    {
+      "name": "bouillon cube légumes",
+      "amount": 1
+    }
+  ],
+  "1 cube goût champignons, à défaut un cube de bouillon de légumes": [
+    {
+      "name": "bouillon cube champignon",
+      "amount": 1
+    }
+  ],
+  "1 cuillère à café bombée de Maïzena": [
+    {
+      "name": "maïzena",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café curcuma": [
+    {
+      "name": "curcuma",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'açaï en poudre": [
+    {
+      "name": "açaï en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’agar-agar": [
+    {
+      "name": "agar-agar",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'ail en poudre": [
+    {
+      "name": "ail en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'ail en poudreconcassées (environ 10-15g)": [
+    {
+      "name": "ail en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’arôme de vanille": [
+    {
+      "name": "arôme de vanille",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'arôme vanille": [
+    {
+      "name": "arôme de vanille",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’épices au choix (curcuma, cumin, paprika…)": [
+    {
+      "name": "épices",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’épices cajun": [
+    {
+      "name": "épices cajun",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’épices indiennes : curry, gingembre, citronnelle…": [
+    {
+      "name": "épices indiennes",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'épices mexicaines": [
+    {
+      "name": "épices mexicaines",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'épices pour viande": [
+    {
+      "name": "épices pour viande",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’épices tandoori": [
+    {
+      "name": "épices tandoori",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’extrait de vanille": [
+    {
+      "name": "extrait de vanille",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'extrait de vanille liquide": [
+    {
+      "name": "extrait de vanille",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'herbes de Provence": [
+    {
+      "name": "herbes de provence",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’herbes de provence séchées": [
+    {
+      "name": "herbes de provence",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’herbes séchées mélangées (origan, basilic, laurier, thym, romarin)": [
+    {
+      "name": "herbes séchées mélangées",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'huile": [
+    {
+      "name": "huile",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'huile de coco": [
+    {
+      "name": "huile de coco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'huile de colza": [
+    {
+      "name": "huile de colza",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d'huile de sésame": [
+    {
+      "name": "huile de sésame",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’huile neutre": [
+    {
+      "name": "huile neutre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’huile végétale": [
+    {
+      "name": "huile végétale",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’oignon séché": [
+    {
+      "name": "oignon séché",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’origan": [
+    {
+      "name": "origan",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’origan sec": [
+    {
+      "name": "origan",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’origan séché": [
+    {
+      "name": "origan",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café d’un mélange 4 épices.": [
+    {
+      "name": "quatre épices",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de baies rouges": [
+    {
+      "name": "baies rouges",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de beurre": [
+    {
+      "name": "beurre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de beurre d'amande": [
+    {
+      "name": "beurre d'amande",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de beurre de cacahuète": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de beurre de coco": [
+    {
+      "name": "beurre de coco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de bicarbonate": [
+    {
+      "name": "bicarbonate de soude",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de bicarbonate alimentaire": [
+    {
+      "name": "bicarbonate de soude",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de bicarbonate de soude": [
+    {
+      "name": "bicarbonate de soude",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de bicarbonate de soude alimentaire": [
+    {
+      "name": "bicarbonate de soude",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cacao cru": [
+    {
+      "name": "cacao cru",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cacao cru en poudre (optionnel)": [
+    {
+      "name": "cacao cru",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cacao en poudre": [
+    {
+      "name": "cacao en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cannelle": [
+    {
+      "name": "cannelle",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de caramel": [
+    {
+      "name": "caramel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cassonade": [
+    {
+      "name": "cassonade",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de chili en poudre (optionnel)": [
+    {
+      "name": "chili en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de chili en poudre (selon les goûts car c’est assez piquant)": [
+    {
+      "name": "chili en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de ciboulette fraiche hachée": [
+    {
+      "name": "ciboulette",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de citron": [
+    {
+      "name": "citron",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de citronnelle moulue": [
+    {
+      "name": "citronnelle",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de concentré de tomate": [
+    {
+      "name": "concentré de tomate",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de coriandre": [
+    {
+      "name": "coriandre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de coriandre moulue": [
+    {
+      "name": "coriandre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cumin": [
+    {
+      "name": "cumin",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de cumin moulu": [
+    {
+      "name": "cumin",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de curcuma": [
+    {
+      "name": "curcuma",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de curcuma en poudre": [
+    {
+      "name": "curcuma",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de curry": [
+    {
+      "name": "curry",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de curry doux": [
+    {
+      "name": "curry doux",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de curry en poudre": [
+    {
+      "name": "curry",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de curry ou de cumin": [
+    {
+      "name": "curry",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de farine": [
+    {
+      "name": "farine",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de farine de coco": [
+    {
+      "name": "farine de coco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de fécule": [
+    {
+      "name": "fécule",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de fécule de maïs + 30ml d’eau": [
+    {
+      "name": "fécule de maïs",
+      "amount": 1,
+      "unit": "cuillère à café"
+    },
+    {
+      "name": "eau",
+      "amount": 30,
+      "unit": "ml"
+    }
+  ],
+  "1 cuillère à café de fécule de pomme de terre": [
+    {
+      "name": "fécule de pomme de terre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de fenugrec": [
+    {
+      "name": "fenugrec",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de fleur de sel": [
+    {
+      "name": "fleur de sel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de flocons de chili": [
+    {
+      "name": "flocons de chili",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de garam masala": [
+    {
+      "name": "garam masala",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de garam massala": [
+    {
+      "name": "garam masala",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de garam massala (ou colombo)": [
+    {
+      "name": "garam masala",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de gingembre": [
+    {
+      "name": "gingembre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de gingembre râpé": [
+    {
+      "name": "gingembre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de gomme de guar": [
+    {
+      "name": "gomme de guar",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de graines de fenouil": [
+    {
+      "name": "graines de fenouil",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de graines de sésame": [
+    {
+      "name": "graines de sésame",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de graines mélangées": [
+    {
+      "name": "graines mélangées",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de harissa": [
+    {
+      "name": "harissa",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de jus de citron": [
+    {
+      "name": "jus de citron",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de jus de citron vert": [
+    {
+      "name": "jus de citron vert",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de laurier": [
+    {
+      "name": "laurier",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de levure": [
+    {
+      "name": "levure",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de levure chimique": [
+    {
+      "name": "levure chimique",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de levure de boulanger": [
+    {
+      "name": "levure de boulanger",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de levure de boulanger (4g)": [
+    {
+      "name": "levure de boulanger",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de levure de boulanger déshydratée": [
+    {
+      "name": "levure de boulanger",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de levure maltée": [
+    {
+      "name": "levure maltée",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de lucuma": [
+    {
+      "name": "lucuma",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de margarine": [
+    {
+      "name": "margarine",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de mascobado": [
+    {
+      "name": "mascobado",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de matcha": [
+    {
+      "name": "matcha",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de mélange d'épices chai": [
+    {
+      "name": "mélange d'épices chai",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de menthe finement coupée": [
+    {
+      "name": "menthe",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel liquide": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel ou de sirop d'érable": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel ou sirop d'agave": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel ou sirop d'érable": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel/sirop d’érable": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miel1 cuillère à café de moutarde au miel": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    },
+    {
+      "name": "moutarde au miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de miso (optionnel)": [
+    {
+      "name": "miso",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de moutarde": [
+    {
+      "name": "moutarde",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de moutarde à l'ancienne": [
+    {
+      "name": "moutarde à l'ancienne",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de moutarde au miel": [
+    {
+      "name": "moutarde au miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de moutarde forte": [
+    {
+      "name": "moutarde forte",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère a café de paprika": [
+    {
+      "name": "paprika",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de paprika": [
+    {
+      "name": "paprika",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de paprika doux": [
+    {
+      "name": "paprika doux",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de paprika fumé": [
+    {
+      "name": "paprika fumé",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de paprika fumé2 poignées de mesclun": [
+    {
+      "name": "paprika fumé",
+      "amount": 1,
+      "unit": "cuillère à café"
+    },
+    {
+      "name": "mesclun",
+      "amount": 2,
+      "unit": "poignée"
+    }
+  ],
+  "1 cuillère à café de pâte de curry rouge": [
+    {
+      "name": "pâte de curry rouge",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de pâte de piment sambal oalek": [
+    {
+      "name": "sambal oelek",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de pâte miso": [
+    {
+      "name": "pâte miso",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de pépites de chocolat noir": [
+    {
+      "name": "pépites de chocolat noir",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de persil frais ciselé": [
+    {
+      "name": "persil frais",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de persil frais haché": [
+    {
+      "name": "persil frais",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de persil haché": [
+    {
+      "name": "persil",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de persil sec": [
+    {
+      "name": "persil sec",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de pesto": [
+    {
+      "name": "pesto",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de piment d’espelette": [
+    {
+      "name": "piment d'espelette",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de piment de cayenne": [
+    {
+      "name": "piment de cayenne",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de piment doux": [
+    {
+      "name": "piment doux",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de piment en flocons": [
+    {
+      "name": "piment en flocons",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de poivre": [
+    {
+      "name": "poivre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de psyllium": [
+    {
+      "name": "psyllium",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de purée d'amandes complètes": [
+    {
+      "name": "purée d'amandes complètes",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de purée d'oléagineux": [
+    {
+      "name": "purée d'oléagineux",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de purée de piment": [
+    {
+      "name": "purée de piment",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de purée de sésame": [
+    {
+      "name": "purée de sésame",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de purée de sésame blanche": [
+    {
+      "name": "purée de sésame blanche",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de ras el hanout": [
+    {
+      "name": "ras el hanout",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de ras el-hanout": [
+    {
+      "name": "ras el hanout",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de romarin": [
+    {
+      "name": "romarin",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sauce soja": [
+    {
+      "name": "sauce soja",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sauce sriracha": [
+    {
+      "name": "sauce sriracha",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sauce tamari": [
+    {
+      "name": "sauce tamari",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sauge séchées": [
+    {
+      "name": "sauge séchée",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sel": [
+    {
+      "name": "sel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sel noir": [
+    {
+      "name": "sel noir",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sel noir (Kala Namak)": [
+    {
+      "name": "sel noir",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sésame noir": [
+    {
+      "name": "sésame noir",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sirop d’agave": [
+    {
+      "name": "sirop d'agave",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sirop d'agave (optionnel selon le gout sucré de la banane)": [
+    {
+      "name": "sirop d'agave",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sirop d'érable": [
+    {
+      "name": "sirop d'érable",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sirop d'érable (ou sirop d'agave, de coco, de dattes,...)": [
+    {
+      "name": "sirop d'érable",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de souchet": [
+    {
+      "name": "souchet",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre": [
+    {
+      "name": "sucre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre brun": [
+    {
+      "name": "sucre brun",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre complet": [
+    {
+      "name": "sucre complet",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre complet ou sirop d’érable": [
+    {
+      "name": "sucre complet",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre de canne": [
+    {
+      "name": "sucre de canne",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre de coco": [
+    {
+      "name": "sucre de coco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre glace": [
+    {
+      "name": "sucre glace",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre roux": [
+    {
+      "name": "sucre roux",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de sucre roux ou de miel": [
+    {
+      "name": "sucre roux",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de tabasco": [
+    {
+      "name": "tabasco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de tahini": [
+    {
+      "name": "tahini",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de thym": [
+    {
+      "name": "thym",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de thym séché": [
+    {
+      "name": "thym séché",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vanille liquide": [
+    {
+      "name": "vanille liquide",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre balsamique": [
+    {
+      "name": "vinaigre balsamique",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre de cidre": [
+    {
+      "name": "vinaigre de cidre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre de riz": [
+    {
+      "name": "vinaigre de riz",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre de vin": [
+    {
+      "name": "vinaigre de vin",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre de vin blanc": [
+    {
+      "name": "vinaigre de vin blanc",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre de vin blanc ou de riz": [
+    {
+      "name": "vinaigre de vin blanc",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de vinaigre de vin rouge ou de cidre": [
+    {
+      "name": "vinaigre de vin rouge",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de zaaatar": [
+    {
+      "name": "za'atar",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café de zeste de citron": [
+    {
+      "name": "zeste de citron",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café rase d'ail en poudre": [
+    {
+      "name": "ail en poudre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café rase d’oignon séché": [
+    {
+      "name": "oignon séché",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café rase de bicarbonate": [
+    {
+      "name": "bicarbonate de soude",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café rase de leure chimique": [
+    {
+      "name": "levure chimique",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café rase de paprika fumé": [
+    {
+      "name": "paprika fumé",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café sucre de coco ou mascobado": [
+    {
+      "name": "sucre de coco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à café vinaigre de cidre": [
+    {
+      "name": "vinaigre de cidre",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "1 cuillère à soupe beurre de cacahuète": [
+    {
+      "name": "beurre de cacahuète",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe ciboulette": [
+    {
+      "name": "ciboulette",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’ huile olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'ail semoule": [
+    {
+      "name": "ail semoule",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’amandes effilées": [
+    {
+      "name": "amandes effilées",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’eau": [
+    {
+      "name": "eau",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’épices à steak": [
+    {
+      "name": "épices à steak",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’épices au choix (curry, tandoori, cajun, curcuma, fenugrec, paprika...)": [
+    {
+      "name": "épices",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’épices cajun": [
+    {
+      "name": "épices cajun",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’épices jerk": [
+    {
+      "name": "épices jerk",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’extrait de vanille": [
+    {
+      "name": "extrait de vanille",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’herbes de Provence": [
+    {
+      "name": "herbes de provence",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’herbes de Provence séchées": [
+    {
+      "name": "herbes de provence",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’herbes mélangées (romarin, thym, origan et basilic)": [
+    {
+      "name": "herbes mélangées",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'herbes séchées (origan et basilic)": [
+    {
+      "name": "herbes séchées",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'herbes séchées mélangées": [
+    {
+      "name": "herbes séchées mélangées",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile": [
+    {
+      "name": "huile",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile au choix": [
+    {
+      "name": "huile",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile d'olive (pour badigeonner avant cuisson)": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile d'olive + 1 filet": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    },
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "filet"
+    }
+  ],
+  "1 cuillère à soupe d’huile d’olive extra vierge": [
+    {
+      "name": "huile d'olive extra vierge",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile d'olive1 filet d'huile d'olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    },
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "filet"
+    }
+  ],
+  "1 cuillère à soupe d’huile de coco": [
+    {
+      "name": "huile de coco",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile de coco (ou compote de pommes)": [
+    {
+      "name": "huile de coco",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile de coco désodorisée": [
+    {
+      "name": "huile de coco désodorisée",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile de cuisson neutre en gout (pour le moule)": [
+    {
+      "name": "huile de cuisson neutre",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’huile de sésame": [
+    {
+      "name": "huile de sésame",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’huile de sésame grillé": [
+    {
+      "name": "huile de sésame grillé",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'huile de tournesol": [
+    {
+      "name": "huile de tournesol",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’huile de votre choix": [
+    {
+      "name": "huile",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’huile neutre": [
+    {
+      "name": "huile neutre",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'hydrolat de fleur d'oranger": [
+    {
+      "name": "hydrolat de fleur d'oranger",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d'olive à la truffe": [
+    {
+      "name": "huile d'olive à la truffe",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "1 cuillère à soupe d’origan séché": [
+    {
+      "name": "origan",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ]
+}

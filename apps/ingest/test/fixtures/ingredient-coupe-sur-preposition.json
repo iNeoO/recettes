@@ -1,0 +1,503 @@
+{
+  "book": 2,
+  "page": 239,
+  "items": [
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "Dans une assiette creuse, battre 2 oeufs avec le lait.",
+      "x": 251.14,
+      "y": 636.8,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "Ajouter ensuite le comté râpé. Saler et poivrer.",
+      "x": 251.14,
+      "y": 620.3,
+      "width": 232.05,
+      "size": 12
+    },
+    {
+      "str": "Tremper",
+      "x": 251.14,
+      "y": 587.28,
+      "width": 43.61,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 294.75,
+      "y": 587.28,
+      "width": 10.51,
+      "size": 12
+    },
+    {
+      "str": "les",
+      "x": 302.64,
+      "y": 587.28,
+      "width": 14.15,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 316.79,
+      "y": 587.28,
+      "width": 10.51,
+      "size": 12
+    },
+    {
+      "str": "tranches",
+      "x": 324.67,
+      "y": 587.28,
+      "width": 43.95,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 368.62,
+      "y": 587.28,
+      "width": 10.51,
+      "size": 12
+    },
+    {
+      "str": "de",
+      "x": 376.5,
+      "y": 587.28,
+      "width": 12.27,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 388.77,
+      "y": 587.28,
+      "width": 10.51,
+      "size": 12
+    },
+    {
+      "str": "pain",
+      "x": 396.66,
+      "y": 587.28,
+      "width": 22.34,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 419,
+      "y": 587.28,
+      "width": 10.51,
+      "size": 12
+    },
+    {
+      "str": "dans",
+      "x": 426.88,
+      "y": 587.28,
+      "width": 23.97,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 450.86,
+      "y": 587.28,
+      "width": 10.51,
+      "size": 12
+    },
+    {
+      "str": "l'appareil",
+      "x": 458.74,
+      "y": 587.28,
+      "width": 47.91,
+      "size": 12
+    },
+    {
+      "str": "précédemment obtenu, et les laisser absorber le",
+      "x": 251.14,
+      "y": 570.78,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "mélange.",
+      "x": 251.14,
+      "y": 554.27,
+      "width": 44.83,
+      "size": 12
+    },
+    {
+      "str": "Pendant",
+      "x": 251.14,
+      "y": 521.26,
+      "width": 42.05,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 293.2,
+      "y": 521.26,
+      "width": 9.67,
+      "size": 12
+    },
+    {
+      "str": "ce",
+      "x": 300.45,
+      "y": 521.26,
+      "width": 10.9,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 311.35,
+      "y": 521.26,
+      "width": 9.67,
+      "size": 12
+    },
+    {
+      "str": "temps,",
+      "x": 318.61,
+      "y": 521.26,
+      "width": 32.95,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 351.57,
+      "y": 521.26,
+      "width": 9.67,
+      "size": 12
+    },
+    {
+      "str": "préparer",
+      "x": 358.82,
+      "y": 521.26,
+      "width": 44.91,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 403.73,
+      "y": 521.26,
+      "width": 9.67,
+      "size": 12
+    },
+    {
+      "str": "vos",
+      "x": 410.99,
+      "y": 521.26,
+      "width": 16.59,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 427.58,
+      "y": 521.26,
+      "width": 9.67,
+      "size": 12
+    },
+    {
+      "str": "oeufs",
+      "x": 434.83,
+      "y": 521.26,
+      "width": 27.24,
+      "size": 12
+    },
+    {
+      "str": " ",
+      "x": 462.08,
+      "y": 521.26,
+      "width": 9.67,
+      "size": 12
+    },
+    {
+      "str": "pochés.",
+      "x": 469.34,
+      "y": 521.26,
+      "width": 37.31,
+      "size": 12
+    },
+    {
+      "str": "Remplir une grande casserole d'eau, ajouter une",
+      "x": 251.14,
+      "y": 504.75,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "pincée de sel et porter à ébullition. Casser les oeufs",
+      "x": 251.14,
+      "y": 488.25,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "dans un ramequin un à un. Quand l'eau commence",
+      "x": 251.14,
+      "y": 471.74,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "à bouillir, réduire le feu. A l'aide d'une spatule ou",
+      "x": 251.14,
+      "y": 455.23,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "d'une cuillère faire des ronds dans l'eau pour",
+      "x": 251.14,
+      "y": 438.73,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "former un tourbillon. Verser l'oeuf au coeur du",
+      "x": 251.14,
+      "y": 422.22,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "tourbillon et faire le cuire 3 minutes. Faire le",
+      "x": 251.14,
+      "y": 405.71,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "second. Retirer de l'eau à l'aide d'un écumoire et",
+      "x": 251.14,
+      "y": 389.21,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "disposer les oeufs sur une assiette recouverte de",
+      "x": 251.14,
+      "y": 372.7,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "papier absorbant.",
+      "x": 251.14,
+      "y": 356.2,
+      "width": 88.76,
+      "size": 12
+    },
+    {
+      "str": "Faire chauffer une poêle à feu vif avec le beurre.",
+      "x": 251.14,
+      "y": 323.18,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "Une fois la poêle bien chaude, placer les tranches",
+      "x": 251.14,
+      "y": 306.68,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "de pain dedans. Les faire griller quelques minutes",
+      "x": 251.14,
+      "y": 290.17,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "de chaque côté jusqu'à ce qu'elles soient bien",
+      "x": 251.14,
+      "y": 273.66,
+      "width": 255.51,
+      "size": 12
+    },
+    {
+      "str": "dorées et grillées.",
+      "x": 251.14,
+      "y": 257.16,
+      "width": 88.12,
+      "size": 12
+    },
+    {
+      "str": "P a i n",
+      "x": 209.88,
+      "y": 730.46,
+      "width": 67.1,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 276.98,
+      "y": 730.46,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "p e r d u",
+      "x": 304.19,
+      "y": 730.46,
+      "width": 82.19,
+      "size": 40.01
+    },
+    {
+      "str": "a u",
+      "x": 220.04,
+      "y": 698.95,
+      "width": 29.53,
+      "size": 40.01
+    },
+    {
+      "str": " ",
+      "x": 249.57,
+      "y": 698.95,
+      "width": 36.26,
+      "size": 40.01
+    },
+    {
+      "str": "c o m t é",
+      "x": 276.78,
+      "y": 698.95,
+      "width": 77.46,
+      "size": 40.01
+    },
+    {
+      "str": "2 portions",
+      "x": 506.66,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "1 cuillère à café de beurre",
+      "x": 29.55,
+      "y": 600.32,
+      "width": 94.69,
+      "size": 8.86
+    },
+    {
+      "str": "4 tranches de pain",
+      "x": 29.55,
+      "y": 588.14,
+      "width": 67.64,
+      "size": 8.86
+    },
+    {
+      "str": "2 + 2 oeufs",
+      "x": 29.55,
+      "y": 575.96,
+      "width": 37.57,
+      "size": 8.86
+    },
+    {
+      "str": "240ml de lait",
+      "x": 29.55,
+      "y": 563.78,
+      "width": 48.51,
+      "size": 8.86
+    },
+    {
+      "str": "40g de comté râpé",
+      "x": 29.55,
+      "y": 551.6,
+      "width": 67.56,
+      "size": 8.86
+    },
+    {
+      "str": "Sel, poivre",
+      "x": 29.55,
+      "y": 539.42,
+      "width": 38.7,
+      "size": 8.86
+    },
+    {
+      "str": "12 champignons de",
+      "x": 145.93,
+      "y": 600.32,
+      "width": 70.16,
+      "size": 8.86
+    },
+    {
+      "str": "Paris",
+      "x": 145.93,
+      "y": 588.14,
+      "width": 18.92,
+      "size": 8.86
+    },
+    {
+      "str": "2 poignées de",
+      "x": 145.93,
+      "y": 575.96,
+      "width": 49.67,
+      "size": 8.86
+    },
+    {
+      "str": "salade",
+      "x": 145.93,
+      "y": 563.78,
+      "width": 23.91,
+      "size": 8.86
+    },
+    {
+      "str": "Huile d'olive",
+      "x": 145.93,
+      "y": 551.6,
+      "width": 46.58,
+      "size": 8.86
+    },
+    {
+      "str": "Ciboulette fraîche",
+      "x": 145.93,
+      "y": 539.42,
+      "width": 67.02,
+      "size": 8.86
+    },
+    {
+      "str": "Pendant que le pain perdu grille, ajouter, dans la même poêle, les champignons",
+      "x": 101.72,
+      "y": 226.55,
+      "width": 404.93,
+      "size": 12
+    },
+    {
+      "str": "lavés et coupés en tranches. Les faire revenir quelques minutes jusqu'à ce qu'ils",
+      "x": 101.72,
+      "y": 210.04,
+      "width": 404.93,
+      "size": 12
+    },
+    {
+      "str": "soient bien dorés.",
+      "x": 101.72,
+      "y": 193.53,
+      "width": 87.98,
+      "size": 12
+    },
+    {
+      "str": "Assembler votre assiette : ajouter la salade, placer les tranches de pain perdu",
+      "x": 101.72,
+      "y": 160.52,
+      "width": 404.93,
+      "size": 12
+    },
+    {
+      "str": "grillé, placer dessus les champignons grillés et un oeuf poché. Assaisonner avec",
+      "x": 101.72,
+      "y": 144.02,
+      "width": 404.93,
+      "size": 12
+    },
+    {
+      "str": "de l'huile d'olive et de la ciboulette.",
+      "x": 101.72,
+      "y": 127.51,
+      "width": 175.43,
+      "size": 12
+    }
+  ]
+}

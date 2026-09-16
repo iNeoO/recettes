@@ -1,0 +1,17 @@
+{
+  "name": "@recettes/contract",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": {
+    "@effect/platform": "^0.97.2",
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "catalog:"
+  }
+}

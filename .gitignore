@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.pdf
+/data/
+.env
+
+# captures Playwright
+.playwright-mcp/

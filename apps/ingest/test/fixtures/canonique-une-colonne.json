@@ -1,0 +1,258 @@
+{
+  "book": 1,
+  "page": 2,
+  "items": [
+    {
+      "str": "Ingrédients",
+      "x": 72.58,
+      "y": 624.54,
+      "width": 42.92,
+      "size": 14.76
+    },
+    {
+      "str": "B o w l",
+      "x": 162.91,
+      "y": 730.66,
+      "width": 65.97,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 228.89,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "d e",
+      "x": 255.42,
+      "y": 730.66,
+      "width": 25.87,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 281.28,
+      "y": 730.66,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "p a s t è q u e",
+      "x": 307.81,
+      "y": 730.66,
+      "width": 124.77,
+      "size": 39.01
+    },
+    {
+      "str": "t o m a t e",
+      "x": 194.98,
+      "y": 699.9,
+      "width": 87.78,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 282.76,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "&",
+      "x": 309.29,
+      "y": 699.9,
+      "width": 12.06,
+      "size": 39.01
+    },
+    {
+      "str": " ",
+      "x": 321.35,
+      "y": 699.9,
+      "width": 35.36,
+      "size": 39.01
+    },
+    {
+      "str": "f e t a",
+      "x": 347.88,
+      "y": 699.9,
+      "width": 52.63,
+      "size": 39.01
+    },
+    {
+      "str": "2 portions",
+      "x": 506.66,
+      "y": 821.66,
+      "width": 42.43,
+      "size": 10
+    },
+    {
+      "str": "1/4 de pastèque",
+      "x": 29.55,
+      "y": 600.69,
+      "width": 59.58,
+      "size": 8.86
+    },
+    {
+      "str": "1",
+      "x": 29.55,
+      "y": 588.88,
+      "width": 3.62,
+      "size": 8.86
+    },
+    {
+      "str": " ",
+      "x": 33.17,
+      "y": 588.88,
+      "width": 2.9,
+      "size": 8.86
+    },
+    {
+      "str": "tomate coeur de boeuf",
+      "x": 35.31,
+      "y": 588.88,
+      "width": 84.82,
+      "size": 8.86
+    },
+    {
+      "str": "60g d’",
+      "x": 29.55,
+      "y": 577.07,
+      "width": 22.27,
+      "size": 8.86
+    },
+    {
+      "str": "olives",
+      "x": 52.05,
+      "y": 577.07,
+      "width": 22.04,
+      "size": 8.86
+    },
+    {
+      "str": "B",
+      "x": 29.55,
+      "y": 565.26,
+      "width": 5.1,
+      "size": 8.86
+    },
+    {
+      "str": "asilic",
+      "x": 34.87,
+      "y": 565.26,
+      "width": 20.02,
+      "size": 8.86
+    },
+    {
+      "str": "60g de f",
+      "x": 29.55,
+      "y": 553.45,
+      "width": 29.37,
+      "size": 8.86
+    },
+    {
+      "str": "eta végane",
+      "x": 59.15,
+      "y": 553.45,
+      "width": 39.96,
+      "size": 8.86
+    },
+    {
+      "str": "300g de tofu Rosso Taifun",
+      "x": 29.55,
+      "y": 541.63,
+      "width": 98.31,
+      "size": 8.86
+    },
+    {
+      "str": "2 cuillères à soupe d’",
+      "x": 29.55,
+      "y": 529.82,
+      "width": 78.67,
+      "size": 8.86
+    },
+    {
+      "str": "huile",
+      "x": 108.45,
+      "y": 529.82,
+      "width": 19.75,
+      "size": 8.86
+    },
+    {
+      "str": "d'olive",
+      "x": 29.55,
+      "y": 518.01,
+      "width": 25.18,
+      "size": 8.86
+    },
+    {
+      "str": "1.5 cuillères à soupe de",
+      "x": 29.55,
+      "y": 506.2,
+      "width": 86.89,
+      "size": 8.86
+    },
+    {
+      "str": "vinaigre balsamique",
+      "x": 29.55,
+      "y": 494.39,
+      "width": 77.67,
+      "size": 8.86
+    },
+    {
+      "str": "S",
+      "x": 29.55,
+      "y": 482.57,
+      "width": 4.64,
+      "size": 8.86
+    },
+    {
+      "str": "el, poivre",
+      "x": 34.42,
+      "y": 482.57,
+      "width": 35,
+      "size": 8.86
+    },
+    {
+      "str": "Couper les tomates en tranches. Retirer la peau de la pastèque et la couper en",
+      "x": 93.95,
+      "y": 451.63,
+      "width": 427.67,
+      "size": 12
+    },
+    {
+      "str": "cubes.",
+      "x": 93.95,
+      "y": 435.13,
+      "width": 32.19,
+      "size": 12
+    },
+    {
+      "str": "Émincer les feuilles de basilic. Emietté le tofu.",
+      "x": 93.95,
+      "y": 402.12,
+      "width": 236.69,
+      "size": 12
+    },
+    {
+      "str": "Dans un saladier, mélanger les tomates, la pastèque, le basilic, le tofu, les olives et",
+      "x": 93.95,
+      "y": 369.1,
+      "width": 427.67,
+      "size": 12
+    },
+    {
+      "str": "la feta.",
+      "x": 93.95,
+      "y": 352.6,
+      "width": 34.26,
+      "size": 12
+    },
+    {
+      "str": "Verser l'huile d'olive et le vinaigre balsamique, du sel, du poivre.",
+      "x": 93.95,
+      "y": 319.59,
+      "width": 331.54,
+      "size": 12
+    }
+  ]
+}

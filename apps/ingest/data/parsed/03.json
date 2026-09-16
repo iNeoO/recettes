@@ -1,0 +1,2513 @@
+{
+ "1 poignée de chou rouge râpé": [
+  {
+   "name": "chou rouge",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de coriandre": [
+  {
+   "name": "coriandre",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de feuille de menthe hachée": [
+  {
+   "name": "menthe",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de feuilles de basilic frais": [
+  {
+   "name": "basilic",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de fruits : bananes, framboises, grenades, myrtilles...": [
+  {
+   "name": "fruits",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de fruits surgelés": [
+  {
+   "name": "fruits surgelés",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de graines de courge": [
+  {
+   "name": "graine de courge",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de graines de tournesol": [
+  {
+   "name": "graine de tournesol",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de graines germées": [
+  {
+   "name": "graine germée",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de graines germées (en magasins bio)": [
+  {
+   "name": "graine germée",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de granola salé": [
+  {
+   "name": "granola salé",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de myrtilles": [
+  {
+   "name": "myrtille",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de noisettes (ou amandes, noix, noix de cajou,...)": [
+  {
+   "name": "noisette",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de noix de pécan": [
+  {
+   "name": "noix de pécan",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de noix de pécan (ou amandes, noix, noix de cajou,...)": [
+  {
+   "name": "noix de pécan",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de noix de pécan concassées": [
+  {
+   "name": "noix de pécan",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de pousses d'épinard": [
+  {
+   "name": "pousse d'épinard",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de pousses d’épinards": [
+  {
+   "name": "pousse d'épinard",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée de roquette": [
+  {
+   "name": "roquette",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée noix": [
+  {
+   "name": "noix",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 poignée raisins secs": [
+  {
+   "name": "raisin sec",
+   "amount": 1,
+   "unit": "poignée"
+  }
+ ],
+ "1 pointe de clou de girofle": [
+  {
+   "name": "clou de girofle",
+   "amount": 1,
+   "unit": "pointe"
+  }
+ ],
+ "1 pointe de miel": [
+  {
+   "name": "miel",
+   "amount": 1,
+   "unit": "pointe"
+  }
+ ],
+ "1 poire": [
+  {
+   "name": "poire",
+   "amount": 1
+  }
+ ],
+ "1 poireau": [
+  {
+   "name": "poireau",
+   "amount": 1
+  }
+ ],
+ "1 poireau (la partie blanche)": [
+  {
+   "name": "poireau",
+   "amount": 1
+  }
+ ],
+ "1 poivron": [
+  {
+   "name": "poivron",
+   "amount": 1
+  }
+ ],
+ "1 poivron en julienne": [
+  {
+   "name": "poivron",
+   "amount": 1
+  }
+ ],
+ "1 poivron jaune": [
+  {
+   "name": "poivron jaune",
+   "amount": 1
+  }
+ ],
+ "1 poivron jaune ou rouge": [
+  {
+   "name": "poivron jaune",
+   "amount": 1
+  }
+ ],
+ "1 poivron rouge": [
+  {
+   "name": "poivron rouge",
+   "amount": 1
+  }
+ ],
+ "1 poivron sans la peau": [
+  {
+   "name": "poivron",
+   "amount": 1
+  }
+ ],
+ "1 poivron vert": [
+  {
+   "name": "poivron vert",
+   "amount": 1
+  }
+ ],
+ "1 pomme": [
+  {
+   "name": "pomme",
+   "amount": 1
+  }
+ ],
+ "1 pomme de terre": [
+  {
+   "name": "pomme de terre",
+   "amount": 1
+  }
+ ],
+ "1 pomme de terre moyenne": [
+  {
+   "name": "pomme de terre",
+   "amount": 1
+  }
+ ],
+ "1 pomme granny smith": [
+  {
+   "name": "pomme granny smith",
+   "amount": 1
+  }
+ ],
+ "1 pomme rouge": [
+  {
+   "name": "pomme rouge",
+   "amount": 1
+  }
+ ],
+ "1 pomme verte": [
+  {
+   "name": "pomme verte",
+   "amount": 1
+  }
+ ],
+ "1 pommes de terre": [
+  {
+   "name": "pomme de terre",
+   "amount": 1
+  }
+ ],
+ "1 pot de coulis de tomates (environ 300g)": [
+  {
+   "name": "coulis de tomates",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de fromage frais aux herbes": [
+  {
+   "name": "fromage frais aux herbes",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de labneh": [
+  {
+   "name": "labneh",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de labneh ( ou yaourt grec)": [
+  {
+   "name": "labneh",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de pesto rosso": [
+  {
+   "name": "pesto rosso",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de sauce tomate de votre choix": [
+  {
+   "name": "sauce tomate",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de stracciatella (ou le coeur d'une burrata récupéré à l'aide d'une cuillère)": [
+  {
+   "name": "stracciatella",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de yaourt à la grecque": [
+  {
+   "name": "yaourt grec",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de yaourt nature ou végétal neutre": [
+  {
+   "name": "yaourt nature",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 pot de yaourt végétal à la grecque": [
+  {
+   "name": "yaourt végétal à la grecque",
+   "amount": 1,
+   "unit": "pot"
+  }
+ ],
+ "1 quinzaine de tomates cerise fraiches": [
+  {
+   "name": "tomate cerise",
+   "amount": 15
+  }
+ ],
+ "1 quinzaine de tomates séchées": [
+  {
+   "name": "tomate séchée",
+   "amount": 15
+  }
+ ],
+ "1 récipient": [],
+ "1 Reese's Cup": [
+  {
+   "name": "reese's cup",
+   "amount": 1
+  }
+ ],
+ "1 rouleau de pâte": [
+  {
+   "name": "pâte",
+   "amount": 1,
+   "unit": "rouleau"
+  }
+ ],
+ "1 rouleau de pâte à pizza (rectangulaire de préférence)": [
+  {
+   "name": "pâte à pizza",
+   "amount": 1,
+   "unit": "rouleau"
+  }
+ ],
+ "1 rouleau de pâte feuilletée": [
+  {
+   "name": "pâte feuilletée",
+   "amount": 1,
+   "unit": "rouleau"
+  }
+ ],
+ "1 sachet de levure": [
+  {
+   "name": "levure",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de levure boulangère": [
+  {
+   "name": "levure boulangère",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de levure boulangère sèche (environ 5g)": [
+  {
+   "name": "levure boulangère sèche",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de levure boulangère sèche active": [
+  {
+   "name": "levure boulangère sèche",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de levure de boulanger sèche": [
+  {
+   "name": "levure boulangère sèche",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de levure sèche pour brioche/pain": [
+  {
+   "name": "levure sèche",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de pépites de chocolat": [
+  {
+   "name": "pépites de chocolat",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de pousses d’épinards": [
+  {
+   "name": "pousse d'épinard",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 sachet de sucre vanillé": [
+  {
+   "name": "sucre vanillé",
+   "amount": 1,
+   "unit": "sachet"
+  }
+ ],
+ "1 tasse + 1/2 de bouillon de légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 1.5,
+   "unit": "tasse"
+  }
+ ],
+ "1 tasse d’épinards frais": [
+  {
+   "name": "épinard",
+   "amount": 1,
+   "unit": "tasse"
+  }
+ ],
+ "1 tasse de chapelure Panko (chapelure japonaise) ou une chapelure au choix": [
+  {
+   "name": "chapelure panko",
+   "amount": 1,
+   "unit": "tasse"
+  }
+ ],
+ "1 tasse de fromage râpé au choix": [
+  {
+   "name": "fromage",
+   "amount": 1,
+   "unit": "tasse"
+  }
+ ],
+ "1 tasse de rondelles de banane surgelée": [
+  {
+   "name": "banane surgelée",
+   "amount": 1,
+   "unit": "tasse"
+  }
+ ],
+ "1 tasse de roquette": [
+  {
+   "name": "roquette",
+   "amount": 1,
+   "unit": "tasse"
+  }
+ ],
+ "1 tasse de salade verte ou un petit coeur de laitue": [
+  {
+   "name": "salade verte",
+   "amount": 1,
+   "unit": "tasse"
+  }
+ ],
+ "1 tête d’ail": [
+  {
+   "name": "ail",
+   "amount": 1,
+   "unit": "tête"
+  }
+ ],
+ "1 tomate": [
+  {
+   "name": "tomate",
+   "amount": 1
+  }
+ ],
+ "1 tomate ananas": [
+  {
+   "name": "tomate ananas",
+   "amount": 1
+  }
+ ],
+ "1 tomate coeur de boeuf": [
+  {
+   "name": "tomate cœur de bœuf",
+   "amount": 1
+  }
+ ],
+ "1 tomate cœur de bœuf": [
+  {
+   "name": "tomate cœur de bœuf",
+   "amount": 1
+  }
+ ],
+ "1 tomate pelée San Marzano (en boite)": [
+  {
+   "name": "tomate pelée san marzano",
+   "amount": 1
+  }
+ ],
+ "1 tomate rouge type cœur de bœuf": [
+  {
+   "name": "tomate cœur de bœuf",
+   "amount": 1
+  }
+ ],
+ "1 tomate verte": [
+  {
+   "name": "tomate verte",
+   "amount": 1
+  }
+ ],
+ "1 tomates": [
+  {
+   "name": "tomate",
+   "amount": 1
+  }
+ ],
+ "1 tortilla de maïs": [
+  {
+   "name": "tortilla de maïs",
+   "amount": 1
+  }
+ ],
+ "1 trait de citron vert": [
+  {
+   "name": "citron vert",
+   "amount": 1,
+   "unit": "trait"
+  }
+ ],
+ "1 trait de jus de citron": [
+  {
+   "name": "jus de citron",
+   "amount": 1,
+   "unit": "trait"
+  }
+ ],
+ "1 tranche de brioche": [
+  {
+   "name": "brioche",
+   "amount": 1,
+   "unit": "tranche"
+  }
+ ],
+ "1 tranche de jambon de Bayonne": [
+  {
+   "name": "jambon de bayonne",
+   "amount": 1,
+   "unit": "tranche"
+  }
+ ],
+ "1 tranche de pain complet": [
+  {
+   "name": "pain complet",
+   "amount": 1,
+   "unit": "tranche"
+  }
+ ],
+ "1 tranche de pain rassis": [
+  {
+   "name": "pain rassis",
+   "amount": 1,
+   "unit": "tranche"
+  }
+ ],
+ "1 unité": [],
+ "1 verre d'eau": [
+  {
+   "name": "eau",
+   "amount": 1,
+   "unit": "verre"
+  }
+ ],
+ "1 verre d’eau ou lait végétal": [
+  {
+   "name": "eau",
+   "amount": 1,
+   "unit": "verre"
+  }
+ ],
+ "1 verre de flocons d'avoine": [
+  {
+   "name": "flocon d'avoine",
+   "amount": 1,
+   "unit": "verre"
+  }
+ ],
+ "1 verre de lait d'avoine": [
+  {
+   "name": "lait d'avoine",
+   "amount": 1,
+   "unit": "verre"
+  }
+ ],
+ "1 verre de lait végétal": [
+  {
+   "name": "lait végétal",
+   "amount": 1,
+   "unit": "verre"
+  }
+ ],
+ "1 verre de vin blanc": [
+  {
+   "name": "vin blanc",
+   "amount": 1,
+   "unit": "verre"
+  }
+ ],
+ "1 vingtaine de fleurs de courgettes": [
+  {
+   "name": "fleur de courgette",
+   "amount": 20
+  }
+ ],
+ "1 vingtaine de noisettes": [
+  {
+   "name": "noisette",
+   "amount": 20
+  }
+ ],
+ "1 yaourt": [
+  {
+   "name": "yaourt",
+   "amount": 1
+  }
+ ],
+ "1 yaourt au soja": [
+  {
+   "name": "yaourt de soja",
+   "amount": 1
+  }
+ ],
+ "1 yaourt de brebis": [
+  {
+   "name": "yaourt de brebis",
+   "amount": 1
+  }
+ ],
+ "1 yaourt de soja blanc nature": [
+  {
+   "name": "yaourt de soja nature",
+   "amount": 1
+  }
+ ],
+ "1 yaourt grec": [
+  {
+   "name": "yaourt grec",
+   "amount": 1
+  }
+ ],
+ "1 yaourt nature": [
+  {
+   "name": "yaourt nature",
+   "amount": 1
+  }
+ ],
+ "1 yaourt nature ou végétal": [
+  {
+   "name": "yaourt nature",
+   "amount": 1
+  }
+ ],
+ "1 yaourt soja nature": [
+  {
+   "name": "yaourt de soja nature",
+   "amount": 1
+  }
+ ],
+ "1 zeste de citron": [
+  {
+   "name": "citron",
+   "amount": 1,
+   "unit": "zeste"
+  }
+ ],
+ "1-2 cuillères à soupe d'huile de coco fondue": [
+  {
+   "name": "huile de coco",
+   "amount": 1,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1-2 dattes": [
+  {
+   "name": "datte",
+   "amount": 1
+  }
+ ],
+ "1-2 gousse d’ail": [
+  {
+   "name": "ail",
+   "amount": 1,
+   "unit": "gousse"
+  }
+ ],
+ "1,5 cuillère à café de purée de sésame blanc": [
+  {
+   "name": "purée de sésame blanc",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1,5 cuillère à soupe d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.2 gousse d’ail": [
+  {
+   "name": "ail",
+   "amount": 1.2,
+   "unit": "gousse"
+  }
+ ],
+ "1.2L de bouillon de légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 1.2,
+   "unit": "l"
+  }
+ ],
+ "1.5 aubergine": [
+  {
+   "name": "aubergine",
+   "amount": 1.5
+  }
+ ],
+ "1.5 aubergines": [
+  {
+   "name": "aubergine",
+   "amount": 1.5
+  }
+ ],
+ "1.5 carottes": [
+  {
+   "name": "carotte",
+   "amount": 1.5
+  }
+ ],
+ "1.5 cuillère à café de miel": [
+  {
+   "name": "miel",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillère à café de moutarde": [
+  {
+   "name": "moutarde",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillère à café de paprika": [
+  {
+   "name": "paprika",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillère à café de vinaigre de riz": [
+  {
+   "name": "vinaigre de riz",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillère à soupe d’eau": [
+  {
+   "name": "eau",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillère à soupe d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillère à soupe d'huile de tournesol": [
+  {
+   "name": "huile de tournesol",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillère à soupe de beurre": [
+  {
+   "name": "beurre",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillère à soupe de mascobado": [
+  {
+   "name": "mascobado",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillère à soupe de sauce soja": [
+  {
+   "name": "sauce soja",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillère à soupe de sauce soja tamari": [
+  {
+   "name": "sauce soja tamari",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à café de bicarbonate de soude": [
+  {
+   "name": "bicarbonate de soude",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à café de levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à café de moutarde": [
+  {
+   "name": "moutarde",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à café de paprika": [
+  {
+   "name": "paprika",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à café de paprika fumé": [
+  {
+   "name": "paprika fumé",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à café de pâte de curry rouge": [
+  {
+   "name": "pâte de curry rouge",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à café de vinaigre de cidre": [
+  {
+   "name": "vinaigre de cidre",
+   "amount": 1.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1.5 cuillères à soupe d'huile d'olive": [
+  {
+   "name": "huile d'olive",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe d’huile de sésame": [
+  {
+   "name": "huile de sésame",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe d’huile de tournesol": [
+  {
+   "name": "huile de tournesol",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe d’huile neutre": [
+  {
+   "name": "huile neutre",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe de crème fraîche épaisse": [
+  {
+   "name": "crème fraîche épaisse",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe de cumin en poudre": [
+  {
+   "name": "cumin",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe de margarine": [
+  {
+   "name": "margarine",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe de petites câpres": [
+  {
+   "name": "câpre",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe de sauce soja": [
+  {
+   "name": "sauce soja",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 cuillères à soupe de vinaigre balsamique": [
+  {
+   "name": "vinaigre balsamique",
+   "amount": 1.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1.5 échalotes": [
+  {
+   "name": "échalote",
+   "amount": 1.5
+  }
+ ],
+ "1.5 gousse d'ail": [
+  {
+   "name": "ail",
+   "amount": 1.5,
+   "unit": "gousse"
+  }
+ ],
+ "1.5 gousses d’ail": [
+  {
+   "name": "ail",
+   "amount": 1.5,
+   "unit": "gousse"
+  }
+ ],
+ "1.5 oignons verts": [
+  {
+   "name": "oignon vert",
+   "amount": 1.5
+  }
+ ],
+ "1.5 oignons verts émincés": [
+  {
+   "name": "oignon vert",
+   "amount": 1.5
+  }
+ ],
+ "1.5 tiges de citronnelle": [
+  {
+   "name": "tige de citronnelle",
+   "amount": 1.5
+  }
+ ],
+ "1.5cm de gingembre": [
+  {
+   "name": "gingembre",
+   "amount": 1.5,
+   "unit": "cm"
+  }
+ ],
+ "1/2 aubergine": [
+  {
+   "name": "aubergine",
+   "amount": 0.5
+  }
+ ],
+ "1/2 aubergines": [
+  {
+   "name": "aubergine",
+   "amount": 0.5
+  }
+ ],
+ "1/2 avocat": [
+  {
+   "name": "avocat",
+   "amount": 0.5
+  }
+ ],
+ "1/2 avocat bien mûr quelques gouttes de jus de citron": [
+  {
+   "name": "avocat",
+   "amount": 0.5
+  },
+  {
+   "name": "jus de citron",
+   "unit": "goutte"
+  }
+ ],
+ "1/2 avocat congelé": [
+  {
+   "name": "avocat congelé",
+   "amount": 0.5
+  }
+ ],
+ "1/2 baguette": [
+  {
+   "name": "baguette",
+   "amount": 0.5
+  }
+ ],
+ "1/2 banane": [
+  {
+   "name": "banane",
+   "amount": 0.5
+  }
+ ],
+ "1/2 banane mûre": [
+  {
+   "name": "banane",
+   "amount": 0.5
+  }
+ ],
+ "1/2 belle orange": [
+  {
+   "name": "orange",
+   "amount": 0.5
+  }
+ ],
+ "1/2 betterave chioggia crue": [
+  {
+   "name": "betterave chioggia",
+   "amount": 0.5
+  }
+ ],
+ "1/2 bocal de tomates semi-séchées": [
+  {
+   "name": "tomate semi-séchée",
+   "amount": 0.5,
+   "unit": "bocal"
+  }
+ ],
+ "1/2 boite de haricots rouges ou noirs": [
+  {
+   "name": "haricot rouge",
+   "amount": 0.5,
+   "unit": "boite"
+  }
+ ],
+ "1/2 boite de lait de coco": [
+  {
+   "name": "lait de coco",
+   "amount": 0.5,
+   "unit": "boite"
+  }
+ ],
+ "1/2 boite de tomates cerise (200g)": [
+  {
+   "name": "tomate cerise",
+   "amount": 0.5,
+   "unit": "boite"
+  }
+ ],
+ "1/2 boîte de tomates concassées en conserve": [
+  {
+   "name": "tomate concassée",
+   "amount": 0.5,
+   "unit": "boite"
+  }
+ ],
+ "1/2 boite de tomates jaunes pelées": [
+  {
+   "name": "tomate jaune pelée",
+   "amount": 0.5,
+   "unit": "boite"
+  }
+ ],
+ "1/2 boite de tomates pelées entières": [
+  {
+   "name": "tomate pelée entière",
+   "amount": 0.5,
+   "unit": "boite"
+  }
+ ],
+ "1/2 bol de guacamole": [
+  {
+   "name": "guacamole",
+   "amount": 0.5,
+   "unit": "bol"
+  }
+ ],
+ "1/2 bol de quinoa": [
+  {
+   "name": "quinoa",
+   "amount": 0.5,
+   "unit": "bol"
+  }
+ ],
+ "1/2 botte d’asperges": [
+  {
+   "name": "asperge",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 botte d’oignons verts": [
+  {
+   "name": "oignon vert",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 botte de cébette": [
+  {
+   "name": "cébette",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 botte de cébettes": [
+  {
+   "name": "cébette",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 botte de ciboulette": [
+  {
+   "name": "ciboulette",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 botte de coriandre fraîche": [
+  {
+   "name": "coriandre",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 botte de persil plat": [
+  {
+   "name": "persil plat",
+   "amount": 0.5,
+   "unit": "botte"
+  }
+ ],
+ "1/2 bouillon cube légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 0.5,
+   "unit": "cube"
+  }
+ ],
+ "1/2 boule de mozzarella": [
+  {
+   "name": "mozzarella",
+   "amount": 0.5,
+   "unit": "boule"
+  }
+ ],
+ "1/2 bouquet de feuilles de chou noir de Toscane (125g de feuilles) ou de chou kale ou frisé": [
+  {
+   "name": "chou noir de toscane",
+   "amount": 0.5,
+   "unit": "bouquet"
+  }
+ ],
+ "1/2 branche de céleri": [
+  {
+   "name": "céleri",
+   "amount": 0.5,
+   "unit": "branche"
+  }
+ ],
+ "1/2 branche de persil frais ciselé": [
+  {
+   "name": "persil",
+   "amount": 0.5,
+   "unit": "branche"
+  }
+ ],
+ "1/2 brin d'aneth": [
+  {
+   "name": "aneth",
+   "amount": 0.5,
+   "unit": "brin"
+  }
+ ],
+ "1/2 brocoli": [
+  {
+   "name": "brocoli",
+   "amount": 0.5
+  }
+ ],
+ "1/2 butternut": [
+  {
+   "name": "courge butternut",
+   "amount": 0.5
+  }
+ ],
+ "1/2 carotte": [
+  {
+   "name": "carotte",
+   "amount": 0.5
+  }
+ ],
+ "1/2 chou-fleur": [
+  {
+   "name": "chou-fleur",
+   "amount": 0.5
+  }
+ ],
+ "1/2 chou-fleur (ou 1/2 brocoli)": [
+  {
+   "name": "chou-fleur",
+   "amount": 0.5
+  }
+ ],
+ "1/2 ciboulette fraîche": [
+  {
+   "name": "ciboulette",
+   "amount": 0.5
+  }
+ ],
+ "1/2 citron": [
+  {
+   "name": "citron",
+   "amount": 0.5
+  }
+ ],
+ "1/2 citron bio": [
+  {
+   "name": "citron",
+   "amount": 0.5
+  }
+ ],
+ "1/2 citron jaune bio": [
+  {
+   "name": "citron jaune",
+   "amount": 0.5
+  }
+ ],
+ "1/2 citron pressé": [
+  {
+   "name": "citron",
+   "amount": 0.5
+  }
+ ],
+ "1/2 citron vert": [
+  {
+   "name": "citron vert",
+   "amount": 0.5
+  }
+ ],
+ "1/2 citron vert (zeste et tranches)": [
+  {
+   "name": "citron vert",
+   "amount": 0.5
+  }
+ ],
+ "1/2 clou de girofle réduit en poudre": [
+  {
+   "name": "clou de girofle",
+   "amount": 0.5
+  }
+ ],
+ "1/2 concombre": [
+  {
+   "name": "concombre",
+   "amount": 0.5
+  }
+ ],
+ "1/2 concombre30ml de sauce soja": [
+  {
+   "name": "concombre",
+   "amount": 0.5
+  },
+  {
+   "name": "sauce soja",
+   "amount": 30,
+   "unit": "ml"
+  }
+ ],
+ "1/2 conserve de chair de tomate": [
+  {
+   "name": "chair de tomate",
+   "amount": 0.5,
+   "unit": "conserve"
+  }
+ ],
+ "1/2 conserve de concentré de tomates": [
+  {
+   "name": "concentré de tomates",
+   "amount": 0.5,
+   "unit": "conserve"
+  }
+ ],
+ "1/2 conserve de haricots rouges": [
+  {
+   "name": "haricot rouge",
+   "amount": 0.5,
+   "unit": "conserve"
+  }
+ ],
+ "1/2 conserve de poivrons grillés": [
+  {
+   "name": "poivron grillé",
+   "amount": 0.5,
+   "unit": "conserve"
+  }
+ ],
+ "1/2 conserve moyenne de haricots rouge ≈ 100g": [
+  {
+   "name": "haricot rouge",
+   "amount": 0.5,
+   "unit": "conserve"
+  }
+ ],
+ "1/2 courge butternut": [
+  {
+   "name": "courge butternut",
+   "amount": 0.5
+  }
+ ],
+ "1/2 courge poivrée": [
+  {
+   "name": "courge poivrée",
+   "amount": 0.5
+  }
+ ],
+ "1/2 courge spaghetti": [
+  {
+   "name": "courge spaghetti",
+   "amount": 0.5
+  }
+ ],
+ "1/2 courgette": [
+  {
+   "name": "courgette",
+   "amount": 0.5
+  }
+ ],
+ "1/2 cube de bouillon de légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 0.5,
+   "unit": "cube"
+  }
+ ],
+ "1/2 cube de bouillon de poisson ou légumes": [
+  {
+   "name": "bouillon de poisson",
+   "amount": 0.5,
+   "unit": "cube"
+  }
+ ],
+ "1/2 cuillère ) café de cumin": [
+  {
+   "name": "cumin",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café bicarbonate alimentaire": [
+  {
+   "name": "bicarbonate alimentaire",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café bombée de curry": [
+  {
+   "name": "curry",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café curcuma": [
+  {
+   "name": "curcuma",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café d'ail en poudre": [
+  {
+   "name": "ail en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café d’ail en poudre (si toléré)": [
+  {
+   "name": "ail en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café d’épices à chili": [
+  {
+   "name": "épices à chili",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café d’extrait de vanille": [
+  {
+   "name": "extrait de vanille",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café d'huile de coco solide": [
+  {
+   "name": "huile de coco",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de 4 épices": [
+  {
+   "name": "4 épices",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de bicarbonate": [
+  {
+   "name": "bicarbonate",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de bicarbonate alimentaire": [
+  {
+   "name": "bicarbonate alimentaire",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de bicarbonate de soude": [
+  {
+   "name": "bicarbonate de soude",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère a café de cannelle": [
+  {
+   "name": "cannelle",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de cannelle": [
+  {
+   "name": "cannelle",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de cannelle en poudre": [
+  {
+   "name": "cannelle",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de chili en poudre": [
+  {
+   "name": "chili en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de concentré de tomates": [
+  {
+   "name": "concentré de tomates",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de coriandre en poudre": [
+  {
+   "name": "coriandre en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de coriandre moulue": [
+  {
+   "name": "coriandre en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de crème de tartre": [
+  {
+   "name": "crème de tartre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère a café de cumin": [
+  {
+   "name": "cumin",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de cumin": [
+  {
+   "name": "cumin",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de cumin en poudre": [
+  {
+   "name": "cumin",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de curcuma": [
+  {
+   "name": "curcuma",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de curry": [
+  {
+   "name": "curry",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de fécule de maïs": [
+  {
+   "name": "fécule de maïs",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de fenugrec": [
+  {
+   "name": "fenugrec",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de fleur de sel": [
+  {
+   "name": "fleur de sel",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de garam masala": [
+  {
+   "name": "garam masala",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de gingembre": [
+  {
+   "name": "gingembre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de graines de cumin": [
+  {
+   "name": "graine de cumin",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de graines de moutarde": [
+  {
+   "name": "graine de moutarde",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de gros sel": [
+  {
+   "name": "gros sel",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de levure de boulanger déshydratée": [
+  {
+   "name": "levure boulangère sèche",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de mélange 4 épices": [
+  {
+   "name": "4 épices",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de miel": [
+  {
+   "name": "miel",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de miel (~)1/2 cuillère à soupe d'eau": [
+  {
+   "name": "miel",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  },
+  {
+   "name": "eau",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à café de miel liquide": [
+  {
+   "name": "miel",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de moutarde": [
+  {
+   "name": "moutarde",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de moutarde forte": [
+  {
+   "name": "moutarde forte",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de noix de muscade": [
+  {
+   "name": "noix de muscade",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de noix de muscade râpée": [
+  {
+   "name": "noix de muscade",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de paprika": [
+  {
+   "name": "paprika",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de paprika doux": [
+  {
+   "name": "paprika doux",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de paprika fumé": [
+  {
+   "name": "paprika fumé",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de pâte de curry rouge": [
+  {
+   "name": "pâte de curry rouge",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de pâte de miso rouge": [
+  {
+   "name": "pâte de miso rouge",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de piment de cayenne": [
+  {
+   "name": "piment de cayenne",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de piment en flocons": [
+  {
+   "name": "piment en flocons",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère a café de piment en poudre": [
+  {
+   "name": "piment en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de piment en poudre": [
+  {
+   "name": "piment en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de poivre": [
+  {
+   "name": "poivre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de poivre noir": [
+  {
+   "name": "poivre noir",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de poudre d’ail": [
+  {
+   "name": "ail en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de poudre de cèpes": [
+  {
+   "name": "cèpe en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de poudre de chili": [
+  {
+   "name": "chili en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de poudre de vanille": [
+  {
+   "name": "vanille en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de ras el hanout": [
+  {
+   "name": "ras el hanout",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de sel": [
+  {
+   "name": "sel",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de sel rose de l'Himalaya": [
+  {
+   "name": "sel rose de l'himalaya",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de sésame": [
+  {
+   "name": "sésame",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de sucre": [
+  {
+   "name": "sucre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de thym séché effeuillé": [
+  {
+   "name": "thym séché",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de vanille en poudre": [
+  {
+   "name": "vanille en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café de vanille en poudre et/ou cannelle": [
+  {
+   "name": "vanille en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café moutarde (optionnel)": [
+  {
+   "name": "moutarde",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café paprika": [
+  {
+   "name": "paprika",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café rase d’ail en poudre": [
+  {
+   "name": "ail en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café rase de coriandre": [
+  {
+   "name": "coriandre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à café rase de curcuma": [
+  {
+   "name": "curcuma",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à s’assume d’huile de sésame": [
+  {
+   "name": "huile de sésame",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe d'ail en poudre": [
+  {
+   "name": "ail en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe d’herbes de provence séchées": [
+  {
+   "name": "herbes de provence",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe d'huile de sésame": [
+  {
+   "name": "huile de sésame",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe d’huile végétale": [
+  {
+   "name": "huile végétale",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe d'oignons en paillettes": [
+  {
+   "name": "oignon en paillettes",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de concentré de tomates": [
+  {
+   "name": "concentré de tomates",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de curry": [
+  {
+   "name": "curry",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de curry en poudre": [
+  {
+   "name": "curry",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de fécule de maïs": [
+  {
+   "name": "fécule de maïs",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de graines de lin moulues": [
+  {
+   "name": "graine de lin moulue",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de miel": [
+  {
+   "name": "miel",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de miso blanc": [
+  {
+   "name": "miso blanc",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de moutarde douce (type": [
+  {
+   "name": "moutarde douce",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de pâte de curry rouge": [
+  {
+   "name": "pâte de curry rouge",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de persil plat haché": [
+  {
+   "name": "persil plat",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de psyllium": [
+  {
+   "name": "psyllium",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de sirop d'agave": [
+  {
+   "name": "sirop d'agave",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de vinaigre balsamique": [
+  {
+   "name": "vinaigre balsamique",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de vinaigre de riz": [
+  {
+   "name": "vinaigre de riz",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe de vinaigre de vin blanc": [
+  {
+   "name": "vinaigre de vin blanc",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à soupe jus de citron": [
+  {
+   "name": "jus de citron",
+   "amount": 0.5,
+   "unit": "cuillère à soupe"
+  }
+ ],
+ "1/2 cuillère à thé de cardamome moulue": [
+  {
+   "name": "cardamome moulue",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à thé de curcuma": [
+  {
+   "name": "curcuma",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillère à thé de gingembre râpé": [
+  {
+   "name": "gingembre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 cuillèreà café de gingembre en poudre": [
+  {
+   "name": "gingembre en poudre",
+   "amount": 0.5,
+   "unit": "cuillère à café"
+  }
+ ],
+ "1/2 d'échalote": [
+  {
+   "name": "échalote",
+   "amount": 0.5
+  }
+ ],
+ "1/2 échalote": [
+  {
+   "name": "échalote",
+   "amount": 0.5
+  }
+ ],
+ "1/2 échalotte": [
+  {
+   "name": "échalote",
+   "amount": 0.5
+  }
+ ],
+ "1/2 feuille d'algue nori": [
+  {
+   "name": "algue nori",
+   "amount": 0.5,
+   "unit": "feuille"
+  }
+ ],
+ "1/2 gousse d'ail": [
+  {
+   "name": "ail",
+   "amount": 0.5,
+   "unit": "gousse"
+  }
+ ],
+ "1/2 gousse d'ail dégermée": [
+  {
+   "name": "ail",
+   "amount": 0.5,
+   "unit": "gousse"
+  }
+ ],
+ "1/2 gousse d’ail pressée": [
+  {
+   "name": "ail",
+   "amount": 0.5,
+   "unit": "gousse"
+  }
+ ],
+ "1/2 gousse d’ail, émincée": [
+  {
+   "name": "ail",
+   "amount": 0.5,
+   "unit": "gousse"
+  }
+ ],
+ "1/2 grande patate douce": [
+  {
+   "name": "patate douce",
+   "amount": 0.5
+  }
+ ],
+ "1/2 grenade": [
+  {
+   "name": "grenade",
+   "amount": 0.5
+  }
+ ],
+ "1/2 laitue": [
+  {
+   "name": "laitue",
+   "amount": 0.5
+  }
+ ],
+ "1/2 laitue romaine": [
+  {
+   "name": "laitue romaine",
+   "amount": 0.5
+  }
+ ],
+ "1/2 levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 0.5
+  }
+ ],
+ "1/2 mangue": [
+  {
+   "name": "mangue",
+   "amount": 0.5
+  }
+ ],
+ "1/2 mangue ou 1/2 papaye": [
+  {
+   "name": "mangue",
+   "amount": 0.5
+  }
+ ],
+ "1/2 mozzarella Burrata": [
+  {
+   "name": "mozzarella burrata",
+   "amount": 0.5
+  }
+ ],
+ "1/2 navet": [
+  {
+   "name": "navet",
+   "amount": 0.5
+  }
+ ],
+ "1/2 oignon": [
+  {
+   "name": "oignon",
+   "amount": 0.5
+  }
+ ],
+ "1/2 oignon blanc": [
+  {
+   "name": "oignon blanc",
+   "amount": 0.5
+  }
+ ],
+ "1/2 oignon émincé": [
+  {
+   "name": "oignon",
+   "amount": 0.5
+  }
+ ],
+ "1/2 oignon jaune": [
+  {
+   "name": "oignon jaune",
+   "amount": 0.5
+  }
+ ],
+ "1/2 oignon rouge": [
+  {
+   "name": "oignon rouge",
+   "amount": 0.5
+  }
+ ],
+ "1/2 oignon rouge + 1 bol d'eau vinaigrée": [
+  {
+   "name": "oignon rouge",
+   "amount": 0.5
+  },
+  {
+   "name": "eau vinaigrée",
+   "amount": 1,
+   "unit": "bol"
+  }
+ ],
+ "1/2 oignon rouge + 1 récipient d’eau vinaigrée": [
+  {
+   "name": "oignon rouge",
+   "amount": 0.5
+  },
+  {
+   "name": "eau vinaigrée",
+   "amount": 1,
+   "unit": "récipient"
+  }
+ ],
+ "1/2 oignon rouge coupé très finement": [
+  {
+   "name": "oignon rouge",
+   "amount": 0.5
+  }
+ ],
+ "1/2 orange": [
+  {
+   "name": "orange",
+   "amount": 0.5
+  }
+ ],
+ "1/2 patate douce": [
+  {
+   "name": "patate douce",
+   "amount": 0.5
+  }
+ ],
+ "1/2 petit citron": [
+  {
+   "name": "citron",
+   "amount": 0.5
+  }
+ ],
+ "1/2 petit concombre": [
+  {
+   "name": "concombre",
+   "amount": 0.5
+  }
+ ],
+ "1/2 petit piment serrano": [
+  {
+   "name": "piment serrano",
+   "amount": 0.5
+  }
+ ],
+ "1/2 petit verre de vin blanc": [
+  {
+   "name": "vin blanc",
+   "amount": 0.5,
+   "unit": "verre"
+  }
+ ],
+ "1/2 petite banane": [
+  {
+   "name": "banane",
+   "amount": 0.5
+  }
+ ],
+ "1/2 petite courge butternut (ou 1/4 de grosse)": [
+  {
+   "name": "courge butternut",
+   "amount": 0.5
+  }
+ ],
+ "1/2 petite patate douce": [
+  {
+   "name": "patate douce",
+   "amount": 0.5
+  }
+ ],
+ "1/2 piment jalapeño": [
+  {
+   "name": "piment jalapeño",
+   "amount": 0.5
+  }
+ ],
+ "1/2 piment rouge frais": [
+  {
+   "name": "piment rouge",
+   "amount": 0.5
+  }
+ ],
+ "1/2 piment séché": [
+  {
+   "name": "piment séché",
+   "amount": 0.5
+  }
+ ],
+ "1/2 pincée de cannelle": [
+  {
+   "name": "cannelle",
+   "amount": 0.5,
+   "unit": "pincée"
+  }
+ ],
+ "1/2 poignée d’amande": [
+  {
+   "name": "amande",
+   "amount": 0.5,
+   "unit": "poignée"
+  }
+ ],
+ "1/2 poignée de noix": [
+  {
+   "name": "noix",
+   "amount": 0.5,
+   "unit": "poignée"
+  }
+ ],
+ "1/2 poignée de noix de cajou": [
+  {
+   "name": "noix de cajou",
+   "amount": 0.5,
+   "unit": "poignée"
+  }
+ ],
+ "1/2 poignée de raisins secs blonds": [
+  {
+   "name": "raisin sec blond",
+   "amount": 0.5,
+   "unit": "poignée"
+  }
+ ],
+ "1/2 poire": [
+  {
+   "name": "poire",
+   "amount": 0.5
+  }
+ ],
+ "1/2 poireau": [
+  {
+   "name": "poireau",
+   "amount": 0.5
+  }
+ ],
+ "1/2 poivron": [
+  {
+   "name": "poivron",
+   "amount": 0.5
+  }
+ ],
+ "1/2 poivron jalapeno ou corne de boeuf vert fin et long": [
+  {
+   "name": "poivron jalapeno",
+   "amount": 0.5
+  }
+ ],
+ "1/2 poivron rouge": [
+  {
+   "name": "poivron rouge",
+   "amount": 0.5
+  }
+ ],
+ "1/2 pomme": [
+  {
+   "name": "pomme",
+   "amount": 0.5
+  }
+ ],
+ "1/2 pomme de terre": [
+  {
+   "name": "pomme de terre",
+   "amount": 0.5
+  }
+ ],
+ "1/2 pot de concentré de tomates": [
+  {
+   "name": "concentré de tomates",
+   "amount": 0.5,
+   "unit": "pot"
+  }
+ ],
+ "1/2 pot de fromage frais aux herbes": [
+  {
+   "name": "fromage frais aux herbes",
+   "amount": 0.5,
+   "unit": "pot"
+  }
+ ],
+ "1/2 pot de pesto": [
+  {
+   "name": "pesto",
+   "amount": 0.5,
+   "unit": "pot"
+  }
+ ],
+ "1/2 pot de pesto rosso": [
+  {
+   "name": "pesto rosso",
+   "amount": 0.5,
+   "unit": "pot"
+  }
+ ],
+ "1/2 potimarron": [
+  {
+   "name": "potimarron",
+   "amount": 0.5
+  }
+ ],
+ "1/2 sachet de levure": [
+  {
+   "name": "levure",
+   "amount": 0.5,
+   "unit": "sachet"
+  }
+ ],
+ "1/2 sachet de levure chimique": [
+  {
+   "name": "levure chimique",
+   "amount": 0.5,
+   "unit": "sachet"
+  }
+ ],
+ "1/2 tasse d'épinards frais": [
+  {
+   "name": "épinard",
+   "amount": 0.5,
+   "unit": "tasse"
+  }
+ ],
+ "1/2 tasse de farine auto-levante (ou farine": [
+  {
+   "name": "farine auto-levante",
+   "amount": 0.5,
+   "unit": "tasse"
+  }
+ ],
+ "1/2 tasse de lait d’amande feuilles de menthe fraîche": [
+  {
+   "name": "lait d'amande",
+   "amount": 0.5,
+   "unit": "tasse"
+  },
+  {
+   "name": "menthe"
+  }
+ ],
+ "1/2 tasse de lait de votre choix": [
+  {
+   "name": "lait",
+   "amount": 0.5,
+   "unit": "tasse"
+  }
+ ],
+ "1/2 tasse de tortillas chips": [
+  {
+   "name": "tortilla chips",
+   "amount": 0.5,
+   "unit": "tasse"
+  }
+ ],
+ "1/2 verre de bouillon de légumes": [
+  {
+   "name": "bouillon de légumes",
+   "amount": 0.5,
+   "unit": "verre"
+  }
+ ],
+ "1/2 verre de lait d'avoine": [
+  {
+   "name": "lait d'avoine",
+   "amount": 0.5,
+   "unit": "verre"
+  }
+ ],
+ "1/2 verre de lait végétal": [
+  {
+   "name": "lait végétal",
+   "amount": 0.5,
+   "unit": "verre"
+  }
+ ]
+}

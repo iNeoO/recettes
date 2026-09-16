@@ -1,0 +1,27 @@
+{
+  "name": "@recettes/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts"
+  },
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@effect/sql": "^0.52.1",
+    "@effect/sql-drizzle": "^0.51.0",
+    "@effect/sql-pg": "^0.53.0",
+    "drizzle-orm": "^0.45.2",
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "@types/node": "^22.10.0",
+    "typescript": "catalog:"
+  }
+}

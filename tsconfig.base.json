@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    // On n'émet jamais de JS : tsx et vitest résolvent comme un bundler.
+    // nodenext ferait diverger les types CJS/ESM de drizzle-orm entre packages.
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    // exactOptionalPropertyTypes est désactivé : drizzle-orm ne le supporte pas.
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"]
+  }
+}

@@ -1,0 +1,2047 @@
+{
+  "Conserve de 400ml de haricots blancs": [
+    {
+      "name": "haricots blancs",
+      "amount": 400,
+      "unit": "ml"
+    }
+  ],
+  "Coriandre": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Coriandre et menthe": [
+    {
+      "name": "coriandre"
+    },
+    {
+      "name": "menthe"
+    }
+  ],
+  "Coriandre fraîche": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Coriandre fraîche1/2 cuillère à café de gingembre": [
+    {
+      "name": "coriandre"
+    },
+    {
+      "name": "gingembre",
+      "amount": 0.5,
+      "unit": "cuillère à café"
+    }
+  ],
+  "Coriandre hachée": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Coriandre moulue": [
+    {
+      "name": "coriandre moulue"
+    }
+  ],
+  "Coriandre ou basilic thaï": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Coriandre ou menthe": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Coriandre ou persil": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Corn Flakes, émiettées": [
+    {
+      "name": "corn flakes"
+    }
+  ],
+  "Cornichons": [
+    {
+      "name": "cornichon"
+    }
+  ],
+  "Coulis de tomates": [
+    {
+      "name": "coulis de tomates"
+    }
+  ],
+  "Crudités au choix : 1/2 avocat, carotte, radis roses...": [
+    {
+      "name": "avocat",
+      "amount": 0.5
+    }
+  ],
+  "Crudités au choix : carotte, concombre, avocat, tomate, betterave, courgette, choux...": [
+    {
+      "name": "carotte"
+    }
+  ],
+  "Crunchy)": [],
+  "Cubes de pastèque": [
+    {
+      "name": "pastèque"
+    }
+  ],
+  "Cumin": [
+    {
+      "name": "cumin"
+    }
+  ],
+  "Cumin en poudre": [
+    {
+      "name": "cumin"
+    }
+  ],
+  "Cumin, paprika, ail, piment": [
+    {
+      "name": "cumin"
+    },
+    {
+      "name": "paprika"
+    },
+    {
+      "name": "ail"
+    },
+    {
+      "name": "piment"
+    }
+  ],
+  "Curcuma": [
+    {
+      "name": "curcuma"
+    }
+  ],
+  "Curcuma en poudre": [
+    {
+      "name": "curcuma"
+    }
+  ],
+  "Curcuma, cumin": [
+    {
+      "name": "curcuma"
+    },
+    {
+      "name": "cumin"
+    }
+  ],
+  "Curry en poudre": [
+    {
+      "name": "curry"
+    }
+  ],
+  "Curry jaune": [
+    {
+      "name": "curry jaune"
+    }
+  ],
+  "Curry rouge": [
+    {
+      "name": "curry rouge"
+    }
+  ],
+  "Curry vert": [
+    {
+      "name": "curry vert"
+    }
+  ],
+  "Déco : 20/30g de pépites de chocolat (optionnel)": [
+    {
+      "name": "pépite de chocolat",
+      "amount": 20,
+      "unit": "g"
+    }
+  ],
+  "Déco : 20g de flocons d’avoine (optionnel)": [
+    {
+      "name": "flocon d'avoine",
+      "amount": 20,
+      "unit": "g"
+    }
+  ],
+  "Dizaine de feuilles de basilic frais": [
+    {
+      "name": "basilic",
+      "amount": 10
+    }
+  ],
+  "Dizaine de noisettes": [
+    {
+      "name": "noisette",
+      "amount": 10
+    }
+  ],
+  "Eau": [
+    {
+      "name": "eau"
+    }
+  ],
+  "Eau de trempage des cèpes +": [
+    {
+      "name": "eau de trempage des cèpes"
+    }
+  ],
+  "Environ 8 pâtes à cannelloni": [
+    {
+      "name": "pâte à cannelloni",
+      "amount": 8
+    }
+  ],
+  "Epices au choix": [
+    {
+      "name": "épice"
+    }
+  ],
+  "Epices au choix : 4 épices, muscade...": [
+    {
+      "name": "quatre épices"
+    }
+  ],
+  "Épices italiennes": [
+    {
+      "name": "épices italiennes"
+    }
+  ],
+  "Epices mexicaines": [
+    {
+      "name": "épices mexicaines"
+    }
+  ],
+  "Épices mexicaines": [
+    {
+      "name": "épices mexicaines"
+    }
+  ],
+  "Épinards": [
+    {
+      "name": "épinard"
+    }
+  ],
+  "Epinards frais": [
+    {
+      "name": "épinard"
+    }
+  ],
+  "Estragon frais": [
+    {
+      "name": "estragon"
+    }
+  ],
+  "Exemple de garniture : brocolis (précuit), oignon rouge, roquette, radis... n'hésitez pas à adapter selon vos envies ! :)": [
+    {
+      "name": "brocoli"
+    }
+  ],
+  "Extrait de vanille": [
+    {
+      "name": "extrait de vanille"
+    }
+  ],
+  "Facultatif : 1 échalote": [
+    {
+      "name": "échalote",
+      "amount": 1
+    }
+  ],
+  "Facultatif : 1 pincée de piment": [
+    {
+      "name": "piment",
+      "amount": 1,
+      "unit": "pincée"
+    }
+  ],
+  "Facultatif : ail en poudre, gingembre..": [
+    {
+      "name": "ail"
+    },
+    {
+      "name": "gingembre"
+    }
+  ],
+  "Facultatif : fromage râpé": [
+    {
+      "name": "fromage"
+    }
+  ],
+  "Facultatif : mirin": [
+    {
+      "name": "mirin"
+    }
+  ],
+  "Facultatif : paprika": [
+    {
+      "name": "paprika"
+    }
+  ],
+  "Feuille de laurier": [
+    {
+      "name": "laurier"
+    }
+  ],
+  "Feuilles d’épinards": [
+    {
+      "name": "épinard"
+    }
+  ],
+  "Feuilles de basilic": [
+    {
+      "name": "basilic"
+    }
+  ],
+  "Feuilles de coriandre": [
+    {
+      "name": "coriandre"
+    }
+  ],
+  "Feuilles de lasagnes": [
+    {
+      "name": "feuille de lasagne"
+    }
+  ],
+  "Feuilles de menthe": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Feuilles de menthe fraîche": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Feuilles de menthe fraîche, ciselées": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Feuilles de salade": [
+    {
+      "name": "salade"
+    }
+  ],
+  "Feuilles de sauge fraîche": [
+    {
+      "name": "sauge"
+    }
+  ],
+  "Feuilles de sucrine": [
+    {
+      "name": "sucrine"
+    }
+  ],
+  "Fleur de sel": [
+    {
+      "name": "fleur de sel"
+    }
+  ],
+  "Fleurs comestibles": [
+    {
+      "name": "fleur comestible"
+    }
+  ],
+  "Fruits frais, coco râpé...": [
+    {
+      "name": "fruit"
+    },
+    {
+      "name": "coco"
+    }
+  ],
+  "Fruits, oléagineux": [
+    {
+      "name": "fruit"
+    },
+    {
+      "name": "oléagineux"
+    }
+  ],
+  "Garam masala": [
+    {
+      "name": "garam masala"
+    }
+  ],
+  "Garniture au choix : épinard, tomates cerises, fromage végétal, bacon végétal...)": [
+    {
+      "name": "épinard"
+    }
+  ],
+  "Gingembre": [
+    {
+      "name": "gingembre"
+    }
+  ],
+  "Gingembre (selon goût)": [
+    {
+      "name": "gingembre"
+    }
+  ],
+  "Gingembre en poudre": [
+    {
+      "name": "gingembre"
+    }
+  ],
+  "Gingembre frais": [
+    {
+      "name": "gingembre"
+    }
+  ],
+  "Gingembre moulu": [
+    {
+      "name": "gingembre"
+    }
+  ],
+  "Gomasio": [
+    {
+      "name": "gomasio"
+    }
+  ],
+  "Graines de chanvre": [
+    {
+      "name": "graine de chanvre"
+    }
+  ],
+  "Graines de chia": [
+    {
+      "name": "graine de chia"
+    }
+  ],
+  "Graines de courge": [
+    {
+      "name": "graine de courge"
+    }
+  ],
+  "Graines de courges": [
+    {
+      "name": "graine de courge"
+    }
+  ],
+  "Graines de lin": [
+    {
+      "name": "graine de lin"
+    }
+  ],
+  "Graines de pavot": [
+    {
+      "name": "graine de pavot"
+    }
+  ],
+  "Graines de sésame": [
+    {
+      "name": "graine de sésame"
+    }
+  ],
+  "Graines de sésame blanches": [
+    {
+      "name": "graine de sésame blanche"
+    }
+  ],
+  "Graines de sésame noires": [
+    {
+      "name": "graine de sésame noire"
+    }
+  ],
+  "Graines de sésame, graines de pavot, gros sel, etc. (au choix)": [
+    {
+      "name": "graine de sésame"
+    }
+  ],
+  "Graines de tournesol": [
+    {
+      "name": "graine de tournesol"
+    }
+  ],
+  "Grenade": [
+    {
+      "name": "grenade"
+    }
+  ],
+  "Gros sel": [
+    {
+      "name": "gros sel"
+    }
+  ],
+  "Gros sel ou fleur de sel": [
+    {
+      "name": "gros sel"
+    }
+  ],
+  "Gros sel pour la cuisson": [
+    {
+      "name": "gros sel"
+    }
+  ],
+  "Groseilles": [
+    {
+      "name": "groseille"
+    }
+  ],
+  "Harissa": [
+    {
+      "name": "harissa"
+    }
+  ],
+  "Herbes aromatiques (ciboulette, basilic…)": [
+    {
+      "name": "herbes aromatiques"
+    }
+  ],
+  "Herbes de Provence": [
+    {
+      "name": "herbes de provence"
+    }
+  ],
+  "Herbes fraîches (coriandre ou persil)": [
+    {
+      "name": "herbes fraîches"
+    }
+  ],
+  "Herbes fraîches au choix": [
+    {
+      "name": "herbes fraîches"
+    }
+  ],
+  "Huile d 'olive": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile d'olive": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile d'olive (pour les moules)": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile d’olive extra vierge": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile d'olive extra vierge pour la sauce": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile d'olive ou une huile pour friture": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile de cuisson": [
+    {
+      "name": "huile de cuisson"
+    }
+  ],
+  "Huile de friture": [
+    {
+      "name": "huile de friture"
+    }
+  ],
+  "Huile neutre": [
+    {
+      "name": "huile neutre"
+    }
+  ],
+  "Huile neutre pour la cuisson": [
+    {
+      "name": "huile neutre"
+    }
+  ],
+  "Huile neutre végétale": [
+    {
+      "name": "huile neutre"
+    }
+  ],
+  "Huile olive": [
+    {
+      "name": "huile d'olive"
+    }
+  ],
+  "Huile végétale": [
+    {
+      "name": "huile végétale"
+    }
+  ],
+  "Huile végétale pour cuisson": [
+    {
+      "name": "huile végétale"
+    }
+  ],
+  "Huile végétale pour la cuisson": [
+    {
+      "name": "huile végétale"
+    }
+  ],
+  "Jamaïque en poudre": [
+    {
+      "name": "piment de la jamaïque"
+    }
+  ],
+  "Jay&Joy)": [
+    {
+      "name": "fromage végétal"
+    }
+  ],
+  "Jeunes pousses": [
+    {
+      "name": "jeune pousse"
+    }
+  ],
+  "Jeunes pousses d’épinards": [
+    {
+      "name": "jeune pousse d'épinard"
+    }
+  ],
+  "Jus de citron": [
+    {
+      "name": "jus de citron"
+    }
+  ],
+  "La Vie": [
+    {
+      "name": "bacon végétal"
+    }
+  ],
+  "Lait végétal": [
+    {
+      "name": "lait végétal"
+    }
+  ],
+  "Laitue": [
+    {
+      "name": "laitue"
+    }
+  ],
+  "Laitue iceberg": [
+    {
+      "name": "laitue iceberg"
+    }
+  ],
+  "Laitue romaine": [
+    {
+      "name": "laitue romaine"
+    }
+  ],
+  "Laurier": [
+    {
+      "name": "laurier"
+    }
+  ],
+  "Le jus d'1 citron": [
+    {
+      "name": "citron",
+      "amount": 1
+    }
+  ],
+  "Le jus d’1/2 citron": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Le jus d’1/2 citron bio": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Le jus d’1/2 citron jaune": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Le jus d’1/4 de citron": [
+    {
+      "name": "citron",
+      "amount": 0.25
+    }
+  ],
+  "Le jus d'un citron": [
+    {
+      "name": "citron",
+      "amount": 1
+    }
+  ],
+  "Le jus d'un citron vert": [
+    {
+      "name": "citron vert",
+      "amount": 1
+    }
+  ],
+  "Le jus d’un demi citron": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Le jus et le zeste râpé d’1/2 citron jaune": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Le zeste d’un demi-citron": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Le zeste et le jus d’ 1 citron vert": [
+    {
+      "name": "citron vert",
+      "amount": 1
+    }
+  ],
+  "Le zeste râpé de 1/2 orange bio": [
+    {
+      "name": "orange",
+      "amount": 0.5
+    }
+  ],
+  "Les queues des champignons": [
+    {
+      "name": "champignon"
+    }
+  ],
+  "Mâche ou des feuilles vertes au choix": [
+    {
+      "name": "mâche"
+    }
+  ],
+  "Mâche, roquette…": [
+    {
+      "name": "mâche"
+    },
+    {
+      "name": "roquette"
+    }
+  ],
+  "Maïs": [
+    {
+      "name": "maïs"
+    }
+  ],
+  "Mayonnaise": [
+    {
+      "name": "mayonnaise"
+    }
+  ],
+  "Mélange d'épices pour BBQ": [
+    {
+      "name": "mélange d'épices pour bbq"
+    }
+  ],
+  "Mélange de jeunes pousses": [
+    {
+      "name": "jeune pousse"
+    }
+  ],
+  "Mélange quatre épices": [
+    {
+      "name": "quatre épices"
+    }
+  ],
+  "Menthe": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Menthe fraiche": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Menthe fraîche": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Menthe fraîche ciselée": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Mesclun": [
+    {
+      "name": "mesclun"
+    }
+  ],
+  "Mesclun ou autre salade au choix": [
+    {
+      "name": "mesclun"
+    }
+  ],
+  "Miel": [
+    {
+      "name": "miel"
+    }
+  ],
+  "Miso blanc (selon les goûts)": [
+    {
+      "name": "miso blanc"
+    }
+  ],
+  "Moret": [
+    {
+      "name": "brie de moret"
+    }
+  ],
+  "Moutarde à l'ancienne": [
+    {
+      "name": "moutarde à l'ancienne"
+    }
+  ],
+  "Muscade": [
+    {
+      "name": "muscade"
+    }
+  ],
+  "Noisettes ou amandes concassées": [
+    {
+      "name": "noisette"
+    }
+  ],
+  "Noix de cajou concassées": [
+    {
+      "name": "noix de cajou"
+    }
+  ],
+  "Noix de coco rapée": [
+    {
+      "name": "noix de coco"
+    }
+  ],
+  "Noix de muscade": [
+    {
+      "name": "muscade"
+    }
+  ],
+  "Noix de muscade râpée": [
+    {
+      "name": "muscade"
+    }
+  ],
+  "Oignon en poudre": [
+    {
+      "name": "oignon"
+    }
+  ],
+  "Oignons frits": [
+    {
+      "name": "oignon frit"
+    }
+  ],
+  "Oléagineux au choix ou soja soufflé": [
+    {
+      "name": "oléagineux"
+    }
+  ],
+  "Optionnel ; 1 cuillère à café de miel": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "Optionnel : 1 cuillère à café de La": [],
+  "Optionnel : 1 cuillère à café de sarrasin grillé": [
+    {
+      "name": "sarrasin",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "Optionnel : 1 cuillère à café de sirop d'agave ou érable": [
+    {
+      "name": "sirop d'agave",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "Optionnel : 1 cuillère à café de sucre de coco ou sirop d'érable": [
+    {
+      "name": "sucre de coco",
+      "amount": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "Optionnel : 1 cuillère à soupe de farine de cacahuètes": [
+    {
+      "name": "farine de cacahuète",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 1 cuillère à soupe de graines de grenade": [
+    {
+      "name": "graine de grenade",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 1 cuillère à soupe de miel": [
+    {
+      "name": "miel",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 1 cuillère à soupe protéine végétale en poudre": [
+    {
+      "name": "protéine végétale",
+      "amount": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 1 pincée de sel": [
+    {
+      "name": "sel",
+      "amount": 1,
+      "unit": "pincée"
+    }
+  ],
+  "Optionnel : 1/2 citron jaune pour la décoration": [
+    {
+      "name": "citron",
+      "amount": 0.5
+    }
+  ],
+  "Optionnel : 1/2 cuillère à café de cannelle moulue": [
+    {
+      "name": "cannelle",
+      "amount": 0.5,
+      "unit": "cuillère à café"
+    }
+  ],
+  "Optionnel : ½ piment": [
+    {
+      "name": "piment",
+      "amount": 0.5
+    }
+  ],
+  "Optionnel : ⅓ de piment": [
+    {
+      "name": "piment",
+      "amount": 0.333
+    }
+  ],
+  "Optionnel : ¼ de piment": [
+    {
+      "name": "piment",
+      "amount": 0.25
+    }
+  ],
+  "Optionnel : ¼ de piment rouge": [
+    {
+      "name": "piment rouge",
+      "amount": 0.25
+    }
+  ],
+  "Optionnel : 100g de tofu": [
+    {
+      "name": "tofu",
+      "amount": 100,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 10g de soja soufflé": [
+    {
+      "name": "soja soufflé",
+      "amount": 10,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 10g de sucre au choix": [
+    {
+      "name": "sucre",
+      "amount": 10,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 125ml de sour cream végane": [
+    {
+      "name": "sour cream végane",
+      "amount": 125,
+      "unit": "ml"
+    }
+  ],
+  "Optionnel : 15 g protéine végétale en poudre": [
+    {
+      "name": "protéine végétale",
+      "amount": 15,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 15g protéine végétale en poudre": [
+    {
+      "name": "protéine végétale",
+      "amount": 15,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 2 cuillère à soupe de pickles d'oignons rouges": [
+    {
+      "name": "pickles d'oignon rouge",
+      "amount": 2,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 2 cuillères à soupe d’huile d’olive à la truffe": [
+    {
+      "name": "huile d'olive à la truffe",
+      "amount": 2,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 2 cuillères à soupe de protéine végétale en poudre": [
+    {
+      "name": "protéine végétale",
+      "amount": 2,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "Optionnel : 2 naans": [
+    {
+      "name": "naan",
+      "amount": 2
+    }
+  ],
+  "Optionnel : 200g de tofu": [
+    {
+      "name": "tofu",
+      "amount": 200,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 200g de tofu japonais": [
+    {
+      "name": "tofu japonais",
+      "amount": 200,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 20g de protéine végétale à la vanille": [
+    {
+      "name": "protéine végétale à la vanille",
+      "amount": 20,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 30g de mascobado": [
+    {
+      "name": "mascobado",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 4 tranches de jambon cru": [
+    {
+      "name": "jambon cru",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "Optionnel : 4 tranches de jambon de Parme": [
+    {
+      "name": "jambon de parme",
+      "amount": 4,
+      "unit": "tranche"
+    }
+  ],
+  "Optionnel : 40g de feta (végétale ou animale)": [
+    {
+      "name": "feta",
+      "amount": 40,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 50g de fromage râpé vegan": [
+    {
+      "name": "fromage végétal",
+      "amount": 50,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 50g de fromage végétal": [
+    {
+      "name": "fromage végétal",
+      "amount": 50,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 60g de feta vegan": [
+    {
+      "name": "feta végétale",
+      "amount": 60,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 60g de fromage": [
+    {
+      "name": "fromage",
+      "amount": 60,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 60g de noix du brésil": [
+    {
+      "name": "noix du brésil",
+      "amount": 60,
+      "unit": "g"
+    }
+  ],
+  "Optionnel : 7.5cl de vin blanc (l'alcool s'évapore à la cuisson)": [
+    {
+      "name": "vin blanc",
+      "amount": 7.5,
+      "unit": "cl"
+    }
+  ],
+  "Optionnel : ail": [
+    {
+      "name": "ail"
+    }
+  ],
+  "Optionnel : crème végétale": [
+    {
+      "name": "crème végétale"
+    }
+  ],
+  "Optionnel : épices": [
+    {
+      "name": "épice"
+    }
+  ],
+  "Optionnel : extrait de vanille": [
+    {
+      "name": "extrait de vanille"
+    }
+  ],
+  "Optionnel : flocons de piment": [
+    {
+      "name": "flocon de piment"
+    }
+  ],
+  "Optionnel : fromage râpé": [
+    {
+      "name": "fromage"
+    }
+  ],
+  "Optionnel : Fromage râpé vegan": [
+    {
+      "name": "fromage végétal"
+    }
+  ],
+  "Optionnel : Gomasio": [
+    {
+      "name": "gomasio"
+    }
+  ],
+  "Optionnel : graines (sésame, lin, courge, tournesol, pavot...)": [
+    {
+      "name": "graine"
+    }
+  ],
+  "Optionnel : Huile pimentée": [
+    {
+      "name": "huile pimentée"
+    }
+  ],
+  "Optionnel : noix de coco en poudre ou cacao non sucré en poudre": [
+    {
+      "name": "noix de coco"
+    }
+  ],
+  "Optionnel : oignons nouveaux, graines de sésame...": [
+    {
+      "name": "oignon nouveau"
+    },
+    {
+      "name": "graine de sésame"
+    }
+  ],
+  "Optionnel : Piment": [
+    {
+      "name": "piment"
+    }
+  ],
+  "Optionnel : piment frais": [
+    {
+      "name": "piment"
+    }
+  ],
+  "Optionnel : pousses de pois": [
+    {
+      "name": "pousse de pois"
+    }
+  ],
+  "Optionnel : pousses de tournesol": [
+    {
+      "name": "pousse de tournesol"
+    }
+  ],
+  "Optionnel : sel": [
+    {
+      "name": "sel"
+    }
+  ],
+  "Optionnel : Tartare végétal": [
+    {
+      "name": "tartare végétal"
+    }
+  ],
+  "Optionnel : tomates séchées": [
+    {
+      "name": "tomate séchée"
+    }
+  ],
+  "Optionnel selon tolérance :": [],
+  "Optionnel selon tolérance : 1/2 oignon": [
+    {
+      "name": "oignon",
+      "amount": 0.5
+    }
+  ],
+  "Origan": [
+    {
+      "name": "origan"
+    }
+  ],
+  "Origan ciselé": [
+    {
+      "name": "origan"
+    }
+  ],
+  "Origan séché": [
+    {
+      "name": "origan"
+    }
+  ],
+  "Ou à défaut 4 betteraves rouges cuites que l’on ne fera pas cuire": [
+    {
+      "name": "betterave rouge",
+      "amount": 4
+    }
+  ],
+  "Papaye": [
+    {
+      "name": "papaye"
+    }
+  ],
+  "Paprika": [
+    {
+      "name": "paprika"
+    }
+  ],
+  "Paprika en poudre": [
+    {
+      "name": "paprika"
+    }
+  ],
+  "Paprika fumé": [
+    {
+      "name": "paprika fumé"
+    }
+  ],
+  "Paprika fumé en poudre": [
+    {
+      "name": "paprika fumé"
+    }
+  ],
+  "Paprika, cumin": [
+    {
+      "name": "paprika"
+    },
+    {
+      "name": "cumin"
+    }
+  ],
+  "Paprika, curcuma": [
+    {
+      "name": "paprika"
+    },
+    {
+      "name": "curcuma"
+    }
+  ],
+  "Parmesan (animal ou végétal)": [
+    {
+      "name": "parmesan"
+    }
+  ],
+  "Persil": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil frais": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil frais / basilic": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil frais ou coriandre": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil frisé": [
+    {
+      "name": "persil frisé"
+    }
+  ],
+  "Persil haché": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil ou basilic frais": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil ou cerfeuil": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil ou coriandre": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil ou menthe": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil ou romarin frais": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Persil plat": [
+    {
+      "name": "persil plat"
+    }
+  ],
+  "Persil plat ciselé": [
+    {
+      "name": "persil plat"
+    }
+  ],
+  "Persil plat et basilic": [
+    {
+      "name": "persil plat"
+    },
+    {
+      "name": "basilic"
+    }
+  ],
+  "Persil plat et ciboulette": [
+    {
+      "name": "persil plat"
+    },
+    {
+      "name": "ciboulette"
+    }
+  ],
+  "Persil plat et menthe": [
+    {
+      "name": "persil plat"
+    },
+    {
+      "name": "menthe"
+    }
+  ],
+  "Persil plat fraîchement haché": [
+    {
+      "name": "persil plat"
+    }
+  ],
+  "Persil plat, coriandre et menthe": [
+    {
+      "name": "persil plat"
+    },
+    {
+      "name": "coriandre"
+    },
+    {
+      "name": "menthe"
+    }
+  ],
+  "Pignons de pin": [
+    {
+      "name": "pignon de pin"
+    }
+  ],
+  "Piment": [
+    {
+      "name": "piment"
+    }
+  ],
+  "Piment d'Espelette": [
+    {
+      "name": "piment d'espelette"
+    }
+  ],
+  "Piment doux": [
+    {
+      "name": "piment doux"
+    }
+  ],
+  "Piment séché en poudre": [
+    {
+      "name": "piment"
+    }
+  ],
+  "Piment selon goût": [
+    {
+      "name": "piment"
+    }
+  ],
+  "Piments séchés": [
+    {
+      "name": "piment"
+    }
+  ],
+  "Piri-piri": [
+    {
+      "name": "piri-piri"
+    }
+  ],
+  "Poivre": [
+    {
+      "name": "poivre"
+    }
+  ],
+  "Poivre du moulin": [
+    {
+      "name": "poivre"
+    }
+  ],
+  "Poivre noir": [
+    {
+      "name": "poivre noir"
+    }
+  ],
+  "Pousses d'alfalfa": [
+    {
+      "name": "pousse d'alfalfa"
+    }
+  ],
+  "Pousses d'épinard": [
+    {
+      "name": "pousse d'épinard"
+    }
+  ],
+  "Pousses d’épinards": [
+    {
+      "name": "pousse d'épinard"
+    }
+  ],
+  "Pousses d’épinards frais": [
+    {
+      "name": "pousse d'épinard"
+    }
+  ],
+  "Pousses de pois": [
+    {
+      "name": "pousse de pois"
+    }
+  ],
+  "Quelques branches de romarin frais": [
+    {
+      "name": "romarin"
+    }
+  ],
+  "Quelques branches de thym frais": [
+    {
+      "name": "thym"
+    }
+  ],
+  "Quelques brins d'aneth frais": [
+    {
+      "name": "aneth"
+    }
+  ],
+  "Quelques brins de ciboulettes": [
+    {
+      "name": "ciboulette"
+    }
+  ],
+  "Quelques brins de menthe": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Quelques brins de persil": [
+    {
+      "name": "persil"
+    }
+  ],
+  "Quelques champignons de Paris frais": [
+    {
+      "name": "champignon de paris"
+    }
+  ],
+  "Quelques clous de girofle": [
+    {
+      "name": "clou de girofle"
+    }
+  ],
+  "Quelques copeaux de parmesan": [
+    {
+      "name": "parmesan"
+    }
+  ],
+  "Quelques dès de comté": [
+    {
+      "name": "comté"
+    }
+  ],
+  "Quelques feuilles de basilic": [
+    {
+      "name": "basilic"
+    }
+  ],
+  "Quelques feuilles de basilic frais": [
+    {
+      "name": "basilic"
+    }
+  ],
+  "Quelques feuilles de basilic pour garnir les assiettes": [
+    {
+      "name": "basilic"
+    }
+  ],
+  "Quelques feuilles de menthe": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Quelques feuilles de menthe fraîche": [
+    {
+      "name": "menthe"
+    }
+  ],
+  "Quelques feuilles de salade": [
+    {
+      "name": "salade"
+    }
+  ],
+  "Quelques glaçons": [
+    {
+      "name": "glaçon"
+    }
+  ],
+  "Quelques goutes de citron vert": [
+    {
+      "name": "citron vert"
+    }
+  ],
+  "Quelques gouttes de jus de citron": [
+    {
+      "name": "jus de citron"
+    }
+  ],
+  "Quelques graines de grenade": [
+    {
+      "name": "graine de grenade"
+    }
+  ],
+  "Quelques herbes de Provence": [
+    {
+      "name": "herbes de provence"
+    }
+  ],
+  "Quelques noisettes": [
+    {
+      "name": "noisette"
+    }
+  ],
+  "Quelques noix": [
+    {
+      "name": "noix"
+    }
+  ],
+  "Quelques oléagineux": [
+    {
+      "name": "oléagineux"
+    }
+  ],
+  "Quelques raisins secs": [
+    {
+      "name": "raisin sec"
+    }
+  ],
+  "Quelques rondelles de banane": [
+    {
+      "name": "banane"
+    }
+  ],
+  "Quelques rondelles de concombre": [
+    {
+      "name": "concombre"
+    }
+  ],
+  "Quelques tomates cerises": [
+    {
+      "name": "tomate cerise"
+    }
+  ],
+  "Quelques tomates cerises rouges et jaunes": [
+    {
+      "name": "tomate cerise"
+    }
+  ],
+  "Quelques tranches de concombre": [
+    {
+      "name": "concombre"
+    }
+  ],
+  "Radis roses": [
+    {
+      "name": "radis rose"
+    }
+  ],
+  "Raisins secs Sultanines": [
+    {
+      "name": "raisin sec"
+    }
+  ],
+  "Ras el hanout": [
+    {
+      "name": "ras el hanout"
+    }
+  ],
+  "Ras el-hanout": [
+    {
+      "name": "ras el hanout"
+    }
+  ],
+  "Ras en hanout": [
+    {
+      "name": "ras el hanout"
+    }
+  ],
+  "Ras-el-Hanout": [
+    {
+      "name": "ras el hanout"
+    }
+  ],
+  "Romain frais": [
+    {
+      "name": "romarin"
+    }
+  ],
+  "Romarin": [
+    {
+      "name": "romarin"
+    }
+  ],
+  "Romarin (ou basilic) frais": [
+    {
+      "name": "romarin"
+    }
+  ],
+  "Romarin frais": [
+    {
+      "name": "romarin"
+    }
+  ],
+  "Romarin ou thym frais": [
+    {
+      "name": "romarin"
+    }
+  ],
+  "Roquette": [
+    {
+      "name": "roquette"
+    }
+  ],
+  "Salade": [
+    {
+      "name": "salade"
+    }
+  ],
+  "Salade au choix": [
+    {
+      "name": "salade"
+    }
+  ],
+  "Salade au choix (idéalement sucrine)": [
+    {
+      "name": "salade"
+    }
+  ],
+  "Salade au choix (mâche, roquette, pousses d'épinard...)": [
+    {
+      "name": "mâche"
+    }
+  ],
+  "Salade de jeunes pousses": [
+    {
+      "name": "jeune pousse"
+    }
+  ],
+  "Salade émincée": [
+    {
+      "name": "salade"
+    }
+  ],
+  "Salade iceberg": [
+    {
+      "name": "salade iceberg"
+    }
+  ],
+  "Sauce aigre-douce": [
+    {
+      "name": "sauce aigre-douce"
+    }
+  ],
+  "Sauce piquante": [
+    {
+      "name": "sauce piquante"
+    }
+  ],
+  "Sauce soja": [
+    {
+      "name": "sauce soja"
+    }
+  ],
+  "Sauge": [
+    {
+      "name": "sauge"
+    }
+  ],
+  "Savora, c'est meilleur)": [],
+  "Sel": [
+    {
+      "name": "sel"
+    }
+  ],
+  "Sel , poivre": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    }
+  ],
+  "Sel & poivre": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    }
+  ],
+  "Sel au goût": [
+    {
+      "name": "sel"
+    }
+  ],
+  "Sel et poivre": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    }
+  ],
+  "Sel et poivre moulu": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    }
+  ],
+  "Sel, poivre": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    }
+  ],
+  "Sel, poivre noir": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre noir"
+    }
+  ],
+  "Sel, poivre, épices au choix": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    },
+    {
+      "name": "épice"
+    }
+  ],
+  "Sel, poivre6 oeufs": [
+    {
+      "name": "sel"
+    },
+    {
+      "name": "poivre"
+    },
+    {
+      "name": "oeuf",
+      "amount": 6
+    }
+  ],
+  "Selgrillé": [
+    {
+      "name": "sel"
+    }
+  ],
+  "Selon les goûts: carottes râpées, bâtonnets de concombre, oignon rouge émincé, etc.": [
+    {
+      "name": "carotte"
+    }
+  ],
+  "Sésame": [
+    {
+      "name": "sésame"
+    }
+  ],
+  "Sésame noir": [
+    {
+      "name": "sésame noir"
+    }
+  ],
+  "Sésame noir & blanc": [
+    {
+      "name": "sésame noir"
+    },
+    {
+      "name": "sésame blanc"
+    }
+  ],
+  "Sucrine": [
+    {
+      "name": "sucrine"
+    }
+  ],
+  "Sucrine ou autre salade": [
+    {
+      "name": "sucrine"
+    }
+  ],
+  "Suelques pincées de piment d'Espelette": [
+    {
+      "name": "piment d'espelette"
+    }
+  ],
+  "Sumac": [
+    {
+      "name": "sumac"
+    }
+  ],
+  "Taifun (magasins bio)": [
+    {
+      "name": "tofu taifun"
+    }
+  ],
+  "Taifun à la japonaise": [
+    {
+      "name": "tofu taifun japonais"
+    }
+  ],
+  "Taifun curry mango (magasin bio)": [
+    {
+      "name": "tofu taifun curry mango"
+    }
+  ],
+  "Taifun Curry-Mango": [
+    {
+      "name": "tofu taifun curry mango"
+    }
+  ],
+  "Thé vert": [
+    {
+      "name": "thé vert"
+    }
+  ],
+  "Thym": [
+    {
+      "name": "thym"
+    }
+  ],
+  "Thym frais": [
+    {
+      "name": "thym"
+    }
+  ],
+  "Thym frais ou persil": [
+    {
+      "name": "thym"
+    }
+  ],
+  "Thym séché": [
+    {
+      "name": "thym"
+    }
+  ],
+  "Tisanière": [],
+  "Tomates cerises": [
+    {
+      "name": "tomate cerise"
+    }
+  ],
+  "Tomates cerises pour la décoration": [
+    {
+      "name": "tomate cerise"
+    }
+  ],
+  "Tomates séchées": [
+    {
+      "name": "tomate séchée"
+    }
+  ],
+  "Topping : 1/2 avocat, tomates cerises, mangue, edamame, tofu mange curry, oeuf mollet, chou rouge, pousses de soja...": [
+    {
+      "name": "avocat",
+      "amount": 0.5
+    }
+  ],
+  "Topping : grenade et pignons de pin": [
+    {
+      "name": "grenade"
+    },
+    {
+      "name": "pignon de pin"
+    }
+  ],
+  "Toppings : graines de courge ou graines de sésame": [
+    {
+      "name": "graine de courge"
+    }
+  ],
+  "Tranches de fraises": [
+    {
+      "name": "fraise"
+    }
+  ],
+  "Un filet d’huile d’olive": [
+    {
+      "name": "huile d'olive",
+      "amount": 1,
+      "unit": "filet"
+    }
+  ],
+  "Un mélange d'épices au choix (paprika, cumin, origan...)": [
+    {
+      "name": "mélange d'épices"
+    }
+  ],
+  "Un peu d'eau chaude": [
+    {
+      "name": "eau"
+    }
+  ],
+  "Un peu d’eau pour la consistance": [
+    {
+      "name": "eau"
+    }
+  ],
+  "Une dizaine d'asperges vertes": [
+    {
+      "name": "asperge verte",
+      "amount": 10
+    }
+  ],
+  "Une dizaine d'olives": [
+    {
+      "name": "olive",
+      "amount": 10
+    }
+  ],
+  "Une poignée d’amandes": [
+    {
+      "name": "amande",
+      "amount": 1,
+      "unit": "poignée"
+    }
+  ],
+  "Une poignée de cacahuètes grillées, hachées grossièrement": [
+    {
+      "name": "cacahuète",
+      "amount": 1,
+      "unit": "poignée"
+    }
+  ],
+  "Une vingtaine de tomates cerises": [
+    {
+      "name": "tomate cerise",
+      "amount": 20
+    }
+  ],
+  "Vanille en poudre": [
+    {
+      "name": "vanille en poudre"
+    }
+  ],
+  "Vanille liquide": [
+    {
+      "name": "vanille liquide"
+    }
+  ],
+  "Vialone Nano)": [
+    {
+      "name": "riz vialone nano"
+    }
+  ],
+  "Vinaigre balsamique": [
+    {
+      "name": "vinaigre balsamique"
+    }
+  ],
+  "Vinaigre balsamique blanc (ou noir)": [
+    {
+      "name": "vinaigre balsamique blanc"
+    }
+  ],
+  "Vinaigre blanc": [
+    {
+      "name": "vinaigre blanc"
+    }
+  ],
+  "Worcestershire": [
+    {
+      "name": "sauce worcestershire"
+    }
+  ],
+  "Yhym séché": [
+    {
+      "name": "thym"
+    }
+  ],
+  "Zaatar": [
+    {
+      "name": "zaatar"
+    }
+  ]
+}
