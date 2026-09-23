@@ -22,6 +22,27 @@
       "when": 1789128918208,
       "tag": "0002_ingredients_normalises",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1789128918209,
+      "tag": "0003_auth",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1789128918210,
+      "tag": "0004_quantites_normalisees",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1789128918211,
+      "tag": "0005_listes_de_courses",
+      "breakpoints": true
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "@effect/vitest"
 import { Effect } from "effect"
 import { MAX_LIMIT } from "@recettes/contract"
-import { client, fetchImage, fetchPath, TestServer } from "./harness.ts"
+import { authenticated, cookieHeader, fetchImage, fetchPath, sessionToken, TestServer } from "./harness.ts"
 import { putTestObject } from "./storage.ts"
 import { seed } from "./seed.ts"
 
@@ -15,7 +15,7 @@ describe("GET /recipes", () => {
           { book: 2, page: 1, title: "Crème brûlée" },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: {} })
 
         expect(page.total).toBe(3)
@@ -36,7 +36,7 @@ describe("GET /recipes", () => {
           { book: 2, page: 1, title: "Pâtes au pesto" },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: { search: "creme" } })
 
         expect(page.items.map((r) => r.title)).toEqual(["Crème brûlée"])
@@ -55,7 +55,7 @@ describe("GET /recipes", () => {
           { book: 1, page: 2, title: "Curry", ingredients: [{ name: "oignon" }] },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: { search: "halloumi" } })
 
         expect(page.items.map((r) => r.title)).toEqual(["Salade d'été"])
@@ -72,7 +72,7 @@ describe("GET /recipes", () => {
           },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: { search: "creme" } })
 
         expect(page.items).toHaveLength(1)
@@ -87,7 +87,7 @@ describe("GET /recipes", () => {
           { book: 1, page: 3, title: "Buddha bowl", category: "Salades & bowls" },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({
           urlParams: { category: "Salades & bowls" },
         })
@@ -104,7 +104,7 @@ describe("GET /recipes", () => {
           { book: 2, page: 2, title: "Gamma" },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: { book: 2 } })
 
         expect(page.items.map((r) => r.title)).toEqual(["Beta", "Gamma"])
@@ -121,7 +121,7 @@ describe("GET /recipes", () => {
           { book: 2, page: 2, title: "Tarte du livre 2" },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({
           urlParams: { search: "creme", book: 2 },
         })
@@ -140,7 +140,7 @@ describe("GET /recipes", () => {
           }))
         )
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: { limit: 2, offset: 1 } })
 
         // Ordre alphabétique : Alpha, Beta, Delta, Epsilon, Gamma
@@ -164,7 +164,7 @@ describe("GET /recipes", () => {
           { book: 1, page: 5, title: "Gratin" },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const seen: Array<number> = []
         for (let offset = 0; offset < 5; offset += 2) {
           const page = yield* api.recipes.list({ urlParams: { limit: 2, offset } })
@@ -198,7 +198,7 @@ describe("GET /recipes/:id", () => {
           },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const { items } = yield* api.recipes.list({ urlParams: {} })
         const recipe = yield* api.recipes.byId({ path: { id: items[0]!.id } })
 
@@ -238,7 +238,7 @@ describe("GET /recipes/:id", () => {
           },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const { items } = yield* api.recipes.list({ urlParams: {} })
         const [salade, pates] = yield* Effect.all([
           api.recipes.byId({ path: { id: items[1]!.id } }),
@@ -255,7 +255,7 @@ describe("GET /recipes/:id", () => {
       Effect.gen(function* () {
         yield* seed([])
 
-        const api = yield* client
+        const api = yield* authenticated
         const error = yield* api.recipes.byId({ path: { id: 999 } }).pipe(Effect.flip)
 
         expect(error._tag).toBe("RecipeNotFound")
@@ -271,11 +271,11 @@ describe("GET /recipes/:id/image", () => {
         const bytes = yield* putTestObject(key)
         yield* seed([{ book: 1, page: 1, title: "Avec photo", imageKey: key }])
 
-        const api = yield* client
+        const api = yield* authenticated
         const { items } = yield* api.recipes.list({ urlParams: {} })
         expect(items[0]!.imageUrl).toBe(`/recipes/${items[0]!.id}/image`)
 
-        const response = yield* fetchImage(items[0]!.id)
+        const response = yield* fetchImage(items[0]!.id, yield* sessionToken)
         expect(response.status).toBe(200)
         // Le PNG doit sortir en image/png, pas en octet-stream ni en jpeg.
         expect(response.headers.get("content-type")).toBe("image/png")
@@ -287,9 +287,9 @@ describe("GET /recipes/:id/image", () => {
       Effect.gen(function* () {
         yield* seed([{ book: 1, page: 1, title: "Sans photo", imageKey: null }])
 
-        const api = yield* client
+        const api = yield* authenticated
         const { items } = yield* api.recipes.list({ urlParams: {} })
-        const response = yield* fetchImage(items[0]!.id)
+        const response = yield* fetchImage(items[0]!.id, yield* sessionToken)
 
         expect(response.status).toBe(404)
       }))
@@ -317,7 +317,7 @@ describe("GET /recipes/:id/image", () => {
           },
         ])
 
-        const api = yield* client
+        const api = yield* authenticated
         const { items } = yield* api.recipes.list({ urlParams: {} })
         const [salade, pates] = yield* Effect.all([
           api.recipes.byId({ path: { id: items[1]!.id } }),
@@ -333,7 +333,7 @@ describe("GET /recipes/:id/image", () => {
     it.effect("rend 404 pour une recette inconnue", () =>
       Effect.gen(function* () {
         yield* seed([])
-        const response = yield* fetchImage(999)
+        const response = yield* fetchImage(999, yield* sessionToken)
         expect(response.status).toBe(404)
       }))
   })
@@ -346,7 +346,9 @@ describe("validation des paramètres", () => {
         yield* seed([{ book: 1, page: 1, title: "Bowl" }])
 
         // En requête brute : un appelant qui n'est pas le client typé.
-        const response = yield* fetchPath(`/recipes?limit=${MAX_LIMIT + 1}`)
+        const response = yield* fetchPath(`/recipes?limit=${MAX_LIMIT + 1}`, {
+          headers: cookieHeader(yield* sessionToken),
+        })
 
         expect(response.status).toBe(400)
       }))
@@ -354,13 +356,15 @@ describe("validation des paramètres", () => {
     it.effect("rejette côté serveur un offset négatif", () =>
       Effect.gen(function* () {
         yield* seed([])
-        const response = yield* fetchPath("/recipes?offset=-1")
+        const response = yield* fetchPath("/recipes?offset=-1", {
+          headers: cookieHeader(yield* sessionToken),
+        })
         expect(response.status).toBe(400)
       }))
 
     it.effect("le client typé refuse avant même d'émettre la requête", () =>
       Effect.gen(function* () {
-        const api = yield* client
+        const api = yield* authenticated
         const error = yield* api.recipes
           .list({ urlParams: { limit: MAX_LIMIT + 1 } })
           .pipe(Effect.flip)
@@ -372,7 +376,7 @@ describe("validation des paramètres", () => {
       Effect.gen(function* () {
         yield* seed([{ book: 1, page: 1, title: "Bowl" }])
 
-        const api = yield* client
+        const api = yield* authenticated
         const page = yield* api.recipes.list({ urlParams: { limit: MAX_LIMIT } })
 
         expect(page.limit).toBe(MAX_LIMIT)

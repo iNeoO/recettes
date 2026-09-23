@@ -2,7 +2,7 @@
 # Tout passe par pnpm et docker compose : rien ici ne duplique de logique.
 
 .DEFAULT_GOAL := help
-.PHONY: help env install up down restart ps logs garage-init migrate ingest setup dev api web test typecheck
+.PHONY: help env install up down restart ps logs garage-init migrate ingest user setup dev api web test typecheck
 
 help: ## Affiche cette aide
 	@grep -hE '^[a-z-]+:.*## ' $(MAKEFILE_LIST) \
@@ -36,8 +36,12 @@ garage-init: up ## Dispose Garage, importe la clé S3, crée le bucket (idempote
 migrate: up ## Applique les migrations Drizzle
 	pnpm --filter @recettes/db migrate
 
-ingest: up ## Vide et réingère les PDF (list1.pdf et list2.pdf requis à la racine)
+ingest: up ## Ingère ou met à jour les PDF (list1.pdf et list2.pdf requis à la racine)
 	pnpm ingest
+
+user: up ## Crée un compte : make user EMAIL=anne@example.org (mot de passe lu sur stdin)
+	@test -n "$(EMAIL)" || { echo "usage : make user EMAIL=..."; exit 1; }
+	@pnpm --filter @recettes/api --silent create-user $(EMAIL)
 
 setup: install garage-init migrate ## Poste neuf : dépendances, Garage, base migrée
 	@echo "Prêt. 'make ingest' pour peupler la base, puis 'make dev'."

@@ -3,6 +3,7 @@ import { readdir, readFile } from "node:fs/promises"
 import { fileURLToPath } from "node:url"
 import type { Aliases, Catalog, ParsedIngredient } from "./catalog.ts"
 import { normalizeLine } from "./normalize.ts"
+import { UnitRulesFile, type UnitRules } from "./units.ts"
 
 export class CatalogError extends Data.TaggedError("CatalogError")<{
   readonly file: string
@@ -20,28 +21,36 @@ const File = Schema.Record({ key: Schema.String, value: Schema.Array(Entry) })
 
 export const CATALOG_DIR = fileURLToPath(new URL("../../data/parsed/", import.meta.url))
 export const ALIASES_FILE = fileURLToPath(new URL("../../data/aliases.json", import.meta.url))
+export const UNITS_FILE = fileURLToPath(new URL("../../data/units.json", import.meta.url))
+
+/** Lit un fichier JSON facultatif : absent vaut vide, illisible est une erreur. */
+const loadOptionalJson = <A, I>(file: string, schema: Schema.Schema<A, I>, empty: A) =>
+  Effect.tryPromise({ try: () => readFile(file, "utf8"), catch: () => null }).pipe(
+    Effect.flatMap((content) =>
+      Schema.decodeUnknown(schema)(JSON.parse(content)).pipe(
+        Effect.mapError((error) => new CatalogError({ file, reason: String(error) }))
+      )
+    ),
+    Effect.catchAll((error) => (error === null ? Effect.succeed(empty) : Effect.fail(error)))
+  )
 
 /**
  * Table des variantes à unifier. Facultative : sans elle, chaque nom reste tel
  * que l'agent l'a écrit. Voir `scripts/suggest-aliases.ts` pour la construire.
  */
 export const loadAliases = (file = ALIASES_FILE): Effect.Effect<Aliases, CatalogError> =>
-  Effect.tryPromise({
-    try: () => readFile(file, "utf8"),
-    catch: () => null,
-  }).pipe(
-    Effect.flatMap((content) =>
-      Schema.decodeUnknown(Schema.Record({ key: Schema.String, value: Schema.String }))(
-        JSON.parse(content)
-      ).pipe(
-        Effect.mapError((error) => new CatalogError({ file, reason: String(error) })),
-        Effect.map((record) => new Map(Object.entries(record)) as Aliases)
-      )
-    ),
-    // Absent, c'est le cas normal tant qu'aucune variante n'a été arbitrée.
-    Effect.catchAll((error) =>
-      error === null ? Effect.succeed(new Map() as Aliases) : Effect.fail(error)
-    )
+  loadOptionalJson(file, Schema.Record({ key: Schema.String, value: Schema.String }), {}).pipe(
+    Effect.map((record) => new Map(Object.entries(record)) as Aliases)
+  )
+
+/**
+ * Les arbitrages d'unités par ingrédient. Facultatif : sans lui, chaque
+ * ingrédient garde son unité la plus fréquente et les sauts de famille sont
+ * invariants. Voir `scripts/suggest-units.ts` et `scripts/check-units.ts`.
+ */
+export const loadUnits = (file = UNITS_FILE): Effect.Effect<UnitRules, CatalogError> =>
+  loadOptionalJson(file, UnitRulesFile, {}).pipe(
+    Effect.map((record) => new Map(Object.entries(record)) as UnitRules)
   )
 
 /**

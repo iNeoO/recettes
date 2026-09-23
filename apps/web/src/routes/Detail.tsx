@@ -2,6 +2,8 @@ import type { Ingredient } from "@recettes/contract"
 import { useQuery } from "@tanstack/react-query"
 import { Link } from "@tanstack/react-router"
 import { imageSrc, useApi } from "../api.ts"
+import { useAuthGuard } from "../auth-guard.ts"
+import { AddToList } from "../components/AddToList.tsx"
 import { detailRoute } from "../routes.tsx"
 
 /** Les sous-titres du bloc ingrédients, dans l'ordre où ils sont imprimés. */
@@ -17,11 +19,13 @@ const bySection = (ingredients: ReadonlyArray<Ingredient>) => {
 
 export const DetailPage = () => {
   const { id } = detailRoute.useParams()
+  const { list } = detailRoute.useSearch()
   const api = useApi()
-  const { data, isPending, isError } = useQuery({
+  const { data, isPending, isError, error } = useQuery({
     queryKey: ["recipe", id],
     queryFn: () => api.byId(Number(id)),
   })
+  useAuthGuard(error)
 
   if (isError) {
     return (
@@ -40,6 +44,7 @@ export const DetailPage = () => {
           {data.category ?? "sans catégorie"} · livre {data.book}, page {data.page}
           {data.servings !== null && ` · pour ${data.servings} personnes`}
         </p>
+        {list !== undefined && <AddToList listId={list} recipeId={data.id} />}
       </header>
 
       {data.imageUrl !== null && (

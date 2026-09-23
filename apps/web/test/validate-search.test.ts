@@ -37,8 +37,27 @@ describe("filtres lus dans l'URL", () => {
       "book",
       "category",
       "limit",
+      "list",
       "offset",
+      "redirect",
       "search",
     ])
+  })
+
+  it("n'accepte comme redirect qu'un chemin interne", () => {
+    expect(validateSearch({ redirect: "/recipes/7?x=1" }).redirect).toBe("/recipes/7?x=1")
+    expect(validateSearch({ redirect: "https://evil.example/" }).redirect).toBeUndefined()
+    // Protocol-relative : le navigateur en ferait un changement d'hôte.
+    expect(validateSearch({ redirect: "//evil.example/" }).redirect).toBeUndefined()
+    expect(validateSearch({ redirect: "/\\evil.example/" }).redirect).toBeUndefined()
+    expect(validateSearch({ redirect: "recipes" }).redirect).toBeUndefined()
+    expect(validateSearch({ redirect: 42 }).redirect).toBeUndefined()
+  })
+
+  it("n'accepte comme liste en cours qu'un identifiant entier positif", () => {
+    expect(validateSearch({ list: "3" }).list).toBe(3)
+    expect(validateSearch({ list: 0 }).list).toBeUndefined()
+    expect(validateSearch({ list: "abc" }).list).toBeUndefined()
+    expect(validateSearch({ list: 1.5 }).list).toBeUndefined()
   })
 })

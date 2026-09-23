@@ -1,5 +1,6 @@
 import { normalizeLine } from "./normalize.ts"
 import { formatQuantity, scale } from "./quantity.ts"
+import { makeUnits, normalize, type Units } from "./units.ts"
 
 /** Ce qu'un modèle a tiré d'une ligne d'ingrédient. */
 export interface ParsedIngredient {
@@ -26,7 +27,11 @@ export interface SourceLine {
 
 export interface ExpandedIngredient {
   readonly name: string
+  /** Telle qu'affichée sur la fiche : « 2 cuillères à soupe ». */
   readonly quantity: string | null
+  /** Dans l'unité d'achat de l'ingrédient, pour la liste de courses. null, null = invariant. */
+  readonly amount: number | null
+  readonly unit: string | null
   readonly section: string | null
   readonly position: number
   readonly raw: string
@@ -48,7 +53,8 @@ export const expandIngredients = (
   lines: ReadonlyArray<SourceLine>,
   servings: number | null,
   catalog: Catalog,
-  aliases: Aliases = new Map()
+  aliases: Aliases = new Map(),
+  units: Units = makeUnits(catalog, aliases)
 ): ReadonlyArray<ExpandedIngredient> => {
   const rows: Array<ExpandedIngredient> = []
 
@@ -57,12 +63,16 @@ export const expandIngredients = (
     if (parsed === undefined) throw new UnknownLineError(line.raw)
 
     for (const ingredient of parsed) {
+      const name = aliases.get(ingredient.name) ?? ingredient.name
+      const normalized = normalize(name, ingredient, servings, units)
       rows.push({
-        name: aliases.get(ingredient.name) ?? ingredient.name,
+        name,
         quantity: formatQuantity(
           ingredient.amount === undefined ? undefined : scale(ingredient.amount, servings),
           ingredient.unit
         ),
+        amount: normalized._tag === "Quantified" ? normalized.amount : null,
+        unit: normalized._tag === "Quantified" ? normalized.unit : null,
         section: line.section,
         position: rows.length,
         raw: line.raw,

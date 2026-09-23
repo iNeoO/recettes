@@ -5,13 +5,17 @@ import userEvent from "@testing-library/user-event"
 import { afterEach, describe, expect, it } from "vitest"
 import { App } from "../src/App.tsx"
 import { createAppRouter } from "../src/routes.tsx"
-import { fakeApi, recipe } from "./fake-api.ts"
+import { createSession } from "../src/session.ts"
+import { fakeApi, fakeAuth, fakeLists, recipe } from "./fake-api.ts"
 
 const renderAt = (path: string, api = fakeApi()) => {
-  const router = createAppRouter(createMemoryHistory({ initialEntries: [path] }))
+  const session = createSession(fakeAuth())
+  const router = createAppRouter(session, createMemoryHistory({ initialEntries: [path] }))
   render(
     <App
       api={api}
+      lists={fakeLists()}
+      session={session}
       router={router}
       queryClient={new QueryClient({ defaultOptions: { queries: { retry: false } } })}
     />

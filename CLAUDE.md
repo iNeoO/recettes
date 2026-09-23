@@ -12,8 +12,9 @@ d'olive » est une seule ligne d'ingrédient quelle que soit la recette, donc
 additionnable.
 
 **État actuel** : socle terminé (ingestion, API de consultation, SPA de
-navigation). La sélection de recettes et la génération de liste de courses ne
-sont **pas encore écrites** — c'est la suite.
+navigation), **authentification** (cookie de session, comptes créés par
+`make user`) et **listes de courses** (API et front) en place. Les décisions de
+conception des listes sont dans `docs/liste-de-courses.md`.
 
 Le `README.md` documente en détail le parser, l'ingestion, l'API et le front.
 Le lire avant de toucher à l'un d'eux ; ce fichier-ci ne dit que ce qui s'y
@@ -25,7 +26,8 @@ ajoute.
 
 ```sh
 make setup      # poste neuf : deps, Garage, base migrée
-make ingest     # vide et réingère (list1.pdf / list2.pdf requis à la racine)
+make ingest     # ingère ou met à jour (list1.pdf / list2.pdf requis à la racine)
+make user EMAIL=anne@example.org  # crée un compte, mot de passe sur stdin
 make dev        # API :3000 (doc sur /docs) + front :5173
 make test       # tous les tests
 make typecheck  # tous les packages
@@ -61,6 +63,12 @@ version de ces paquets passe par `pnpm-workspace.yaml`, pas par le
 - **Pas de `as`, pas de `any`.** Les tests fournissent de vrais faux (voir
   `apps/web/test/fake-api.ts`), pas des casts.
 - **Pas de couche use-case** tant qu'elle ne ferait que retransmettre l'appel.
+  `Users` et `Sessions` en sont : ils portent une règle (leurre, empreinte,
+  durée), pas un simple relais.
+- **Authentification** : le middleware `Authentication` du contrat fournit
+  `CurrentUser` aux handlers. Un nouvel endpoint qui lit ou écrit des données
+  d'un utilisateur se pose dans un groupe qui porte `.middleware(Authentication)`
+  et lit `yield* CurrentUser` — jamais un `userId` dans l'URL ou le payload.
 - Le code et les commentaires sont **en français**, comme le reste du dépôt.
 - Commits en Conventional Commits, une modification logique par commit.
 
@@ -72,18 +80,34 @@ version de ces paquets passe par `pnpm-workspace.yaml`, pas par le
 - `/recipes/:id/image` vit **hors** du contrat `HttpApi`
   (`apps/api/src/http/image-route.ts`) : `HttpApiSchema.Uint8Array()` impose un
   `Content-Type` statique, or les photos sont tantôt JPEG tantôt PNG. Montée en
-  tête du serveur, cette route doit rester totale par construction.
-- Les identifiants de recette **changent à chaque `pnpm ingest`**
-  (`TRUNCATE ... RESTART IDENTITY`). Les stabiliser demanderait un
-  `ON CONFLICT (book, page) DO UPDATE` côté ingestion.
-- `quantity` est une **chaîne** (« 200g », « 1/2 », « pincée »), pas un nombre.
-  Elle s'affiche, elle ne se recalcule pas. Agréger des quantités pour une liste
-  de courses demandera de conserver `amount` et `unit` en base — ce n'est pas
-  fait.
+  tête du serveur, cette route doit rester totale par construction — **et le
+  middleware `Authentication` ne la voit pas** : elle vérifie la session à la
+  main, en tête. Toute autre route ajoutée devant l'API devra faire pareil ; le
+  test « refuse sans cookie : liste, détail et image » ne se supprime pas.
+- La validité d'une session se lit sur `Clock` d'Effect, jamais sur `now()` de
+  Postgres : les tests décalent l'horloge (`apps/api/test/clock.ts`). Toute
+  nouvelle règle temporelle suit le même chemin.
+- `drizzle-kit generate` **bloque** sur une question interactive : le snapshot
+  est resté à 0000. Les migrations s'écrivent à la main dans
+  `packages/db/migrations/` et s'inscrivent dans `meta/_journal.json`.
+- Choix explicites, à ne pas « corriger » sans en parler : **aucune limitation**
+  sur `/auth/login`, pas de purge des sessions expirées, pas de changement de
+  mot de passe (et donc pas de révocation des sessions à cette occasion).
+- L'ingestion est **idempotente** (`upsertRecipes` dans `packages/db`) : les
+  recettes sont mises à jour sur `(book, page)`, les ingrédients sur leur nom,
+  et les identifiants ne bougent pas. Ne jamais réintroduire un `TRUNCATE` :
+  les listes de courses référencent ces identifiants.
+- `quantity` est une **chaîne** (« 200g », « 1/2 », « pincée ») : elle
+  s'affiche telle quelle sur la fiche. La liste de courses lit `amount` et
+  `unit`, normalisés à l'ingestion dans l'unité d'achat de l'ingrédient ; les
+  deux à `null` veulent dire **invariant** (on en veut, sans compter).
 - Le découpage des lignes d'ingrédients a été fait **une fois** par des agents
   LLM et est versionné dans `apps/ingest/data/parsed/`. L'ingestion est du code
   pur : ne jamais y rappeler un LLM. Une ligne inconnue du catalogue est
   rapportée comme un échec, pas devinée.
+- `data/units.json` est une table **relue à la main**, arbitrée avec
+  l'utilisateur ligne par ligne : ne jamais y écrire un facteur deviné.
+  `suggest-units` prépare, `check-units` mesure ce qui reste.
 - `data/aliases.json` est une table **relue à la main**. `suggest-aliases`
   propose, le fichier décide : pas de règle de pluriel automatique, elle
   fusionnerait « pâte » et « pâtes » ou les farines T45/T55/T65/T80.

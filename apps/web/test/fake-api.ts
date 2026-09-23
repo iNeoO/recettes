@@ -1,5 +1,18 @@
-import type { ListQuery, Recipe, RecipeListPage, RecipeSummary } from "@recettes/contract"
-import type { RecipesApi } from "../src/api.ts"
+import type {
+  ListQuery,
+  Recipe,
+  RecipeListPage,
+  RecipeSummary,
+  ShoppingList,
+  User,
+} from "@recettes/contract"
+import {
+  type AuthApi,
+  InvalidCredentials,
+  ListMissing,
+  type RecipesApi,
+  type ShoppingListApi,
+} from "../src/api.ts"
 
 export interface FakeApi extends RecipesApi {
   /** Ce que l'interface a réellement demandé, dans l'ordre. */
@@ -48,3 +61,152 @@ export const fakeApi = (page: Partial<RecipeListPage> = {}): FakeApi => {
 }
 
 export { summary }
+
+export interface FakeAuth extends AuthApi {
+  /** Les identifiants reçus, dans l'ordre. */
+  readonly logins: Array<{ email: string; password: string }>
+  readonly logouts: { count: number }
+}
+
+export const user = (over: Partial<User> = {}): User => ({
+  id: 1,
+  email: "anne@example.org",
+  ...over,
+})
+
+/**
+ * Un faux serveur d'authentification : `me` rend l'utilisateur donné (null =
+ * pas de session), `login` accepte un seul mot de passe.
+ */
+export const fakeAuth = (current: User | null = user(), password = "secret"): FakeAuth => {
+  const logins: Array<{ email: string; password: string }> = []
+  const logouts = { count: 0 }
+  return {
+    logins,
+    logouts,
+    me: () => Promise.resolve(current),
+    login: (email, given) => {
+      logins.push({ email, password: given })
+      return given === password
+        ? Promise.resolve(user({ email }))
+        : Promise.reject(new InvalidCredentials())
+    },
+    logout: () => {
+      logouts.count += 1
+      return Promise.resolve()
+    },
+  }
+}
+
+export interface FakeLists extends ShoppingListApi {
+  /** L'état des listes, tel que le faux serveur le tient. */
+  readonly state: Map<number, ShoppingList>
+  readonly calls: Array<string>
+}
+
+/** Une liste de courses complète, prête à afficher. */
+export const shoppingList = (over: Partial<ShoppingList> = {}): ShoppingList => ({
+  id: 3,
+  name: "23 septembre 2026",
+  servings: 2,
+  createdAt: new Date("2026-09-23T10:00:00Z"),
+  recipes: [
+    { recipeId: 1, title: "Bowl de pastèque", imageUrl: "/recipes/1/image", count: 2 },
+    { recipeId: 2, title: "Curry de lentilles", imageUrl: null, count: 1 },
+  ],
+  items: [
+    { ingredientId: 10, name: "ail", amount: 1.5, unit: "gousse", checked: false },
+    { ingredientId: 11, name: "farine", amount: 350, unit: "g", checked: false },
+    { ingredientId: 12, name: "lait", amount: 1200, unit: "ml", checked: true },
+    { ingredientId: 13, name: "oignon", amount: 3, unit: "pièce", checked: false },
+  ],
+  pantry: [{ ingredientId: 20, name: "huile d'olive", checked: false }],
+  ...over,
+})
+
+/**
+ * Un faux serveur de listes qui tient son état : ajouter une recette
+ * l'incrémente, cocher persiste, supprimer efface. Les quantités ne sont pas
+ * recalculées — ce n'est pas le rôle du front de le vérifier.
+ */
+export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists => {
+  const state = new Map(initial.map((list) => [list.id, list]))
+  const calls: Array<string> = []
+  let nextId = Math.max(0, ...state.keys()) + 1
+
+  const get = (id: number) => {
+    const list = state.get(id)
+    if (list === undefined) throw new ListMissing()
+    return list
+  }
+  const put = (list: ShoppingList) => {
+    state.set(list.id, list)
+    return Promise.resolve(list)
+  }
+
+  return {
+    state,
+    calls,
+    list: () => {
+      calls.push("list")
+      return Promise.resolve(
+        [...state.values()].map((l) => ({
+          id: l.id,
+          name: l.name,
+          servings: l.servings,
+          createdAt: l.createdAt,
+          recipeCount: l.recipes.reduce((n, r) => n + r.count, 0),
+        }))
+      )
+    },
+    create: () => {
+      calls.push("create")
+      return put(shoppingList({ id: nextId++, recipes: [], items: [], pantry: [] }))
+    },
+    byId: (id) => {
+      calls.push(`byId ${id}`)
+      try {
+        return Promise.resolve(get(id))
+      } catch (error) {
+        return Promise.reject(error)
+      }
+    },
+    setServings: (id, servings) => {
+      calls.push(`setServings ${id} ${servings}`)
+      return put({ ...get(id), servings })
+    },
+    remove: (id) => {
+      calls.push(`remove ${id}`)
+      state.delete(id)
+      return Promise.resolve()
+    },
+    addRecipe: (id, recipeId) => {
+      calls.push(`addRecipe ${id} ${recipeId}`)
+      const list = get(id)
+      const existing = list.recipes.find((r) => r.recipeId === recipeId)
+      const recipes =
+        existing === undefined
+          ? [...list.recipes, { recipeId, title: `Recette ${recipeId}`, imageUrl: null, count: 1 }]
+          : list.recipes.map((r) => (r.recipeId === recipeId ? { ...r, count: r.count + 1 } : r))
+      return put({ ...list, recipes })
+    },
+    removeRecipe: (id, recipeId) => {
+      calls.push(`removeRecipe ${id} ${recipeId}`)
+      const list = get(id)
+      const recipes = list.recipes
+        .map((r) => (r.recipeId === recipeId ? { ...r, count: r.count - 1 } : r))
+        .filter((r) => r.count > 0)
+      return put({ ...list, recipes })
+    },
+    setChecked: (id, ingredientId, checked) => {
+      calls.push(`setChecked ${id} ${ingredientId} ${checked}`)
+      const list = get(id)
+      void put({
+        ...list,
+        items: list.items.map((i) => (i.ingredientId === ingredientId ? { ...i, checked } : i)),
+        pantry: list.pantry.map((p) => (p.ingredientId === ingredientId ? { ...p, checked } : p)),
+      })
+      return Promise.resolve()
+    },
+  }
+}

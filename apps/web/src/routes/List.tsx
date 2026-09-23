@@ -2,6 +2,8 @@ import type { ListQuery } from "@recettes/contract"
 import { useQuery } from "@tanstack/react-query"
 import { useNavigate } from "@tanstack/react-router"
 import { useApi } from "../api.ts"
+import { useAuthGuard } from "../auth-guard.ts"
+import { AddToList } from "../components/AddToList.tsx"
 import { Filters } from "../components/Filters.tsx"
 import { Pagination } from "../components/Pagination.tsx"
 import { RecipeCard } from "../components/RecipeCard.tsx"
@@ -14,12 +16,15 @@ export const ListPage = () => {
 
   // La clé, c'est l'URL : revenir d'une recette réaffiche la page depuis le
   // cache, sans requête ni clignotement.
-  const { data, isPending, isError } = useQuery({
-    queryKey: ["recipes", search],
-    queryFn: () => api.list(search),
+  const { list, redirect: _redirect, ...query } = search
+  const { data, isPending, isError, error } = useQuery({
+    queryKey: ["recipes", query],
+    queryFn: () => api.list(query),
   })
+  useAuthGuard(error)
 
-  const setSearch = (next: ListQuery) => navigate({ search: next })
+  // Les filtres changent, la liste en cours de sélection reste.
+  const setSearch = (next: ListQuery) => navigate({ search: { ...next, list: search.list } })
 
   return (
     <div className="space-y-6">
@@ -42,7 +47,11 @@ export const ListPage = () => {
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {data.items.map((recipe) => (
-              <RecipeCard key={recipe.id} recipe={recipe} />
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                footer={list === undefined ? undefined : <AddToList listId={list} recipeId={recipe.id} />}
+              />
             ))}
           </div>
           <Pagination

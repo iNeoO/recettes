@@ -11,7 +11,9 @@
     "quality": "node --env-file=../../.env --import tsx scripts/quality.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "suggest-aliases": "node --import tsx scripts/suggest-aliases.ts"
+    "suggest-aliases": "node --import tsx scripts/suggest-aliases.ts",
+    "suggest-units": "node --import tsx scripts/suggest-units.ts",
+    "check-units": "node --import tsx scripts/check-units.ts"
   },
   "dependencies": {
     "@recettes/db": "workspace:*",

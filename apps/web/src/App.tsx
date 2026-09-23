@@ -1,21 +1,30 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { RouterProvider } from "@tanstack/react-router"
-import { ApiProvider, type RecipesApi } from "./api.ts"
+import { ApiProvider, type RecipesApi, type ShoppingListApi } from "./api.ts"
 import { createAppRouter } from "./routes.tsx"
+import type { Session } from "./session.ts"
 
 interface Props {
   readonly api: RecipesApi
+  readonly lists: ShoppingListApi
+  readonly session: Session
   readonly router?: ReturnType<typeof createAppRouter>
   readonly queryClient?: QueryClient
 }
 
 /**
- * L'API arrive par les props : les tests en fournissent une factice, et rien
- * dans l'arbre ne connaît fetch.
+ * L'API et la session arrivent par les props : les tests en fournissent des
+ * factices, et rien dans l'arbre ne connaît fetch.
  */
-export const App = ({ api, router = createAppRouter(), queryClient }: Props) => (
+export const App = ({
+  api,
+  lists,
+  session,
+  router = createAppRouter(session),
+  queryClient,
+}: Props) => (
   <QueryClientProvider client={queryClient ?? new QueryClient()}>
-    <ApiProvider value={api}>
+    <ApiProvider value={{ recipes: api, lists }}>
       <RouterProvider router={router} />
     </ApiProvider>
   </QueryClientProvider>

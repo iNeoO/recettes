@@ -1,5 +1,16 @@
-import { relations } from "drizzle-orm"
-import { index, integer, pgTable, serial, smallint, text, uniqueIndex } from "drizzle-orm/pg-core"
+import { relations, sql } from "drizzle-orm"
+import {
+  doublePrecision,
+  index,
+  integer,
+  pgTable,
+  primaryKey,
+  serial,
+  smallint,
+  text,
+  timestamp,
+  uniqueIndex,
+} from "drizzle-orm/pg-core"
 
 export const recipes = pgTable(
   "recipes",
@@ -48,6 +59,13 @@ export const recipeIngredients = pgTable(
     section: text("section"),
     /** Ramenée à 2 portions. "200g", "1/2", "2 cuillères à soupe", "pincée". */
     quantity: text("quantity"),
+    /**
+     * La même quantité dans l'unité d'achat de l'ingrédient, pour la liste de
+     * courses (voir apps/ingest/data/units.json). Les deux à null : la ligne
+     * est invariante — on en veut, peu importe combien.
+     */
+    amount: doublePrecision("amount"),
+    unit: text("unit"),
     /** La ligne du PDF dont cette entrée est issue : aucune perte. */
     raw: text("raw").notNull(),
   },
@@ -71,3 +89,94 @@ export const recipeIngredientsRelations = relations(recipeIngredients, ({ one })
     references: [ingredients.id],
   }),
 }))
+
+/**
+ * Les comptes. Aucune table d'authentification ne référence recipes : le
+ * TRUNCATE ... CASCADE de la réingestion ne les touche jamais.
+ */
+export const users = pgTable(
+  "users",
+  {
+    id: serial("id").primaryKey(),
+    email: text("email").notNull(),
+    /** Chaîne PHC produite par argon2id, jamais le mot de passe. */
+    passwordHash: text("password_hash").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    // L'adresse est comparée sans tenir compte de la casse.
+    uniqueIndex("users_email_lower_key").on(sql`lower(${table.email})`),
+  ]
+)
+
+/**
+ * Une ligne par connexion. Seul le SHA-256 du jeton est stocké : un dump de
+ * cette table ne permet pas de se connecter.
+ */
+export const sessions = pgTable(
+  "sessions",
+  {
+    id: serial("id").primaryKey(),
+    userId: integer("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    tokenHash: text("token_hash").notNull().unique(),
+    /** Fixe : 7 jours après la connexion, sans glissement. */
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("sessions_user_id_idx").on(table.userId)]
+)
+
+/** Une liste de courses : des plats, un nombre de personnes, des cases cochées. */
+export const shoppingLists = pgTable(
+  "shopping_lists",
+  {
+    id: serial("id").primaryKey(),
+    userId: integer("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    /** La date du jour à la création ; les doublons sont acceptés. */
+    name: text("name").notNull(),
+    /** Un seul nombre pour toute la liste ; les recettes sont ramenées à 2. */
+    servings: integer("servings").notNull().default(2),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("shopping_lists_user_id_idx").on(table.userId)]
+)
+
+/**
+ * Une ligne par occurrence : la même recette peut figurer deux fois, ses
+ * quantités comptent double. RESTRICT côté recette : une réingestion qui
+ * voudrait supprimer une recette référencée doit échouer bruyamment.
+ */
+export const shoppingListRecipes = pgTable(
+  "shopping_list_recipes",
+  {
+    id: serial("id").primaryKey(),
+    listId: integer("list_id")
+      .notNull()
+      .references(() => shoppingLists.id, { onDelete: "cascade" }),
+    recipeId: integer("recipe_id")
+      .notNull()
+      .references(() => recipes.id, { onDelete: "restrict" }),
+    /** Ordre d'ajout. */
+    position: integer("position").notNull(),
+  },
+  (table) => [index("shopping_list_recipes_list_id_idx").on(table.listId)]
+)
+
+/** Les ingrédients cochés d'une liste ; la ligne existe = coché. */
+export const shoppingListChecks = pgTable(
+  "shopping_list_checks",
+  {
+    listId: integer("list_id")
+      .notNull()
+      .references(() => shoppingLists.id, { onDelete: "cascade" }),
+    ingredientId: integer("ingredient_id")
+      .notNull()
+      .references(() => ingredients.id),
+    checkedAt: timestamp("checked_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [primaryKey({ columns: [table.listId, table.ingredientId] })]
+)

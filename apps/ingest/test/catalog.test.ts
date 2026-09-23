@@ -41,8 +41,8 @@ describe("expansion d'une liste d'ingrédients", () => {
     const rows = expandIngredients([line("Sel, poivre")], 2, catalog)
 
     expect(rows).toEqual([
-      { name: "sel", quantity: null, section: null, position: 0, raw: "Sel, poivre" },
-      { name: "poivre", quantity: null, section: null, position: 1, raw: "Sel, poivre" },
+      { name: "sel", quantity: null, amount: null, unit: null, section: null, position: 0, raw: "Sel, poivre" },
+      { name: "poivre", quantity: null, amount: null, unit: null, section: null, position: 1, raw: "Sel, poivre" },
     ])
   })
 

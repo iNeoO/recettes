@@ -1,0 +1,1518 @@
+{
+  "eau": {
+    "invariant": true
+  },
+  "huile d'olive": {
+    "invariant": true
+  },
+  "farine": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "beurre": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 15,
+      "cuillère à café": 5,
+      "noisette": 5,
+      "noix": 15
+    }
+  },
+  "bouillon de légumes": {
+    "unit": "cube",
+    "factors": {
+      "ml": 0.002,
+      "tasse": 0.5,
+      "verre": 0.4,
+      "cuillère à café": 0.5,
+      "g": 0.1
+    }
+  },
+  "lait végétal": {
+    "unit": "ml",
+    "factors": {
+      "verre": 200,
+      "g": 1,
+      "filet": 15
+    }
+  },
+  "pois chiche": {
+    "unit": "g",
+    "factors": {
+      "boite": 265,
+      "conserve": 265,
+      "bocal": 265
+    }
+  },
+  "ail": {
+    "unit": "gousse",
+    "factors": {
+      "cuillère à café": 1,
+      "cuillère à soupe": 3,
+      "tête": 10
+    }
+  },
+  "tomate cerise": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.067,
+      "ml": 0.05,
+      "boite": 20,
+      "branche": 8
+    }
+  },
+  "patate douce": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.004
+    }
+  },
+  "sel": {
+    "invariant": true
+  },
+  "carotte": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.01
+    }
+  },
+  "gingembre": {
+    "invariant": true
+  },
+  "miel": {
+    "invariant": true
+  },
+  "margarine": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 15,
+      "cuillère à café": 5,
+      "noisette": 5,
+      "pièce": 250,
+      "ml": 1
+    }
+  },
+  "persil": {
+    "invariant": true
+  },
+  "citron": {
+    "unit": "pièce",
+    "factors": {
+      "cuillère à café": 0.2,
+      "zeste": 1
+    }
+  },
+  "sirop d'érable": {
+    "invariant": true
+  },
+  "flocon d'avoine": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "pincée": 1,
+      "verre": 80
+    }
+  },
+  "lait": {
+    "unit": "ml",
+    "factors": {
+      "filet": 15,
+      "tasse": 250,
+      "g": 1
+    }
+  },
+  "pomme de terre": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0067
+    }
+  },
+  "épinard": {
+    "unit": "g",
+    "factors": {
+      "poignée": 30,
+      "tasse": 30,
+      "pièce": 30
+    }
+  },
+  "lait de coco": {
+    "unit": "ml",
+    "factors": {
+      "brique": 400,
+      "boite": 400,
+      "g": 1
+    }
+  },
+  "coriandre": {
+    "invariant": true
+  },
+  "sauce soja": {
+    "invariant": true
+  },
+  "menthe": {
+    "invariant": true
+  },
+  "pousse d'épinard": {
+    "unit": "g",
+    "factors": {
+      "poignée": 25,
+      "sachet": 100
+    }
+  },
+  "tomate séchée": {
+    "unit": "g",
+    "factors": {
+      "pièce": 5,
+      "bocal": 200
+    }
+  },
+  "concentré de tomate": {
+    "invariant": true
+  },
+  "parmesan": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 8
+    }
+  },
+  "huile neutre": {
+    "invariant": true
+  },
+  "jus de citron": {
+    "invariant": true
+  },
+  "persil plat": {
+    "invariant": true
+  },
+  "curcuma": {
+    "invariant": true
+  },
+  "ciboulette": {
+    "invariant": true
+  },
+  "basilic": {
+    "invariant": true
+  },
+  "huile de coco": {
+    "invariant": true
+  },
+  "paprika": {
+    "invariant": true
+  },
+  "thym": {
+    "invariant": true
+  },
+  "cannelle": {
+    "invariant": true
+  },
+  "curry": {
+    "invariant": true
+  },
+  "levure chimique": {
+    "invariant": true
+  },
+  "graine de sésame": {
+    "invariant": true
+  },
+  "poivre": {
+    "invariant": true
+  },
+  "romarin": {
+    "invariant": true
+  },
+  "huile de sésame": {
+    "invariant": true
+  },
+  "ail en poudre": {
+    "invariant": true
+  },
+  "sirop d'agave": {
+    "invariant": true
+  },
+  "aneth": {
+    "invariant": true
+  },
+  "huile": {
+    "invariant": true
+  },
+  "levure maltée": {
+    "invariant": true
+  },
+  "origan": {
+    "invariant": true
+  },
+  "paprika fumé": {
+    "invariant": true
+  },
+  "vin blanc": {
+    "invariant": true
+  },
+  "fleur de sel": {
+    "invariant": true
+  },
+  "pâte de curry rouge": {
+    "invariant": true
+  },
+  "gros sel": {
+    "invariant": true
+  },
+  "huile végétale": {
+    "invariant": true
+  },
+  "graine de chia": {
+    "invariant": true
+  },
+  "levure": {
+    "invariant": true
+  },
+  "cacao en poudre": {
+    "invariant": true
+  },
+  "noix de muscade": {
+    "invariant": true
+  },
+  "clou de girofle": {
+    "invariant": true
+  },
+  "levure boulangère sèche": {
+    "invariant": true
+  },
+  "mayonnaise végane": {
+    "invariant": true
+  },
+  "laurier": {
+    "invariant": true
+  },
+  "levure de boulanger": {
+    "invariant": true
+  },
+  "tahini": {
+    "invariant": true
+  },
+  "sauce barbecue": {
+    "invariant": true
+  },
+  "sésame": {
+    "invariant": true
+  },
+  "sirop de riz": {
+    "invariant": true
+  },
+  "herbes fraîches": {
+    "invariant": true
+  },
+  "persil frais": {
+    "invariant": true
+  },
+  "épices cajun": {
+    "invariant": true
+  },
+  "huile de colza": {
+    "invariant": true
+  },
+  "miso": {
+    "invariant": true
+  },
+  "paprika doux": {
+    "invariant": true
+  },
+  "piment d'espelette": {
+    "invariant": true
+  },
+  "huile de coco désodorisée": {
+    "invariant": true
+  },
+  "câpre": {
+    "invariant": true
+  },
+  "vanille": {
+    "invariant": true
+  },
+  "pesto": {
+    "invariant": true
+  },
+  "pesto rosso": {
+    "invariant": true
+  },
+  "mayonnaise": {
+    "invariant": true
+  },
+  "agar-agar": {
+    "invariant": true
+  },
+  "jus de citron vert": {
+    "invariant": true
+  },
+  "piment de cayenne": {
+    "invariant": true
+  },
+  "piment doux": {
+    "invariant": true
+  },
+  "ketchup": {
+    "invariant": true
+  },
+  "bicarbonate": {
+    "invariant": true
+  },
+  "bicarbonate alimentaire": {
+    "invariant": true
+  },
+  "miso blanc": {
+    "invariant": true
+  },
+  "sauce tomate": {
+    "invariant": true
+  },
+  "gomme de guar": {
+    "invariant": true
+  },
+  "tabasco": {
+    "invariant": true
+  },
+  "cacao maigre en poudre": {
+    "invariant": true
+  },
+  "crème de tartre": {
+    "invariant": true
+  },
+  "sucre vanillé": {
+    "invariant": true
+  },
+  "eau tiède": {
+    "invariant": true
+  },
+  "eau vinaigrée": {
+    "invariant": true
+  },
+  "café": {
+    "invariant": true
+  },
+  "sauce hoisin": {
+    "invariant": true
+  },
+  "ail des ours": {
+    "invariant": true
+  },
+  "basilic frais": {
+    "invariant": true
+  },
+  "gingembre frais": {
+    "invariant": true
+  },
+  "fécule": {
+    "invariant": true
+  },
+  "fécule de maïs": {
+    "invariant": true
+  },
+  "maïzena": {
+    "invariant": true
+  },
+  "fécule de pomme de terre": {
+    "invariant": true
+  },
+  "caramel": {
+    "invariant": true
+  },
+  "graine de lin moulue": {
+    "invariant": true
+  },
+  "beurre de cacahuète": {
+    "invariant": true
+  },
+  "purée d'amande": {
+    "invariant": true
+  },
+  "purée de cacahuète": {
+    "invariant": true
+  },
+  "beurre d'amande": {
+    "invariant": true
+  },
+  "purée d'oléagineux": {
+    "invariant": true
+  },
+  "purée d'amande complète": {
+    "invariant": true
+  },
+  "purée de noix de cajou": {
+    "invariant": true
+  },
+  "mascobado": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "sucre": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "sucre complet": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "sucre de coco": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "sucre roux": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "cassonade": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "sucre de canne": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "cuillère à café": 4,
+      "pincée": 0.5
+    }
+  },
+  "sucre glace": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 8,
+      "cuillère à café": 3
+    }
+  },
+  "farine de pois chiche": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "farine de blé": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "poudre d'amande": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "farine de maïs": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "farine sans gluten": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "farine de coco": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "semoule": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "sarrasin": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "protéine végétale": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "cuillère à café": 3
+    }
+  },
+  "chapelure": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 8
+    }
+  },
+  "chapelure panko": {
+    "unit": "g",
+    "factors": {
+      "tasse": 60
+    }
+  },
+  "quinoa": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 12,
+      "bol": 150
+    }
+  },
+  "riz semi-complet": {
+    "unit": "g",
+    "factors": {
+      "pièce": 100
+    }
+  },
+  "noix de coco râpée": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 8
+    }
+  },
+  "coco râpée": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 8
+    }
+  },
+  "compote de pomme": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 20
+    }
+  },
+  "houmous": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 20
+    }
+  },
+  "cottage cheese": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 20
+    }
+  },
+  "noix de cajou": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "amande": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "amande entière": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "amande effilée": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "pistache": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "éclat de pistache": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "cacahuète": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "graine de tournesol": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "noix de pécan": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "pignon de pin": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "graine de courge": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5
+    }
+  },
+  "graine de chanvre": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 10,
+      "poignée": 30,
+      "pièce": 1.5,
+      "cuillère à café": 3
+    }
+  },
+  "noisette": {
+    "unit": "g",
+    "factors": {
+      "pièce": 1.3,
+      "poignée": 30
+    }
+  },
+  "noix": {
+    "unit": "g",
+    "factors": {
+      "poignée": 30,
+      "pièce": 5
+    }
+  },
+  "cerneau de noix": {
+    "unit": "g",
+    "factors": {
+      "poignée": 30,
+      "pièce": 5
+    }
+  },
+  "raisin sec": {
+    "unit": "g",
+    "factors": {
+      "poignée": 30,
+      "cuillère à soupe": 10
+    }
+  },
+  "myrtille": {
+    "unit": "g",
+    "factors": {
+      "poignée": 40,
+      "cuillère à soupe": 10
+    }
+  },
+  "abricot sec": {
+    "unit": "g",
+    "factors": {
+      "poignée": 40
+    }
+  },
+  "pépite de chocolat": {
+    "unit": "g",
+    "factors": {
+      "sachet": 100
+    }
+  },
+  "pépite de chocolat noir": {
+    "unit": "g",
+    "factors": {
+      "cuillère à café": 4
+    }
+  },
+  "chocolat noir": {
+    "unit": "g",
+    "factors": {
+      "pièce": 100
+    }
+  },
+  "aubergine": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0033
+    }
+  },
+  "courgette": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.004
+    }
+  },
+  "concombre": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0033
+    }
+  },
+  "mangue": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0033
+    }
+  },
+  "courge butternut": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.001
+    }
+  },
+  "grenade": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0033
+    }
+  },
+  "poivron rouge": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0063
+    }
+  },
+  "poivron jaune": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0063
+    }
+  },
+  "oignon jaune": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.01
+    }
+  },
+  "betterave": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.005
+    }
+  },
+  "betterave rouge": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.005
+    }
+  },
+  "potimarron": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.001
+    }
+  },
+  "panais": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.0063
+    }
+  },
+  "datte": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.1
+    }
+  },
+  "date": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.1
+    }
+  },
+  "radis rose": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.1
+    }
+  },
+  "olive kalamata": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.25
+    }
+  },
+  "topinambour": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.02
+    }
+  },
+  "tomate": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.008,
+      "ml": 0.008,
+      "conserve": 3
+    }
+  },
+  "oignon nouveau": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.05,
+      "botte": 6
+    }
+  },
+  "oignon vert": {
+    "unit": "pièce",
+    "factors": {
+      "botte": 6
+    }
+  },
+  "cébette": {
+    "unit": "pièce",
+    "factors": {
+      "botte": 6
+    }
+  },
+  "ciboule": {
+    "unit": "pièce",
+    "factors": {
+      "tige": 1
+    }
+  },
+  "asperge verte": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.05,
+      "botte": 12
+    }
+  },
+  "asperge": {
+    "unit": "pièce",
+    "factors": {
+      "botte": 12
+    }
+  },
+  "radis": {
+    "unit": "pièce",
+    "factors": {
+      "botte": 12
+    }
+  },
+  "citron vert": {
+    "unit": "pièce",
+    "factors": {
+      "trait": 0.1
+    }
+  },
+  "fenouil": {
+    "unit": "pièce",
+    "factors": {
+      "bulbe": 1
+    }
+  },
+  "laitue romaine": {
+    "unit": "pièce",
+    "factors": {
+      "feuille": 0.1
+    }
+  },
+  "laitue": {
+    "unit": "pièce",
+    "factors": {
+      "poignée": 0.2
+    }
+  },
+  "endive": {
+    "unit": "pièce",
+    "factors": {
+      "feuille": 0.1
+    }
+  },
+  "pâte feuilletée": {
+    "unit": "pièce",
+    "factors": {
+      "rouleau": 1
+    }
+  },
+  "pâte phyllo": {
+    "unit": "feuille",
+    "factors": {
+      "pièce": 1
+    }
+  },
+  "feuille de pâte filo": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.05
+    }
+  },
+  "pâte à lasagne": {
+    "unit": "g",
+    "factors": {
+      "pièce": 15
+    }
+  },
+  "piment": {
+    "unit": "pièce",
+    "factors": {
+      "pincée": 0.1,
+      "cuillère à café": 0.5
+    }
+  },
+  "champignon": {
+    "unit": "g",
+    "factors": {
+      "pièce": 20
+    }
+  },
+  "champignon de paris": {
+    "unit": "g",
+    "factors": {
+      "pièce": 20
+    }
+  },
+  "champignon king oyster": {
+    "unit": "g",
+    "factors": {
+      "pièce": 50
+    }
+  },
+  "brocoli": {
+    "unit": "g",
+    "factors": {
+      "pièce": 400
+    }
+  },
+  "chou-fleur": {
+    "unit": "g",
+    "factors": {
+      "pièce": 800
+    }
+  },
+  "fraise": {
+    "unit": "g",
+    "factors": {
+      "pièce": 15
+    }
+  },
+  "framboise": {
+    "unit": "g",
+    "factors": {
+      "pièce": 4
+    }
+  },
+  "olive": {
+    "unit": "g",
+    "factors": {
+      "pièce": 4
+    }
+  },
+  "tomate pelée san marzano": {
+    "unit": "g",
+    "factors": {
+      "pièce": 60
+    }
+  },
+  "chou rouge": {
+    "unit": "g",
+    "factors": {
+      "poignée": 50,
+      "pièce": 800
+    }
+  },
+  "kale": {
+    "unit": "branche",
+    "factors": {
+      "poignée": 3
+    }
+  },
+  "chou kale": {
+    "unit": "branche",
+    "factors": {
+      "g": 0.05
+    }
+  },
+  "chou noir de toscane": {
+    "unit": "bouquet",
+    "factors": {
+      "feuille": 0.1
+    }
+  },
+  "roquette": {
+    "unit": "poignée",
+    "factors": {
+      "g": 0.04,
+      "tasse": 1
+    }
+  },
+  "petit pois": {
+    "unit": "g",
+    "factors": {
+      "tasse": 150,
+      "cosse": 5,
+      "cuillère à soupe": 10
+    }
+  },
+  "fruit": {
+    "unit": "g",
+    "factors": {
+      "poignée": 100
+    }
+  },
+  "crème de soja": {
+    "unit": "ml",
+    "factors": {
+      "g": 1
+    }
+  },
+  "crème liquide": {
+    "unit": "ml",
+    "factors": {
+      "brique": 200
+    }
+  },
+  "crème liquide animale": {
+    "unit": "ml",
+    "factors": {
+      "brique": 200
+    }
+  },
+  "crème de coco": {
+    "unit": "ml",
+    "factors": {
+      "brique": 200
+    }
+  },
+  "crème végétale neutre": {
+    "unit": "ml",
+    "factors": {
+      "g": 1,
+      "brique": 200
+    }
+  },
+  "crème fraîche épaisse": {
+    "unit": "ml",
+    "factors": {
+      "g": 1
+    }
+  },
+  "lait demi-écrémé": {
+    "unit": "ml",
+    "factors": {
+      "g": 1
+    }
+  },
+  "crème fraîche": {
+    "unit": "g",
+    "factors": {
+      "ml": 1
+    }
+  },
+  "crème épaisse": {
+    "unit": "g",
+    "factors": {
+      "pot": 200,
+      "ml": 1
+    }
+  },
+  "lait d'amande": {
+    "unit": "ml",
+    "factors": {
+      "tasse": 250
+    }
+  },
+  "lait d'avoine": {
+    "unit": "ml",
+    "factors": {
+      "verre": 200
+    }
+  },
+  "yaourt végétal": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "cuillère à soupe": 15,
+      "pot": 125,
+      "pièce": 125
+    }
+  },
+  "yaourt grec": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "cuillère à soupe": 15,
+      "pot": 125,
+      "pièce": 125
+    }
+  },
+  "yaourt nature": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "cuillère à soupe": 15,
+      "pot": 125,
+      "pièce": 125
+    }
+  },
+  "yaourt de coco": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "cuillère à soupe": 15,
+      "pot": 125,
+      "pièce": 125
+    }
+  },
+  "yaourt végétal neutre": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "cuillère à soupe": 15,
+      "pot": 125,
+      "pièce": 125
+    }
+  },
+  "skyr": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "cuillère à soupe": 15,
+      "pot": 125,
+      "pièce": 125
+    }
+  },
+  "yaourt": {
+    "unit": "pièce",
+    "factors": {
+      "cuillère à soupe": 0.12,
+      "g": 0.008
+    }
+  },
+  "yaourt végétal à la grecque": {
+    "unit": "g",
+    "factors": {
+      "pot": 150
+    }
+  },
+  "labneh": {
+    "unit": "pot",
+    "factors": {
+      "g": 0.005
+    }
+  },
+  "fromage": {
+    "unit": "g",
+    "factors": {
+      "tasse": 100,
+      "cuillère à soupe": 8,
+      "tranche": 20
+    }
+  },
+  "fromage végétal": {
+    "unit": "g",
+    "factors": {
+      "tranche": 20
+    }
+  },
+  "cheddar végétal": {
+    "unit": "g",
+    "factors": {
+      "tranche": 20
+    }
+  },
+  "fromage de chèvre": {
+    "unit": "g",
+    "factors": {
+      "pièce": 150
+    }
+  },
+  "fromage frais aux herbes": {
+    "unit": "g",
+    "factors": {
+      "pot": 150
+    }
+  },
+  "fromage frais": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 15
+    }
+  },
+  "ricotta": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 15
+    }
+  },
+  "mascarpone": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 15
+    }
+  },
+  "pecorino": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 8
+    }
+  },
+  "halloumi": {
+    "unit": "g",
+    "factors": {
+      "bloc": 225
+    }
+  },
+  "mozzarella": {
+    "unit": "g",
+    "factors": {
+      "pièce": 125,
+      "boule": 125
+    }
+  },
+  "burrata": {
+    "unit": "boule",
+    "factors": {
+      "pièce": 1,
+      "g": 0.005
+    }
+  },
+  "petit suisse": {
+    "unit": "g",
+    "factors": {
+      "pièce": 60
+    }
+  },
+  "beurre demi-sel": {
+    "unit": "g",
+    "factors": {
+      "noisette": 5,
+      "noix": 15
+    }
+  },
+  "beurre salé": {
+    "unit": "g",
+    "factors": {
+      "noisette": 5,
+      "pièce": 250
+    }
+  },
+  "margarine végétale": {
+    "unit": "g",
+    "factors": {
+      "cuillère à soupe": 15
+    }
+  },
+  "cube de bouillon de légumes": {
+    "unit": "pièce",
+    "factors": {
+      "ml": 0.002
+    }
+  },
+  "bouillon de poisson": {
+    "unit": "cube",
+    "factors": {
+      "ml": 0.002
+    }
+  },
+  "tomate concassée": {
+    "unit": "g",
+    "factors": {
+      "boite": 400,
+      "conserve": 400,
+      "ml": 1
+    }
+  },
+  "tomate pelée": {
+    "unit": "g",
+    "factors": {
+      "ml": 1,
+      "conserve": 400
+    }
+  },
+  "chair de tomate": {
+    "unit": "bocal",
+    "factors": {
+      "conserve": 1,
+      "g": 0.0025
+    }
+  },
+  "coulis de tomate": {
+    "unit": "ml",
+    "factors": {
+      "brique": 500,
+      "pot": 500,
+      "g": 1
+    }
+  },
+  "purée de tomate": {
+    "unit": "conserve",
+    "factors": {
+      "cuillère à soupe": 0.04
+    }
+  },
+  "tomate semi-séchée": {
+    "unit": "g",
+    "factors": {
+      "bocal": 200
+    }
+  },
+  "haricot rouge": {
+    "unit": "g",
+    "factors": {
+      "boite": 250,
+      "conserve": 250
+    }
+  },
+  "maïs": {
+    "unit": "g",
+    "factors": {
+      "boite": 280,
+      "conserve": 280,
+      "cuillère à soupe": 15
+    }
+  },
+  "lentille": {
+    "unit": "g",
+    "factors": {
+      "conserve": 250
+    }
+  },
+  "haricot blanc": {
+    "unit": "g",
+    "factors": {
+      "boite": 250,
+      "ml": 1
+    }
+  },
+  "haricot noir": {
+    "unit": "g",
+    "factors": {
+      "boite": 250
+    }
+  },
+  "thon au naturel": {
+    "unit": "g",
+    "factors": {
+      "boite": 140
+    }
+  },
+  "poivron grillé": {
+    "unit": "g",
+    "factors": {
+      "conserve": 200
+    }
+  },
+  "filet de saumon": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.007
+    }
+  },
+  "pavé de saumon": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.007
+    }
+  },
+  "filet de cabillaud": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.007
+    }
+  },
+  "filet de lieu noir": {
+    "unit": "pièce",
+    "factors": {
+      "g": 0.007
+    }
+  },
+  "saumon fumé": {
+    "unit": "g",
+    "factors": {
+      "tranche": 30
+    }
+  },
+  "lardon végétal": {
+    "unit": "g",
+    "factors": {
+      "paquet": 150
+    }
+  },
+  "haché végétal": {
+    "unit": "g",
+    "factors": {
+      "paquet": 200
+    }
+  },
+  "falafel": {
+    "unit": "g",
+    "factors": {
+      "barquette": 200
+    }
+  },
+  "tofu ferme": {
+    "unit": "g",
+    "factors": {
+      "bloc": 200
+    }
+  },
+  "pain": {
+    "unit": "tranche",
+    "factors": {
+      "g": 0.03
+    }
+  },
+  "pain complet": {
+    "unit": "tranche",
+    "factors": {
+      "g": 0.03
+    }
+  },
+  "pain rassis": {
+    "unit": "g",
+    "factors": {
+      "tranche": 30
+    }
+  }
+}

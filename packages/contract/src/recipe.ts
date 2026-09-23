@@ -1,3 +1,4 @@
+import { HttpApiSchema } from "@effect/platform"
 import { Schema } from "effect"
 
 /** 1 ou 2 : il n'y a que deux livres, la valeur ne dépend pas du contenu. */
@@ -70,3 +71,9 @@ export const ListQuery = Schema.Struct({
   ),
 })
 export type ListQuery = typeof ListQuery.Type
+
+export class RecipeNotFound extends Schema.TaggedError<RecipeNotFound>()(
+  "RecipeNotFound",
+  { id: Schema.Number },
+  HttpApiSchema.annotations({ status: 404 })
+) {}

@@ -21,7 +21,12 @@ docker compose up -d
 pnpm install
 pnpm --filter @recettes/db migrate
 pnpm ingest
+make user EMAIL=anne@example.org   # mot de passe lu sur stdin
 ```
+
+Les recettes sont derrière une authentification et l'API n'expose aucune
+inscription : les comptes se créent en ligne de commande, sur le poste qui a
+accès à la base.
 
 ## Structure
 
@@ -120,6 +125,7 @@ Trois pièges, chacun couvert par une fixture :
 pnpm test
 ```
 
+- `units.test.ts` — conversions, unité par défaut, règles, fichier `units.json`.
 - `parser.test.ts` — 10 fixtures JSON figées, sans PDF, quelques millisecondes.
   C'est la boucle de travail. Chaque cas vient d'une page réelle qui a posé
   problème.
@@ -133,10 +139,43 @@ Régénérer les fixtures après avoir ajouté un cas :
 cd apps/ingest && node scripts/make-fixtures.mjs
 ```
 
+## Unités d'achat et `units.json`
+
+Chaque ligne recette-ingrédient porte, à côté du texte affiché (`quantity`),
+la même quantité **dans l'unité d'achat de l'ingrédient** (`amount`, `unit`),
+pour la liste de courses. Les conversions universelles vivent dans le code
+(`cl`, `dl`, `l` → `ml` ; `kg`, `mg` → `g` ; cuillère à soupe = 15 ml, cuillère
+à café = 5 ml ; sans unité = `pièce`). Les sauts de famille se décident
+ingrédient par ingrédient dans `data/units.json`, **relu à la main** :
+
+```json
+{
+  "farine":        { "unit": "g",      "factors": { "cuillère à soupe": 10 } },
+  "ail":           { "unit": "gousse", "factors": { "g": 0.2 } },
+  "huile d'olive": { "invariant": true }
+}
+```
+
+`unit` est l'unité d'achat (défaut : la plus fréquente du corpus pour cet
+ingrédient), `factors` dit « 1 unité vue = k unités d'achat », `invariant`
+envoie l'ingrédient au placard sans quantité. Une ligne devient **invariante**
+(`amount` et `unit` à `NULL`) si l'ingrédient l'est, si la recette n'a pas de
+portions, si la ligne n'a pas de nombre, ou si aucun facteur ne relie son unité
+à l'unité d'achat. On ne fait pas de la chimie : un facteur approximatif vaut
+mieux qu'une ligne non agrégée.
+
+```sh
+pnpm --filter @recettes/ingest suggest-units   # ce qui mélange des familles, candidats invariants
+pnpm --filter @recettes/ingest check-units     # ce qui reste invariant faute de facteur
+```
+
 ## Réingestion
 
-`pnpm ingest` vide les tables et réinsère tout — rien n'est saisi à la main.
-Les images déjà présentes dans Garage ne sont pas réenvoyées. Les pages non
+`pnpm ingest` se rejoue autant de fois qu'on veut : les recettes sont mises à
+jour sur `(livre, page)` et les ingrédients sur leur nom, sans changer
+d'identifiant (`upsertRecipes` dans `packages/db`, une transaction par livre).
+Seules les lignes recette-ingrédient sont remplacées. Les images déjà présentes
+dans Garage ne sont pas réenvoyées. Les pages non
 analysables n'interrompent pas l'ingestion : tout ce qui passe est inséré, et
 un rapport final liste les échecs avec un code de sortie non nul.
 
@@ -163,28 +202,94 @@ GET /recipes?search=&category=&book=&limit=20&offset=0
     -> { items, total, limit, offset }
 GET /recipes/:id        -> recette complete, ingredients ordonnes
 GET /recipes/:id/image  -> les octets depuis Garage, avec leur vrai type
+
+POST /auth/login   { email, password } -> { id, email } + cookie `session`
+POST /auth/logout  -> 204, cookie effacé (toujours, même sans session)
+GET  /auth/me      -> { id, email }
+
+GET    /lists                          -> [{ id, name, servings, createdAt, recipeCount }]
+POST   /lists                          -> 201, la liste (nom = date du jour, 2 personnes)
+GET    /lists/:id                      -> { id, name, servings, createdAt, recipes, items, pantry }
+PATCH  /lists/:id          { servings } -> la liste
+DELETE /lists/:id                      -> 204
+POST   /lists/:id/recipes  { recipeId } -> la liste (une occurrence de plus)
+DELETE /lists/:id/recipes/:recipeId    -> la liste (une occurrence de moins)
+PUT    /lists/:id/checks/:ingredientId { checked } -> 204
 ```
+
+Une liste appartient à son créateur : celle d'un autre est un `404 ListNotFound`
+sur chaque endpoint, jamais un 403. `items` porte les ingrédients chiffrés,
+sommés par nom et mis à l'échelle de `servings` (les recettes sont ramenées à 2),
+`pantry` ceux dont aucune ligne n'est chiffrée. Les nombres sortent bruts,
+l'arrondi est affaire d'affichage.
+
+Tout sauf `/auth/login`, `/auth/logout` et `/docs` exige le cookie de session ;
+sans lui, `401 { "_tag": "Unauthorized" }`.
 
 `search` porte sur le titre **et** les ingredients, sans tenir compte des
 accents : `creme` trouve `creme`. Les filtres se combinent en ET.
 
 ```sh
-curl 'localhost:3000/recipes?search=creme&book=2&limit=3'
-curl localhost:3000/recipes/444
+curl -c jar -X POST -H 'content-type: application/json' \
+     -d '{"email":"anne@example.org","password":"..."}' localhost:3000/auth/login
+curl -b jar 'localhost:3000/recipes?search=creme&book=2&limit=3'
+curl -b jar localhost:3000/recipes/444
 ```
+
+## Authentification
+
+| Question | Retenu | Écarté |
+|---|---|---|
+| Transport | Cookie `httpOnly`, `Secure`, `SameSite=Lax`, `Path=/`, `Max-Age=604800` | Bearer |
+| Jeton | 32 octets aléatoires ; **SHA-256 stocké**, jamais le jeton | JWT |
+| Mots de passe | argon2id (`@node-rs/argon2`), m=19456 t=2 p=1 | scrypt, bcrypt |
+| Durée | fixe, 7 jours depuis la connexion | glissante |
+| Horloge | `Clock` d'Effect, passée en paramètre lié à la requête | `now()` de Postgres |
+| Identifiant | e-mail, index unique sur `lower(email)` | pseudo |
+| Création de compte | `make user`, mot de passe sur stdin | inscription par l'API |
+| Anti-bruteforce | **rien**, choix explicite | limite par e-mail / IP |
+
+**Pourquoi le cookie** : `RecipeCard` et `Detail` chargent les photos par
+`<img src>`, qui ne peut pas porter d'en-tête `Authorization`. Le cookie part
+tout seul ; `Path=/` est indispensable puisque le front appelle
+`/api/auth/login` et que le navigateur limiterait sinon le cookie à `/api/auth`.
+
+**Pourquoi l'horloge Effect** : si la validité s'écrivait `expires_at > now()`,
+c'est Postgres qui déciderait et le test « le 8e jour, 401 » serait impossible.
+`Sessions` lit `Clock.currentTimeMillis` et le passe au `SessionStore` ; les
+tests fournissent une horloge décalable (`test/clock.ts`).
+
+**Adresse inconnue** : `Users.authenticate` vérifie quand même un hash leurre,
+calculé au démarrage. Le temps de réponse ne révèle pas quels comptes existent,
+et la réponse est octet pour octet la même qu'un mauvais mot de passe.
+
+**Le piège principal** : `/recipes/:id/image` est montée *devant* l'API par
+`withImageRoute`, donc le middleware `Authentication` du contrat ne la voit
+jamais. `serveImage` appelle `Sessions.verify` en tête, à la main. Le test
+« refuse sans cookie : liste, détail et image » est le garde-fou de cette
+exception : il ne doit jamais être supprimé.
 
 ## Architecture
 
 ```
-domain/   schemas Effect - ports (Context.Tag) - aucun import de drizzle
+domain/   repository.ts (RecipeRepository, ImageStore)
+          users.ts (UserRepository, PasswordHasher, Users)
+          session.ts (SessionStore, Sessions)
+          shopping-lists.ts (ShoppingListRepository, scaled, listName)
+          - aucun import de drizzle
 infra/    repository-drizzle.ts - image-store-garage.ts
-http/     api.ts (contrat) - handlers.ts - image-route.ts - server.ts
+          users-drizzle.ts - sessions-drizzle.ts - argon2.ts
+          shopping-lists-drizzle.ts
+http/     handlers.ts - auth-handlers.ts - list-handlers.ts
+          auth-middleware.ts - image-route.ts - errors.ts - server.ts
+scripts/  create-user.ts
 ```
 
-Deux ports distincts plutot qu'un : `RecipeRepository` ne connait que le SQL,
-`ImageStore` que le stockage objet -- deux adaptateurs, deux raisons de changer.
-Pas de couche use-case : pour ces trois endpoints elle ne ferait que
-retransmettre l'appel.
+Un port par raison de changer : `RecipeRepository` ne connait que le SQL,
+`ImageStore` que le stockage objet, `PasswordHasher` que argon2. `Users` et
+`Sessions` sont les deux services du domaine qui portent une règle (leurre,
+empreinte du jeton, durée) ; les autres endpoints appellent leur port
+directement, sans couche use-case qui ne ferait que retransmettre.
 
 Le contrat `HttpApi` est declaratif : les handlers ne compilent pas s'ils ne
 rendent pas le type annonce, et l'OpenAPI comme le client type en decoulent.
@@ -209,7 +314,7 @@ la parce qu'il est correct, pas parce qu'un test l'exige.
 pnpm --filter @recettes/api test
 ```
 
-18 tests d'integration contre une base `recettes_test` **creee et migree
+49 tests d'integration contre une base `recettes_test` **creee et migree
 automatiquement** -- la base de developpement et ses 887 recettes ne sont
 jamais touchees. Chaque test seme ses propres donnees, puis appelle l'API par
 le client type engendre depuis le contrat : changer une reponse sans changer le
@@ -218,11 +323,26 @@ test ne compile plus.
 L'endpoint image depose un vrai objet dans Garage et le relit, pour verifier
 que les octets et le `Content-Type` traversent correctement.
 
+Côté authentification : 401 sans cookie sur la liste, le détail **et l'image** ;
+mauvais mot de passe et adresse inconnue rigoureusement identiques ; horloge
+avancée de 6 jours puis de 2 (200 puis 401) ; déconnexion qui révoque ; jeton
+forgé refusé ; la table `sessions` ne contient aucun jeton utilisable ; un test
+unitaire vérifie que le leurre est bien haché pour une adresse inconnue.
+
+`lists.test.ts` : agrégation par nom avec les invariants au placard, mise à
+l'échelle, même recette deux fois, cases qui survivent aux changements, liste
+d'un autre introuvable partout, suppression qui ne touche pas les recettes.
+
+`persist.test.ts` prouve l'idempotence de l'ingestion : rejouée, elle ne change
+ni identifiants ni contenu ; une recette modifiée garde son identifiant et voit
+ses lignes remplacées. Il vit ici parce que c'est la seule suite branchée sur
+une base.
+
 ## Identifiants
 
-`/recipes/42` designe une autre recette apres chaque `pnpm ingest`, parce que
-l'ingestion fait `TRUNCATE ... RESTART IDENTITY`. Pour les stabiliser : passer
-l'ingestion en `ON CONFLICT (book, page) DO UPDATE`. L'API n'a pas a changer.
+`/recipes/42` designe la meme recette apres chaque `pnpm ingest` : l'ingestion
+met a jour sur `(livre, page)` au lieu de tout recreer. Les listes de courses
+peuvent donc referencer les recettes et les ingredients par identifiant.
 
 
 ## Ce que la normalisation donne
@@ -257,6 +377,15 @@ Et une ligne qui en cachait deux :
 - `quantity` est une chaine : elle s'affiche, elle ne se recalcule pas. Une mise
   a l'echelle vers un autre nombre de portions demanderait de conserver
   `amount` et `unit` en base, ce qui n'est pas fait.
+- **Aucune limitation sur `/auth/login`.** Un bourrinage lent n'est pas entravé,
+  et argon2id à 19 Mio par tentative est un levier de déni de service bon marché.
+- Il n'y a pas de changement de mot de passe. Le jour où il existera, il devra
+  décider s'il révoque les sessions ouvertes ; combiné au point précédent, un mot
+  de passe compromis resterait sinon exploitable jusqu'à 7 jours.
+- Les sessions expirées ne sont pas purgées : les lignes s'accumulent.
+- Le snapshot drizzle-kit (`migrations/meta/0000_snapshot.json`) est resté à la
+  migration 0000 : `drizzle-kit generate` demande une résolution interactive.
+  Les migrations 0001 à 0003 sont écrites à la main et inscrites dans le journal.
 
 
 ---
@@ -268,7 +397,8 @@ pnpm --filter @recettes/api start     # port 3000
 pnpm --filter @recettes/web dev       # http://localhost:5173
 ```
 
-SPA React : une liste filtrable et paginee, et le detail d'une recette.
+SPA React : une page de connexion, une liste filtrable et paginee, le detail
+d'une recette, et les listes de courses.
 
 ## Le contrat est partage, pas recopie
 
@@ -278,9 +408,49 @@ changer une reponse cote serveur **casse la compilation du front**. Le package
 ne contient que ce qui circule sur le reseau — ni drizzle, ni AWS SDK, ni
 politique serveur (`normalize` et `RecipeQuery` sont restes dans `apps/api`).
 
-Le front reduit ce client a un port etroit (`RecipesApi`, deux methodes), comme
-`RecipeRepository` cote serveur : les tests en fournissent un faux en quelques
-lignes, sans imiter tout `HttpApiClient` ni le moindre `as`.
+Le front reduit ce client a deux ports etroits (`RecipesApi`, deux methodes ;
+`AuthApi`, trois), comme `RecipeRepository` cote serveur : les tests en
+fournissent un faux en quelques lignes, sans imiter tout `HttpApiClient` ni le
+moindre `as`. Un 401 ressort en `Unauthenticated`, reconnaissable par
+`instanceof` ; au login, en `InvalidCredentials`.
+
+## Les listes de courses
+
+`/lists` énumère les listes et en crée une d'un clic : la création répond avec
+la liste, et le front part aussitôt sur les recettes avec `?list=<id>` dans
+l'URL. Tant que ce paramètre est là, un bandeau rappelle la liste en cours et
+chaque carte propose « Ajouter » (avec le compte déjà mis, et un « − »).
+« Terminer » ouvre `/lists/:id`. Le paramètre est validé comme les autres par
+`validateSearch` (entier positif) et voyage avec les filtres jusqu'au détail.
+
+`/lists/:id` montre les plats (« ×2 » quand un plat y est deux fois), le nombre
+de personnes, les ingrédients à acheter et le placard, tous cochables. Chaque
+mutation du serveur rend la liste complète : `useShoppingList` l'écrit
+directement dans le cache TanStack Query au lieu de la redemander. Cocher est
+optimiste. Les quantités s'arrondissent à l'affichage (`src/quantity.ts`) :
+« 350 g », « 1,2 kg », « 2 gousses », et le nombre seul pour les pièces.
+
+Trois ports côté front : `RecipesApi`, `AuthApi`, `ShoppingListApi`, chacun
+avec son faux dans `test/fake-api.ts`. Le faux des listes tient un état, ce qui
+permet de vérifier qu'une case cochée survit à un rechargement.
+
+## La session
+
+Le cookie est `httpOnly` : le front ne le voit jamais. `createSession` garde
+l'utilisateur en mémoire après un seul `GET /auth/me`, et la route parente
+`authenticated` le consulte dans `beforeLoad` à chaque navigation : sans
+session, `redirect` vers `/login?redirect=<destination>`, puis retour à la
+destination après connexion. Un 401 en cours de session (`useAuthGuard`)
+repart vers `/login` de la même façon.
+
+Le paramètre `redirect` est validé comme **chemin interne** par
+`validateSearch` (`/…`, ni `//` ni `/\`) : sans cela, un lien de connexion
+forgé renverrait n'importe où après le mot de passe.
+
+La déconnexion appelle `POST /auth/logout`, navigue vers `/login`, **puis**
+vide le cache TanStack Query. Dans cet ordre : tant que la liste est montée,
+elle re-remplirait le cache. Sans conséquence aujourd'hui (les recettes sont les
+mêmes pour tous), indispensable dès les listes de courses par utilisateur.
 
 ## Les filtres vivent dans l'URL
 
@@ -308,10 +478,17 @@ front ou une URL se fabrique.
 pnpm --filter @recettes/web test
 ```
 
-21 tests sur la chaine reelle avec un client factice : taper dans la recherche
+45 tests sur la chaine reelle avec des clients factices : taper dans la recherche
 met a jour l'URL **et** la requete emise, changer de page conserve les filtres,
 une URL bricolee ne blanchit pas la page, `imageUrl` est prefixe, une photo
-absente devient une mention et non une image cassee.
+absente devient une mention et non une image cassee. Côté session : sans
+utilisateur on atterrit sur `/login` avec la destination retenue et sans avoir
+appelé l'API, la connexion y revient, un `redirect` externe est ignoré, des
+identifiants refusés s'affichent, la déconnexion vide le cache, un 401 en cours
+de route renvoie vers `/login`. Côté listes : créer ouvre le mode sélection,
+ajouter incrémente le compte et le bandeau, terminer ouvre la liste, les
+quantités s'arrondissent comme convenu, cocher appelle l'API et reste coché
+après rechargement, supprimer demande deux clics, `?list=abc` est ignoré.
 
 Ce qui n'est pas couvert : jsdom n'est pas un navigateur, donc la mise en page
 n'est pas verifiee par les tests. Elle a ete controlee a la main (bureau, mobile,
