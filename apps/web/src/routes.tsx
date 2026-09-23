@@ -68,8 +68,8 @@ const AuthenticatedLayout = () => {
   return (
     <div className="min-h-screen bg-stone-50">
       <header className="border-b border-stone-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-          <nav className="flex items-center gap-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
+          <nav className="flex items-center gap-4">
             <Link
               to="/"
               // En mode sélection, revenir aux recettes garde la liste en cours.
@@ -85,12 +85,13 @@ const AuthenticatedLayout = () => {
               Listes
             </Link>
           </nav>
-          <div className="flex items-center gap-4 text-sm">
-            <span className="text-stone-500">{user.email}</span>
+          <div className="flex items-center gap-3 text-sm">
+            {/* Sur un téléphone, l'adresse ne tient pas : le bouton suffit. */}
+            <span className="hidden text-stone-500 sm:inline">{user.email}</span>
             <button
               type="button"
               onClick={() => void logout()}
-              className="rounded-lg border border-stone-300 px-3 py-1 text-stone-700 hover:bg-stone-100"
+              className="min-h-10 rounded-lg border border-stone-300 px-3 text-stone-700 hover:bg-stone-100"
             >
               Déconnexion
             </button>
@@ -98,7 +99,7 @@ const AuthenticatedLayout = () => {
         </div>
       </header>
       {list !== undefined && <SelectionBanner listId={list} />}
-      <main className="mx-auto max-w-7xl px-4 py-8">
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:py-8">
         <Outlet />
       </main>
     </div>

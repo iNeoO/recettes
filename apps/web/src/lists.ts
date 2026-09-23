@@ -1,6 +1,6 @@
 import type { ShoppingList } from "@recettes/contract"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
-import { useListsApi } from "./api.ts"
+import { ListMissing, useListsApi } from "./api.ts"
 
 export const listKey = (id: number) => ["list", id] as const
 export const listsKey = ["lists"] as const
@@ -13,7 +13,12 @@ export const listsKey = ["lists"] as const
 export const useShoppingList = (id: number) => {
   const lists = useListsApi()
   const queryClient = useQueryClient()
-  const query = useQuery({ queryKey: listKey(id), queryFn: () => lists.byId(id) })
+  const query = useQuery({
+    queryKey: listKey(id),
+    queryFn: () => lists.byId(id),
+    // Une liste introuvable ne le sera pas plus au troisième essai.
+    retry: (count, error) => !(error instanceof ListMissing) && count < 3,
+  })
 
   const mutation = useMutation({
     mutationFn: (run: () => Promise<ShoppingList>) => run(),

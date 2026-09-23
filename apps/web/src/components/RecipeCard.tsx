@@ -35,14 +35,14 @@ export const RecipeCard = ({ recipe, footer }: Props) => (
           />
         )}
       </div>
-      <div className="p-3">
-        <h2 className="font-medium text-stone-900">{recipe.title}</h2>
+      <div className="p-2 sm:p-3">
+        <h2 className="text-sm font-medium text-stone-900 sm:text-base">{recipe.title}</h2>
         <p className="mt-1 text-xs text-stone-500">
           {recipe.category ?? "sans catégorie"}
           {recipe.servings !== null && ` · ${recipe.servings} pers.`}
         </p>
       </div>
     </Link>
-    {footer !== undefined && <div className="mt-auto px-3 pb-3">{footer}</div>}
+    {footer !== undefined && <div className="mt-auto px-2 pb-2 sm:px-3 sm:pb-3">{footer}</div>}
   </article>
 )

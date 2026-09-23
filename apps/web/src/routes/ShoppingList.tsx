@@ -59,14 +59,15 @@ export const ShoppingListPage = () => {
   }
 
   const Check = ({ item }: { readonly item: ListItem | PantryItem }) => (
-    <label className="flex cursor-pointer items-center gap-3 py-1.5">
+    // Assez haut pour un pouce au magasin.
+    <label className="flex min-h-11 cursor-pointer items-center gap-3 py-1">
       <input
         type="checkbox"
         checked={item.checked}
         onChange={(event) =>
           check.mutate({ ingredientId: item.ingredientId, checked: event.target.checked })
         }
-        className="size-4 accent-stone-900"
+        className="size-5 shrink-0 accent-stone-900"
       />
       <span className={item.checked ? "text-stone-400 line-through" : "text-stone-800"}>
         {"amount" in item && (
@@ -96,7 +97,7 @@ export const ShoppingListPage = () => {
             type="button"
             aria-label="Une personne de moins"
             onClick={() => setServings(data.servings - 1)}
-            className="rounded-lg border border-stone-300 px-2 py-1 hover:bg-stone-100"
+            className="min-h-10 min-w-10 rounded-lg border border-stone-300 hover:bg-stone-100"
           >
             −
           </button>
@@ -107,7 +108,7 @@ export const ShoppingListPage = () => {
             type="button"
             aria-label="Une personne de plus"
             onClick={() => setServings(data.servings + 1)}
-            className="rounded-lg border border-stone-300 px-2 py-1 hover:bg-stone-100"
+            className="min-h-10 min-w-10 rounded-lg border border-stone-300 hover:bg-stone-100"
           >
             +
           </button>
@@ -121,7 +122,7 @@ export const ShoppingListPage = () => {
           <Link
             to="/"
             search={{ list: listId }}
-            className="rounded-lg bg-stone-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-stone-700"
+            className="inline-flex min-h-10 items-center rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700"
           >
             Ajouter des plats
           </Link>
@@ -144,7 +145,7 @@ export const ShoppingListPage = () => {
                   type="button"
                   aria-label={`Retirer ${recipe.title}`}
                   onClick={() => mutate(() => lists.removeRecipe(listId, recipe.recipeId))}
-                  className="rounded-lg border border-stone-300 px-2 py-1 text-sm text-stone-700 hover:bg-stone-100"
+                  className="min-h-10 shrink-0 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
                 >
                   Retirer
                 </button>
@@ -190,7 +191,7 @@ export const ShoppingListPage = () => {
           <button
             type="button"
             onClick={() => remove.mutate()}
-            className="rounded-lg bg-red-700 px-3 py-1.5 text-sm text-white hover:bg-red-800"
+            className="min-h-10 rounded-lg bg-red-700 px-3 text-sm text-white hover:bg-red-800"
           >
             Confirmer la suppression
           </button>
@@ -198,7 +199,7 @@ export const ShoppingListPage = () => {
           <button
             type="button"
             onClick={() => setConfirming(true)}
-            className="text-sm text-stone-500 hover:text-red-700 hover:underline"
+            className="min-h-10 text-sm text-stone-500 hover:text-red-700 hover:underline"
           >
             Supprimer cette liste
           </button>

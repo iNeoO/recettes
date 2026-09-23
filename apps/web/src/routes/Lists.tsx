@@ -31,13 +31,13 @@ export const ListsPage = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-3">
         <h1 className="text-2xl font-semibold text-stone-900">Listes de courses</h1>
         <button
           type="button"
           disabled={create.isPending}
           onClick={() => create.mutate()}
-          className="rounded-lg bg-stone-900 px-3 py-2 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50"
+          className="min-h-10 shrink-0 rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50"
         >
           Créer une liste
         </button>
@@ -57,9 +57,9 @@ export const ListsPage = () => {
         <ul className="divide-y divide-stone-200 rounded-xl border border-stone-200 bg-white">
           {data.map((list) => (
             <li key={list.id} className="flex items-center justify-between gap-4 px-4 py-3">
-              <Link to="/lists/$id" params={{ id: String(list.id) }} className="min-w-0 flex-1">
-                <span className="font-medium text-stone-900">{list.name}</span>
-                <span className="ml-3 text-sm text-stone-500">
+              <Link to="/lists/$id" params={{ id: String(list.id) }} className="min-w-0 flex-1 py-1">
+                <span className="block font-medium text-stone-900">{list.name}</span>
+                <span className="block text-sm text-stone-500">
                   {list.recipeCount} plat{list.recipeCount > 1 ? "s" : ""} · {list.servings} pers. ·{" "}
                   {dateFormat.format(list.createdAt)}
                 </span>
@@ -68,15 +68,15 @@ export const ListsPage = () => {
                 <button
                   type="button"
                   onClick={() => remove.mutate(list.id)}
-                  className="rounded-lg bg-red-700 px-3 py-1 text-sm text-white hover:bg-red-800"
+                  className="min-h-10 shrink-0 rounded-lg bg-red-700 px-3 text-sm text-white hover:bg-red-800"
                 >
-                  Confirmer la suppression
+                  Confirmer
                 </button>
               ) : (
                 <button
                   type="button"
                   onClick={() => setConfirming(list.id)}
-                  className="rounded-lg border border-stone-300 px-3 py-1 text-sm text-stone-700 hover:bg-stone-100"
+                  className="min-h-10 shrink-0 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
                 >
                   Supprimer
                 </button>

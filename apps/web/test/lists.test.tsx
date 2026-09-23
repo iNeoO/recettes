@@ -68,6 +68,16 @@ describe("listes de courses", () => {
     expect(await screen.findByRole("heading", { name: "23 septembre 2026" })).toBeTruthy()
   })
 
+  it("quand la liste en cours n'existe plus, le bandeau le dit et cache Ajouter", async () => {
+    renderAt("/?list=42", [])
+    await screen.findByText("Bowl de pastèque")
+
+    const banner = await screen.findByRole("status")
+    await waitFor(() => expect(banner.textContent).toContain("n'existe plus"))
+    expect(screen.getByRole("link", { name: "Voir les listes" })).toBeTruthy()
+    expect(screen.queryByRole("button", { name: "Ajouter" })).toBeNull()
+  })
+
   it("sans liste en cours, aucun bouton Ajouter ni bandeau", async () => {
     renderAt("/")
     await screen.findByText("Bowl de pastèque")

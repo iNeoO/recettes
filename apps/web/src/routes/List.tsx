@@ -45,7 +45,8 @@ export const ListPage = () => {
           <p className="text-sm text-stone-600">
             {data.total} recette{data.total > 1 ? "s" : ""}
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {/* Deux colonnes dès le téléphone : une seule ferait défiler 20 grandes photos. */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
             {data.items.map((recipe) => (
               <RecipeCard
                 key={recipe.id}

@@ -69,7 +69,7 @@ export const DetailPage = () => {
                 {group.items.map((ingredient, position) => (
                   <li key={position} className="flex gap-2">
                     {/* Assez large pour « 1 1/2 cuillère à soupe » sans repousser le nom. */}
-                    <span className="w-36 shrink-0 text-stone-500">
+                    <span className="w-24 shrink-0 text-stone-500 sm:w-36">
                       {ingredient.quantity ?? ""}
                     </span>
                     {/* Cliquer cherche l'ingrédient : filtre textuel, pas un regroupement exact. */}

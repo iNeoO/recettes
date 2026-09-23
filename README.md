@@ -478,7 +478,7 @@ front ou une URL se fabrique.
 pnpm --filter @recettes/web test
 ```
 
-45 tests sur la chaine reelle avec des clients factices : taper dans la recherche
+46 tests sur la chaine reelle avec des clients factices : taper dans la recherche
 met a jour l'URL **et** la requete emise, changer de page conserve les filtres,
 une URL bricolee ne blanchit pas la page, `imageUrl` est prefixe, une photo
 absente devient une mention et non une image cassee. Côté session : sans
@@ -493,6 +493,15 @@ après rechargement, supprimer demande deux clics, `?list=abc` est ignoré.
 Ce qui n'est pas couvert : jsdom n'est pas un navigateur, donc la mise en page
 n'est pas verifiee par les tests. Elle a ete controlee a la main (bureau, mobile,
 liste, detail).
+
+## Mobile
+
+Repassé en 375 px sur toutes les pages. L'e-mail disparaît de l'en-tête sous
+`sm`, le bandeau de sélection est collant (« Terminer » reste sous le pouce en
+défilant), la grille des recettes fait deux colonnes dès le téléphone, et toutes
+les cibles tactiles (Ajouter, −, Retirer, cases, nombre de personnes) font au
+moins 40 px. Si `?list=` pointe sur une liste supprimée, le bandeau le dit et
+les boutons Ajouter disparaissent, sans réessayer le 404.
 
 ## Limite connue
 

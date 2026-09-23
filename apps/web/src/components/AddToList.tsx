@@ -9,15 +9,18 @@ interface Props {
 /** « Ajouter » à la liste en cours de sélection, avec le nombre déjà mis. */
 export const AddToList = ({ listId, recipeId }: Props) => {
   const lists = useListsApi()
-  const { data, mutate } = useShoppingList(listId)
+  const { data, isError, mutate } = useShoppingList(listId)
   const count = data?.recipes.find((r) => r.recipeId === recipeId)?.count ?? 0
+
+  // Liste supprimée entre-temps : le bandeau l'explique, pas de bouton orphelin.
+  if (isError) return null
 
   return (
     <div className="flex items-center gap-2">
       <button
         type="button"
         onClick={() => mutate(() => lists.addRecipe(listId, recipeId))}
-        className="rounded-lg bg-stone-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-stone-700"
+        className="min-h-10 rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700"
       >
         Ajouter
       </button>
@@ -30,7 +33,7 @@ export const AddToList = ({ listId, recipeId }: Props) => {
             type="button"
             onClick={() => mutate(() => lists.removeRecipe(listId, recipeId))}
             aria-label="Retirer une fois"
-            className="rounded-lg border border-stone-300 px-2 py-1 text-sm text-stone-700 hover:bg-stone-100"
+            className="min-h-10 min-w-10 rounded-lg border border-stone-300 text-sm text-stone-700 hover:bg-stone-100"
           >
             −
           </button>
