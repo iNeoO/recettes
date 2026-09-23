@@ -4,11 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=../../.env --import tsx --watch src/http/server.ts",
-    "start": "node --env-file=../../.env --import tsx src/http/server.ts",
+    "dev": "node --env-file-if-exists=../../.env --import tsx --watch src/http/server.ts",
+    "start": "node --env-file-if-exists=../../.env --import tsx src/http/server.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "create-user": "node --env-file=../../.env --import tsx scripts/create-user.ts"
+    "create-user": "node --env-file-if-exists=../../.env --import tsx scripts/create-user.ts",
+    "start:prod": "node --import tsx src/http/server.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.734.0",
@@ -19,7 +20,8 @@
     "@recettes/contract": "workspace:*",
     "@recettes/db": "workspace:*",
     "drizzle-orm": "^0.45.2",
-    "effect": "catalog:"
+    "effect": "catalog:",
+    "prom-client": "^15.1.3"
   },
   "devDependencies": {
     "@effect/vitest": "catalog:",

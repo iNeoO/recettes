@@ -11,5 +11,8 @@
     "ingest": "pnpm --filter @recettes/ingest ingest",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "^1.9.1"
   }
 }

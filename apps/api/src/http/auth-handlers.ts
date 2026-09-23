@@ -4,6 +4,7 @@ import { Duration, Effect, Option, Redacted } from "effect"
 import { SESSION_TTL, Sessions } from "../domain/session.ts"
 import { Users } from "../domain/users.ts"
 import { orInternalError } from "./errors.ts"
+import { observeLogin } from "./metrics.ts"
 
 /**
  * Path=/ est indispensable : le front appelle /api/auth/login, et sans lui le
@@ -22,7 +23,11 @@ export const AuthLive = HttpApiBuilder.group(RecettesApi, "auth", (handlers) =>
         Effect.gen(function* () {
           const found = yield* orInternalError(users.authenticate(payload.email, payload.password))
           // Même réponse pour un mot de passe faux et une adresse inconnue.
-          if (Option.isNone(found)) return yield* new Unauthorized()
+          if (Option.isNone(found)) {
+            observeLogin("failure")
+            return yield* new Unauthorized()
+          }
+          observeLogin("success")
           const token = yield* orInternalError(sessions.open(found.value.id))
           yield* HttpApiBuilder.securitySetCookie(sessionSecurity, token, {
             ...COOKIE,
