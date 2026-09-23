@@ -390,6 +390,65 @@ Et une ligne qui en cachait deux :
 
 ---
 
+# Production
+
+```sh
+cp .env.docker.example .env.docker   # puis remplir (Postgres, clé Garage, port)
+make prod-up                          # construit, migre, démarre
+make prod-user EMAIL=anne@example.org # mot de passe sur stdin
+make prod-ingest                      # une fois : lit PDF_DIR, remplit base et Garage
+```
+
+`docker-compose.prod.yaml` suit le modèle de `brief` : une seule construction
+(`Dockerfile`) avec trois cibles, choisies par service.
+
+| Service | Cible | Rôle |
+| --- | --- | --- |
+| `postgres` | — | Postgres 17, volume `recettes-pgdata-prod`, publié sur loopback (`PG_HOST_PORT`) |
+| `db-migrate` | `api` | `drizzle-kit migrate`, s'exécute avant l'API et s'arrête |
+| `api` | `api` | le serveur Effect, lancé par tsx, `LOG_FORMAT=json` |
+| `web` | `web` | nginx : la SPA construite, `/api/*` renvoyé vers l'API, publié sur loopback (`WEB_HOST_PORT`) |
+| `ingest` | `ingest` | l'API plus `poppler-utils`, profil `tools`, PDF montés depuis `PDF_DIR` |
+
+Garage n'est pas dans ce stack : c'est le `garage-prod` du dépôt `infra`, joint
+par le réseau externe `garage-network`, avec une clé et un bucket dédiés (les
+commandes sont dans `.env.docker.example`). Le reverse proxy de la machine
+termine le HTTPS et renvoie vers `127.0.0.1:WEB_HOST_PORT` ; le cookie de
+session est `Secure`, il ne marchera pas en HTTP clair.
+
+L'ingestion en production tourne dans un conteneur, avec les PDF montés en
+lecture seule : rien à installer sur la machine. Elle est idempotente, on la
+relance après chaque arbitrage de `units.json`.
+
+## Observabilité
+
+L'API sert `GET /metrics` au format Prometheus, toutes les séries préfixées
+`recettes_api_` :
+
+| Série | Ce qu'elle dit |
+| --- | --- |
+| `recettes_api_process_*`, `recettes_api_nodejs_*` | le processus : boucle d'événements, tas, GC |
+| `recettes_api_http_request_duration_seconds` | latence et taux d'erreur par `route`, `method`, `status_class` |
+| `recettes_api_logins_total{result}` | connexions réussies et refusées — le login n'a aucune limitation, c'est ici qu'un bourrinage se voit |
+
+`route` est un jeu **fermé** (`KNOWN_ROUTES` dans `apps/api/src/http/metrics.ts`) :
+une route ajoutée au contrat s'y ajoute, sinon elle se compte en `other`. La
+route image et `/docs` comptent aussi ; `/metrics` s'exclut dans les requêtes
+Grafana.
+
+Le point de scrape n'a **pas d'authentification**. Il n'est pas fait pour être
+joignable de l'extérieur : le conteneur `api` rejoint le réseau externe
+`monitoring-shared` et le Prometheus du dépôt `observability` le lit là, par
+son nom (`recettes-api-prod:3000`). nginx refuse `/api/metrics` d'un 404 ; ce
+refus est la seule barrière, ne pas le retirer.
+
+Chaque requête écrit aussi une ligne de journal (`route`, `method`, `status`,
+`durationMs`), en JSON quand `LOG_FORMAT=json` : Promtail les envoie à Loki, et
+le tableau de bord `Recettes Observability` (`observability/grafana/dashboards/`)
+les affiche à côté des métriques. Le niveau est dans `logLevel`, en majuscules.
+
+---
+
 # Front (apps/web)
 
 ```sh

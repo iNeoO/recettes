@@ -1,0 +1,11 @@
+# Le contexte de construction reste léger : les PDF font 290 Mo et n'entrent
+# jamais dans l'image (montés au lancement de l'ingestion), .env non plus.
+node_modules
+**/node_modules
+**/dist
+*.pdf
+.env
+.env.docker
+.git
+.playwright-mcp
+data

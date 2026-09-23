@@ -1,0 +1,122 @@
+name: recettes-prod
+
+x-api: &api
+  image: recettes-api:prod
+  build:
+    context: .
+    dockerfile: ./Dockerfile
+    target: api
+  env_file:
+    - ./.env.docker
+  environment:
+    NODE_ENV: production
+    LOG_FORMAT: json
+  restart: unless-stopped
+  networks:
+    - recettes-network
+    - garage-network
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: recettes-postgres-prod
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${PG_HOST_PORT}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - recettes-network
+
+  db-migrate:
+    <<: *api
+    container_name: recettes-db-migrate-prod
+    command: ["pnpm", "--filter", "@recettes/db", "migrate"]
+    restart: "no"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    <<: *api
+    container_name: recettes-api-prod
+    # Redit la liste de l'ancre : une clé explicite la remplace au lieu de
+    # l'étendre. L'entrée en plus est `monitoring-shared` : Prometheus y lit
+    # /metrics directement sur le conteneur, sans passer par nginx, qui le refuse.
+    networks:
+      - recettes-network
+      - garage-network
+      - monitoring-shared
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/metrics"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      db-migrate:
+        condition: service_completed_successfully
+
+  web:
+    image: recettes-web:prod
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: web
+    container_name: recettes-web-prod
+    restart: unless-stopped
+    # Sur loopback, pour le reverse proxy de la machine.
+    ports:
+      - "127.0.0.1:${WEB_HOST_PORT}:80"
+    networks:
+      - recettes-network
+    depends_on:
+      api:
+        condition: service_healthy
+
+  # Ne tourne que sur demande (`make prod-ingest`) : lit les PDF montés depuis
+  # PDF_DIR, écrit les recettes en base et les photos dans Garage. Idempotent.
+  ingest:
+    <<: *api
+    image: recettes-ingest:prod
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: ingest
+    container_name: recettes-ingest-prod
+    profiles: ["tools"]
+    restart: "no"
+    volumes:
+      - ${PDF_DIR:-./}/list1.pdf:/app/list1.pdf:ro
+      - ${PDF_DIR:-./}/list2.pdf:/app/list2.pdf:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      db-migrate:
+        condition: service_completed_successfully
+
+volumes:
+  pgdata:
+    name: recettes-pgdata-prod
+
+networks:
+  recettes-network:
+    name: recettes-network-prod
+    driver: bridge
+  garage-network:
+    name: ${GARAGE_NETWORK:-garage-network}
+    external: true
+  monitoring-shared:
+    name: ${MONITORING_SHARED_NETWORK:-monitoring-shared}
+    external: true

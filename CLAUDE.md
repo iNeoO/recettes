@@ -31,6 +31,7 @@ make user EMAIL=anne@example.org  # crée un compte, mot de passe sur stdin
 make dev        # API :3000 (doc sur /docs) + front :5173
 make test       # tous les tests
 make typecheck  # tous les packages
+make prod-up    # production : construit, migre, démarre (voir README, Production)
 ```
 
 Les tests API créent et migrent `recettes_test` eux-mêmes : la base de dev et
@@ -117,6 +118,12 @@ version de ces paquets passe par `pnpm-workspace.yaml`, pas par le
 Postgres + **Garage** (S3-compatible) via `docker compose`. `scripts/garage-init.sh`
 est idempotent. Les secrets vivent dans `.env` (gitignoré) ; `.env.example`
 documente chaque variable et ne contient que des placeholders.
+
+En production (`docker-compose.prod.yaml`, `.env.docker`), Garage est le
+`garage-prod` partagé du dépôt `infra`, et Prometheus (dépôt `observability`)
+lit `/metrics` de l'API par le réseau `monitoring-shared`. Toute nouvelle route
+du contrat s'ajoute à `KNOWN_ROUTES` dans `apps/api/src/http/metrics.ts`, sinon
+elle se compte en `other`.
 
 Les PDF sources (`list1.pdf`, `list2.pdf`, 163 et 127 Mo) ne sont pas versionnés.
 Sans eux : le parser tourne sur ses 10 fixtures JSON, `corpus.test.ts` est sauté,
