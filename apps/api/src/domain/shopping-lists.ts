@@ -26,7 +26,7 @@ export interface StoredList {
 
 /** Les plats ne bougent que sur une liste en draft. */
 export type DishEdit = "done" | "list-missing" | "not-draft"
-export type DishAdd = DishEdit | "recipe-missing"
+export type DishPick = DishEdit | "recipe-missing"
 export type Finalize = "done" | "list-missing" | "empty"
 
 /**
@@ -67,20 +67,23 @@ export class ShoppingListRepository extends Context.Tag("ShoppingListRepository"
       userId: number,
       id: number,
       recipeId: number
-    ) => Effect.Effect<DishAdd, RepositoryError>
+    ) => Effect.Effect<DishPick, RepositoryError>
     /** Retire une occurrence, la dernière ajoutée. */
     readonly removeRecipe: (
       userId: number,
       id: number,
       recipeId: number
     ) => Effect.Effect<DishEdit, RepositoryError>
-    /** Remplace une occurrence, la dernière ajoutée, en gardant sa place. */
+    /**
+     * Remplace une occurrence, la dernière ajoutée, en gardant sa place. Un
+     * remplaçant déjà présent ne se dédouble pas : l'occurrence est retirée.
+     */
     readonly replaceRecipe: (
       userId: number,
       id: number,
       recipeId: number,
       replacementId: number
-    ) => Effect.Effect<DishEdit, RepositoryError>
+    ) => Effect.Effect<DishPick, RepositoryError>
     readonly setChecked: (
       userId: number,
       id: number,

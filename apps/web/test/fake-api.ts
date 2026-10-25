@@ -141,6 +141,13 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
     return { recipeId: 100 + drawn, title: `Plat tiré ${drawn}`, imageUrl: null, count: 1 }
   }
 
+  const dish = (recipeId: number) => ({
+    recipeId,
+    title: `Recette ${recipeId}`,
+    imageUrl: null,
+    count: 1,
+  })
+
   const get = (id: number) => {
     const list = state.get(id)
     if (list === undefined) throw new ListMissing()
@@ -200,24 +207,16 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
     addRecipe: (id, recipeId) => {
       calls.push(`addRecipe ${id} ${recipeId}`)
       const list = get(id)
-      const existing = list.recipes.find((r) => r.recipeId === recipeId)
-      const recipes =
-        existing === undefined
-          ? [...list.recipes, { recipeId, title: `Recette ${recipeId}`, imageUrl: null, count: 1 }]
-          : list.recipes.map((r) => (r.recipeId === recipeId ? { ...r, count: r.count + 1 } : r))
-      return put({ ...list, recipes })
+      if (list.recipes.some((r) => r.recipeId === recipeId)) return put(list)
+      return put({ ...list, recipes: [...list.recipes, dish(recipeId)] })
     },
-    addRandomRecipe: (id) => {
-      calls.push(`addRandomRecipe ${id}`)
+    replaceRecipe: (id, recipeId, replacementId) => {
+      calls.push(`replaceRecipe ${id} ${recipeId} ${replacementId}`)
       const list = get(id)
-      return put({ ...list, recipes: [...list.recipes, draw()] })
-    },
-    replaceRecipe: (id, recipeId) => {
-      calls.push(`replaceRecipe ${id} ${recipeId}`)
-      const list = get(id)
+      const present = list.recipes.some((r) => r.recipeId === replacementId)
       const recipes = list.recipes.flatMap((r) => {
         if (r.recipeId !== recipeId) return [r]
-        return r.count > 1 ? [{ ...r, count: r.count - 1 }, draw()] : [draw()]
+        return present ? [] : [dish(replacementId)]
       })
       return put({ ...list, recipes })
     },

@@ -8,7 +8,7 @@ import {
   RecipeNotFound,
 } from "@recettes/contract"
 import { Clock, Effect, Option } from "effect"
-import { drawMeal, drawMeals, NOT_MEALS } from "../domain/meals.ts"
+import { drawMeals, NOT_MEALS } from "../domain/meals.ts"
 import {
   type DishEdit,
   listName,
@@ -109,16 +109,6 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           return yield* load(user.id, path.id)
         })
       )
-      .handle("addRandomRecipe", ({ path }) =>
-        Effect.gen(function* () {
-          const user = yield* CurrentUser
-          const recipeId = yield* drawMeal(yield* mealPool)
-          const result = yield* orInternalError(lists.addRecipe(user.id, path.id, recipeId))
-          if (result === "recipe-missing") return yield* Effect.die("plat tiré introuvable")
-          yield* orNotDraft(path.id)(result)
-          return yield* load(user.id, path.id)
-        })
-      )
       .handle("removeRecipe", ({ path }) =>
         Effect.gen(function* () {
           const user = yield* CurrentUser
@@ -128,13 +118,14 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           return yield* load(user.id, path.id)
         })
       )
-      .handle("replaceRecipe", ({ path }) =>
+      .handle("replaceRecipe", ({ path, payload }) =>
         Effect.gen(function* () {
           const user = yield* CurrentUser
-          const replacementId = yield* drawMeal(yield* mealPool, path.recipeId)
-          yield* orInternalError(
-            lists.replaceRecipe(user.id, path.id, path.recipeId, replacementId)
-          ).pipe(Effect.flatMap(orNotDraft(path.id)))
+          const result = yield* orInternalError(
+            lists.replaceRecipe(user.id, path.id, path.recipeId, payload.recipeId)
+          )
+          if (result === "recipe-missing") return yield* new RecipeNotFound({ id: payload.recipeId })
+          yield* orNotDraft(path.id)(result)
           return yield* load(user.id, path.id)
         })
       )

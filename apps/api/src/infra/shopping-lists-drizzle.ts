@@ -40,6 +40,36 @@ export const ShoppingListRepositoryLive = Layer.effect(
           )
         )
 
+    const recipeExists = (recipeId: number) =>
+      db
+        .select({ id: schema.recipes.id })
+        .from(schema.recipes)
+        .where(eq(schema.recipes.id, recipeId))
+        .limit(1)
+        .pipe(Effect.map((rows) => rows.length > 0))
+
+    const inList = (id: number, recipeId: number) =>
+      db
+        .select({ id: schema.shoppingListRecipes.id })
+        .from(schema.shoppingListRecipes)
+        .where(
+          and(
+            eq(schema.shoppingListRecipes.listId, id),
+            eq(schema.shoppingListRecipes.recipeId, recipeId)
+          )
+        )
+        .limit(1)
+        .pipe(Effect.map((rows) => rows.length > 0))
+
+    /** La dernière occurrence ajoutée : c'est elle qu'on retire ou remplace. */
+    const removeLast = (id: number, recipeId: number) =>
+      raw`
+        DELETE FROM shopping_list_recipes
+        WHERE id = (
+          SELECT id FROM shopping_list_recipes
+          WHERE list_id = ${id} AND recipe_id = ${recipeId}
+          ORDER BY position DESC LIMIT 1)`
+
     const recipesOf = (id: number): Effect.Effect<ReadonlyArray<ListRecipe>, unknown> =>
       db
         .select({
@@ -226,12 +256,8 @@ export const ShoppingListRepositoryLive = Layer.effect(
         Effect.gen(function* () {
           const state = yield* editable(userId, id)
           if (state !== "draft") return state
-          const recipe = yield* db
-            .select({ id: schema.recipes.id })
-            .from(schema.recipes)
-            .where(eq(schema.recipes.id, recipeId))
-            .limit(1)
-          if (recipe.length === 0) return "recipe-missing" as const
+          if (!(yield* recipeExists(recipeId))) return "recipe-missing" as const
+          if (yield* inList(id, recipeId)) return "done" as const
           yield* db.insert(schema.shoppingListRecipes).values({
             listId: id,
             recipeId,
@@ -247,12 +273,7 @@ export const ShoppingListRepositoryLive = Layer.effect(
         Effect.gen(function* () {
           const state = yield* editable(userId, id)
           if (state !== "draft") return state
-          yield* raw`
-            DELETE FROM shopping_list_recipes
-            WHERE id = (
-              SELECT id FROM shopping_list_recipes
-              WHERE list_id = ${id} AND recipe_id = ${recipeId}
-              ORDER BY position DESC LIMIT 1)`
+          yield* removeLast(id, recipeId)
           return "done" as const
         }).pipe(raw.withTransaction, asRepositoryError),
 
@@ -260,6 +281,12 @@ export const ShoppingListRepositoryLive = Layer.effect(
         Effect.gen(function* () {
           const state = yield* editable(userId, id)
           if (state !== "draft") return state
+          if (!(yield* recipeExists(replacementId))) return "recipe-missing" as const
+          if (replacementId === recipeId) return "done" as const
+          if (yield* inList(id, replacementId)) {
+            yield* removeLast(id, recipeId)
+            return "done" as const
+          }
           yield* raw`
             UPDATE shopping_list_recipes SET recipe_id = ${replacementId}
             WHERE id = (

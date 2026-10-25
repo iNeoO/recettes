@@ -64,10 +64,9 @@ export interface ShoppingListApi {
   readonly finalize: (id: number) => Promise<ShoppingList>
   readonly reopen: (id: number) => Promise<ShoppingList>
   readonly addRecipe: (id: number, recipeId: number) => Promise<ShoppingList>
-  readonly addRandomRecipe: (id: number) => Promise<ShoppingList>
   readonly removeRecipe: (id: number, recipeId: number) => Promise<ShoppingList>
-  /** Remplace une occurrence par un autre plat tiré au hasard, à la même place. */
-  readonly replaceRecipe: (id: number, recipeId: number) => Promise<ShoppingList>
+  /** Remplace une occurrence par le plat choisi, à la même place. */
+  readonly replaceRecipe: (id: number, recipeId: number, replacementId: number) => Promise<ShoppingList>
   readonly setChecked: (id: number, ingredientId: number, checked: boolean) => Promise<void>
 }
 
@@ -134,11 +133,13 @@ export const makeClients = async (
       reopen: (id) => run(client.lists.reopen({ path: { id } }), unauthenticated),
       addRecipe: (id, recipeId) =>
         run(client.lists.addRecipe({ path: { id }, payload: { recipeId } }), unauthenticated),
-      addRandomRecipe: (id) => run(client.lists.addRandomRecipe({ path: { id } }), unauthenticated),
       removeRecipe: (id, recipeId) =>
         run(client.lists.removeRecipe({ path: { id, recipeId } }), unauthenticated),
-      replaceRecipe: (id, recipeId) =>
-        run(client.lists.replaceRecipe({ path: { id, recipeId } }), unauthenticated),
+      replaceRecipe: (id, recipeId, replacementId) =>
+        run(
+          client.lists.replaceRecipe({ path: { id, recipeId }, payload: { recipeId: replacementId } }),
+          unauthenticated
+        ),
       setChecked: (id, ingredientId, checked) =>
         run(
           client.lists.setChecked({ path: { id, ingredientId }, payload: { checked } }),
