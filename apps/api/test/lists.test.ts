@@ -61,6 +61,7 @@ describe("listes de courses", () => {
 
         expect(list.name).toBe(listName(Date.now()))
         expect(list.servings).toBe(2)
+        expect(list.status).toBe("draft")
         expect(list.recipes).toEqual([])
         expect(list.items).toEqual([])
         expect(list.pantry).toEqual([])
@@ -81,6 +82,7 @@ describe("listes de courses", () => {
         expect(mine.map((l) => l.id)).toEqual([second.id, first.id])
         expect(mine[0]!.recipeCount).toBe(1)
         expect(mine[1]!.recipeCount).toBe(0)
+        expect(mine[0]!.status).toBe("draft")
         // Deux listes le même jour portent le même nom : c'est accepté.
         expect(mine[0]!.name).toBe(mine[1]!.name)
       }))
@@ -179,6 +181,8 @@ describe("listes de courses", () => {
           api.lists.remove({ path }),
           api.lists.addRecipe({ path, payload: { recipeId: crepes } }),
           api.lists.removeRecipe({ path: { ...path, recipeId: crepes } }),
+          api.lists.finalize({ path }),
+          api.lists.reopen({ path }),
           api.lists.addRandomRecipe({ path }),
           api.lists.replaceRecipe({ path: { ...path, recipeId: crepes } }),
           api.lists.setChecked({ path: { ...path, ingredientId: 1 }, payload: { checked: true } }),
@@ -190,6 +194,63 @@ describe("listes de courses", () => {
         const intact = yield* other.lists.byId({ path })
         expect(intact.servings).toBe(2)
         expect(intact.recipes).toEqual([])
+      }))
+
+    it.effect("valide une liste puis la rouvre, cases cochées comprises", () =>
+      Effect.gen(function* () {
+        yield* corpus()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const path = { id: created.id }
+        const withCrepes = yield* api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Crêpes") } })
+        const farine = withCrepes.items.find((i) => i.name === "farine")!
+        yield* api.lists.setChecked({ path: { ...path, ingredientId: farine.ingredientId }, payload: { checked: true } })
+
+        const ready = yield* api.lists.finalize({ path })
+        expect(ready.status).toBe("ready")
+        expect((yield* api.lists.list())[0]!.status).toBe("ready")
+
+        const draft = yield* api.lists.reopen({ path })
+        expect(draft.status).toBe("draft")
+        expect(draft.items.find((i) => i.name === "farine")!.checked).toBe(true)
+      }))
+
+    it.effect("refuse de valider une liste sans plat", () =>
+      Effect.gen(function* () {
+        yield* corpus()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        expect(tagOf(yield* Effect.flip(api.lists.finalize({ path: { id: created.id } })))).toBe("EmptyList")
+        expect((yield* api.lists.byId({ path: { id: created.id } })).status).toBe("draft")
+      }))
+
+    it.effect("une liste validée refuse qu'on touche à ses plats, pas aux personnes ni aux cases", () =>
+      Effect.gen(function* () {
+        yield* corpus()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const path = { id: created.id }
+        const crepes = yield* recipeId("Crêpes")
+        const list = yield* api.lists.addRecipe({ path, payload: { recipeId: crepes } })
+        yield* api.lists.finalize({ path })
+
+        const attempts: ReadonlyArray<Effect.Effect<unknown, unknown>> = [
+          api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Gâteau") } }),
+          api.lists.removeRecipe({ path: { ...path, recipeId: crepes } }),
+          api.lists.replaceRecipe({ path: { ...path, recipeId: crepes } }),
+        ]
+        for (const attempt of attempts) {
+          expect(tagOf(yield* Effect.flip(attempt))).toBe("ListNotDraft")
+        }
+
+        yield* api.lists.setChecked({
+          path: { ...path, ingredientId: list.items[0]!.ingredientId },
+          payload: { checked: true },
+        })
+        const after = yield* api.lists.setServings({ path, payload: { servings: 4 } })
+        expect(after.servings).toBe(4)
+        expect(after.items[0]!.checked).toBe(true)
+        expect(after.recipes.map((r) => r.title)).toEqual(["Crêpes"])
       }))
 
     it.effect("une case cochée survit à l'ajout d'un plat et au changement de personnes", () =>

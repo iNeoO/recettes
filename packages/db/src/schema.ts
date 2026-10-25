@@ -1,5 +1,6 @@
 import { relations, sql } from "drizzle-orm"
 import {
+  check,
   doublePrecision,
   index,
   integer,
@@ -140,9 +141,14 @@ export const shoppingLists = pgTable(
     name: text("name").notNull(),
     /** Un seul nombre pour toute la liste ; les recettes sont ramenées à 2. */
     servings: integer("servings").notNull().default(2),
+    /** draft : on choisit les plats ; ready : on fait les courses. */
+    status: text("status", { enum: ["draft", "ready"] }).notNull().default("draft"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (table) => [index("shopping_lists_user_id_idx").on(table.userId)]
+  (table) => [
+    index("shopping_lists_user_id_idx").on(table.userId),
+    check("shopping_lists_status_check", sql`${table.status} IN ('draft', 'ready')`),
+  ]
 )
 
 /**

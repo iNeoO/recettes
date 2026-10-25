@@ -109,6 +109,7 @@ export const shoppingList = (over: Partial<ShoppingList> = {}): ShoppingList => 
   id: 3,
   name: "23 septembre 2026",
   servings: 2,
+  status: "ready",
   createdAt: new Date("2026-09-23T10:00:00Z"),
   recipes: [
     { recipeId: 1, title: "Bowl de pastèque", imageUrl: "/recipes/1/image", count: 2 },
@@ -160,6 +161,7 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
           id: l.id,
           name: l.name,
           servings: l.servings,
+          status: l.status,
           createdAt: l.createdAt,
           recipeCount: l.recipes.reduce((n, r) => n + r.count, 0),
         }))
@@ -168,7 +170,7 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
     create: (meals) => {
       calls.push(`create ${meals}`)
       const recipes = Array.from({ length: meals }, draw)
-      return put(shoppingList({ id: nextId++, recipes, items: [], pantry: [] }))
+      return put(shoppingList({ id: nextId++, status: "draft", recipes, items: [], pantry: [] }))
     },
     byId: (id) => {
       calls.push(`byId ${id}`)
@@ -186,6 +188,14 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
       calls.push(`remove ${id}`)
       state.delete(id)
       return Promise.resolve()
+    },
+    finalize: (id) => {
+      calls.push(`finalize ${id}`)
+      return put({ ...get(id), status: "ready" })
+    },
+    reopen: (id) => {
+      calls.push(`reopen ${id}`)
+      return put({ ...get(id), status: "draft" })
     },
     addRecipe: (id, recipeId) => {
       calls.push(`addRecipe ${id} ${recipeId}`)

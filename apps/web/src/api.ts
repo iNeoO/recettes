@@ -61,6 +61,8 @@ export interface ShoppingListApi {
   readonly byId: (id: number) => Promise<ShoppingList>
   readonly setServings: (id: number, servings: number) => Promise<ShoppingList>
   readonly remove: (id: number) => Promise<void>
+  readonly finalize: (id: number) => Promise<ShoppingList>
+  readonly reopen: (id: number) => Promise<ShoppingList>
   readonly addRecipe: (id: number, recipeId: number) => Promise<ShoppingList>
   readonly addRandomRecipe: (id: number) => Promise<ShoppingList>
   readonly removeRecipe: (id: number, recipeId: number) => Promise<ShoppingList>
@@ -128,6 +130,8 @@ export const makeClients = async (
       setServings: (id, servings) =>
         run(client.lists.setServings({ path: { id }, payload: { servings } }), unauthenticated),
       remove: (id) => run(client.lists.remove({ path: { id } }), unauthenticated),
+      finalize: (id) => run(client.lists.finalize({ path: { id } }), unauthenticated),
+      reopen: (id) => run(client.lists.reopen({ path: { id } }), unauthenticated),
       addRecipe: (id, recipeId) =>
         run(client.lists.addRecipe({ path: { id }, payload: { recipeId } }), unauthenticated),
       addRandomRecipe: (id) => run(client.lists.addRandomRecipe({ path: { id } }), unauthenticated),

@@ -3,12 +3,17 @@ import { Schema } from "effect"
 import { Authentication } from "./auth.ts"
 import { RecipeNotFound } from "./recipe.ts"
 
+/** draft : on choisit les plats ; ready : on fait les courses. */
+export const ListStatus = Schema.Literal("draft", "ready")
+export type ListStatus = typeof ListStatus.Type
+
 /** Une liste vue de loin, pour l'onglet qui les énumère. */
 export const ShoppingListSummary = Schema.Struct({
   id: Schema.Number,
   /** La date du jour à la création, en clair ; pas unique. */
   name: Schema.String,
   servings: Schema.Number,
+  status: ListStatus,
   createdAt: Schema.Date,
   recipeCount: Schema.Number,
 })
@@ -47,6 +52,7 @@ export const ShoppingList = Schema.Struct({
   id: Schema.Number,
   name: Schema.String,
   servings: Schema.Number,
+  status: ListStatus,
   createdAt: Schema.Date,
   recipes: Schema.Array(ListRecipe),
   /** Triés par nom. */
@@ -61,6 +67,20 @@ export class ListNotFound extends Schema.TaggedError<ListNotFound>()(
   "ListNotFound",
   { id: Schema.Number },
   HttpApiSchema.annotations({ status: 404 })
+) {}
+
+/** Les plats d'une liste validée ne bougent plus : la rouvrir d'abord. */
+export class ListNotDraft extends Schema.TaggedError<ListNotDraft>()(
+  "ListNotDraft",
+  { id: Schema.Number },
+  HttpApiSchema.annotations({ status: 409 })
+) {}
+
+/** Une liste sans plat ne se valide pas. */
+export class EmptyList extends Schema.TaggedError<EmptyList>()(
+  "EmptyList",
+  { id: Schema.Number },
+  HttpApiSchema.annotations({ status: 409 })
 ) {}
 
 export const MAX_SERVINGS = 50
@@ -113,11 +133,25 @@ export const ListsGroup = HttpApiGroup.make("lists")
       .addError(ListNotFound)
   )
   .add(
+    HttpApiEndpoint.post("finalize", "/lists/:id/finalize")
+      .setPath(listPath)
+      .addSuccess(ShoppingList)
+      .addError(ListNotFound)
+      .addError(EmptyList)
+  )
+  .add(
+    HttpApiEndpoint.post("reopen", "/lists/:id/reopen")
+      .setPath(listPath)
+      .addSuccess(ShoppingList)
+      .addError(ListNotFound)
+  )
+  .add(
     HttpApiEndpoint.post("addRecipe", "/lists/:id/recipes")
       .setPath(listPath)
       .setPayload(RecipeRef)
       .addSuccess(ShoppingList)
       .addError(ListNotFound)
+      .addError(ListNotDraft)
       .addError(RecipeNotFound)
   )
   .add(
@@ -125,18 +159,21 @@ export const ListsGroup = HttpApiGroup.make("lists")
       .setPath(listPath)
       .addSuccess(ShoppingList)
       .addError(ListNotFound)
+      .addError(ListNotDraft)
   )
   .add(
     HttpApiEndpoint.del("removeRecipe", "/lists/:id/recipes/:recipeId")
       .setPath(Schema.Struct({ id: Schema.NumberFromString, recipeId: Schema.NumberFromString }))
       .addSuccess(ShoppingList)
       .addError(ListNotFound)
+      .addError(ListNotDraft)
   )
   .add(
     HttpApiEndpoint.post("replaceRecipe", "/lists/:id/recipes/:recipeId/replace")
       .setPath(Schema.Struct({ id: Schema.NumberFromString, recipeId: Schema.NumberFromString }))
       .addSuccess(ShoppingList)
       .addError(ListNotFound)
+      .addError(ListNotDraft)
   )
   .add(
     HttpApiEndpoint.put("setChecked", "/lists/:id/checks/:ingredientId")

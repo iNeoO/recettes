@@ -1,8 +1,20 @@
 import { HttpApiBuilder } from "@effect/platform"
-import { CurrentUser, ListNotFound, RecettesApi, RecipeNotFound } from "@recettes/contract"
+import {
+  CurrentUser,
+  EmptyList,
+  ListNotDraft,
+  ListNotFound,
+  RecettesApi,
+  RecipeNotFound,
+} from "@recettes/contract"
 import { Clock, Effect, Option } from "effect"
 import { drawMeal, drawMeals, NOT_MEALS } from "../domain/meals.ts"
-import { listName, scaled, ShoppingListRepository } from "../domain/shopping-lists.ts"
+import {
+  type DishEdit,
+  listName,
+  scaled,
+  ShoppingListRepository,
+} from "../domain/shopping-lists.ts"
 import { orInternalError } from "./errors.ts"
 
 export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =>
@@ -25,6 +37,15 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
     /** Un booléen « trouvée » devient 404 quand il est faux. */
     const orNotFound = (id: number) => (found: boolean) =>
       found ? Effect.void : Effect.fail(new ListNotFound({ id }))
+
+    const orNotDraft =
+      (id: number) =>
+      (result: DishEdit): Effect.Effect<void, ListNotFound | ListNotDraft> =>
+        result === "list-missing"
+          ? Effect.fail(new ListNotFound({ id }))
+          : result === "not-draft"
+            ? Effect.fail(new ListNotDraft({ id }))
+            : Effect.void
 
     return handlers
       .handle("list", () =>
@@ -61,12 +82,30 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           Effect.flatMap(orNotFound(path.id))
         )
       )
+      .handle("finalize", ({ path }) =>
+        Effect.gen(function* () {
+          const user = yield* CurrentUser
+          const result = yield* orInternalError(lists.finalize(user.id, path.id))
+          if (result === "list-missing") return yield* new ListNotFound({ id: path.id })
+          if (result === "empty") return yield* new EmptyList({ id: path.id })
+          return yield* load(user.id, path.id)
+        })
+      )
+      .handle("reopen", ({ path }) =>
+        Effect.gen(function* () {
+          const user = yield* CurrentUser
+          yield* orInternalError(lists.reopen(user.id, path.id)).pipe(
+            Effect.flatMap(orNotFound(path.id))
+          )
+          return yield* load(user.id, path.id)
+        })
+      )
       .handle("addRecipe", ({ path, payload }) =>
         Effect.gen(function* () {
           const user = yield* CurrentUser
           const result = yield* orInternalError(lists.addRecipe(user.id, path.id, payload.recipeId))
-          if (result === "list-missing") return yield* new ListNotFound({ id: path.id })
           if (result === "recipe-missing") return yield* new RecipeNotFound({ id: payload.recipeId })
+          yield* orNotDraft(path.id)(result)
           return yield* load(user.id, path.id)
         })
       )
@@ -75,7 +114,8 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           const user = yield* CurrentUser
           const recipeId = yield* drawMeal(yield* mealPool)
           const result = yield* orInternalError(lists.addRecipe(user.id, path.id, recipeId))
-          if (result === "list-missing") return yield* new ListNotFound({ id: path.id })
+          if (result === "recipe-missing") return yield* Effect.die("plat tiré introuvable")
+          yield* orNotDraft(path.id)(result)
           return yield* load(user.id, path.id)
         })
       )
@@ -83,7 +123,7 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
         Effect.gen(function* () {
           const user = yield* CurrentUser
           yield* orInternalError(lists.removeRecipe(user.id, path.id, path.recipeId)).pipe(
-            Effect.flatMap(orNotFound(path.id))
+            Effect.flatMap(orNotDraft(path.id))
           )
           return yield* load(user.id, path.id)
         })
@@ -94,7 +134,7 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           const replacementId = yield* drawMeal(yield* mealPool, path.recipeId)
           yield* orInternalError(
             lists.replaceRecipe(user.id, path.id, path.recipeId, replacementId)
-          ).pipe(Effect.flatMap(orNotFound(path.id)))
+          ).pipe(Effect.flatMap(orNotDraft(path.id)))
           return yield* load(user.id, path.id)
         })
       )
