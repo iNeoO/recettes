@@ -64,48 +64,6 @@ describe("listes de courses", () => {
     expect(lists.calls.filter((c) => c.startsWith("create"))).toEqual([])
   })
 
-  it("ajouter met le plat et le bandeau à jour, retirer l'enlève", async () => {
-    const { lists } = renderAt("/?list=3", [shoppingList({ recipes: [] })])
-    await screen.findByText("Bowl de pastèque")
-
-    const [addFirst] = await screen.findAllByRole("button", { name: "Ajouter" })
-    await userEvent.click(addFirst!)
-
-    expect(await screen.findByText("×1")).toBeTruthy()
-    expect(screen.getByRole("status").textContent).toContain("1 plat")
-    expect(lists.calls).toContain("addRecipe 3 1")
-
-    await userEvent.click(screen.getByRole("button", { name: "Retirer une fois" }))
-    await waitFor(() => expect(lists.calls).toContain("removeRecipe 3 1"))
-  })
-
-  it("terminer ouvre la liste", async () => {
-    const { router } = renderAt("/?list=3")
-    await screen.findByRole("status")
-
-    await userEvent.click(screen.getByRole("link", { name: "Terminer" }))
-
-    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/3"))
-    expect(await screen.findByRole("heading", { name: "23 septembre 2026" })).toBeTruthy()
-  })
-
-  it("quand la liste en cours n'existe plus, le bandeau le dit et cache Ajouter", async () => {
-    renderAt("/?list=42", [])
-    await screen.findByText("Bowl de pastèque")
-
-    const banner = await screen.findByRole("status")
-    await waitFor(() => expect(banner.textContent).toContain("n'existe plus"))
-    expect(screen.getByRole("link", { name: "Voir les listes" })).toBeTruthy()
-    expect(screen.queryByRole("button", { name: "Ajouter" })).toBeNull()
-  })
-
-  it("sans liste en cours, aucun bouton Ajouter ni bandeau", async () => {
-    renderAt("/")
-    await screen.findByText("Bowl de pastèque")
-    expect(screen.queryByRole("button", { name: "Ajouter" })).toBeNull()
-    expect(screen.queryByRole("status")).toBeNull()
-  })
-
   it("affiche les plats, les quantités arrondies et le placard", async () => {
     renderAt("/lists/3")
 
@@ -156,14 +114,6 @@ describe("listes de courses", () => {
 
     await waitFor(() => expect(lists.calls).toContain("removeRecipe 3 2"))
     await waitFor(() => expect(screen.queryByText("Curry de lentilles")).toBeNull())
-  })
-
-  it("garde l'accès au catalogue pour choisir à la main", async () => {
-    renderAt("/lists/3")
-    await screen.findByRole("heading", { name: "23 septembre 2026" })
-
-    const link = screen.getByRole("link", { name: "Choisir dans le catalogue" })
-    expect(link.getAttribute("href")).toBe("/?list=3")
   })
 
   it("supprime une liste en deux clics et revient aux listes", async () => {

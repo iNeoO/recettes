@@ -117,18 +117,7 @@ export const ShoppingListPage = () => {
       </header>
 
       <section className="space-y-3">
-        <div className="flex items-center justify-between">
-          <h2 className="font-medium text-stone-900">Plats</h2>
-          <div className="flex flex-wrap justify-end gap-2">
-            <Link
-              to="/"
-              search={{ list: listId }}
-              className="inline-flex min-h-10 items-center rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
-            >
-              Choisir dans le catalogue
-            </Link>
-          </div>
-        </div>
+        <h2 className="font-medium text-stone-900">Plats</h2>
         {data.recipes.length === 0 ? (
           <p className="text-sm text-stone-500">Aucun plat pour l'instant.</p>
         ) : (
