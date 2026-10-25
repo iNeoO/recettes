@@ -13,8 +13,10 @@ additionnable.
 
 **État actuel** : socle terminé (ingestion, API de consultation, SPA de
 navigation), **authentification** (cookie de session, comptes créés par
-`make user`) et **listes de courses** (API et front) en place, créées par
-**tirage au hasard** d'un nombre de repas.
+`make user`) et **listes de courses** (API et front) en place. Une liste naît
+en **brouillon** avec un nombre de repas tirés au hasard, se prépare sur
+`/lists/:id/plats` (drawer de propositions et de recherche), puis passe
+**prête** pour les courses sur `/lists/:id`.
 
 Le `README.md` documente en détail le parser, l'ingestion, l'API et le front.
 Le lire avant de toucher à l'un d'eux ; ce fichier-ci ne dit que ce qui s'y
@@ -98,6 +100,9 @@ version de ces paquets passe par `pnpm-workspace.yaml`, pas par le
   recettes sont mises à jour sur `(book, page)`, les ingrédients sur leur nom,
   et les identifiants ne bougent pas. Ne jamais réintroduire un `TRUNCATE` :
   les listes de courses référencent ces identifiants.
+- Les plats d'une liste ne bougent qu'en **brouillon** : toute nouvelle mutation
+  de plats passe par `editable` (`infra/shopping-lists-drizzle.ts`), qui lit le
+  statut sous verrou dans la même transaction, et rend `ListNotDraft` sinon.
 - `quantity` est une **chaîne** (« 200g », « 1/2 », « pincée ») : elle
   s'affiche telle quelle sur la fiche. La liste de courses lit `amount` et
   `unit`, normalisés à l'ingestion dans l'unité d'achat de l'ingrédient ; les

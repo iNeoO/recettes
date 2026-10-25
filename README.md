@@ -205,7 +205,7 @@ pnpm --filter @recettes/api dev     # http://localhost:3000, doc sur /docs
 
 ```
 GET /recipes?search=&category=&book=&limit=20&offset=0
-    -> { items, total, limit, offset }
+    -> { items, total, limit, offset }   (chaque item porte ses `highlights`)
 GET /recipes/:id        -> recette complete, ingredients ordonnes
 GET /recipes/:id/image  -> les octets depuis Garage, avec leur vrai type
 
@@ -213,17 +213,22 @@ POST /auth/login   { email, password } -> { id, email } + cookie `session`
 POST /auth/logout  -> 204, cookie effacé (toujours, même sans session)
 GET  /auth/me      -> { id, email }
 
-GET    /lists                          -> [{ id, name, servings, createdAt, recipeCount }]
-POST   /lists          { meals }       -> 201, la liste (nom = date du jour, 2 personnes,
-                                          `meals` plats tirés au hasard, 0 à 21)
-GET    /lists/:id                      -> { id, name, servings, createdAt, recipes, items, pantry }
+GET    /lists                          -> [{ id, name, servings, status, createdAt, recipeCount }]
+POST   /lists          { meals }       -> 201, la liste en `draft` (nom = date du jour,
+                                          2 personnes, `meals` plats distincts tirés, 0 à 21)
+GET    /lists/:id                      -> { id, name, servings, status, createdAt, recipes,
+                                          items, pantry }
 PATCH  /lists/:id          { servings } -> la liste
 DELETE /lists/:id                      -> 204
-POST   /lists/:id/recipes  { recipeId } -> la liste (une occurrence de plus)
-POST   /lists/:id/recipes/random     -> la liste (un plat tiré au hasard de plus)
-DELETE /lists/:id/recipes/:recipeId    -> la liste (une occurrence de moins)
-POST   /lists/:id/recipes/:recipeId/replace -> la liste (une occurrence remplacée
-                                          par un autre plat tiré, à la même place)
+GET    /lists/:id/suggestions?count=6  -> [RecipeSummary] (plats salés au hasard, hors
+                                          ceux de la liste, 1 à 12)
+POST   /lists/:id/finalize             -> la liste en `ready` (409 EmptyList sans plat)
+POST   /lists/:id/reopen               -> la liste en `draft`
+POST   /lists/:id/recipes  { recipeId } -> la liste (sans effet si le plat y est déjà)
+DELETE /lists/:id/recipes/:recipeId    -> la liste (le plat en moins)
+POST   /lists/:id/recipes/:recipeId/replace { recipeId }
+                                       -> la liste (le plat remplacé par celui choisi,
+                                          à la même place)
 PUT    /lists/:id/checks/:ingredientId { checked } -> 204
 ```
 
@@ -233,11 +238,27 @@ sommés par nom et mis à l'échelle de `servings` (les recettes sont ramenées 
 `pantry` ceux dont aucune ligne n'est chiffrée. Les nombres sortent bruts,
 l'arrondi est affaire d'affichage.
 
+Une liste est `draft` tant qu'on en choisit les plats, `ready` quand elle sert
+au magasin. Hors `draft`, ajouter, retirer ou remplacer un plat rend
+`409 ListNotDraft` ; le nombre de personnes et les cases restent modifiables.
+Le statut est lu sous verrou (`SELECT … FOR UPDATE`) dans la transaction de la
+modification : une validation concurrente ne passe pas entre les deux.
+
+Une liste ne contient pas deux fois le même plat : l'ajout est idempotent, et
+remplacer par un plat déjà présent retire simplement le plat remplacé. `count`
+reste dans la réponse pour les listes antérieures, qui peuvent en avoir.
+
 Le tirage pioche parmi les plats salés : tout sauf les catégories de
 `NOT_MEALS` (`domain/meals.ts` : sucré, boissons, pains, apéritifs), soit 671
-recettes sur 887. Il passe par le service `Random` d'Effect. Pas de
-dédoublonnage : une recette peut sortir deux fois (« ×2 ») ; seul le
-remplacement exclut la recette qu'il remplace.
+recettes sur 887. Il mélange le pool par le service `Random` d'Effect et en
+prend les premiers, donc sans remise. Les suggestions retirent d'abord du pool
+les plats de la liste.
+
+`highlights` résume une recette par ses trois premiers ingrédients chiffrés,
+dans l'ordre imprimé : les invariants (sel, huile, herbes) ne disent pas ce
+qu'il y a dedans. Une requête par page ou par liste (`infra/highlights.ts`),
+partagée par le catalogue et les listes. La fiche complète n'en a pas besoin :
+elle a les ingrédients.
 
 Tout sauf `/auth/login`, `/auth/logout` et `/docs` exige le cookie de session ;
 sans lui, `401 { "_tag": "Unauthorized" }`.
@@ -346,9 +367,11 @@ forgé refusé ; la table `sessions` ne contient aucun jeton utilisable ; un tes
 unitaire vérifie que le leurre est bien haché pour une adresse inconnue.
 
 `lists.test.ts` : agrégation par nom avec les invariants au placard, mise à
-l'échelle, même recette deux fois, cases qui survivent aux changements, liste
+l'échelle, ajout idempotent, cases qui survivent aux changements, liste
 d'un autre introuvable partout, suppression qui ne touche pas les recettes,
-tirage limité aux plats salés, remplacement à la même place.
+validation et réouverture, plats figés hors brouillon, liste vide non
+validable, tirage sans doublon limité aux plats salés, suggestions hors plats
+de la liste, remplacement choisi à la même place.
 
 `persist.test.ts` prouve l'idempotence de l'ingestion : rejouée, elle ne change
 ni identifiants ni contenu ; une recette modifiée garde son identifiant et voit
@@ -492,18 +515,25 @@ moindre `as`. Un 401 ressort en `Unauthenticated`, reconnaissable par
 
 ## Les listes de courses
 
-`/lists` énumère les listes et en crée une à partir d'un nombre de repas (5 par
-défaut, 1 à 21) : le serveur tire les plats au hasard et le front ouvre
-`/lists/:id`. Sur la liste, « Remplacer » change un plat, « Un plat au hasard »
-en ajoute un, « Retirer » en retire un. « Choisir dans le catalogue » part sur
-les recettes avec `?list=<id>` dans l'URL. Tant que ce paramètre est là, un
-bandeau rappelle la liste en cours et chaque carte propose « Ajouter » (avec le
-compte déjà mis, et un « − »). « Terminer » ouvre `/lists/:id`. Le paramètre
-est validé comme les autres par `validateSearch` (entier positif) et voyage avec
-les filtres jusqu'au détail.
+`/lists` énumère les listes (badge « Brouillon » pour celles en `draft`) et en
+crée une à partir d'un nombre de repas (5 par défaut, 0 à 21) : le serveur tire
+les plats, le front ouvre la préparation.
 
-`/lists/:id` montre les plats (« ×2 » quand un plat y est deux fois), le nombre
-de personnes, les ingrédients à acheter et le placard, tous cochables. Chaque
+`/lists/:id/plats`, la préparation, montre chaque plat en carte (photo, titre,
+ingrédients phares) avec « Remplacer » et « Retirer », puis « Ajouter un plat »
+et, collé en bas, « Valider les plats » (désactivé tant que la liste est vide).
+« Remplacer » et « Ajouter » ouvrent le même drawer (`MealDrawer`, sur le
+`Drawer` de `@base-ui/react`) : sans filtre, 6 plats au hasard et « Autres
+propositions » ; avec une recherche ou une catégorie, les résultats de
+`GET /recipes`, paginés par « Voir plus », où les plats déjà dans la liste sont
+marqués et non choisissables. Le contenu du drawer est démonté à la fermeture :
+chaque ouverture repart d'un tirage neuf.
+
+`/lists/:id` montre les plats, le nombre de personnes, les ingrédients à
+acheter et le placard, tous cochables, et « Modifier les plats » qui rouvre la
+liste. Chaque page redirige vers l'autre si le statut ne lui correspond pas ;
+une mutation refusée (liste validée dans un autre onglet) relit la liste, et la
+redirection fait le reste. Chaque
 mutation du serveur rend la liste complète : `useShoppingList` l'écrit
 directement dans le cache TanStack Query au lieu de la redemander. Cocher est
 optimiste. Les quantités s'arrondissent à l'affichage (`src/quantity.ts`) :
@@ -557,17 +587,19 @@ front ou une URL se fabrique.
 pnpm --filter @recettes/web test
 ```
 
-46 tests sur la chaine reelle avec des clients factices : taper dans la recherche
+53 tests sur la chaine reelle avec des clients factices : taper dans la recherche
 met a jour l'URL **et** la requete emise, changer de page conserve les filtres,
 une URL bricolee ne blanchit pas la page, `imageUrl` est prefixe, une photo
 absente devient une mention et non une image cassee. Côté session : sans
 utilisateur on atterrit sur `/login` avec la destination retenue et sans avoir
 appelé l'API, la connexion y revient, un `redirect` externe est ignoré, des
 identifiants refusés s'affichent, la déconnexion vide le cache, un 401 en cours
-de route renvoie vers `/login`. Côté listes : créer ouvre le mode sélection,
-ajouter incrémente le compte et le bandeau, terminer ouvre la liste, les
-quantités s'arrondissent comme convenu, cocher appelle l'API et reste coché
-après rechargement, supprimer demande deux clics, `?list=abc` est ignoré.
+de route renvoie vers `/login`. Côté listes : créer ouvre la préparation,
+chaque page redirige selon le statut, le drawer remplace par la proposition
+choisie, relance un tirage, marque en recherche les plats déjà présents,
+valider mène aux courses et modifier en revient, les quantités s'arrondissent
+comme convenu, cocher appelle l'API et reste coché après rechargement,
+supprimer demande deux clics.
 
 Ce qui n'est pas couvert : jsdom n'est pas un navigateur, donc la mise en page
 n'est pas verifiee par les tests. Elle a ete controlee a la main (bureau, mobile,
@@ -576,11 +608,11 @@ liste, detail).
 ## Mobile
 
 Repassé en 375 px sur toutes les pages. L'e-mail disparaît de l'en-tête sous
-`sm`, le bandeau de sélection est collant (« Terminer » reste sous le pouce en
-défilant), la grille des recettes fait deux colonnes dès le téléphone, et toutes
-les cibles tactiles (Ajouter, −, Retirer, cases, nombre de personnes) font au
-moins 40 px. Si `?list=` pointe sur une liste supprimée, le bandeau le dit et
-les boutons Ajouter disparaissent, sans réessayer le 404.
+`sm`, « Valider les plats » est collant (il reste sous le pouce en défilant), les
+boutons d'un plat passent sous sa carte plutôt que de tronquer le titre, le
+drawer monte à 85 % de la hauteur, la grille des recettes fait deux colonnes dès
+le téléphone, et toutes les cibles tactiles (Remplacer, Retirer, cases, nombre
+de personnes) font au moins 40 px.
 
 ## Limite connue
 
