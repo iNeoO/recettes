@@ -3,7 +3,7 @@
 # PDF) et `web` (nginx qui sert la SPA construite et renvoie /api vers l'API).
 # docker-compose.prod.yaml choisit la cible par service.
 
-ARG NODE_VERSION=24-alpine
+ARG NODE_VERSION=24.22.1-alpine
 FROM node:${NODE_VERSION} AS base
 
 ARG PNPM_VERSION=10.33.2
