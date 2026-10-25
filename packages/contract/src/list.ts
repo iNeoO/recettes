@@ -70,6 +70,15 @@ export const ServingsUpdate = Schema.Struct({
 })
 export type ServingsUpdate = typeof ServingsUpdate.Type
 
+export const MAX_MEALS = 21
+export const DEFAULT_MEALS = 5
+
+/** Le nombre de plats tirés au hasard ; 0 crée une liste vide, à remplir à la main. */
+export const ListCreation = Schema.Struct({
+  meals: Schema.Int.pipe(Schema.between(0, MAX_MEALS)),
+})
+export type ListCreation = typeof ListCreation.Type
+
 export const RecipeRef = Schema.Struct({ recipeId: Schema.Number })
 
 export const CheckUpdate = Schema.Struct({ checked: Schema.Boolean })
@@ -79,7 +88,11 @@ const listPath = Schema.Struct({ id: Schema.NumberFromString })
 /** Toutes les mutations rendent la liste complète : le front n'a qu'une requête à rafraîchir. */
 export const ListsGroup = HttpApiGroup.make("lists")
   .add(HttpApiEndpoint.get("list", "/lists").addSuccess(Schema.Array(ShoppingListSummary)))
-  .add(HttpApiEndpoint.post("create", "/lists").addSuccess(ShoppingList, { status: 201 }))
+  .add(
+    HttpApiEndpoint.post("create", "/lists")
+      .setPayload(ListCreation)
+      .addSuccess(ShoppingList, { status: 201 })
+  )
   .add(
     HttpApiEndpoint.get("byId", "/lists/:id")
       .setPath(listPath)
@@ -108,7 +121,19 @@ export const ListsGroup = HttpApiGroup.make("lists")
       .addError(RecipeNotFound)
   )
   .add(
+    HttpApiEndpoint.post("addRandomRecipe", "/lists/:id/recipes/random")
+      .setPath(listPath)
+      .addSuccess(ShoppingList)
+      .addError(ListNotFound)
+  )
+  .add(
     HttpApiEndpoint.del("removeRecipe", "/lists/:id/recipes/:recipeId")
+      .setPath(Schema.Struct({ id: Schema.NumberFromString, recipeId: Schema.NumberFromString }))
+      .addSuccess(ShoppingList)
+      .addError(ListNotFound)
+  )
+  .add(
+    HttpApiEndpoint.post("replaceRecipe", "/lists/:id/recipes/:recipeId/replace")
       .setPath(Schema.Struct({ id: Schema.NumberFromString, recipeId: Schema.NumberFromString }))
       .addSuccess(ShoppingList)
       .addError(ListNotFound)

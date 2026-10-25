@@ -1,7 +1,7 @@
 import { SqlClient } from "@effect/sql"
 import { PgDrizzle, schema } from "@recettes/db"
 import type { ListItem, ListRecipe, PantryItem, ShoppingListSummary } from "@recettes/contract"
-import { and, count, desc, eq, min, sql } from "drizzle-orm"
+import { and, count, desc, eq, isNull, min, notInArray, or, sql } from "drizzle-orm"
 import { Effect, Layer, Option } from "effect"
 import { RepositoryError } from "../domain/repository.ts"
 import { ShoppingListRepository, type StoredList } from "../domain/shopping-lists.ts"
@@ -106,19 +106,35 @@ export const ShoppingListRepositoryLive = Layer.effect(
             asRepositoryError
           ),
 
-      create: (userId, name) =>
+      mealPool: (excludedCategories) =>
         db
-          .insert(schema.shoppingLists)
-          .values({ userId, name })
-          .returning({ id: schema.shoppingLists.id })
+          .select({ id: schema.recipes.id })
+          .from(schema.recipes)
+          .where(
+            or(
+              isNull(schema.recipes.category),
+              notInArray(schema.recipes.category, [...excludedCategories])
+            )
+          )
           .pipe(
-            Effect.flatMap((rows) =>
-              rows[0] === undefined
-                ? Effect.fail(new RepositoryError({ cause: "insertion sans retour" }))
-                : Effect.succeed(rows[0].id)
-            ),
+            Effect.map((rows) => rows.map((row) => row.id)),
             asRepositoryError
           ),
+
+      create: (userId, name, recipeIds) =>
+        Effect.gen(function* () {
+          const [list] = yield* db
+            .insert(schema.shoppingLists)
+            .values({ userId, name })
+            .returning({ id: schema.shoppingLists.id })
+          if (list === undefined) return yield* Effect.fail("insertion sans retour")
+          if (recipeIds.length > 0) {
+            yield* db.insert(schema.shoppingListRecipes).values(
+              recipeIds.map((recipeId, index) => ({ listId: list.id, recipeId, position: index + 1 }))
+            )
+          }
+          return list.id
+        }).pipe(raw.withTransaction, asRepositoryError),
 
       find: (userId, id) =>
         Effect.gen(function* () {
@@ -186,6 +202,18 @@ export const ShoppingListRepositoryLive = Layer.effect(
           if (Option.isNone(yield* owned(userId, id))) return false
           yield* raw`
             DELETE FROM shopping_list_recipes
+            WHERE id = (
+              SELECT id FROM shopping_list_recipes
+              WHERE list_id = ${id} AND recipe_id = ${recipeId}
+              ORDER BY position DESC LIMIT 1)`
+          return true
+        }).pipe(asRepositoryError),
+
+      replaceRecipe: (userId, id, recipeId, replacementId) =>
+        Effect.gen(function* () {
+          if (Option.isNone(yield* owned(userId, id))) return false
+          yield* raw`
+            UPDATE shopping_list_recipes SET recipe_id = ${replacementId}
             WHERE id = (
               SELECT id FROM shopping_list_recipes
               WHERE list_id = ${id} AND recipe_id = ${recipeId}

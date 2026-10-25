@@ -1,6 +1,7 @@
 import { HttpApiBuilder } from "@effect/platform"
 import { CurrentUser, ListNotFound, RecettesApi, RecipeNotFound } from "@recettes/contract"
 import { Clock, Effect, Option } from "effect"
+import { drawMeal, drawMeals, NOT_MEALS } from "../domain/meals.ts"
 import { listName, scaled, ShoppingListRepository } from "../domain/shopping-lists.ts"
 import { orInternalError } from "./errors.ts"
 
@@ -19,6 +20,8 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
         )
       )
 
+    const mealPool = orInternalError(lists.mealPool(NOT_MEALS))
+
     /** Un booléen « trouvée » devient 404 quand il est faux. */
     const orNotFound = (id: number) => (found: boolean) =>
       found ? Effect.void : Effect.fail(new ListNotFound({ id }))
@@ -27,11 +30,12 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
       .handle("list", () =>
         CurrentUser.pipe(Effect.flatMap((user) => orInternalError(lists.listFor(user.id))))
       )
-      .handle("create", () =>
+      .handle("create", ({ payload }) =>
         Effect.gen(function* () {
           const user = yield* CurrentUser
           const now = yield* Clock.currentTimeMillis
-          const id = yield* orInternalError(lists.create(user.id, listName(now)))
+          const recipeIds = yield* drawMeals(yield* mealPool, payload.meals)
+          const id = yield* orInternalError(lists.create(user.id, listName(now), recipeIds))
           // Introuvable juste après l'insertion : ce n'est plus une erreur du contrat.
           return yield* load(user.id, id).pipe(Effect.catchTag("ListNotFound", Effect.die))
         })
@@ -66,12 +70,31 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           return yield* load(user.id, path.id)
         })
       )
+      .handle("addRandomRecipe", ({ path }) =>
+        Effect.gen(function* () {
+          const user = yield* CurrentUser
+          const recipeId = yield* drawMeal(yield* mealPool)
+          const result = yield* orInternalError(lists.addRecipe(user.id, path.id, recipeId))
+          if (result === "list-missing") return yield* new ListNotFound({ id: path.id })
+          return yield* load(user.id, path.id)
+        })
+      )
       .handle("removeRecipe", ({ path }) =>
         Effect.gen(function* () {
           const user = yield* CurrentUser
           yield* orInternalError(lists.removeRecipe(user.id, path.id, path.recipeId)).pipe(
             Effect.flatMap(orNotFound(path.id))
           )
+          return yield* load(user.id, path.id)
+        })
+      )
+      .handle("replaceRecipe", ({ path }) =>
+        Effect.gen(function* () {
+          const user = yield* CurrentUser
+          const replacementId = yield* drawMeal(yield* mealPool, path.recipeId)
+          yield* orInternalError(
+            lists.replaceRecipe(user.id, path.id, path.recipeId, replacementId)
+          ).pipe(Effect.flatMap(orNotFound(path.id)))
           return yield* load(user.id, path.id)
         })
       )

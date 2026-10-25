@@ -35,7 +35,16 @@ export class ShoppingListRepository extends Context.Tag("ShoppingListRepository"
     readonly listFor: (
       userId: number
     ) => Effect.Effect<ReadonlyArray<ShoppingListSummary>, RepositoryError>
-    readonly create: (userId: number, name: string) => Effect.Effect<number, RepositoryError>
+    /** Les recettes tirables : toutes, sauf celles des catégories exclues. */
+    readonly mealPool: (
+      excludedCategories: ReadonlyArray<string>
+    ) => Effect.Effect<ReadonlyArray<number>, RepositoryError>
+    /** La liste et ses plats, dans l'ordre donné, en une transaction. */
+    readonly create: (
+      userId: number,
+      name: string,
+      recipeIds: ReadonlyArray<number>
+    ) => Effect.Effect<number, RepositoryError>
     readonly find: (
       userId: number,
       id: number
@@ -56,6 +65,13 @@ export class ShoppingListRepository extends Context.Tag("ShoppingListRepository"
       userId: number,
       id: number,
       recipeId: number
+    ) => Effect.Effect<boolean, RepositoryError>
+    /** Remplace une occurrence, la dernière ajoutée, en gardant sa place. */
+    readonly replaceRecipe: (
+      userId: number,
+      id: number,
+      recipeId: number,
+      replacementId: number
     ) => Effect.Effect<boolean, RepositoryError>
     readonly setChecked: (
       userId: number,

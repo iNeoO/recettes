@@ -133,6 +133,12 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
   const state = new Map(initial.map((list) => [list.id, list]))
   const calls: Array<string> = []
   let nextId = Math.max(0, ...state.keys()) + 1
+  // Le hasard du faux est un compteur : « Plat tiré 1 », « Plat tiré 2 »…
+  let drawn = 0
+  const draw = () => {
+    drawn += 1
+    return { recipeId: 100 + drawn, title: `Plat tiré ${drawn}`, imageUrl: null, count: 1 }
+  }
 
   const get = (id: number) => {
     const list = state.get(id)
@@ -159,9 +165,10 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
         }))
       )
     },
-    create: () => {
-      calls.push("create")
-      return put(shoppingList({ id: nextId++, recipes: [], items: [], pantry: [] }))
+    create: (meals) => {
+      calls.push(`create ${meals}`)
+      const recipes = Array.from({ length: meals }, draw)
+      return put(shoppingList({ id: nextId++, recipes, items: [], pantry: [] }))
     },
     byId: (id) => {
       calls.push(`byId ${id}`)
@@ -188,6 +195,20 @@ export const fakeLists = (initial: ReadonlyArray<ShoppingList> = []): FakeLists 
         existing === undefined
           ? [...list.recipes, { recipeId, title: `Recette ${recipeId}`, imageUrl: null, count: 1 }]
           : list.recipes.map((r) => (r.recipeId === recipeId ? { ...r, count: r.count + 1 } : r))
+      return put({ ...list, recipes })
+    },
+    addRandomRecipe: (id) => {
+      calls.push(`addRandomRecipe ${id}`)
+      const list = get(id)
+      return put({ ...list, recipes: [...list.recipes, draw()] })
+    },
+    replaceRecipe: (id, recipeId) => {
+      calls.push(`replaceRecipe ${id} ${recipeId}`)
+      const list = get(id)
+      const recipes = list.recipes.flatMap((r) => {
+        if (r.recipeId !== recipeId) return [r]
+        return r.count > 1 ? [{ ...r, count: r.count - 1 }, draw()] : [draw()]
+      })
       return put({ ...list, recipes })
     },
     removeRecipe: (id, recipeId) => {

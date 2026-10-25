@@ -1,9 +1,10 @@
+import { DEFAULT_MEALS, MAX_MEALS } from "@recettes/contract"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { Link, useNavigate } from "@tanstack/react-router"
 import { useState } from "react"
 import { useListsApi } from "../api.ts"
 import { useAuthGuard } from "../auth-guard.ts"
-import { listsKey } from "../lists.ts"
+import { listKey, listsKey } from "../lists.ts"
 
 const dateFormat = new Intl.DateTimeFormat("fr-FR", { dateStyle: "medium", timeStyle: "short" })
 
@@ -15,12 +16,17 @@ export const ListsPage = () => {
   useAuthGuard(error)
   const [confirming, setConfirming] = useState<number | null>(null)
 
-  // Créer ouvre aussitôt le mode sélection sur les recettes.
+  const [meals, setMeals] = useState(String(DEFAULT_MEALS))
+  const parsed = Number(meals)
+  const validMeals =
+    meals !== "" && Number.isInteger(parsed) && parsed >= 1 && parsed <= MAX_MEALS ? parsed : null
+
   const create = useMutation({
     mutationFn: lists.create,
     onSuccess: async (list) => {
+      queryClient.setQueryData(listKey(list.id), list)
       await queryClient.invalidateQueries({ queryKey: listsKey })
-      await navigate({ to: "/", search: { list: list.id } })
+      await navigate({ to: "/lists/$id", params: { id: String(list.id) } })
     },
   })
 
@@ -33,14 +39,32 @@ export const ListsPage = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between gap-3">
         <h1 className="text-2xl font-semibold text-stone-900">Listes de courses</h1>
-        <button
-          type="button"
-          disabled={create.isPending}
-          onClick={() => create.mutate()}
-          className="min-h-10 shrink-0 rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50"
+        <form
+          onSubmit={(event) => {
+            event.preventDefault()
+            if (validMeals !== null) create.mutate(validMeals)
+          }}
+          className="flex shrink-0 items-center gap-2"
         >
-          Créer une liste
-        </button>
+          <label className="flex items-center gap-2 text-sm text-stone-600">
+            Nombre de repas
+            <input
+              type="number"
+              min={1}
+              max={MAX_MEALS}
+              value={meals}
+              onChange={(event) => setMeals(event.target.value)}
+              className="min-h-10 w-16 rounded-lg border border-stone-300 px-2 text-stone-900"
+            />
+          </label>
+          <button
+            type="submit"
+            disabled={create.isPending || validMeals === null}
+            className="min-h-10 rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50"
+          >
+            Créer une liste
+          </button>
+        </form>
       </div>
 
       {isError ? (

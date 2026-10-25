@@ -208,12 +208,16 @@ POST /auth/logout  -> 204, cookie effacé (toujours, même sans session)
 GET  /auth/me      -> { id, email }
 
 GET    /lists                          -> [{ id, name, servings, createdAt, recipeCount }]
-POST   /lists                          -> 201, la liste (nom = date du jour, 2 personnes)
+POST   /lists          { meals }       -> 201, la liste (nom = date du jour, 2 personnes,
+                                          `meals` plats tirés au hasard, 0 à 21)
 GET    /lists/:id                      -> { id, name, servings, createdAt, recipes, items, pantry }
 PATCH  /lists/:id          { servings } -> la liste
 DELETE /lists/:id                      -> 204
 POST   /lists/:id/recipes  { recipeId } -> la liste (une occurrence de plus)
+POST   /lists/:id/recipes/random     -> la liste (un plat tiré au hasard de plus)
 DELETE /lists/:id/recipes/:recipeId    -> la liste (une occurrence de moins)
+POST   /lists/:id/recipes/:recipeId/replace -> la liste (une occurrence remplacée
+                                          par un autre plat tiré, à la même place)
 PUT    /lists/:id/checks/:ingredientId { checked } -> 204
 ```
 
@@ -222,6 +226,12 @@ sur chaque endpoint, jamais un 403. `items` porte les ingrédients chiffrés,
 sommés par nom et mis à l'échelle de `servings` (les recettes sont ramenées à 2),
 `pantry` ceux dont aucune ligne n'est chiffrée. Les nombres sortent bruts,
 l'arrondi est affaire d'affichage.
+
+Le tirage pioche parmi les plats salés : tout sauf les catégories de
+`NOT_MEALS` (`domain/meals.ts` : sucré, boissons, pains, apéritifs), soit 671
+recettes sur 887. Il passe par le service `Random` d'Effect. Pas de
+dédoublonnage : une recette peut sortir deux fois (« ×2 ») ; seul le
+remplacement exclut la recette qu'il remplace.
 
 Tout sauf `/auth/login`, `/auth/logout` et `/docs` exige le cookie de session ;
 sans lui, `401 { "_tag": "Unauthorized" }`.
@@ -331,7 +341,8 @@ unitaire vérifie que le leurre est bien haché pour une adresse inconnue.
 
 `lists.test.ts` : agrégation par nom avec les invariants au placard, mise à
 l'échelle, même recette deux fois, cases qui survivent aux changements, liste
-d'un autre introuvable partout, suppression qui ne touche pas les recettes.
+d'un autre introuvable partout, suppression qui ne touche pas les recettes,
+tirage limité aux plats salés, remplacement à la même place.
 
 `persist.test.ts` prouve l'idempotence de l'ingestion : rejouée, elle ne change
 ni identifiants ni contenu ; une recette modifiée garde son identifiant et voit
@@ -475,12 +486,15 @@ moindre `as`. Un 401 ressort en `Unauthenticated`, reconnaissable par
 
 ## Les listes de courses
 
-`/lists` énumère les listes et en crée une d'un clic : la création répond avec
-la liste, et le front part aussitôt sur les recettes avec `?list=<id>` dans
-l'URL. Tant que ce paramètre est là, un bandeau rappelle la liste en cours et
-chaque carte propose « Ajouter » (avec le compte déjà mis, et un « − »).
-« Terminer » ouvre `/lists/:id`. Le paramètre est validé comme les autres par
-`validateSearch` (entier positif) et voyage avec les filtres jusqu'au détail.
+`/lists` énumère les listes et en crée une à partir d'un nombre de repas (5 par
+défaut, 1 à 21) : le serveur tire les plats au hasard et le front ouvre
+`/lists/:id`. Sur la liste, « Remplacer » change un plat, « Un plat au hasard »
+en ajoute un, « Retirer » en retire un. « Choisir dans le catalogue » part sur
+les recettes avec `?list=<id>` dans l'URL. Tant que ce paramètre est là, un
+bandeau rappelle la liste en cours et chaque carte propose « Ajouter » (avec le
+compte déjà mis, et un « − »). « Terminer » ouvre `/lists/:id`. Le paramètre
+est validé comme les autres par `validateSearch` (entier positif) et voyage avec
+les filtres jusqu'au détail.
 
 `/lists/:id` montre les plats (« ×2 » quand un plat y est deux fois), le nombre
 de personnes, les ingrédients à acheter et le placard, tous cochables. Chaque

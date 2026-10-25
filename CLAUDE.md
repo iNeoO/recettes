@@ -13,8 +13,8 @@ additionnable.
 
 **État actuel** : socle terminé (ingestion, API de consultation, SPA de
 navigation), **authentification** (cookie de session, comptes créés par
-`make user`) et **listes de courses** (API et front) en place. Les décisions de
-conception des listes sont dans `docs/liste-de-courses.md`.
+`make user`) et **listes de courses** (API et front) en place, créées par
+**tirage au hasard** d'un nombre de repas.
 
 Le `README.md` documente en détail le parser, l'ingestion, l'API et le front.
 Le lire avant de toucher à l'un d'eux ; ce fichier-ci ne dit que ce qui s'y

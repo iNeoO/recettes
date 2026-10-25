@@ -7,6 +7,9 @@ import { seed } from "./seed.ts"
 
 const OTHER = { email: "bob@example.org", password: "another horse battery" }
 
+/** Une liste vide : le tirage n'est pas l'objet de ces tests. */
+const EMPTY = { payload: { meals: 0 } }
+
 /** Deux plats qui partagent la farine ; l'huile est de placard, le sel aussi. */
 const corpus = () =>
   seed([
@@ -54,7 +57,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const list = yield* api.lists.create()
+        const list = yield* api.lists.create(EMPTY)
 
         expect(list.name).toBe(listName(Date.now()))
         expect(list.servings).toBe(2)
@@ -69,9 +72,9 @@ describe("listes de courses", () => {
         yield* corpus()
         const api = yield* authenticated
         const other = yield* authenticatedAs(OTHER)
-        const first = yield* api.lists.create()
-        const second = yield* api.lists.create()
-        yield* other.lists.create()
+        const first = yield* api.lists.create(EMPTY)
+        const second = yield* api.lists.create(EMPTY)
+        yield* other.lists.create(EMPTY)
         yield* api.lists.addRecipe({ path: { id: second.id }, payload: { recipeId: yield* recipeId("Crêpes") } })
 
         const mine = yield* api.lists.list()
@@ -86,7 +89,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: yield* recipeId("Crêpes") } })
         const list = yield* api.lists.addRecipe({
           path: { id: created.id },
@@ -110,7 +113,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: yield* recipeId("Crêpes") } })
 
         const list = yield* api.lists.setServings({ path: { id: created.id }, payload: { servings: 5 } })
@@ -123,7 +126,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         const list = yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: yield* recipeId("Pain") } })
         expect(list.items).toEqual([])
         expect(list.pantry.map((p) => p.name)).toEqual(["farine"])
@@ -133,7 +136,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         const crepes = yield* recipeId("Crêpes")
         yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: crepes } })
         const twice = yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: crepes } })
@@ -154,7 +157,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         const error = yield* api.lists
           .addRecipe({ path: { id: created.id }, payload: { recipeId: 99999 } })
           .pipe(Effect.flip)
@@ -166,7 +169,7 @@ describe("listes de courses", () => {
         yield* corpus()
         const api = yield* authenticated
         const other = yield* authenticatedAs(OTHER)
-        const theirs = yield* other.lists.create()
+        const theirs = yield* other.lists.create(EMPTY)
         const path = { id: theirs.id }
         const crepes = yield* recipeId("Crêpes")
 
@@ -176,6 +179,8 @@ describe("listes de courses", () => {
           api.lists.remove({ path }),
           api.lists.addRecipe({ path, payload: { recipeId: crepes } }),
           api.lists.removeRecipe({ path: { ...path, recipeId: crepes } }),
+          api.lists.addRandomRecipe({ path }),
+          api.lists.replaceRecipe({ path: { ...path, recipeId: crepes } }),
           api.lists.setChecked({ path: { ...path, ingredientId: 1 }, payload: { checked: true } }),
         ]
         for (const attempt of attempts) {
@@ -191,7 +196,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         const withCrepes = yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: yield* recipeId("Crêpes") } })
         const farine = withCrepes.items.find((i) => i.name === "farine")!
         const huile = withCrepes.pantry.find((p) => p.name === "huile d'olive")!
@@ -214,7 +219,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         const list = yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: yield* recipeId("Crêpes") } })
         yield* api.lists.setChecked({ path: { id: created.id, ingredientId: list.items[0]!.ingredientId }, payload: { checked: true } })
 
@@ -231,7 +236,7 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
-        const created = yield* api.lists.create()
+        const created = yield* api.lists.create(EMPTY)
         const response = yield* fetchPath(`/lists/${created.id}`, {
           method: "PATCH",
           headers: { ...cookieHeader(yield* sessionToken), "content-type": "application/json" },
@@ -244,6 +249,97 @@ describe("listes de courses", () => {
       Effect.gen(function* () {
         const response = yield* fetchPath("/lists")
         expect(response.status).toBe(401)
+      }))
+  })
+
+  /** Deux plats salés ; tout le reste est hors du tirage. */
+  const meals = () =>
+    seed([
+      {
+        book: 1,
+        page: 1,
+        title: "Curry",
+        category: "Currys & plats en sauce",
+        ingredients: [{ name: "lait de coco", quantity: "40cl", amount: 400, unit: "ml" }, { name: "sel" }],
+      },
+      {
+        book: 1,
+        page: 2,
+        title: "Quiche",
+        category: "Tartes & quiches",
+        ingredients: [{ name: "farine", quantity: "200g", amount: 200, unit: "g" }, { name: "sel" }],
+      },
+      { book: 2, page: 1, title: "Cookies", category: "Recettes sucrées" },
+      { book: 2, page: 2, title: "Smoothie", category: "Boissons" },
+      { book: 2, page: 3, title: "Baguette", category: "Pains & boulanges" },
+      { book: 2, page: 4, title: "Houmous", category: "Apéritifs /collations & petits-déjeuners salés" },
+    ])
+
+  const occurrences = (list: { recipes: ReadonlyArray<{ title: string; count: number }> }) =>
+    list.recipes.reduce((total, recipe) => total + recipe.count, 0)
+
+  it.layer(TestServer)("tirage", (it) => {
+    it.effect("crée une liste de N plats tirés parmi les plats salés", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const list = yield* api.lists.create({ payload: { meals: 8 } })
+
+        expect(occurrences(list)).toBe(8)
+        for (const recipe of list.recipes) expect(["Curry", "Quiche"]).toContain(recipe.title)
+      }))
+
+    it.effect("ajoute un plat tiré parmi les plats salés", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create({ payload: { meals: 2 } })
+        const list = yield* api.lists.addRandomRecipe({ path: { id: created.id } })
+
+        expect(occurrences(list)).toBe(3)
+        for (const recipe of list.recipes) expect(["Curry", "Quiche"]).toContain(recipe.title)
+      }))
+
+    it.effect("remplace un plat par un autre, à la même place, sans toucher aux cases", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const curry = yield* recipeId("Curry")
+        const path = { id: created.id }
+        yield* api.lists.addRecipe({ path, payload: { recipeId: curry } })
+        const before = yield* api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Cookies") } })
+        const sel = before.pantry.find((p) => p.name === "sel")!
+        yield* api.lists.setChecked({ path: { ...path, ingredientId: sel.ingredientId }, payload: { checked: true } })
+
+        const after = yield* api.lists.replaceRecipe({ path: { ...path, recipeId: curry } })
+
+        // La seule autre recette salée est la quiche ; elle prend la place du curry.
+        expect(after.recipes.map((r) => r.title)).toEqual(["Quiche", "Cookies"])
+        expect(after.pantry.find((p) => p.name === "sel")!.checked).toBe(true)
+      }))
+
+    it.effect("remplacer un plat absent de la liste ne change rien", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const list = yield* api.lists.replaceRecipe({ path: { id: created.id, recipeId: yield* recipeId("Curry") } })
+        expect(list.recipes).toEqual([])
+      }))
+
+    it.effect("rejette un nombre de repas hors bornes", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const token = yield* sessionToken
+        for (const count of [-1, 22, 2.5]) {
+          const response = yield* fetchPath("/lists", {
+            method: "POST",
+            headers: { ...cookieHeader(token), "content-type": "application/json" },
+            body: JSON.stringify({ meals: count }),
+          })
+          expect(response.status).toBe(400)
+        }
       }))
   })
 })

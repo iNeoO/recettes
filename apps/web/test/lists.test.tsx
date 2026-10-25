@@ -28,18 +28,40 @@ describe("listes de courses", () => {
     expect(screen.getByText(/3 plats · 2 pers\./)).toBeTruthy()
   })
 
-  it("créer ouvre le mode sélection sur les recettes", async () => {
+  it("créer tire 5 repas par défaut et ouvre la liste", async () => {
     const { router, lists } = renderAt("/lists", [])
     await screen.findByText(/Aucune liste/)
 
+    expect(screen.getByLabelText("Nombre de repas")).toHaveProperty("value", "5")
     await userEvent.click(screen.getByRole("button", { name: "Créer une liste" }))
 
-    await waitFor(() => expect(router.state.location.pathname).toBe("/"))
-    expect(router.state.location.search).toMatchObject({ list: 1 })
-    expect(lists.calls).toContain("create")
-    const banner = await screen.findByRole("status")
-    expect(banner.textContent).toContain("Sélection pour")
-    expect(banner.textContent).toContain("0 plat")
+    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/1"))
+    expect(lists.calls).toContain("create 5")
+    expect(await screen.findByText("Plat tiré 5")).toBeTruthy()
+  })
+
+  it("créer tire le nombre de repas saisi", async () => {
+    const { lists } = renderAt("/lists", [])
+    await screen.findByText(/Aucune liste/)
+
+    const meals = screen.getByLabelText("Nombre de repas")
+    await userEvent.clear(meals)
+    await userEvent.type(meals, "2")
+    await userEvent.click(screen.getByRole("button", { name: "Créer une liste" }))
+
+    await waitFor(() => expect(lists.calls).toContain("create 2"))
+    expect(await screen.findByText("Plat tiré 2")).toBeTruthy()
+    expect(screen.queryByText("Plat tiré 3")).toBeNull()
+  })
+
+  it("refuse de créer sans nombre de repas valide", async () => {
+    const { lists } = renderAt("/lists", [])
+    await screen.findByText(/Aucune liste/)
+
+    await userEvent.clear(screen.getByLabelText("Nombre de repas"))
+    await userEvent.click(screen.getByRole("button", { name: "Créer une liste" }))
+
+    expect(lists.calls.filter((c) => c.startsWith("create"))).toEqual([])
   })
 
   it("ajouter incrémente le plat et le bandeau, retirer décrémente", async () => {
@@ -135,6 +157,39 @@ describe("listes de courses", () => {
 
     await waitFor(() => expect(lists.calls).toContain("removeRecipe 3 2"))
     await waitFor(() => expect(screen.queryByText("Curry de lentilles")).toBeNull())
+  })
+
+  it("ajoute un plat au hasard depuis la liste", async () => {
+    const { lists } = renderAt("/lists/3")
+    await screen.findByRole("heading", { name: "23 septembre 2026" })
+
+    await userEvent.click(screen.getByRole("button", { name: "Un plat au hasard" }))
+
+    await waitFor(() => expect(lists.calls).toContain("addRandomRecipe 3"))
+    expect(await screen.findByText("Plat tiré 1")).toBeTruthy()
+  })
+
+  it("remplace un plat par un autre tiré au hasard, à sa place", async () => {
+    const { lists } = renderAt("/lists/3")
+    await screen.findByRole("heading", { name: "23 septembre 2026" })
+
+    await userEvent.click(screen.getByRole("button", { name: "Remplacer Curry de lentilles" }))
+
+    await waitFor(() => expect(lists.calls).toContain("replaceRecipe 3 2"))
+    await waitFor(() => expect(screen.queryByText("Curry de lentilles")).toBeNull())
+    const dishes = screen.getByRole("heading", { name: "Plats" }).closest("section")!
+    expect(within(dishes).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
+      expect.stringContaining("Bowl de pastèque"),
+      expect.stringContaining("Plat tiré 1"),
+    ])
+  })
+
+  it("garde l'accès au catalogue pour choisir à la main", async () => {
+    renderAt("/lists/3")
+    await screen.findByRole("heading", { name: "23 septembre 2026" })
+
+    const link = screen.getByRole("link", { name: "Choisir dans le catalogue" })
+    expect(link.getAttribute("href")).toBe("/?list=3")
   })
 
   it("supprime une liste en deux clics et revient aux listes", async () => {

@@ -14,7 +14,7 @@ export const ShoppingListPage = () => {
   const lists = useListsApi()
   const queryClient = useQueryClient()
   const navigate = useNavigate()
-  const { data, isPending, isError, error, mutate } = useShoppingList(listId)
+  const { data, isPending, isError, error, mutate, pending } = useShoppingList(listId)
   useAuthGuard(error)
   const [confirming, setConfirming] = useState(false)
 
@@ -119,13 +119,23 @@ export const ShoppingListPage = () => {
       <section className="space-y-3">
         <div className="flex items-center justify-between">
           <h2 className="font-medium text-stone-900">Plats</h2>
-          <Link
-            to="/"
-            search={{ list: listId }}
-            className="inline-flex min-h-10 items-center rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700"
-          >
-            Ajouter des plats
-          </Link>
+          <div className="flex flex-wrap justify-end gap-2">
+            <Link
+              to="/"
+              search={{ list: listId }}
+              className="inline-flex min-h-10 items-center rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
+            >
+              Choisir dans le catalogue
+            </Link>
+            <button
+              type="button"
+              disabled={pending}
+              onClick={() => mutate(() => lists.addRandomRecipe(listId))}
+              className="min-h-10 rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50"
+            >
+              Un plat au hasard
+            </button>
+          </div>
         </div>
         {data.recipes.length === 0 ? (
           <p className="text-sm text-stone-500">Aucun plat pour l'instant.</p>
@@ -141,14 +151,25 @@ export const ShoppingListPage = () => {
                   {recipe.title}
                   {recipe.count > 1 && <span className="ml-2 text-stone-500">×{recipe.count}</span>}
                 </Link>
-                <button
-                  type="button"
-                  aria-label={`Retirer ${recipe.title}`}
-                  onClick={() => mutate(() => lists.removeRecipe(listId, recipe.recipeId))}
-                  className="min-h-10 shrink-0 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
-                >
-                  Retirer
-                </button>
+                <div className="flex shrink-0 gap-2">
+                  <button
+                    type="button"
+                    aria-label={`Remplacer ${recipe.title}`}
+                    disabled={pending}
+                    onClick={() => mutate(() => lists.replaceRecipe(listId, recipe.recipeId))}
+                    className="min-h-10 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100 disabled:opacity-50"
+                  >
+                    Remplacer
+                  </button>
+                  <button
+                    type="button"
+                    aria-label={`Retirer ${recipe.title}`}
+                    onClick={() => mutate(() => lists.removeRecipe(listId, recipe.recipeId))}
+                    className="min-h-10 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
+                  >
+                    Retirer
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
