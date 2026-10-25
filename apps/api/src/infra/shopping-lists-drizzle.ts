@@ -4,6 +4,7 @@ import type { ListItem, ListRecipe, PantryItem, ShoppingListSummary } from "@rec
 import { and, count, desc, eq, isNull, min, notInArray, or, sql } from "drizzle-orm"
 import { Effect, Layer, Option } from "effect"
 import { RepositoryError } from "../domain/repository.ts"
+import { highlightsOf } from "./highlights.ts"
 import { ShoppingListRepository, type StoredList } from "../domain/shopping-lists.ts"
 
 const asRepositoryError = <A, R>(effect: Effect.Effect<A, unknown, R>) =>
@@ -85,13 +86,21 @@ export const ShoppingListRepositoryLive = Layer.effect(
         .groupBy(schema.shoppingListRecipes.recipeId, schema.recipes.title, schema.recipes.imageKey)
         .orderBy(min(schema.shoppingListRecipes.position))
         .pipe(
-          Effect.map((rows) =>
-            rows.map((row) => ({
-              recipeId: row.recipeId,
-              title: row.title,
-              imageUrl: row.imageKey === null ? null : `/recipes/${row.recipeId}/image`,
-              count: row.count,
-            }))
+          Effect.flatMap((rows) =>
+            highlightsOf(
+              raw,
+              rows.map((row) => row.recipeId)
+            ).pipe(
+              Effect.map((highlights) =>
+                rows.map((row) => ({
+                  recipeId: row.recipeId,
+                  title: row.title,
+                  imageUrl: row.imageKey === null ? null : `/recipes/${row.recipeId}/image`,
+                  highlights: highlights.get(row.recipeId) ?? [],
+                  count: row.count,
+                }))
+              )
+            )
           )
         )
 

@@ -21,6 +21,7 @@ const KNOWN_ROUTES = new Set([
   "/lists/:id",
   "/lists/:id/finalize",
   "/lists/:id/reopen",
+  "/lists/:id/suggestions",
   "/lists/:id/recipes",
   "/lists/:id/recipes/:id",
   "/lists/:id/recipes/:id/replace",

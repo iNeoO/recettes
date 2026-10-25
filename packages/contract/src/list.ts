@@ -1,7 +1,7 @@
 import { HttpApiEndpoint, HttpApiGroup, HttpApiSchema } from "@effect/platform"
 import { Schema } from "effect"
 import { Authentication } from "./auth.ts"
-import { RecipeNotFound } from "./recipe.ts"
+import { RecipeNotFound, RecipeSummary } from "./recipe.ts"
 
 /** draft : on choisit les plats ; ready : on fait les courses. */
 export const ListStatus = Schema.Literal("draft", "ready")
@@ -24,6 +24,7 @@ export const ListRecipe = Schema.Struct({
   recipeId: Schema.Number,
   title: Schema.String,
   imageUrl: Schema.NullOr(Schema.String),
+  highlights: Schema.Array(Schema.String),
   count: Schema.Number,
 })
 export type ListRecipe = typeof ListRecipe.Type
@@ -99,6 +100,16 @@ export const ListCreation = Schema.Struct({
 })
 export type ListCreation = typeof ListCreation.Type
 
+export const MAX_SUGGESTIONS = 12
+export const DEFAULT_SUGGESTIONS = 6
+
+/** Des plats au hasard, hors ceux de la liste ; `count` absent vaut DEFAULT_SUGGESTIONS. */
+export const SuggestionQuery = Schema.Struct({
+  count: Schema.optional(
+    Schema.NumberFromString.pipe(Schema.int(), Schema.between(1, MAX_SUGGESTIONS))
+  ),
+})
+
 export const RecipeRef = Schema.Struct({ recipeId: Schema.Number })
 
 export const CheckUpdate = Schema.Struct({ checked: Schema.Boolean })
@@ -130,6 +141,13 @@ export const ListsGroup = HttpApiGroup.make("lists")
     HttpApiEndpoint.del("remove", "/lists/:id")
       .setPath(listPath)
       .addSuccess(HttpApiSchema.NoContent)
+      .addError(ListNotFound)
+  )
+  .add(
+    HttpApiEndpoint.get("suggestions", "/lists/:id/suggestions")
+      .setPath(listPath)
+      .setUrlParams(SuggestionQuery)
+      .addSuccess(Schema.Array(RecipeSummary))
       .addError(ListNotFound)
   )
   .add(

@@ -1,6 +1,7 @@
 import { HttpApiBuilder } from "@effect/platform"
 import {
   CurrentUser,
+  DEFAULT_SUGGESTIONS,
   EmptyList,
   ListNotDraft,
   ListNotFound,
@@ -9,6 +10,7 @@ import {
 } from "@recettes/contract"
 import { Clock, Effect, Option } from "effect"
 import { drawMeals, NOT_MEALS } from "../domain/meals.ts"
+import { RecipeRepository } from "../domain/repository.ts"
 import {
   type DishEdit,
   listName,
@@ -20,6 +22,7 @@ import { orInternalError } from "./errors.ts"
 export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =>
   Effect.gen(function* () {
     const lists = yield* ShoppingListRepository
+    const recipes = yield* RecipeRepository
 
     /** La liste complète, mise à l'échelle, ou 404. */
     const load = (userId: number, id: number) =>
@@ -81,6 +84,16 @@ export const ListsLive = HttpApiBuilder.group(RecettesApi, "lists", (handlers) =
           Effect.flatMap((user) => orInternalError(lists.remove(user.id, path.id))),
           Effect.flatMap(orNotFound(path.id))
         )
+      )
+      .handle("suggestions", ({ path, urlParams }) =>
+        Effect.gen(function* () {
+          const user = yield* CurrentUser
+          const list = yield* load(user.id, path.id)
+          const present = new Set(list.recipes.map((recipe) => recipe.recipeId))
+          const pool = (yield* mealPool).filter((id) => !present.has(id))
+          const drawn = yield* drawMeals(pool, urlParams.count ?? DEFAULT_SUGGESTIONS)
+          return yield* orInternalError(recipes.summaries(drawn))
+        })
       )
       .handle("finalize", ({ path }) =>
         Effect.gen(function* () {

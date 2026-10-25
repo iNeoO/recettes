@@ -29,6 +29,10 @@ export class RecipeRepository extends Context.Tag("RecipeRepository")<
   {
     readonly list: (query: RecipeQuery) => Effect.Effect<RecipePage, RepositoryError>
     readonly findById: (id: number) => Effect.Effect<Option.Option<Recipe>, RepositoryError>
+    /** Les recettes demandées, dans l'ordre demandé ; les inconnues sont omises. */
+    readonly summaries: (
+      ids: ReadonlyArray<number>
+    ) => Effect.Effect<ReadonlyArray<RecipeSummary>, RepositoryError>
     readonly imageKeyById: (id: number) => Effect.Effect<Option.Option<string>, RepositoryError>
   }
 >() {}

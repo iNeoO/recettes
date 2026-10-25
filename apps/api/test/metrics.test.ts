@@ -10,6 +10,7 @@ describe("normalisation des routes", () => {
     expect(normalizeRoute("/lists/7/checks/12?x=1")).toBe("/lists/:id/checks/:id")
     expect(normalizeRoute("/lists/7/finalize")).toBe("/lists/:id/finalize")
     expect(normalizeRoute("/lists/7/reopen")).toBe("/lists/:id/reopen")
+    expect(normalizeRoute("/lists/7/suggestions?count=6")).toBe("/lists/:id/suggestions")
     expect(normalizeRoute("/lists/7/recipes/random")).toBe("other")
     expect(normalizeRoute("/lists/7/recipes/3/replace")).toBe("/lists/:id/recipes/:id/replace")
     expect(normalizeRoute("/recipes?search=creme&limit=3")).toBe("/recipes")

@@ -4,6 +4,7 @@ import {
   ListNotFound,
   type Recipe,
   type RecipeListPage,
+  type RecipeSummary,
   RecettesApi,
   type ShoppingList,
   type ShoppingListSummary,
@@ -61,6 +62,8 @@ export interface ShoppingListApi {
   readonly byId: (id: number) => Promise<ShoppingList>
   readonly setServings: (id: number, servings: number) => Promise<ShoppingList>
   readonly remove: (id: number) => Promise<void>
+  /** Des plats au hasard, hors ceux de la liste. */
+  readonly suggestions: (id: number) => Promise<ReadonlyArray<RecipeSummary>>
   readonly finalize: (id: number) => Promise<ShoppingList>
   readonly reopen: (id: number) => Promise<ShoppingList>
   readonly addRecipe: (id: number, recipeId: number) => Promise<ShoppingList>
@@ -129,6 +132,8 @@ export const makeClients = async (
       setServings: (id, servings) =>
         run(client.lists.setServings({ path: { id }, payload: { servings } }), unauthenticated),
       remove: (id) => run(client.lists.remove({ path: { id } }), unauthenticated),
+      suggestions: (id) =>
+        run(client.lists.suggestions({ path: { id }, urlParams: {} }), unauthenticated),
       finalize: (id) => run(client.lists.finalize({ path: { id } }), unauthenticated),
       reopen: (id) => run(client.lists.reopen({ path: { id } }), unauthenticated),
       addRecipe: (id, recipeId) =>
