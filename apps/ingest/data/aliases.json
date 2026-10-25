@@ -1,13 +1,13 @@
 {
-  "purée de tomates": "purée de tomate",
-  "chair de tomates": "chair de tomate",
+  "purée de tomates": "coulis de tomate",
+  "chair de tomates": "tomate concassée",
   "pois chiches": "pois chiche",
   "haricots blancs": "haricot blanc",
   "concentré de tomates": "concentré de tomate",
   "coulis de tomates": "coulis de tomate",
   "graines de sésame": "graine de sésame",
   "pépites de chocolat": "pépite de chocolat",
-  "pépites de chocolat noir": "pépite de chocolat noir",
+  "pépites de chocolat noir": "pépite de chocolat",
   "amandes effilées": "amande effilée",
   "poudre d'amandes": "poudre d'amande",
   "purée d'amandes": "purée d'amande",
@@ -24,5 +24,716 @@
 
   "zaatar": "za'atar",
   "piment jalapeno": "piment jalapeño",
-  "edamame": "édamame"
+  "edamame": "édamame",
+
+  "abricot moelleux": "abricot sec",
+
+  "ail semoule": "ail en poudre",
+
+  "feuille d'algue nori": "algue nori",
+  "nori": "algue nori",
+
+  "amande crue pelée": "amande",
+  "amande entière": "amande",
+  "amande grillée": "amande",
+
+  "jus de pois chiche": "aquafaba",
+
+  "asperge": "asperge verte",
+
+  "bagel au sésame": "bagel",
+  "pain bagel": "bagel",
+
+  "demi-baguette": "baguette",
+
+  "baie de goji séchée": "baie de goji",
+
+  "banane ferme": "banane",
+
+  "basilic frais": "basilic",
+  "feuille de basilic": "basilic",
+
+  "betterave crue": "betterave",
+  "betterave cuite": "betterave",
+  "betterave rouge": "betterave",
+
+  "margarine": "beurre",
+  "margarine végétale": "beurre",
+
+  "purée de cacahuète": "beurre de cacahuète",
+
+  "beurre salé": "beurre demi-sel",
+
+  "bicarbonate": "bicarbonate de soude",
+  "bicarbonate alimentaire": "bicarbonate de soude",
+
+  "bouillon": "bouillon de légumes",
+  "bouillon cube légumes": "bouillon de légumes",
+  "bouillon de légumes en poudre": "bouillon de légumes",
+  "cube de bouillon de légumes": "bouillon de légumes",
+
+  "fleuret de brocoli": "brocoli",
+
+  "chou cima": "brocoli rave",
+
+  "burratina": "burrata",
+  "mozzarella burrata": "burrata",
+
+  "arachide toastée": "cacahuète",
+  "cacahuète non salée": "cacahuète",
+
+  "cacao": "cacao en poudre",
+  "cacao cru": "cacao en poudre",
+  "cacao cru en poudre": "cacao en poudre",
+  "cacao maigre": "cacao en poudre",
+  "cacao maigre en poudre": "cacao en poudre",
+  "cacao non sucré": "cacao en poudre",
+
+  "caramel liquide": "caramel",
+  "coulis de caramel": "caramel",
+
+  "carotte fane": "carotte",
+  "carotte râpée": "carotte",
+  "mini carotte": "carotte",
+
+  "céleri": "céleri branche",
+  "céleri-branche": "céleri branche",
+
+  "champignon": "champignon de paris",
+  "champignon brun": "champignon de paris",
+
+  "champignon eryngii": "champignon king oyster",
+
+  "portobello": "champignon portobello",
+
+  "chapelure grosse": "chapelure",
+
+  "cheddar râpé": "cheddar",
+  "cheddar râpé végétal": "cheddar",
+  "cheddar vegan": "cheddar",
+  "cheddar végétal": "cheddar",
+
+  "chocolat blanc végétal": "chocolat blanc",
+
+  "chocolat": "chocolat noir",
+  "chocolat dessert": "chocolat noir",
+  "chocolat noir dessert": "chocolat noir",
+
+  "chou": "chou blanc",
+
+  "baby kale": "chou kale",
+  "kale": "chou kale",
+
+  "ciboulette fraîche": "ciboulette",
+
+  "citron jaune": "citron",
+  "jus de citron": "citron",
+  "jus de citron jaune": "citron",
+  "zeste de citron": "citron",
+
+  "jus de citron vert": "citron vert",
+
+  "bâton de citronnelle": "citronnelle",
+  "tige de citronnelle": "citronnelle",
+
+  "compote de pomme sans sucre ajouté": "compote de pomme",
+
+  "comté râpé": "comté",
+
+  "coriandre fraîche": "coriandre",
+
+  "coriandre en poudre": "coriandre moulue",
+
+  "céréale de flocon de maïs": "corn flakes",
+  "corn flakes nature": "corn flakes",
+  "corn flakes non sucré": "corn flakes",
+
+  "purée de tomate": "coulis de tomate",
+  "sauce de tomates": "coulis de tomate",
+  "sauce tomate": "coulis de tomate",
+
+  "chair de courge": "courge",
+
+  "chair de butternut": "courge butternut",
+
+  "courgette avec fleur": "courgette",
+  "courgette râpée": "courgette",
+
+  "canneberge séchée": "cranberry séché",
+  "cranberry": "cranberry séché",
+
+  "crème épaisse": "crème fraîche",
+  "crème fraîche épaisse": "crème fraîche",
+  "crème fraîche végétale": "crème fraîche",
+  "crème végétale épaisse": "crème fraîche",
+  "sour cream végane": "crème fraîche",
+
+  "crème": "crème liquide",
+  "crème 5%": "crème liquide",
+  "crème d'avoine": "crème liquide",
+  "crème de soja": "crème liquide",
+  "crème fraîche liquide": "crème liquide",
+  "crème liquide animale": "crème liquide",
+  "crème liquide végétale": "crème liquide",
+  "crème végétale": "crème liquide",
+  "crème végétale neutre": "crème liquide",
+
+  "curry doux": "curry",
+
+  "date": "datte",
+  "datte medjool": "datte",
+
+  "eau chaude": "eau",
+  "eau froide": "eau",
+  "eau salée": "eau",
+  "eau tiède": "eau",
+  "eau vinaigrée": "eau",
+
+  "effiloché végétal": "émincé végétal",
+  "émincé végan": "émincé végétal",
+  "émincé végétal façon kebab döner": "émincé végétal",
+  "émincé végétarien": "émincé végétal",
+
+  "emmental râpé": "emmental",
+
+  "épinard frais": "épinard",
+
+  "espresso allongé": "espresso",
+
+  "arôme de vanille": "extrait de vanille",
+  "vanille liquide": "extrait de vanille",
+
+  "farine blanche": "farine",
+  "farine de blé": "farine",
+  "farine de blé t45": "farine",
+  "farine de blé t65": "farine",
+  "farine de blé t80": "farine",
+  "farine t45": "farine",
+  "farine t55": "farine",
+  "farine t65": "farine",
+  "farine t80": "farine",
+
+  "farine de flocons d'avoine": "farine d'avoine",
+
+  "mix de farine sans gluten": "farine sans gluten",
+
+  "farine de blé t110": "farine t110",
+
+  "fécule": "fécule de maïs",
+  "maïzena": "fécule de maïs",
+
+  "feta végane": "feta",
+  "feta végétale": "feta",
+  "feta violife": "feta",
+
+  "pâte à lasagne": "feuille de lasagne",
+
+  "fève fraîche": "fève",
+
+  "dos de cabillaud": "filet de cabillaud",
+  "pavé de cabillaud": "filet de cabillaud",
+
+  "merlu": "filet de merlu",
+
+  "poisson blanc": "filet de poisson blanc",
+
+  "aiguillette de poulet": "filet de poulet",
+  "escalope de poulet": "filet de poulet",
+
+  "filet de saumon avec peau": "filet de saumon",
+  "pavé de saumon": "filet de saumon",
+  "saumon": "filet de saumon",
+
+  "flocon de sel": "fleur de sel",
+
+  "flocon d'avoine fin": "flocon d'avoine",
+
+  "fromage vegan": "fromage",
+  "fromage végétal": "fromage",
+  "fromage végétal fondant": "fromage",
+
+  "fromage blanc végétal": "fromage blanc",
+
+  "bleu": "fromage bleu",
+
+  "bûche de chèvre": "fromage de chèvre",
+  "chèvre": "fromage de chèvre",
+  "chèvre frais": "fromage de chèvre",
+  "chèvre frais en faisselle": "fromage de chèvre",
+  "crottin de chavignol": "fromage de chèvre",
+  "crottin de chèvre": "fromage de chèvre",
+  "fromage de chèvre frais": "fromage de chèvre",
+  "fromage de chèvre râpé": "fromage de chèvre",
+  "palet de chèvre": "fromage de chèvre",
+
+  "cream cheese vegan": "fromage frais",
+  "fromage à tartiner vegan": "fromage frais",
+  "fromage à tartiner végane": "fromage frais",
+  "fromage frais type philadelphia": "fromage frais",
+  "fromage végétal à tartiner": "fromage frais",
+
+  "boursin ail et fines herbes": "fromage frais aux herbes",
+
+  "fromage râpé vegan": "fromage râpé",
+  "fromage végétal râpé": "fromage râpé",
+  "râpé végétal": "fromage râpé",
+
+  "baies rouges": "fruit rouge",
+
+  "gingembre frais": "gingembre",
+
+  "farine de gluten": "gluten de blé",
+  "farine de gluten de blé": "gluten de blé",
+
+  "gnocchi de pomme de terre": "gnocchi",
+
+  "gouda râpé": "gouda",
+
+  "graine de chanvre décortiquée": "graine de chanvre",
+
+  "graines de fenouil": "graine de fenouil",
+
+  "graine de lin moulu": "graine de lin moulue",
+
+  "graine de sésame blanche": "graine de sésame",
+  "sésame": "graine de sésame",
+  "sésame blanc": "graine de sésame",
+
+  "sésame noir": "graine de sésame noire",
+
+  "graine de grenade": "grenade",
+
+  "gruyère râpé": "gruyère",
+
+  "haricot rouge en conserve": "haricot rouge",
+
+  "pâte de harissa": "harissa",
+
+  "herbes aromatiques": "herbes fraîches",
+  "herbes mélangées": "herbes fraîches",
+
+  "herbes séchées mélangées": "herbes séchées",
+
+  "huile d'olive extra vierge": "huile d'olive",
+
+  "huile d'olive saveur truffe": "huile d'olive à la truffe",
+
+  "huile de coco désodorisée": "huile de coco",
+
+  "huile de sésame grillé": "huile de sésame grillée",
+
+  "huile": "huile neutre",
+  "huile de colza": "huile neutre",
+  "huile de cuisson": "huile neutre",
+  "huile de cuisson neutre": "huile neutre",
+  "huile de cuisson neutre en goût": "huile neutre",
+  "huile de friture": "huile neutre",
+  "huile de tournesol": "huile neutre",
+  "huile végétale": "huile neutre",
+  "huile végétale neutre": "huile neutre",
+
+  "jambon de bayonne": "jambon cru",
+  "jambon de parme": "jambon cru",
+
+  "lait animal": "lait",
+  "lait de soja": "lait",
+  "lait demi-écrémé": "lait",
+  "lait entier": "lait",
+  "lait végétal": "lait",
+  "lait végétal neutre": "lait",
+  "lait végétal non sucré": "lait",
+
+  "lait d'amande non sucré": "lait d'amande",
+  "lait d'amande sans sucre ajouté": "lait d'amande",
+
+  "lait de coco cuisine": "lait de coco",
+
+  "bacon végétal": "lardon",
+  "lardon végétal": "lardon",
+  "lardon végétal la vie": "lardon",
+
+  "feuille de laurier": "laurier",
+  "laurier séché": "laurier",
+
+  "lentille": "lentille verte",
+  "lentille verte sèche": "lentille verte",
+
+  "levure": "levure chimique",
+  "levure sans gluten": "levure chimique",
+
+  "levure boulangère fraîche": "levure de boulanger fraîche",
+  "levure fraîche": "levure de boulanger fraîche",
+  "levure fraîche de boulangerie": "levure de boulanger fraîche",
+
+  "levure boulangère": "levure de boulanger sèche",
+  "levure boulangère sèche": "levure de boulanger sèche",
+  "levure de boulanger": "levure de boulanger sèche",
+  "levure de boulanger déshydratée": "levure de boulanger sèche",
+  "levure sèche": "levure de boulanger sèche",
+  "levure sèche instantanée": "levure de boulanger sèche",
+
+  "levure de bière": "levure maltée",
+  "levure nutritionnelle": "levure maltée",
+
+  "poudre de matcha": "matcha",
+
+  "mayonnaise végane": "mayonnaise",
+  "mayonnaise végétale": "mayonnaise",
+  "véganaise": "mayonnaise",
+
+  "feuille de menthe": "menthe",
+  "feuille de menthe fraîche": "menthe",
+
+  "miel clair": "miel",
+  "miel d'acacia": "miel",
+  "miel doux": "miel",
+  "miel liquide": "miel",
+
+  "pâte miso": "miso",
+
+  "miso blond": "miso blanc",
+  "pâte de miso blanc": "miso blanc",
+
+  "moutarde fine": "moutarde",
+  "moutarde forte": "moutarde",
+
+  "bille de mozzarella": "mozzarella",
+  "mozzarella di bufala": "mozzarella",
+  "mozzarella fior di latte": "mozzarella",
+  "mozzarella râpée": "mozzarella",
+
+  "cerneau de noix": "noix",
+  "noix concassée": "noix",
+
+  "noix de cajou concassée": "noix de cajou",
+  "noix de cajou non salée": "noix de cajou",
+  "noix de cajou non toastées": "noix de cajou",
+
+  "coco râpée": "noix de coco râpée",
+
+  "muscade": "noix de muscade",
+
+  "pâtes asiatiques": "nouille asiatique",
+
+  "nouille de riz plate": "nouille de riz",
+
+  "oignon blanc": "oignon",
+  "oignon jaune": "oignon",
+
+  "cébette": "oignon nouveau",
+  "ciboule": "oignon nouveau",
+  "oignon cébette": "oignon nouveau",
+  "oignon de printemps": "oignon nouveau",
+  "oignon vert": "oignon nouveau",
+
+  "oignon en paillettes": "oignon séché",
+
+  "olive noire à la grecque": "olive noire",
+  "olive noire dénoyautée": "olive noire",
+
+  "origan séché": "origan",
+
+  "pâtes orzo": "orzo",
+
+  "mie de pain": "pain",
+  "pain rassis": "pain",
+  "tartine de pain": "pain",
+
+  "bun": "pain burger",
+  "bun à burger": "pain burger",
+
+  "pain complet aux céréales": "pain complet",
+
+  "pain de mie complet": "pain de mie",
+
+  "naan": "pain naan",
+
+  "pita": "pain pita",
+
+  "bok choy": "pak choï",
+  "chou pak choï": "pak choï",
+  "chou pak choy": "pak choï",
+
+  "paprika doux": "paprika",
+
+  "copeaux de grana padano": "parmesan",
+  "gondino": "parmesan",
+  "parmesan en copeaux": "parmesan",
+  "parmesan râpé": "parmesan",
+  "parmesan végétal": "parmesan",
+
+  "nocciolata": "pâte à tartiner chocolat-noisette",
+
+  "pâte": "pâte brisée",
+  "pâte à tarte": "pâte brisée",
+
+  "pâte à tarte sans gluten": "pâte brisée sans gluten",
+
+  "curry rouge": "pâte de curry rouge",
+  "pâte de curry rouge thaï": "pâte de curry rouge",
+
+  "pâte feuilletée végane": "pâte feuilletée",
+  "pâte feuilletée végétale": "pâte feuilletée",
+
+  "feuille de pâte filo": "pâte filo",
+  "pâte phyllo": "pâte filo",
+
+  "casarecce": "pâtes",
+  "conchiglie": "pâtes",
+  "conchiglioni": "pâtes",
+  "coquillette": "pâtes",
+  "farfalle": "pâtes",
+  "fregola": "pâtes",
+  "linguine": "pâtes",
+  "linguine complète": "pâtes",
+  "macaroni": "pâtes",
+  "orecchiette": "pâtes",
+  "pappardelle": "pâtes",
+  "pâte fraîche": "pâtes",
+  "pâtes bucatini": "pâtes",
+  "pâtes bucatini complètes": "pâtes",
+  "pâtes complètes": "pâtes",
+  "pâtes conchiglioni": "pâtes",
+  "pâtes coquilles géantes": "pâtes",
+  "pâtes courtes rayées": "pâtes",
+  "pâtes de lentilles corail": "pâtes",
+  "pâtes longues": "pâtes",
+  "pâtes perles": "pâtes",
+  "penne": "pâtes",
+  "petites pâtes": "pâtes",
+  "rigatoni": "pâtes",
+  "spaghetti": "pâtes",
+  "spaghetti complet": "pâtes",
+  "tagliatelle": "pâtes",
+  "tagliatelle sèche": "pâtes",
+  "vermicelle": "pâtes",
+
+  "pêche jaune": "pêche",
+
+  "pecorino en copeaux": "pecorino",
+  "pecorino râpé": "pecorino",
+
+  "pépite de chocolat noir": "pépite de chocolat",
+
+  "feuille de persil plat": "persil",
+  "persil frais": "persil",
+  "persil frisé": "persil",
+  "persil plat": "persil",
+
+  "pesto de basilic": "pesto",
+  "pesto de basilic vegan": "pesto",
+  "pesto vegan": "pesto",
+  "pesto vert": "pesto",
+
+  "pesto rosso vegan": "pesto rosso",
+
+  "piment chili": "piment",
+  "piment rouge": "piment",
+  "piment thaï": "piment",
+
+  "chili broyé": "piment en flocons",
+  "flocon de piment": "piment en flocons",
+  "flocons de chili": "piment en flocons",
+  "piment concassé": "piment en flocons",
+  "piment séché": "piment en flocons",
+
+  "chili": "piment en poudre",
+  "chili en poudre": "piment en poudre",
+  "poudre de chili": "piment en poudre",
+
+  "piment jalapeño mariné": "piment jalapeño",
+  "poivron jalapeno": "piment jalapeño",
+
+  "éclat de pistache": "pistache",
+  "pistache décortiquée": "pistache",
+
+  "pois chiche cuit": "pois chiche",
+  "pois chiche en conserve": "pois chiche",
+
+  "pois mange-tout": "pois gourmand",
+
+  "poivre noir": "poivre",
+
+  "poivron jaune": "poivron",
+  "poivron rouge": "poivron",
+  "poivron vert": "poivron",
+
+  "poivron mariné": "poivron grillé",
+  "poivron rouge en saumure": "poivron grillé",
+
+  "polenta cuisson rapide": "polenta",
+  "polenta précuite": "polenta",
+
+  "pomme rouge": "pomme",
+
+  "pomme de terre à chair ferme": "pomme de terre",
+
+  "grenaille rouge": "pomme de terre grenaille",
+  "pomme de terre grelot": "pomme de terre grenaille",
+
+  "pomme granny smith": "pomme verte",
+
+  "chair de potimarron": "potimarron",
+
+  "citrouille": "potiron",
+
+  "jeune pousse d'épinard": "pousse d'épinard",
+
+  "poudre de protéine": "protéine végétale",
+  "protéine en poudre": "protéine végétale",
+
+  "tégument de psyllium blond": "psyllium",
+
+  "beurre d'amande": "purée d'amande",
+  "purée d'amande blanche": "purée d'amande",
+
+  "4 épices": "quatre épices",
+  "mélange quatre épices": "quatre épices",
+
+  "radis rose": "radis",
+
+  "raisin sec blond": "raisin sec",
+  "raisin sec sultanine": "raisin sec",
+
+  "ricotta végétale": "ricotta",
+
+  "riz basmati": "riz",
+  "riz brun": "riz",
+  "riz complet": "riz",
+  "riz noir": "riz",
+  "riz rond semi-complet": "riz",
+  "riz rouge complet": "riz",
+  "riz semi-complet": "riz",
+  "riz thaï semi-complet": "riz",
+
+  "riz vialone nano": "riz arborio",
+
+  "feuille de laitue": "salade",
+  "feuille de laitue romaine": "salade",
+  "feuille verte": "salade",
+  "jeune pousse": "salade",
+  "jeunes pousses mélangées": "salade",
+  "laitue": "salade",
+  "laitue iceberg": "salade",
+  "laitue romaine": "salade",
+  "mâche": "salade",
+  "mesclun": "salade",
+  "roquette": "salade",
+  "salade iceberg": "salade",
+  "salade mélangée": "salade",
+  "salade verte": "salade",
+  "sucrine": "salade",
+
+  "sauce barbecue vegan": "sauce barbecue",
+  "sauce barbecue végétalienne": "sauce barbecue",
+
+  "sauce soja salée": "sauce soja",
+
+  "sriracha": "sauce sriracha",
+
+  "merguez végétale": "saucisse végétale",
+
+  "miette de saumon fumé": "saumon fumé",
+
+  "émincé de seitan": "seitan",
+  "seitan nature": "seitan",
+
+  "sel de mer": "sel",
+  "sel fin": "sel",
+  "sel rose de l'himalaya": "sel",
+
+  "sel noir d'himalaya": "sel noir",
+
+  "couscous": "semoule",
+  "graine de couscous": "semoule",
+  "semoule à couscous": "semoule",
+  "semoule de blé": "semoule",
+  "semoule de blé dur": "semoule",
+  "semoule de couscous": "semoule",
+
+  "skyr nature": "skyr",
+
+  "cassonade": "sucre",
+  "mascobado": "sucre",
+  "sucre brun": "sucre",
+  "sucre complet": "sucre",
+  "sucre de canne": "sucre",
+  "sucre de coco": "sucre",
+  "sucre en poudre": "sucre",
+  "sucre glace": "sucre",
+  "sucre mascobado": "sucre",
+  "sucre perlé": "sucre",
+  "sucre roux": "sucre",
+  "sucre vanillé": "sucre",
+
+  "purée de sésame": "tahini",
+  "purée de sésame blanc": "tahini",
+  "purée de sésame blanche": "tahini",
+  "tahin": "tahini",
+
+  "sauce soja tamari": "tamari",
+  "sauce tamari": "tamari",
+
+  "thon": "thon au naturel",
+
+  "thym frais": "thym",
+
+  "tofu taifun curry mango": "tofu curry mangue",
+
+  "tofu": "tofu ferme",
+  "tofu extra-ferme": "tofu ferme",
+  "tofu ferme nature": "tofu ferme",
+  "tofu nature": "tofu ferme",
+
+  "tofu taifun japonais": "tofu japonais",
+
+  "tofu rosso taifun": "tofu rosso",
+
+  "tomate à l'ancienne": "tomate",
+  "tomate allongée": "tomate",
+  "tomate ananas": "tomate",
+  "tomate ancienne": "tomate",
+  "tomate cœur de bœuf": "tomate",
+  "tomate grappe": "tomate",
+  "tomate san marzano": "tomate",
+
+  "tomate cerise piccolo": "tomate cerise",
+  "tomate cerise rouge": "tomate cerise",
+
+  "chair de tomate": "tomate concassée",
+  "pulpe de tomate": "tomate concassée",
+
+  "tomate jaune pelée": "tomate pelée",
+  "tomate pelée entière": "tomate pelée",
+  "tomate pelée san marzano": "tomate pelée",
+
+  "tomate confite": "tomate séchée",
+  "tomate semi-séchée": "tomate séchée",
+
+  "galette à tortilla": "tortilla",
+  "mini tortilla": "tortilla",
+  "petite tortilla": "tortilla",
+  "petite tortilla de blé": "tortilla",
+  "tortilla complète": "tortilla",
+  "wrap": "tortilla",
+
+  "petite galette de maïs": "tortilla de maïs",
+
+  "vin blanc sec": "vin blanc",
+
+  "vinaigre de cidre de pomme": "vinaigre de cidre",
+
+  "yaourt coco": "yaourt de coco",
+
+  "yaourt à la grecque": "yaourt grec",
+  "yaourt végétal à la grecque": "yaourt grec",
+
+  "yaourt": "yaourt nature",
+  "yaourt animal": "yaourt nature",
+  "yaourt au soja nature": "yaourt nature",
+  "yaourt au soja nature non sucré": "yaourt nature",
+  "yaourt de soja": "yaourt nature",
+  "yaourt de soja nature": "yaourt nature",
+  "yaourt végétal": "yaourt nature",
+  "yaourt végétal neutre": "yaourt nature"
 }

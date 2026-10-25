@@ -111,7 +111,9 @@ version de ces paquets passe par `pnpm-workspace.yaml`, pas par le
   `suggest-units` prépare, `check-units` mesure ce qui reste.
 - `data/aliases.json` est une table **relue à la main**. `suggest-aliases`
   propose, le fichier décide : pas de règle de pluriel automatique, elle
-  fusionnerait « pâte » et « pâtes » ou les farines T45/T55/T65/T80.
+  fusionnerait « pâte » et « pâtes ». Elle fusionne aussi ce qui s'achète
+  pareil (végétal → animal, sucres, formes de pâtes) : ces regroupements ont
+  été arbitrés avec l'utilisateur, ne pas les défaire sans lui.
 
 ## Infrastructure
 

@@ -67,14 +67,20 @@ leur sortie est versionnee dans `apps/ingest/data/parsed/`.
   -> 4 476 distinctes (apostrophes et espaces normalisees)
   -> 12 tranches, un agent par tranche, couverture verifiee 4476/4476
   -> data/parsed/*.json : ligne -> [{name, amount?, unit?}]
-  -> 10 400 liaisons, 1 147 ingredients canoniques
+  -> 10 400 liaisons, 653 ingredients canoniques (1 147 avant alias)
 ```
 
 Douze agents independants nomment parfois differemment (« puree de tomate » /
 « puree de tomates »). Les variantes sont unifiees par `data/aliases.json`, une
 table **relue**, jamais une regle de pluriel automatique : celle-ci fusionnerait
-« pate » et « pates », ou les farines T45/T55/T65/T80, qui sont des ingredients
-distincts. `suggest-aliases` propose, le fichier decide.
+« pate » et « pates », qui sont des ingredients distincts. `suggest-aliases`
+propose, le fichier decide.
+
+La table va plus loin que les doublons d'ecriture : elle fusionne ce qui
+s'achete pareil, arbitre avec l'utilisateur famille par famille (oignon jaune ->
+oignon, mais oignon rouge a part ; vegetal -> animal ; tous les sucres ; formes
+de pates ; farines sauf T110). Une regle d'unite posee sur une variante est
+morte : elle se reporte sur le nom retenu dans `units.json`.
 
 Consequence : **la migration elle-meme est du code pur**. Elle lit l'artefact,
 applique le facteur d'echelle, formate les quantites et deduplique les noms —
