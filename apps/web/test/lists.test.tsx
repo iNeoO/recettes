@@ -28,14 +28,22 @@ describe("listes de courses", () => {
     expect(screen.getByText(/3 plats · 2 pers\./)).toBeTruthy()
   })
 
-  it("créer tire 5 repas par défaut et ouvre la liste", async () => {
+  it("signale les listes en brouillon", async () => {
+    renderAt("/lists", [shoppingList({ status: "draft" }), shoppingList({ id: 4, name: "1 octobre 2026" })])
+    const draft = (await screen.findByText("23 septembre 2026")).closest("li")!
+    expect(within(draft).getByText("Brouillon")).toBeTruthy()
+    const ready = screen.getByText("1 octobre 2026").closest("li")!
+    expect(within(ready).queryByText("Brouillon")).toBeNull()
+  })
+
+  it("créer tire 5 repas par défaut et ouvre la préparation", async () => {
     const { router, lists } = renderAt("/lists", [])
     await screen.findByText(/Aucune liste/)
 
     expect(screen.getByLabelText("Nombre de repas")).toHaveProperty("value", "5")
     await userEvent.click(screen.getByRole("button", { name: "Créer une liste" }))
 
-    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/1"))
+    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/1/plats"))
     expect(lists.calls).toContain("create 5")
     expect(await screen.findByText("Plat tiré 5")).toBeTruthy()
   })
@@ -52,6 +60,20 @@ describe("listes de courses", () => {
     await waitFor(() => expect(lists.calls).toContain("create 2"))
     expect(await screen.findByText("Plat tiré 2")).toBeTruthy()
     expect(screen.queryByText("Plat tiré 3")).toBeNull()
+  })
+
+  it("créer avec 0 repas ouvre une préparation vide, impossible à valider", async () => {
+    const { router } = renderAt("/lists", [])
+    await screen.findByText(/Aucune liste/)
+
+    const meals = screen.getByLabelText("Nombre de repas")
+    await userEvent.clear(meals)
+    await userEvent.type(meals, "0")
+    await userEvent.click(screen.getByRole("button", { name: "Créer une liste" }))
+
+    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/1/plats"))
+    expect(await screen.findByText("Aucun plat pour l'instant.")).toBeTruthy()
+    expect(screen.getByRole("button", { name: "Valider les plats" })).toHaveProperty("disabled", true)
   })
 
   it("refuse de créer sans nombre de repas valide", async () => {
@@ -106,14 +128,25 @@ describe("listes de courses", () => {
     expect(await screen.findByLabelText("Nombre de personnes")).toHaveProperty("textContent", "3")
   })
 
-  it("retire un plat depuis la liste", async () => {
-    const { lists } = renderAt("/lists/3")
+  it("modifier les plats rouvre la liste et mène à la préparation", async () => {
+    const { router, lists } = renderAt("/lists/3")
     await screen.findByRole("heading", { name: "23 septembre 2026" })
 
-    await userEvent.click(screen.getByRole("button", { name: "Retirer Curry de lentilles" }))
+    await userEvent.click(screen.getByRole("button", { name: "Modifier les plats" }))
 
-    await waitFor(() => expect(lists.calls).toContain("removeRecipe 3 2"))
-    await waitFor(() => expect(screen.queryByText("Curry de lentilles")).toBeNull())
+    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/3/plats"))
+    expect(lists.calls).toContain("reopen 3")
+    expect(await screen.findByRole("button", { name: "Valider les plats" })).toBeTruthy()
+  })
+
+  it("une liste en brouillon ouvre la préparation, une liste prête les courses", async () => {
+    const draft = renderAt("/lists/3", [shoppingList({ status: "draft" })])
+    await waitFor(() => expect(draft.router.state.location.pathname).toBe("/lists/3/plats"))
+    document.body.replaceChildren()
+
+    const ready = renderAt("/lists/3/plats")
+    await waitFor(() => expect(ready.router.state.location.pathname).toBe("/lists/3"))
+    expect(await screen.findByRole("heading", { name: "À acheter" })).toBeTruthy()
   })
 
   it("supprime une liste en deux clics et revient aux listes", async () => {
@@ -131,6 +164,90 @@ describe("listes de courses", () => {
 
   it("dit quand une liste est introuvable", async () => {
     renderAt("/lists/99")
+    expect((await screen.findByRole("alert")).textContent).toContain("introuvable")
+  })
+})
+
+const draft = (over: Partial<ShoppingList> = {}) => shoppingList({ status: "draft", ...over })
+
+describe("préparation d'une liste", () => {
+  it("affiche les plats avec leurs ingrédients phares", async () => {
+    renderAt("/lists/3/plats", [draft()])
+
+    expect(await screen.findByText("Bowl de pastèque")).toBeTruthy()
+    expect(screen.getByText("lentilles corail, lait de coco")).toBeTruthy()
+    expect(screen.getByText("2 plats")).toBeTruthy()
+  })
+
+  it("retire un plat", async () => {
+    const { lists } = renderAt("/lists/3/plats", [draft()])
+    await screen.findByText("Curry de lentilles")
+
+    await userEvent.click(screen.getByRole("button", { name: "Retirer Curry de lentilles" }))
+
+    await waitFor(() => expect(lists.calls).toContain("removeRecipe 3 2"))
+    await waitFor(() => expect(screen.queryByText("Curry de lentilles")).toBeNull())
+  })
+
+  it("remplace un plat par une proposition choisie dans le drawer", async () => {
+    const { lists } = renderAt("/lists/3/plats", [draft()])
+    await screen.findByText("Curry de lentilles")
+
+    await userEvent.click(screen.getByRole("button", { name: "Remplacer Curry de lentilles" }))
+
+    const drawer = await screen.findByRole("dialog")
+    expect(within(drawer).getByText("Remplacer Curry de lentilles")).toBeTruthy()
+    await userEvent.click(await within(drawer).findByRole("button", { name: /Plat proposé 1/ }))
+
+    await waitFor(() => expect(lists.calls).toContain("replaceRecipe 3 2 201"))
+    expect(await screen.findByText("Recette 201")).toBeTruthy()
+    await waitFor(() => expect(screen.queryByText("Curry de lentilles")).toBeNull())
+  })
+
+  it("autres propositions relance un tirage", async () => {
+    const { lists } = renderAt("/lists/3/plats", [draft()])
+    await screen.findByText("Curry de lentilles")
+    await userEvent.click(screen.getByRole("button", { name: "Ajouter un plat" }))
+    const drawer = await screen.findByRole("dialog")
+    await within(drawer).findByText("Plat proposé 6")
+
+    await userEvent.click(within(drawer).getByRole("button", { name: "Autres propositions" }))
+
+    expect(await within(drawer).findByText("Plat proposé 12")).toBeTruthy()
+    expect(within(drawer).queryByText("Plat proposé 1")).toBeNull()
+    expect(lists.calls.filter((c) => c === "suggestions 3")).toHaveLength(2)
+  })
+
+  it("une recherche montre les plats déjà présents sans les rendre choisissables", async () => {
+    const [bowl] = shoppingList().recipes
+    const { lists } = renderAt("/lists/3/plats", [draft({ recipes: [bowl!] })])
+    await screen.findByText("Bowl de pastèque")
+    await userEvent.click(screen.getByRole("button", { name: "Ajouter un plat" }))
+    const drawer = await screen.findByRole("dialog")
+
+    await userEvent.type(within(drawer).getByLabelText("Chercher un plat"), "bowl")
+
+    const present = await within(drawer).findByRole("button", { name: /Bowl de pastèque/ })
+    expect(present).toHaveProperty("disabled", true)
+    expect(within(present).getByText("Déjà dans la liste")).toBeTruthy()
+
+    await userEvent.click(within(drawer).getByRole("button", { name: /Curry de lentilles/ }))
+    await waitFor(() => expect(lists.calls).toContain("addRecipe 3 2"))
+  })
+
+  it("valider passe la liste en prête et mène aux courses", async () => {
+    const { router, lists } = renderAt("/lists/3/plats", [draft()])
+    await screen.findByText("Curry de lentilles")
+
+    await userEvent.click(screen.getByRole("button", { name: "Valider les plats" }))
+
+    await waitFor(() => expect(router.state.location.pathname).toBe("/lists/3"))
+    expect(lists.calls).toContain("finalize 3")
+    expect(await screen.findByRole("heading", { name: "À acheter" })).toBeTruthy()
+  })
+
+  it("dit quand une liste en préparation est introuvable", async () => {
+    renderAt("/lists/99/plats")
     expect((await screen.findByRole("alert")).textContent).toContain("introuvable")
   })
 })

@@ -13,6 +13,7 @@ import { DetailPage } from "./routes/Detail.tsx"
 import { ListPage } from "./routes/List.tsx"
 import { ListsPage } from "./routes/Lists.tsx"
 import { LoginPage } from "./routes/Login.tsx"
+import { PreparationPage } from "./routes/Preparation.tsx"
 import { ShoppingListPage } from "./routes/ShoppingList.tsx"
 import { validateSearch } from "./search.ts"
 import type { Session } from "./session.ts"
@@ -122,9 +123,21 @@ export const shoppingListRoute = createRoute({
   component: ShoppingListPage,
 })
 
+export const preparationRoute = createRoute({
+  getParentRoute: () => authenticatedRoute,
+  path: "/lists/$id/plats",
+  component: PreparationPage,
+})
+
 export const routeTree = rootRoute.addChildren([
   loginRoute,
-  authenticatedRoute.addChildren([listRoute, detailRoute, listsRoute, shoppingListRoute]),
+  authenticatedRoute.addChildren([
+    listRoute,
+    detailRoute,
+    listsRoute,
+    shoppingListRoute,
+    preparationRoute,
+  ]),
 ])
 
 /** L'historique se fournit à la construction : l'URL initiale y est analysée. */

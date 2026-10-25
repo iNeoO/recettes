@@ -26,6 +26,8 @@ export const useShoppingList = (id: number) => {
       queryClient.setQueryData(listKey(id), list)
       void queryClient.invalidateQueries({ queryKey: listsKey })
     },
+    // Validée ou rouverte ailleurs entre-temps : relire la liste suffit, la page redirige.
+    onError: () => queryClient.invalidateQueries({ queryKey: listKey(id) }),
   })
 
   return { ...query, mutate: mutation.mutate, pending: mutation.isPending }
