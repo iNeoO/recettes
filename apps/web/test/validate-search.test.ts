@@ -37,7 +37,6 @@ describe("filtres lus dans l'URL", () => {
       "book",
       "category",
       "limit",
-      "list",
       "offset",
       "redirect",
       "search",
@@ -52,12 +51,5 @@ describe("filtres lus dans l'URL", () => {
     expect(validateSearch({ redirect: "/\\evil.example/" }).redirect).toBeUndefined()
     expect(validateSearch({ redirect: "recipes" }).redirect).toBeUndefined()
     expect(validateSearch({ redirect: 42 }).redirect).toBeUndefined()
-  })
-
-  it("n'accepte comme liste en cours qu'un identifiant entier positif", () => {
-    expect(validateSearch({ list: "3" }).list).toBe(3)
-    expect(validateSearch({ list: 0 }).list).toBeUndefined()
-    expect(validateSearch({ list: "abc" }).list).toBeUndefined()
-    expect(validateSearch({ list: 1.5 }).list).toBeUndefined()
   })
 })

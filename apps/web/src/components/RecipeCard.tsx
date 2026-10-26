@@ -1,15 +1,12 @@
 import type { RecipeSummary } from "@recettes/contract"
 import { Link } from "@tanstack/react-router"
-import type { ReactNode } from "react"
 import { imageSrc } from "../api.ts"
 
 interface Props {
   readonly recipe: RecipeSummary
-  /** Un bouton d'action sous la carte, hors du lien : « Ajouter » en mode sélection. */
-  readonly footer?: ReactNode
 }
 
-export const RecipeCard = ({ recipe, footer }: Props) => (
+export const RecipeCard = ({ recipe }: Props) => (
   <article
     className="group flex flex-col overflow-hidden rounded-xl border border-stone-200 bg-white
                transition hover:border-stone-400 hover:shadow-sm"
@@ -17,7 +14,7 @@ export const RecipeCard = ({ recipe, footer }: Props) => (
     <Link
       to="/recipes/$id"
       params={{ id: String(recipe.id) }}
-      // Les filtres et la liste en cours de sélection suivent jusqu'au détail.
+      // Les filtres suivent jusqu'au détail.
       search={(previous) => previous}
       className="block"
     >
@@ -43,6 +40,5 @@ export const RecipeCard = ({ recipe, footer }: Props) => (
         </p>
       </div>
     </Link>
-    {footer !== undefined && <div className="mt-auto px-2 pb-2 sm:px-3 sm:pb-3">{footer}</div>}
   </article>
 )

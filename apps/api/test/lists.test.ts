@@ -61,6 +61,7 @@ describe("listes de courses", () => {
 
         expect(list.name).toBe(listName(Date.now()))
         expect(list.servings).toBe(2)
+        expect(list.status).toBe("draft")
         expect(list.recipes).toEqual([])
         expect(list.items).toEqual([])
         expect(list.pantry).toEqual([])
@@ -81,6 +82,7 @@ describe("listes de courses", () => {
         expect(mine.map((l) => l.id)).toEqual([second.id, first.id])
         expect(mine[0]!.recipeCount).toBe(1)
         expect(mine[1]!.recipeCount).toBe(0)
+        expect(mine[0]!.status).toBe("draft")
         // Deux listes le même jour portent le même nom : c'est accepté.
         expect(mine[0]!.name).toBe(mine[1]!.name)
       }))
@@ -132,7 +134,7 @@ describe("listes de courses", () => {
         expect(list.pantry.map((p) => p.name)).toEqual(["farine"])
       }))
 
-    it.effect("accepte deux fois la même recette : compte double, puis retire une occurrence", () =>
+    it.effect("ajouter une recette déjà présente ne la double pas ; la retirer la retire", () =>
       Effect.gen(function* () {
         yield* corpus()
         const api = yield* authenticated
@@ -141,12 +143,10 @@ describe("listes de courses", () => {
         yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: crepes } })
         const twice = yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: crepes } })
 
-        expect(twice.recipes).toEqual([{ recipeId: crepes, title: "Crêpes", imageUrl: null, count: 2 }])
-        expect(twice.items.find((i) => i.name === "farine")!.amount).toBe(400)
-
-        const once = yield* api.lists.removeRecipe({ path: { id: created.id, recipeId: crepes } })
-        expect(once.recipes[0]!.count).toBe(1)
-        expect(once.items.find((i) => i.name === "farine")!.amount).toBe(200)
+        expect(twice.recipes).toEqual([
+          { recipeId: crepes, title: "Crêpes", imageUrl: null, highlights: ["farine", "lait"], count: 1 },
+        ])
+        expect(twice.items.find((i) => i.name === "farine")!.amount).toBe(200)
 
         const none = yield* api.lists.removeRecipe({ path: { id: created.id, recipeId: crepes } })
         expect(none.recipes).toEqual([])
@@ -179,8 +179,10 @@ describe("listes de courses", () => {
           api.lists.remove({ path }),
           api.lists.addRecipe({ path, payload: { recipeId: crepes } }),
           api.lists.removeRecipe({ path: { ...path, recipeId: crepes } }),
-          api.lists.addRandomRecipe({ path }),
-          api.lists.replaceRecipe({ path: { ...path, recipeId: crepes } }),
+          api.lists.finalize({ path }),
+          api.lists.suggestions({ path, urlParams: {} }),
+          api.lists.reopen({ path }),
+          api.lists.replaceRecipe({ path: { ...path, recipeId: crepes }, payload: { recipeId: crepes } }),
           api.lists.setChecked({ path: { ...path, ingredientId: 1 }, payload: { checked: true } }),
         ]
         for (const attempt of attempts) {
@@ -190,6 +192,66 @@ describe("listes de courses", () => {
         const intact = yield* other.lists.byId({ path })
         expect(intact.servings).toBe(2)
         expect(intact.recipes).toEqual([])
+      }))
+
+    it.effect("valide une liste puis la rouvre, cases cochées comprises", () =>
+      Effect.gen(function* () {
+        yield* corpus()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const path = { id: created.id }
+        const withCrepes = yield* api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Crêpes") } })
+        const farine = withCrepes.items.find((i) => i.name === "farine")!
+        yield* api.lists.setChecked({ path: { ...path, ingredientId: farine.ingredientId }, payload: { checked: true } })
+
+        const ready = yield* api.lists.finalize({ path })
+        expect(ready.status).toBe("ready")
+        expect((yield* api.lists.list())[0]!.status).toBe("ready")
+
+        const draft = yield* api.lists.reopen({ path })
+        expect(draft.status).toBe("draft")
+        expect(draft.items.find((i) => i.name === "farine")!.checked).toBe(true)
+      }))
+
+    it.effect("refuse de valider une liste sans plat", () =>
+      Effect.gen(function* () {
+        yield* corpus()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        expect(tagOf(yield* Effect.flip(api.lists.finalize({ path: { id: created.id } })))).toBe("EmptyList")
+        expect((yield* api.lists.byId({ path: { id: created.id } })).status).toBe("draft")
+      }))
+
+    it.effect("une liste validée refuse qu'on touche à ses plats, pas aux personnes ni aux cases", () =>
+      Effect.gen(function* () {
+        yield* corpus()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const path = { id: created.id }
+        const crepes = yield* recipeId("Crêpes")
+        const list = yield* api.lists.addRecipe({ path, payload: { recipeId: crepes } })
+        yield* api.lists.finalize({ path })
+
+        const attempts: ReadonlyArray<Effect.Effect<unknown, unknown>> = [
+          api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Gâteau") } }),
+          api.lists.removeRecipe({ path: { ...path, recipeId: crepes } }),
+          api.lists.replaceRecipe({
+            path: { ...path, recipeId: crepes },
+            payload: { recipeId: yield* recipeId("Gâteau") },
+          }),
+        ]
+        for (const attempt of attempts) {
+          expect(tagOf(yield* Effect.flip(attempt))).toBe("ListNotDraft")
+        }
+
+        yield* api.lists.setChecked({
+          path: { ...path, ingredientId: list.items[0]!.ingredientId },
+          payload: { checked: true },
+        })
+        const after = yield* api.lists.setServings({ path, payload: { servings: 4 } })
+        expect(after.servings).toBe(4)
+        expect(after.items[0]!.checked).toBe(true)
+        expect(after.recipes.map((r) => r.title)).toEqual(["Crêpes"])
       }))
 
     it.effect("une case cochée survit à l'ajout d'un plat et au changement de personnes", () =>
@@ -279,28 +341,23 @@ describe("listes de courses", () => {
     list.recipes.reduce((total, recipe) => total + recipe.count, 0)
 
   it.layer(TestServer)("tirage", (it) => {
-    it.effect("crée une liste de N plats tirés parmi les plats salés", () =>
+    it.effect("tire N plats distincts parmi les plats salés", () =>
       Effect.gen(function* () {
         yield* meals()
         const api = yield* authenticated
-        const list = yield* api.lists.create({ payload: { meals: 8 } })
+        const one = yield* api.lists.create({ payload: { meals: 1 } })
+        expect(occurrences(one)).toBe(1)
+        expect(["Curry", "Quiche"]).toContain(one.recipes[0]!.title)
 
-        expect(occurrences(list)).toBe(8)
-        for (const recipe of list.recipes) expect(["Curry", "Quiche"]).toContain(recipe.title)
+        // Plus de repas demandés que de plats salés : chacun une fois, pas de doublon.
+        const all = yield* api.lists.create({ payload: { meals: 8 } })
+        expect(all.recipes.map((r) => [r.title, r.count]).sort()).toEqual([
+          ["Curry", 1],
+          ["Quiche", 1],
+        ])
       }))
 
-    it.effect("ajoute un plat tiré parmi les plats salés", () =>
-      Effect.gen(function* () {
-        yield* meals()
-        const api = yield* authenticated
-        const created = yield* api.lists.create({ payload: { meals: 2 } })
-        const list = yield* api.lists.addRandomRecipe({ path: { id: created.id } })
-
-        expect(occurrences(list)).toBe(3)
-        for (const recipe of list.recipes) expect(["Curry", "Quiche"]).toContain(recipe.title)
-      }))
-
-    it.effect("remplace un plat par un autre, à la même place, sans toucher aux cases", () =>
+    it.effect("remplace un plat par celui choisi, à la même place, sans toucher aux cases", () =>
       Effect.gen(function* () {
         yield* meals()
         const api = yield* authenticated
@@ -312,9 +369,11 @@ describe("listes de courses", () => {
         const sel = before.pantry.find((p) => p.name === "sel")!
         yield* api.lists.setChecked({ path: { ...path, ingredientId: sel.ingredientId }, payload: { checked: true } })
 
-        const after = yield* api.lists.replaceRecipe({ path: { ...path, recipeId: curry } })
+        const after = yield* api.lists.replaceRecipe({
+          path: { ...path, recipeId: curry },
+          payload: { recipeId: yield* recipeId("Quiche") },
+        })
 
-        // La seule autre recette salée est la quiche ; elle prend la place du curry.
         expect(after.recipes.map((r) => r.title)).toEqual(["Quiche", "Cookies"])
         expect(after.pantry.find((p) => p.name === "sel")!.checked).toBe(true)
       }))
@@ -324,8 +383,75 @@ describe("listes de courses", () => {
         yield* meals()
         const api = yield* authenticated
         const created = yield* api.lists.create(EMPTY)
-        const list = yield* api.lists.replaceRecipe({ path: { id: created.id, recipeId: yield* recipeId("Curry") } })
+        const list = yield* api.lists.replaceRecipe({
+          path: { id: created.id, recipeId: yield* recipeId("Curry") },
+          payload: { recipeId: yield* recipeId("Quiche") },
+        })
         expect(list.recipes).toEqual([])
+      }))
+
+    it.effect("remplacer par un plat déjà présent le garde une seule fois", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const path = { id: created.id }
+        const curry = yield* recipeId("Curry")
+        const quiche = yield* recipeId("Quiche")
+        yield* api.lists.addRecipe({ path, payload: { recipeId: curry } })
+        yield* api.lists.addRecipe({ path, payload: { recipeId: quiche } })
+
+        const list = yield* api.lists.replaceRecipe({ path: { ...path, recipeId: curry }, payload: { recipeId: quiche } })
+        expect(list.recipes.map((r) => [r.title, r.count])).toEqual([["Quiche", 1]])
+      }))
+
+    it.effect("refuse un remplaçant inconnu", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const curry = yield* recipeId("Curry")
+        yield* api.lists.addRecipe({ path: { id: created.id }, payload: { recipeId: curry } })
+        const error = yield* api.lists
+          .replaceRecipe({ path: { id: created.id, recipeId: curry }, payload: { recipeId: 99999 } })
+          .pipe(Effect.flip)
+        expect(tagOf(error)).toBe("RecipeNotFound")
+      }))
+
+    it.effect("suggère des plats salés absents de la liste, résumés", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const path = { id: created.id }
+
+        const all = yield* api.lists.suggestions({ path, urlParams: {} })
+        expect(all.map((r) => r.title).sort()).toEqual(["Curry", "Quiche"])
+        expect(all.find((r) => r.title === "Curry")!.highlights).toEqual(["lait de coco"])
+
+        const one = yield* api.lists.suggestions({ path, urlParams: { count: 1 } })
+        expect(one).toHaveLength(1)
+
+        yield* api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Curry") } })
+        const rest = yield* api.lists.suggestions({ path, urlParams: {} })
+        expect(rest.map((r) => r.title)).toEqual(["Quiche"])
+
+        yield* api.lists.addRecipe({ path, payload: { recipeId: yield* recipeId("Quiche") } })
+        expect(yield* api.lists.suggestions({ path, urlParams: {} })).toEqual([])
+      }))
+
+    it.effect("rejette un nombre de suggestions hors bornes", () =>
+      Effect.gen(function* () {
+        yield* meals()
+        const api = yield* authenticated
+        const created = yield* api.lists.create(EMPTY)
+        const token = yield* sessionToken
+        for (const count of ["0", "13", "2.5"]) {
+          const response = yield* fetchPath(`/lists/${created.id}/suggestions?count=${count}`, {
+            headers: cookieHeader(token),
+          })
+          expect(response.status).toBe(400)
+        }
       }))
 
     it.effect("rejette un nombre de repas hors bornes", () =>

@@ -19,14 +19,14 @@ export const ListsPage = () => {
   const [meals, setMeals] = useState(String(DEFAULT_MEALS))
   const parsed = Number(meals)
   const validMeals =
-    meals !== "" && Number.isInteger(parsed) && parsed >= 1 && parsed <= MAX_MEALS ? parsed : null
+    meals !== "" && Number.isInteger(parsed) && parsed >= 0 && parsed <= MAX_MEALS ? parsed : null
 
   const create = useMutation({
     mutationFn: lists.create,
     onSuccess: async (list) => {
       queryClient.setQueryData(listKey(list.id), list)
       await queryClient.invalidateQueries({ queryKey: listsKey })
-      await navigate({ to: "/lists/$id", params: { id: String(list.id) } })
+      await navigate({ to: "/lists/$id/plats", params: { id: String(list.id) } })
     },
   })
 
@@ -37,7 +37,7 @@ export const ListsPage = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-semibold text-stone-900">Listes de courses</h1>
         <form
           onSubmit={(event) => {
@@ -50,7 +50,7 @@ export const ListsPage = () => {
             Nombre de repas
             <input
               type="number"
-              min={1}
+              min={0}
               max={MAX_MEALS}
               value={meals}
               onChange={(event) => setMeals(event.target.value)}
@@ -75,14 +75,21 @@ export const ListsPage = () => {
         <p className="text-sm text-stone-500">Chargement…</p>
       ) : data.length === 0 ? (
         <p className="py-12 text-center text-stone-500">
-          Aucune liste pour l'instant. Créer une liste, puis choisir des plats.
+          Aucune liste pour l'instant. Choisir un nombre de repas, puis les plats.
         </p>
       ) : (
         <ul className="divide-y divide-stone-200 rounded-xl border border-stone-200 bg-white">
           {data.map((list) => (
             <li key={list.id} className="flex items-center justify-between gap-4 px-4 py-3">
               <Link to="/lists/$id" params={{ id: String(list.id) }} className="min-w-0 flex-1 py-1">
-                <span className="block font-medium text-stone-900">{list.name}</span>
+                <span className="flex items-center gap-2 font-medium text-stone-900">
+                  {list.name}
+                  {list.status === "draft" && (
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-normal text-amber-800">
+                      Brouillon
+                    </span>
+                  )}
+                </span>
                 <span className="block text-sm text-stone-500">
                   {list.recipeCount} plat{list.recipeCount > 1 ? "s" : ""} · {list.servings} pers. ·{" "}
                   {dateFormat.format(list.createdAt)}

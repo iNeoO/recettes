@@ -9,11 +9,11 @@ import {
   type RouterHistory,
   useNavigate,
 } from "@tanstack/react-router"
-import { SelectionBanner } from "./components/SelectionBanner.tsx"
 import { DetailPage } from "./routes/Detail.tsx"
 import { ListPage } from "./routes/List.tsx"
 import { ListsPage } from "./routes/Lists.tsx"
 import { LoginPage } from "./routes/Login.tsx"
+import { PreparationPage } from "./routes/Preparation.tsx"
 import { ShoppingListPage } from "./routes/ShoppingList.tsx"
 import { validateSearch } from "./search.ts"
 import type { Session } from "./session.ts"
@@ -52,7 +52,6 @@ export const authenticatedRoute = createRoute({
 
 const AuthenticatedLayout = () => {
   const { user, session } = authenticatedRoute.useRouteContext()
-  const { list } = authenticatedRoute.useSearch()
   const queryClient = useQueryClient()
   const navigate = useNavigate()
 
@@ -70,12 +69,7 @@ const AuthenticatedLayout = () => {
       <header className="border-b border-stone-200 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
           <nav className="flex items-center gap-4">
-            <Link
-              to="/"
-              // En mode sélection, revenir aux recettes garde la liste en cours.
-              search={{ list }}
-              className="text-lg font-semibold text-stone-900"
-            >
+            <Link to="/" className="text-lg font-semibold text-stone-900">
               Recettes
             </Link>
             <Link
@@ -98,7 +92,6 @@ const AuthenticatedLayout = () => {
           </div>
         </div>
       </header>
-      {list !== undefined && <SelectionBanner listId={list} />}
       <main className="mx-auto max-w-7xl px-4 py-6 sm:py-8">
         <Outlet />
       </main>
@@ -130,9 +123,21 @@ export const shoppingListRoute = createRoute({
   component: ShoppingListPage,
 })
 
+export const preparationRoute = createRoute({
+  getParentRoute: () => authenticatedRoute,
+  path: "/lists/$id/plats",
+  component: PreparationPage,
+})
+
 export const routeTree = rootRoute.addChildren([
   loginRoute,
-  authenticatedRoute.addChildren([listRoute, detailRoute, listsRoute, shoppingListRoute]),
+  authenticatedRoute.addChildren([
+    listRoute,
+    detailRoute,
+    listsRoute,
+    shoppingListRoute,
+    preparationRoute,
+  ]),
 ])
 
 /** L'historique se fournit à la construction : l'URL initiale y est analysée. */

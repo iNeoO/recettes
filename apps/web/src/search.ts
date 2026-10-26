@@ -8,7 +8,6 @@ const Text = Schema.NonEmptyTrimmedString
 const BookParam = NumberLike.pipe(Schema.compose(Schema.Literal(1, 2)))
 const Limit = NumberLike.pipe(Schema.int(), Schema.between(1, MAX_LIMIT))
 const Offset = NumberLike.pipe(Schema.int(), Schema.nonNegative())
-const Id = NumberLike.pipe(Schema.int(), Schema.positive())
 
 /**
  * Un chemin de cette application, et rien d'autre : sans cela, ?redirect=
@@ -25,14 +24,9 @@ const field =
       ? undefined
       : Option.getOrUndefined(Schema.decodeUnknownOption(schema)(value))
 
-/**
- * Les filtres de la liste, la destination à retrouver après connexion, et la
- * liste de courses en cours de sélection : tant que `list` est là, chaque
- * recette propose « Ajouter ».
- */
+/** Les filtres de la liste, et la destination à retrouver après connexion. */
 export interface AppSearch extends ListQuery {
   readonly redirect?: string
-  readonly list?: number
 }
 
 /**
@@ -50,7 +44,6 @@ export const validateSearch = (input: Record<string, unknown>): AppSearch => ({
   limit: field(Limit)(input["limit"]),
   offset: field(Offset)(input["offset"]),
   redirect: field(InternalPath)(input["redirect"]),
-  list: field(Id)(input["list"]),
 })
 
 export type { Book }

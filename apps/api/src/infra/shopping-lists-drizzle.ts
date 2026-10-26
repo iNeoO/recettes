@@ -4,6 +4,7 @@ import type { ListItem, ListRecipe, PantryItem, ShoppingListSummary } from "@rec
 import { and, count, desc, eq, isNull, min, notInArray, or, sql } from "drizzle-orm"
 import { Effect, Layer, Option } from "effect"
 import { RepositoryError } from "../domain/repository.ts"
+import { highlightsOf } from "./highlights.ts"
 import { ShoppingListRepository, type StoredList } from "../domain/shopping-lists.ts"
 
 const asRepositoryError = <A, R>(effect: Effect.Effect<A, unknown, R>) =>
@@ -24,6 +25,52 @@ export const ShoppingListRepositoryLive = Layer.effect(
         .limit(1)
         .pipe(Effect.map((rows) => Option.fromNullable(rows[0])))
 
+    /**
+     * Où en est la liste, verrouillée jusqu'à la fin de la transaction : une
+     * validation concurrente ne passe pas entre la lecture du statut et l'écriture.
+     */
+    const editable = (userId: number, id: number) =>
+      db
+        .select({ status: schema.shoppingLists.status })
+        .from(schema.shoppingLists)
+        .where(and(eq(schema.shoppingLists.id, id), eq(schema.shoppingLists.userId, userId)))
+        .for("update")
+        .pipe(
+          Effect.map(([row]) =>
+            row === undefined ? "list-missing" : row.status === "draft" ? "draft" : "not-draft"
+          )
+        )
+
+    const recipeExists = (recipeId: number) =>
+      db
+        .select({ id: schema.recipes.id })
+        .from(schema.recipes)
+        .where(eq(schema.recipes.id, recipeId))
+        .limit(1)
+        .pipe(Effect.map((rows) => rows.length > 0))
+
+    const inList = (id: number, recipeId: number) =>
+      db
+        .select({ id: schema.shoppingListRecipes.id })
+        .from(schema.shoppingListRecipes)
+        .where(
+          and(
+            eq(schema.shoppingListRecipes.listId, id),
+            eq(schema.shoppingListRecipes.recipeId, recipeId)
+          )
+        )
+        .limit(1)
+        .pipe(Effect.map((rows) => rows.length > 0))
+
+    /** La dernière occurrence ajoutée : c'est elle qu'on retire ou remplace. */
+    const removeLast = (id: number, recipeId: number) =>
+      raw`
+        DELETE FROM shopping_list_recipes
+        WHERE id = (
+          SELECT id FROM shopping_list_recipes
+          WHERE list_id = ${id} AND recipe_id = ${recipeId}
+          ORDER BY position DESC LIMIT 1)`
+
     const recipesOf = (id: number): Effect.Effect<ReadonlyArray<ListRecipe>, unknown> =>
       db
         .select({
@@ -39,13 +86,21 @@ export const ShoppingListRepositoryLive = Layer.effect(
         .groupBy(schema.shoppingListRecipes.recipeId, schema.recipes.title, schema.recipes.imageKey)
         .orderBy(min(schema.shoppingListRecipes.position))
         .pipe(
-          Effect.map((rows) =>
-            rows.map((row) => ({
-              recipeId: row.recipeId,
-              title: row.title,
-              imageUrl: row.imageKey === null ? null : `/recipes/${row.recipeId}/image`,
-              count: row.count,
-            }))
+          Effect.flatMap((rows) =>
+            highlightsOf(
+              raw,
+              rows.map((row) => row.recipeId)
+            ).pipe(
+              Effect.map((highlights) =>
+                rows.map((row) => ({
+                  recipeId: row.recipeId,
+                  title: row.title,
+                  imageUrl: row.imageKey === null ? null : `/recipes/${row.recipeId}/image`,
+                  highlights: highlights.get(row.recipeId) ?? [],
+                  count: row.count,
+                }))
+              )
+            )
           )
         )
 
@@ -91,6 +146,7 @@ export const ShoppingListRepositoryLive = Layer.effect(
             id: schema.shoppingLists.id,
             name: schema.shoppingLists.name,
             servings: schema.shoppingLists.servings,
+            status: schema.shoppingLists.status,
             createdAt: schema.shoppingLists.createdAt,
             // Identifiants écrits en clair : dans une liste de colonnes, drizzle
             // dépouille les siens de leur table et « id » deviendrait ambigu.
@@ -148,6 +204,7 @@ export const ShoppingListRepositoryLive = Layer.effect(
             id: list.value.id,
             name: list.value.name,
             servings: list.value.servings,
+            status: list.value.status,
             createdAt: list.value.createdAt,
             recipes,
             items,
@@ -177,15 +234,39 @@ export const ShoppingListRepositoryLive = Layer.effect(
             asRepositoryError
           ),
 
+      finalize: (userId, id) =>
+        Effect.gen(function* () {
+          if ((yield* editable(userId, id)) === "list-missing") return "list-missing" as const
+          const dishes = yield* db
+            .select({ id: schema.shoppingListRecipes.id })
+            .from(schema.shoppingListRecipes)
+            .where(eq(schema.shoppingListRecipes.listId, id))
+            .limit(1)
+          if (dishes.length === 0) return "empty" as const
+          yield* db
+            .update(schema.shoppingLists)
+            .set({ status: "ready" })
+            .where(eq(schema.shoppingLists.id, id))
+          return "done" as const
+        }).pipe(raw.withTransaction, asRepositoryError),
+
+      reopen: (userId, id) =>
+        db
+          .update(schema.shoppingLists)
+          .set({ status: "draft" })
+          .where(and(eq(schema.shoppingLists.id, id), eq(schema.shoppingLists.userId, userId)))
+          .returning({ id: schema.shoppingLists.id })
+          .pipe(
+            Effect.map((rows) => rows.length > 0),
+            asRepositoryError
+          ),
+
       addRecipe: (userId, id, recipeId) =>
         Effect.gen(function* () {
-          if (Option.isNone(yield* owned(userId, id))) return "list-missing" as const
-          const recipe = yield* db
-            .select({ id: schema.recipes.id })
-            .from(schema.recipes)
-            .where(eq(schema.recipes.id, recipeId))
-            .limit(1)
-          if (recipe.length === 0) return "recipe-missing" as const
+          const state = yield* editable(userId, id)
+          if (state !== "draft") return state
+          if (!(yield* recipeExists(recipeId))) return "recipe-missing" as const
+          if (yield* inList(id, recipeId)) return "done" as const
           yield* db.insert(schema.shoppingListRecipes).values({
             listId: id,
             recipeId,
@@ -194,32 +275,35 @@ export const ShoppingListRepositoryLive = Layer.effect(
               FROM ${schema.shoppingListRecipes}
               WHERE ${schema.shoppingListRecipes.listId} = ${id})`,
           })
-          return "added" as const
-        }).pipe(asRepositoryError),
+          return "done" as const
+        }).pipe(raw.withTransaction, asRepositoryError),
 
       removeRecipe: (userId, id, recipeId) =>
         Effect.gen(function* () {
-          if (Option.isNone(yield* owned(userId, id))) return false
-          yield* raw`
-            DELETE FROM shopping_list_recipes
-            WHERE id = (
-              SELECT id FROM shopping_list_recipes
-              WHERE list_id = ${id} AND recipe_id = ${recipeId}
-              ORDER BY position DESC LIMIT 1)`
-          return true
-        }).pipe(asRepositoryError),
+          const state = yield* editable(userId, id)
+          if (state !== "draft") return state
+          yield* removeLast(id, recipeId)
+          return "done" as const
+        }).pipe(raw.withTransaction, asRepositoryError),
 
       replaceRecipe: (userId, id, recipeId, replacementId) =>
         Effect.gen(function* () {
-          if (Option.isNone(yield* owned(userId, id))) return false
+          const state = yield* editable(userId, id)
+          if (state !== "draft") return state
+          if (!(yield* recipeExists(replacementId))) return "recipe-missing" as const
+          if (replacementId === recipeId) return "done" as const
+          if (yield* inList(id, replacementId)) {
+            yield* removeLast(id, recipeId)
+            return "done" as const
+          }
           yield* raw`
             UPDATE shopping_list_recipes SET recipe_id = ${replacementId}
             WHERE id = (
               SELECT id FROM shopping_list_recipes
               WHERE list_id = ${id} AND recipe_id = ${recipeId}
               ORDER BY position DESC LIMIT 1)`
-          return true
-        }).pipe(asRepositoryError),
+          return "done" as const
+        }).pipe(raw.withTransaction, asRepositoryError),
 
       setChecked: (userId, id, ingredientId, checked) =>
         Effect.gen(function* () {

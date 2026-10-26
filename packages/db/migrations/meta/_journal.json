@@ -43,6 +43,13 @@
       "when": 1789128918211,
       "tag": "0005_listes_de_courses",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1789128918212,
+      "tag": "0006_statut_des_listes",
+      "breakpoints": true
     }
   ]
 }

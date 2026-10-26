@@ -1,6 +1,7 @@
 import type {
   ListItem,
   ListRecipe,
+  ListStatus,
   PantryItem,
   ShoppingList,
   ShoppingListSummary,
@@ -16,13 +17,17 @@ export interface StoredList {
   readonly id: number
   readonly name: string
   readonly servings: number
+  readonly status: ListStatus
   readonly createdAt: Date
   readonly recipes: ReadonlyArray<ListRecipe>
   readonly items: ReadonlyArray<ListItem>
   readonly pantry: ReadonlyArray<PantryItem>
 }
 
-export type AddRecipeResult = "added" | "list-missing" | "recipe-missing"
+/** Les plats ne bougent que sur une liste en draft. */
+export type DishEdit = "done" | "list-missing" | "not-draft"
+export type DishPick = DishEdit | "recipe-missing"
+export type Finalize = "done" | "list-missing" | "empty"
 
 /**
  * Le port. Toute lecture ou écriture passe par (userId, id) : la liste d'un
@@ -55,24 +60,30 @@ export class ShoppingListRepository extends Context.Tag("ShoppingListRepository"
       servings: number
     ) => Effect.Effect<boolean, RepositoryError>
     readonly remove: (userId: number, id: number) => Effect.Effect<boolean, RepositoryError>
+    /** Passe en ready ; refusé tant que la liste n'a aucun plat. */
+    readonly finalize: (userId: number, id: number) => Effect.Effect<Finalize, RepositoryError>
+    readonly reopen: (userId: number, id: number) => Effect.Effect<boolean, RepositoryError>
     readonly addRecipe: (
       userId: number,
       id: number,
       recipeId: number
-    ) => Effect.Effect<AddRecipeResult, RepositoryError>
+    ) => Effect.Effect<DishPick, RepositoryError>
     /** Retire une occurrence, la dernière ajoutée. */
     readonly removeRecipe: (
       userId: number,
       id: number,
       recipeId: number
-    ) => Effect.Effect<boolean, RepositoryError>
-    /** Remplace une occurrence, la dernière ajoutée, en gardant sa place. */
+    ) => Effect.Effect<DishEdit, RepositoryError>
+    /**
+     * Remplace une occurrence, la dernière ajoutée, en gardant sa place. Un
+     * remplaçant déjà présent ne se dédouble pas : l'occurrence est retirée.
+     */
     readonly replaceRecipe: (
       userId: number,
       id: number,
       recipeId: number,
       replacementId: number
-    ) => Effect.Effect<boolean, RepositoryError>
+    ) => Effect.Effect<DishPick, RepositoryError>
     readonly setChecked: (
       userId: number,
       id: number,

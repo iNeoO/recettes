@@ -1,6 +1,6 @@
 import type { ListItem, PantryItem } from "@recettes/contract"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { Link, useNavigate } from "@tanstack/react-router"
+import { Link, Navigate, useNavigate } from "@tanstack/react-router"
 import { useState } from "react"
 import { ListMissing, useListsApi } from "../api.ts"
 import { useAuthGuard } from "../auth-guard.ts"
@@ -52,6 +52,7 @@ export const ShoppingListPage = () => {
     )
   }
   if (isPending) return <p className="text-sm text-stone-500">Chargement…</p>
+  if (data.status === "draft") return <Navigate to="/lists/$id/plats" params={{ id }} replace />
 
   const setServings = (servings: number) => {
     if (servings < 1 || servings > 50) return
@@ -117,32 +118,27 @@ export const ShoppingListPage = () => {
       </header>
 
       <section className="space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3">
           <h2 className="font-medium text-stone-900">Plats</h2>
-          <div className="flex flex-wrap justify-end gap-2">
-            <Link
-              to="/"
-              search={{ list: listId }}
-              className="inline-flex min-h-10 items-center rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
-            >
-              Choisir dans le catalogue
-            </Link>
-            <button
-              type="button"
-              disabled={pending}
-              onClick={() => mutate(() => lists.addRandomRecipe(listId))}
-              className="min-h-10 rounded-lg bg-stone-900 px-3 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50"
-            >
-              Un plat au hasard
-            </button>
-          </div>
+          <button
+            type="button"
+            disabled={pending}
+            onClick={() =>
+              mutate(() => lists.reopen(listId), {
+                onSuccess: () => void navigate({ to: "/lists/$id/plats", params: { id } }),
+              })
+            }
+            className="min-h-10 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100 disabled:opacity-50"
+          >
+            Modifier les plats
+          </button>
         </div>
         {data.recipes.length === 0 ? (
           <p className="text-sm text-stone-500">Aucun plat pour l'instant.</p>
         ) : (
           <ul className="divide-y divide-stone-200 rounded-xl border border-stone-200 bg-white">
             {data.recipes.map((recipe) => (
-              <li key={recipe.recipeId} className="flex items-center justify-between gap-4 px-4 py-2">
+              <li key={recipe.recipeId} className="px-4 py-2">
                 <Link
                   to="/recipes/$id"
                   params={{ id: String(recipe.recipeId) }}
@@ -151,25 +147,6 @@ export const ShoppingListPage = () => {
                   {recipe.title}
                   {recipe.count > 1 && <span className="ml-2 text-stone-500">×{recipe.count}</span>}
                 </Link>
-                <div className="flex shrink-0 gap-2">
-                  <button
-                    type="button"
-                    aria-label={`Remplacer ${recipe.title}`}
-                    disabled={pending}
-                    onClick={() => mutate(() => lists.replaceRecipe(listId, recipe.recipeId))}
-                    className="min-h-10 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100 disabled:opacity-50"
-                  >
-                    Remplacer
-                  </button>
-                  <button
-                    type="button"
-                    aria-label={`Retirer ${recipe.title}`}
-                    onClick={() => mutate(() => lists.removeRecipe(listId, recipe.recipeId))}
-                    className="min-h-10 rounded-lg border border-stone-300 px-3 text-sm text-stone-700 hover:bg-stone-100"
-                  >
-                    Retirer
-                  </button>
-                </div>
               </li>
             ))}
           </ul>

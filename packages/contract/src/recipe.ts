@@ -29,7 +29,11 @@ const base = {
   imageUrl: Schema.NullOr(Schema.String),
 }
 
-export const RecipeSummary = Schema.Struct(base)
+export const RecipeSummary = Schema.Struct({
+  ...base,
+  /** Les premiers ingrédients chiffrés, dans l'ordre de la recette : ce qu'il y a dedans. */
+  highlights: Schema.Array(Schema.String),
+})
 export type RecipeSummary = typeof RecipeSummary.Type
 
 export const Recipe = Schema.Struct({

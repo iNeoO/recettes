@@ -79,6 +79,35 @@ describe("GET /recipes", () => {
         expect(page.total).toBe(1)
       }))
 
+    it.effect("résume chaque recette par ses trois premiers ingrédients chiffrés", () =>
+      Effect.gen(function* () {
+        yield* seed([
+          {
+            book: 1,
+            page: 1,
+            title: "Curry",
+            ingredients: [
+              { name: "sel" },
+              { name: "lentilles", quantity: "200g", amount: 200, unit: "g" },
+              { name: "lait de coco", quantity: "40cl", amount: 400, unit: "ml" },
+              { name: "huile d'olive", quantity: "1 filet" },
+              { name: "lentilles", quantity: "50g", amount: 50, unit: "g", section: "Pour servir" },
+              { name: "oignon", quantity: "1", amount: 1, unit: "pièce" },
+              { name: "citron", quantity: "1", amount: 1, unit: "pièce" },
+            ],
+          },
+          { book: 1, page: 2, title: "Eau", ingredients: [{ name: "eau" }] },
+        ])
+
+        const api = yield* authenticated
+        const page = yield* api.recipes.list({ urlParams: {} })
+
+        expect(page.items.map((r) => [r.title, r.highlights])).toEqual([
+          ["Curry", ["lentilles", "lait de coco", "oignon"]],
+          ["Eau", []],
+        ])
+      }))
+
     it.effect("filtre par catégorie", () =>
       Effect.gen(function* () {
         yield* seed([

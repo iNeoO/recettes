@@ -1,11 +1,15 @@
+import { SqlClient } from "@effect/sql"
 import { PgDrizzle, schema } from "@recettes/db"
-import { and, asc, eq, type SQL, sql } from "drizzle-orm"
+import { and, asc, eq, inArray, type SQL, sql } from "drizzle-orm"
 import { Effect, Layer, Option } from "effect"
 import { RecipeRepository, RepositoryError } from "../domain/repository.ts"
 import type { RecipeSummary } from "@recettes/contract"
 import type { RecipeQuery } from "../domain/query.ts"
+import { highlightsOf } from "./highlights.ts"
 
-const summary = (row: typeof schema.recipes.$inferSelect): RecipeSummary => ({
+type RecipeRow = typeof schema.recipes.$inferSelect
+
+const fields = (row: RecipeRow) => ({
   id: row.id,
   book: row.book as 1 | 2,
   page: row.page,
@@ -48,6 +52,19 @@ export const RecipeRepositoryLive = Layer.effect(
   RecipeRepository,
   Effect.gen(function* () {
     const db = yield* PgDrizzle
+    const raw = yield* SqlClient.SqlClient
+
+    const summaries = (rows: ReadonlyArray<RecipeRow>) =>
+      highlightsOf(
+        raw,
+        rows.map((row) => row.id)
+      ).pipe(
+        Effect.map((highlights) =>
+          rows.map(
+            (row): RecipeSummary => ({ ...fields(row), highlights: highlights.get(row.id) ?? [] })
+          )
+        )
+      )
 
     return {
       list: (query) =>
@@ -69,7 +86,7 @@ export const RecipeRepositoryLive = Layer.effect(
             .where(where)
 
           return {
-            items: rows.map(summary),
+            items: yield* summaries(rows),
             total: counted[0]?.total ?? 0,
             limit: query.limit,
             offset: query.offset,
@@ -104,10 +121,20 @@ export const RecipeRepositoryLive = Layer.effect(
             .orderBy(asc(schema.recipeIngredients.position))
 
           return Option.some({
-            ...summary(row),
+            ...fields(row),
             instructions: row.instructions,
             ingredients,
           })
+        }).pipe(Effect.catchAll((cause) => new RepositoryError({ cause }))),
+      summaries: (ids) =>
+        Effect.gen(function* () {
+          if (ids.length === 0) return []
+          const rows = yield* db
+            .select()
+            .from(schema.recipes)
+            .where(inArray(schema.recipes.id, [...ids]))
+          const byId = new Map(rows.map((row) => [row.id, row]))
+          return yield* summaries(ids.flatMap((id) => byId.get(id) ?? []))
         }).pipe(Effect.catchAll((cause) => new RepositoryError({ cause }))),
       imageKeyById: (id) =>
         db
